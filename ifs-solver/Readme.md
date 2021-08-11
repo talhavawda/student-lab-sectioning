@@ -14,5 +14,6 @@ This project is being developed using Java (as the CPSolver is available in Java
     - 'main' and 'test' sub-directories
         - In the 'main' sub-directory, I created 'java' and 'resources' sub-directories and marked them as Sources 
         and Resources respectively in the Project Structure
-        - In the 'test' sub-directory, I created java' and 'resources' sub-directories and marked the 'java' subdirectory
+        - In the 'test' sub-directory, I created a 'java' sub-directory and marked it
         as Tests in the Project Structure
+5. Studying the Data Format of the UniTime Student Sectioning solver

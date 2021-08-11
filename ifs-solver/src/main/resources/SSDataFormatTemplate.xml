@@ -1,0 +1,68 @@
+<!-- Data Format Source: https://www.unitime.org/sct_dataformat.php#students -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Student Sectioning-->
+<sectioning>
+		version="1.0" <!-- file version -->
+		initiative="CAES-Wvl" <!-- campus designation -->
+		term="1" <!-- semester  -->
+		year="2020" <!-- -->
+		created="Wed Aug 11 12:46:42 SAST 2021" <!-- creation time of the file - I put this time myself based on the format -->
+		nrDays="5" <!-- number of days per week (default is 7 days, Monday through Sunday) -->
+		slotsPerDay="2"> <!-- number of slots per day (default is 288, 5 minute long time slots, going from midnight till midnight) -->
+
+	<!-- UNITIME: An offering consists of one or more courses under which it is offered (students are signing for courses) and one or more configurations.
+	Each configuration has one or more subparts and each subpart has one or more sections (classes). Each student requesting given course
+	 has to be enrolled in a section of each subpart of a selected configuration. If a parent-child relation is defined between sections,
+	 if a student is enrolled in a section that has a parent section defined, he/she has to be enrolled in the parent section as well.
+
+	 ME: Since UniTime defines a sectioning differently from me (and the norm) - a section is an identical instance of a course;
+	 they refer to this as a "subpart" above - their 'section' for me is a lab session for a course -->
+	<offerings>
+		<offering id ="1">
+			<course id="<>" /> <!-- PUT relevant course id -->
+			<config id ="1">
+
+				<!-- A subpart is a "collection of alternative sections of the same instructional type"
+				id: subpart unique id; itype: instructional type; parent: parent subpart (if defined) - all sections of the subpart have a parent section defined from the parent subpart;
+				hold: expected: (default values for these two are 0 - which is what I want for now)
+				 ME: for my problem, a subpart is a lab session (a course can have multiple labs), and its sections are the different
+				 possibilities (sections) for that lab - and all lab sessions will have the same number of sections as a course is split into a
+				  specific number of instances -->
+				<subpart id="1" itype="<>">  <!-- PUT relevant instructional type -->
+
+					<!-- id: section unique id; section limit - number of students that can be enrolled into the section, -1 means unlimited;
+					parent: parent section (if defined) - a student enrolled in this section, must be enrolled in the parent section as well.
+					A section may or may not have defined a time abd any number of roo,s-->
+					<section id="1" limit="<>"> <!-- PUT relevant lab session limit -->
+						<!-- E.G> of section defined with parent section -->
+						<!-- <section id="<>" limit="<>" parent=""<parentSectionID> -->
+
+						<!-- SEE SOURCE LINK FOR DOCUMENTATION/EXPLANATION OF TIME AND ROOM -->
+						<time days="" start="" length="" dates="" /> <!-- PUT relevant values -->
+						<room id="<>" capacity="<>" location=""/>  <!-- PUT relevant values -->
+					</section>
+				</subpart>
+			</config>
+		</offering>
+
+		<!-- More "offering"'s -->
+	</offerings>
+
+	<!-- -->
+
+	<students>
+		<!-- PARAMS: student: student unique id; dummy: true for last-like students (false by default);
+		classification: student academic area classification(s) - contains academic area and classification code;
+		major: student major(s) - contains academic area code and major code
+		minor: student minor(s) - contains academic area code and minor code
+
+		Academic area classification, major, and minor information is optional.
+		-->
+		<student id="">
+
+		</student>
+		<!-- More "student"'s -->
+	</students>
+
+</sectioning>

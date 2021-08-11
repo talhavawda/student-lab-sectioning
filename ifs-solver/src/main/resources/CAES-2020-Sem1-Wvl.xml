@@ -1,0 +1,32 @@
+<!-- Data Format Source: https://www.unitime.org/sct_dataformat.php#students -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Student Sectioning-->
+<sectioning>
+		version="1.0" <!-- file version -->
+		initiative="CAES-Wvl" <!-- campus designation -->
+		term="1" <!-- semester  -->
+		year="2020" <!-- -->
+		created="Wed Aug 11 12:46:42 SAST 2021" <!-- creation time of the file - I put this time myself based on the format -->
+		nrDays="5" <!-- number of days per week (default is 7 days, Monday through Sunday) -->
+		slotsPerDay="2"> <!-- number of slots per day (default is 288, 5 minute long time slots, going from midnight till midnight) -->
+
+	<offerings>
+		<offering id ="1">
+
+		</offering>
+
+		<!-- More "offering"'s -->
+	</offerings>
+
+	<!-- -->
+
+	<students>
+
+		<student id="">
+
+		</student>
+		<!-- More "student"'s -->
+	</students>
+
+</sectioning>
