@@ -1,7 +1,7 @@
-<!-- Data Format Source: https://www.unitime.org/sct_dataformat.php#students -->
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Student Sectioning-->
+<!-- Data Format Source: https://www.unitime.org/sct_dataformat.php#students -->
+
 <sectioning>
 		version="1.0" <!-- file version -->
 		initiative="CAES-Wvl" <!-- campus designation -->
@@ -58,9 +58,38 @@
 		minor: student minor(s) - contains academic area code and minor code
 
 		Academic area classification, major, and minor information is optional.
+
+
+		Each student contains a list of course requests. Each request has a priority.
+		For each student, all non-alternative requests should be satisfied (an enrollment is assigned to a request).
+		In the case when only one of two requests can be assigned, the one with the lowest priority is preferred.
 		-->
 		<student id="">
+			<classification area="" code=""/>
+			<major area="" code=""/>
 
+			<!-- Each course specified here is a course request of the student-->
+			<!-- course PARAMS:
+				id: unique id of this course request; priority:	priority of this course request;
+				weight: weight of this course request, by default 1.0, defines the amount of space which will be taken in the section by this course request;
+				course: course id of the requested course; alternative:	true, when alternative request (false by default)
+				[IGNORE] waitlist: true (false by default), when the student should be put on waitlist when he/she cannot be enrolled in the course (e.g., an alternative request cannot be assigned instead)
+
+			Initial, current and best solutions can be defined using initial, current and best elements inside a course request.
+			For course requests, the appropriate selection of sections is present.
+			A section of each subpart of a configuration of the course (or one of the alternative courses) needs to be selected.
+			No two sections that a student is enrolled into can overlap in time.
+
+			initial, current, best : initial, current and best assigment of a request
+				PARAM: section: enrollment of the student into particular section (section with the same id)
+			-->
+			<course id="" priority="0" weight="1.0" course =""/>
+				<best>
+					<!-- The best assigned section for each subpart of the course -->
+					<section id="1832"/>
+					<section id="1841"/>
+				</best>
+			<!-- More "courses"'s -->
 		</student>
 		<!-- More "student"'s -->
 	</students>
