@@ -1,0 +1,6 @@
+[Refer to SSDataFormatTemplate.xml for meanings of the variables]
+
+nrDays = 5 (Mon - Fri)
+slotsPerDay = 2 (for AM and PM)
+
+section: length = 1 [default]

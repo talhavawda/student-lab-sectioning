@@ -9,7 +9,7 @@
 		year="2020" <!-- -->
 		created="Wed Aug 11 12:46:42 SAST 2021" <!-- creation time of the file - I put this time myself based on the format -->
 		nrDays="5" <!-- number of days per week (default is 7 days, Monday through Sunday) -->
-		slotsPerDay="2"> <!-- number of slots per day (default is 288, 5 minute long time slots, going from midnight till midnight) -->
+		slotsPerDay="2"> <!-- number of slots per day (default is 288 -> 5 minute long time slots, going from midnight till midnight) -->
 
 	<!-- UNITIME: An offering consists of one or more courses under which it is offered (students are signing for courses) and one or more configurations.
 	Each configuration has one or more subparts and each subpart has one or more sections (classes). Each student requesting given course
@@ -21,14 +21,15 @@
 	<offerings>
 		<offering id ="1">
 			<course id="<>" /> <!-- PUT relevant course id -->
+			<!-- can have more than one course listed - this doesn't apply to my case -->
 			<config id ="1">
 
 				<!-- A subpart is a "collection of alternative sections of the same instructional type"
 				id: subpart unique id; itype: instructional type; parent: parent subpart (if defined) - all sections of the subpart have a parent section defined from the parent subpart;
 				hold: expected: (default values for these two are 0 - which is what I want for now)
-				 ME: for my problem, a subpart is a lab session (a course can have multiple labs), and its sections are the different
-				 possibilities (sections) for that lab - and all lab sessions will have the same number of sections as a course is split into a
-				  specific number of instances -->
+				ME: for my problem, a subpart is a lab session (a course can have multiple labs), and its sections are the different
+				possibilities (sections) for that lab - and all lab sessions will have the same number of sections as a course is split into a
+				specific number of instances -->
 				<subpart id="1" itype="<>">  <!-- PUT relevant instructional type -->
 
 					<!-- id: section unique id; section limit - number of students that can be enrolled into the section, -1 means unlimited;
@@ -82,6 +83,9 @@
 
 			initial, current, best : initial, current and best assigment of a request
 				PARAM: section: enrollment of the student into particular section (section with the same id)
+
+			THE SOLVER ATTEMPTS TO ASSIGN A SECTION (instance of class session) TO EACH SUBPART (class session) [FROM ONE OF THE SPECIFIED
+			SECTIONS OF THAT SUBPART] OF A COURSE THAT A STUDENT REQUESTS
 			-->
 			<course id="" priority="0" weight="1.0" course =""/>
 				<best>

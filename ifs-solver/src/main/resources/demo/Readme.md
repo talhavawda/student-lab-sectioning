@@ -1,4 +1,4 @@
-UniTime's demo data and solution
+UniTime's demo input data and solution
 Taken from Purdue University's course and enrollment data of Fall 2006
  and Fall 2007
  
