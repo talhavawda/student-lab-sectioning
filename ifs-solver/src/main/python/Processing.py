@@ -9,6 +9,8 @@ coursesFile = "src/main/resources/input/CAES-2020-Sem1-Wvl/Courses.xlsx"
 #coursesDF = coursesEF.parse("Sheet1") # Load the first (and only) sheet as a DataFrame
 
 """
+    Read in input files as Pandas Data Frames
+    
     Using "openpyxl" engine instead of the default "xlrd" engine as xlrd only supports old-style Excel files (.xls)
     whilst openpyxl supports newer Excel formats
 """

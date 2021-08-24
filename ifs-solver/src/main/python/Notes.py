@@ -3,6 +3,13 @@
 
     Sources:
         https://www.datacamp.com/community/tutorials/python-excel-tutorial
+
+    To See:
+        https://openpyxl.readthedocs.io/en/stable/
+        https://openpyxl.readthedocs.io/en/default/pandas.html
+        http://docs.pyexcel.org/en/latest/
+        http://docs.pyexcel.org/en/latest/tutorial_file.html
+
 """
 
 """
@@ -44,7 +51,7 @@ sheet = wb['Sheet1']
 sheet = wb['Sheet1']
 
 # Print the sheet title
-print('Sheet Title:',sheet.title)
+print('Sheet Title:', sheet.title)
 
 # Get currently active sheet
 anotherSheet = wb.active
@@ -84,6 +91,11 @@ for cellObj in sheet['A1':'C3']:
     #print('--- END ---')
     print()
 
+# ALT:
+for row in sheet.rows:
+    for cell in row:
+        print(cell.value)
+
 
 # Retrieve the maximum amount of rows
 print('Max Rows:', sheet.max_row)
@@ -110,7 +122,7 @@ print('Column Index:', column_index_from_string('A')
 # Import `pandas`
 import pandas
 
-# Convert Sheet to DataFrame
+# Convert Openpyxl Sheet to DataFrame
 df = pandas.DataFrame(sheet.values)
 
 # APPEND OR WRITE VALUES BACK TO AN EXCEL FILE
