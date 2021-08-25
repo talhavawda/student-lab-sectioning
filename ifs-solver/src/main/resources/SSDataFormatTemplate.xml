@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Student Sectioning-->
-<!-- Data Format Source: https://www.unitime.org/sct_dataformat.php#students -->
+<!-- Data Format Source: https://www.unitime.org/sct_dataformat.php -->
 
 	<!-- The initiative differentiates between the multiple independent timetables/sectionings required for the same Academic
 	 Session/period (term-year) -->
@@ -36,7 +36,7 @@
 
 					<!-- id: section unique id; section limit - number of students that can be enrolled into the section, -1 means unlimited;
 					parent: parent section (if defined) - a student enrolled in this section, must be enrolled in the parent section as well.
-					A section may or may not have defined a time abd any number of roo,s-->
+					A section may or may not have defined a time and any number of rooms-->
 					<section id="1" limit="<>"> <!-- PUT relevant lab session limit -->
 						<!-- E.G> of section defined with parent section -->
 						<!-- <section id="<>" limit="<>" parent=""<parentSectionID> -->
