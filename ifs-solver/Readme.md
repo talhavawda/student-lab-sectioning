@@ -29,3 +29,17 @@ This project is being developed using Java (as the CPSolver is available in Java
         - When wanting to run a Python script, switch to the Python configuration in the 'Edit Run/Debug Configurations' dialog dropdown 
     - For the main software, when adding the Python interpreter, consider using a virtual environment interpreter
     instead of the System interpreter
+    - I have decided to store the Problem Specification data in an XML file instead of a text file.
+    I am using the BeautifulSoup library to read in the XML file. It needs to first be installed (package name is 'beautifulsoup4')
+    - Python modules for creating XML files: Minidom and ElementTree
+        - I have chosen to use Minimdom as it seems a bit simpler and it formats the tags nicely (puts them on new lines)
+            - References for using Mindom:
+                - https://www.geeksforgeeks.org/create-xml-documents-using-python/
+                - https://www.guru99.com/manipulating-xml-with-python.html
+                
+        - However apparently ElementTree is faster for parsing (reading in) XML files, but I don't think this will affect me (hopefully) as I'm just creating the XML files
+            - References:
+                - https://stackoverflow.com/questions/192907/xml-parsing-elementtree-vs-sax-and-dom
+                - https://www.mirketa.com/xml-parsing-python/
+                - https://www.edureka.co/community/52537/difference-between-elementtree-and-minidom
+                
