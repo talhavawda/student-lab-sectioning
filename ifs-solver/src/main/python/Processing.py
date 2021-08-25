@@ -26,6 +26,8 @@ def main():
 
 	print(coursesDF)
 
+	# studentsDF =
+
 	specificationDict = processProblemSpecification(problemSpecificationFilePath)
 	#print(specificationDict)
 
@@ -69,6 +71,8 @@ def main():
 	currentLabSectionID = 0  # used for 'section' tag/element for its 'id' attribute | currentLabSectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
 	currentStudentID = 0
 
+	courseIdDict = {} # A dictionary (map) to keep track of all the assigned ID's for the courses | to be used when processing students' course enrollments/requests
+
 	""" Process all course offerings (All LabSections for each Lab for each Course) """
 
 	# [DONE] Todo - Add course code, labNum, sectionNum, allocatedDay to the XML input doc as additional attributes to their elements
@@ -104,6 +108,8 @@ def main():
 			currentConfigElement = inputFileXML.createElement("config")
 			currentConfigElement.setAttribute("id", str(currentCourseID))
 			currentOfferingElement.appendChild(currentConfigElement)
+
+			courseIdDict[courseName] = currentCourseID # Add this course as a key and its courseID as the value
 
 			currentCourse = courseName
 			currentLabNum = 0 # Reset lab num (to 0 so that when the first lab (labNum=1) of the next course is read, a new subpart tag will be created)
@@ -147,9 +153,9 @@ def main():
 		currentSectionElement.appendChild(currentTimeElement)
 
 
-	""" Process all student enrollments """
+	""" Process all student enrollments (lab sessions requests) """
 
-
+	# courseIdDict - docitionary of course ID's
 
 
 
