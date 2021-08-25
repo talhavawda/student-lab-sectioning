@@ -69,14 +69,14 @@ def main():
 	currentLabSectionID = 0  # used for 'section' tag/element for its 'id' attribute | currentLabSectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
 	currentStudentID = 0
 
-	# Process all course offerings (All LabSections for each Lab for each Course)
+	""" Process all course offerings (All LabSections for each Lab for each Course) """
 
 	# [DONE] Todo - Add course code, labNum, sectionNum, allocatedDay to the XML input doc as additional attributes to their elements
 	# Since XML is extensible, this shoudn't break/affect the solver, and it will still appear in the solver's solution xml file (hopefully)
 	# which will make me reading that xml file easier (to understand what the id is referring to which specific course/labNum/sectionNum) and
 	# reduce processing to generate a readable solution
 
-	# REFER TO SSDataFormatTemplate.xml (and my Problem Modelling Word doc) FOR THE MEANINGS OF THE ELEMENT NAMES
+	# REFER TO SSDataFormatTemplate.xml (and my Problem Modelling Word doc) FOR THE MEANINGS OF THE ELEMENT NAMES AND LOGIC EXPLANATION
 	"""
 		Links/References to read for iterating/traversing DataFrames:
 			https://www.geeksforgeeks.org/different-ways-to-iterate-over-rows-in-pandas-dataframe/
@@ -88,7 +88,8 @@ def main():
 	for labSection in range(totalLabSections): # Each row/entry in the Courses.xlsx file is a LabSection - a section of a lab for a Course
 		courseName = coursesDF.loc[labSection, "course"] # The course that this LabSection belongs to
 
-		if courseName != currentCourse:  # Create new 'offering' element
+		# if a different course - i.e. a new course to process
+		if courseName != currentCourse:  # Create new 'offering' element with its own 'course' and 'config' sub-elements
 
 			currentOfferingElement = inputFileXML.createElement("offering")
 			currentCourseID += 1
@@ -107,13 +108,14 @@ def main():
 			currentCourse = courseName
 			currentLabNum = 0 # Reset lab num (to 0 so that when the first lab (labNum=1) of the next course is read, a new subpart tag will be created)
 
-		# else continue with the currentOfferingElement and currentConfigElement variables unmodified
+		# else continue with the currentConfigElement variable unmodified
 
 		labNum = coursesDF.loc[labSection, "labNum"] # The lab this LabSection belongs to
 
+		# if a different labNum - i.e. the next lab for the current course to process
 		if labNum != currentLabNum:  # Create a new 'subpart' element under this current offering config
 			currentSubpartElement = inputFileXML.createElement("subpart")
-			currentLabID +=1
+			currentLabID += 1
 			currentSubpartElement.setAttribute("id", str(currentLabID))
 			currentSubpartElement.setAttribute("courseLabNum", str(labNum)) # My own additional atrribute to the XML input doc (See Todo above)
 			currentConfigElement.appendChild(currentSubpartElement)
@@ -122,7 +124,7 @@ def main():
 
 		# else continue with the currentSubpartElement variable unmodified
 
-		# Add LabSection
+		# Add LabSection (UniTime: 'section') to current lab (UniTime: 'subpart')
 		currentSectionElement = inputFileXML.createElement("section")
 		currentLabSectionID += 1
 		currentSectionElement.setAttribute("id", str(currentLabSectionID))
@@ -145,11 +147,7 @@ def main():
 		currentSectionElement.appendChild(currentTimeElement)
 
 
-
-
-
-
-		#print(labSection, coursesDF.loc[labSection, "sectionNum"])
+	""" Process all student enrollments """
 
 
 
