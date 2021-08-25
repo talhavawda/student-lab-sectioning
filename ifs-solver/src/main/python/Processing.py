@@ -63,12 +63,15 @@ def main():
     # Initialise all the ID variables's that are going to be used
     # All id's start with 1 in the UniTime SS Data Format so the variables will be incremented before they'll be assigned
     currentCourse = ""
+    currentLabNum = 0
     currentCourseID = 0  # used for 'offering', 'course', and 'config' tags/elements for their 'id' attributes | for my SS problem, all offerings consists of only 1 course and 1 configuration, so the id's will be matching for all
-    currentLabID = 0  # used for 'subpart' tag/element for its 'id' attribute | labID is a unique course-labNum combination (from the Courses.xlsx file)
-    currentSectionID = 0  # used for 'section' tag/element for its 'id' attribute | sectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
+    currentLabID = 0  # used for 'subpart' tag/element for its 'id' attribute | currentLabID is a unique course-labNum combination (from the Courses.xlsx file)
+    currentLabSectionID = 0  # used for 'section' tag/element for its 'id' attribute | currentLabSectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
     currentStudentID = 0
 
-    # Process all course offerings
+    # Process all course offerings (All LabSections for each Lab for each Course)
+
+    # REFER TO SSDataFormatTemplate.xml (and my Problem Modelling Word doc) FOR THE MEANINGS OF THE ELEMENT NAMES
     """
         Links/References to read for iterating/traversing DataFrames:
             https://www.geeksforgeeks.org/different-ways-to-iterate-over-rows-in-pandas-dataframe/
@@ -80,25 +83,46 @@ def main():
     for labSection in range(totalLabSections): # Each row/entry in the Courses.xlsx file is a LabSection - a section of a lab for a Course
         courseName = coursesDF.loc[labSection, "course"] # The course that this LabSection belongs to
 
-        if courseName != currentCourse:  # Create new offering element
+        if courseName != currentCourse:  # Create new 'offering' element
 
             currentOfferingElement = inputFileXML.createElement("offering")
             currentCourseID += 1
             currentOfferingElement.setAttribute("id", str(currentCourseID))
             offeringsElement.appendChild(currentOfferingElement)
 
-            courseElement = inputFileXML.createElement("course")
-            courseElement.setAttribute("id", str(currentCourseID))
-            currentOfferingElement.appendChild(courseElement)
+            currentCourseElement = inputFileXML.createElement("course")
+            currentCourseElement.setAttribute("id", str(currentCourseID))
+            currentOfferingElement.appendChild(currentCourseElement)
 
-            configElement = inputFileXML.createElement("config")
-            configElement.setAttribute("id", str(currentCourseID))
-            currentOfferingElement.appendChild(configElement)
-
+            currentConfigElement = inputFileXML.createElement("config")
+            currentConfigElement.setAttribute("id", str(currentCourseID))
+            currentOfferingElement.appendChild(currentConfigElement)
 
             currentCourse = courseName
+            currentLabNum = 0 # Reset lab num (to 0 so that when the first lab (labNum=1) of the next course is read, a new subpart tag will be created)
 
-        # else continue with the currentOffering variable unmodified
+        # else continue with the currentOfferingElement and currentConfigElement variables unmodified
+
+        labNum = coursesDF.loc[labSection, "labNum"] # The course that this LabSection belongs to
+
+        if labNum != currentLabNum:  # Create a new 'subpart' element under this current offering config
+            currentSubpartElement = inputFileXML.createElement("subpart")
+            currentLabID +=1
+            currentSubpartElement.setAttribute("id", str(currentLabID))
+            currentConfigElement.appendChild(currentSubpartElement)
+
+            currentLabNum = labNum
+
+        # else continue with the currentSubpartElement variable unmodified
+
+        # Add LabSection
+        currentSectionElement = inputFileXML.createElement("section")
+        currentLabSectionID += 1
+        currentSectionElement.setAttribute("id", str(currentLabSectionID))
+        currentSubpartElement.appendChild(currentSectionElement)
+
+
+
 
 
 

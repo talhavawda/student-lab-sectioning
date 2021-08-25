@@ -19,7 +19,7 @@
 	 if a student is enrolled in a section that has a parent section defined, he/she has to be enrolled in the parent section as well.
 
 	 ME: Since UniTime defines a sectioning differently from me (and the norm) - a section is an identical instance of a course;
-	 they refer to this as a "subpart" above - their 'section' for me is a lab session for a course -->
+	 they refer to this as a "subpart" above - their 'section' for me is a lab session (Lab-Section) for a course -->
 	<offerings>
 		<offering id="1">
 			<course id="<1>" /> <!-- PUT relevant course id -->
@@ -30,8 +30,8 @@
 				id: subpart unique id; itype: instructional type; parent: parent subpart (if defined) - all sections of the subpart have a parent section defined from the parent subpart;
 				hold: expected: (default values for these two are 0 - which is what I want for now)
 				ME: for my problem, a subpart is a lab session (a course can have multiple labs), and its sections are the different
-				possibilities (sections) for that lab - and all lab sessions will have the same number of sections as a course is split into a
-				specific number of instances -->
+				possibilities (sections / Lab-Sections) for that lab - and (not necessarily? Should leave up to the user in their input?) all lab sessions
+				 will have the same number of sections as a course is split into a specific number of instances -->
 				<subpart id="1" itype="<>">  <!-- PUT relevant instructional type -->
 
 					<!-- id: section unique id; section limit - number of students that can be enrolled into the section, -1 means unlimited;
