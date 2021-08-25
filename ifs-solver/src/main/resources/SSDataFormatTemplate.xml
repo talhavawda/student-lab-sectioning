@@ -2,7 +2,9 @@
 <!--Student Sectioning-->
 <!-- Data Format Source: https://www.unitime.org/sct_dataformat.php#students -->
 
-<sectioning version="1.0" initiative="CAES-Wvl" term="1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2" >
+	<!-- The initiative differentiates between the multiple independent timetables/sectionings required for the same Academic
+	 Session/period (term-year) -->
+	<sectioning version="1.0" initiative="CAES-Wvl" term="1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2" >
 		 <!-- version: file version -->
 		 <!-- initiative: campus designation -->
 		 <!-- term: semester  -->
@@ -59,6 +61,8 @@
 		minor: student minor(s) - contains academic area code and minor code
 
 		Academic area classification, major, and minor information is optional.
+		classification -> area: Academic Area (A Faculty/Department, e.g. Science, Mech Eng, Management)
+		major -> area: Subject Area (A Discipline, e.g. Mathematics, Computer Science)
 
 
 		Each student contains a list of course requests. Each request has a priority.

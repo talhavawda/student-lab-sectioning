@@ -2,7 +2,7 @@ The venueCapacity field in my CourseInputTemplate.xlsx doc matches with the
 'limit' field of the 'section' tag in the CPSolver (See SSDataFormatTemplate.xml)
 
 The sessionLength field in my CourseInputTemplate.xlsx doc matches with the
-'length' field of the 'time' tag (which is a subtag of the 'section' tag)
+'length' field/attribute of the 'time' tag/element (which is a sub-tag/element of the 'section' tag/element)
  in the CPSolver (See SSDataFormatTemplate.xml). 
  - This represents the number
  of timeslots a session takes up. The default value is 1, and it should only

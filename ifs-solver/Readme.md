@@ -31,6 +31,7 @@ This project is being developed using Java (as the CPSolver is available in Java
     instead of the System interpreter
     - I have decided to store the Problem Specification data in an XML file instead of a text file.
     I am using the BeautifulSoup library to read in the XML file. It needs to first be installed (package name is 'beautifulsoup4')
+    along with the 'lxml' package
     - Python modules for creating XML files: Minidom and ElementTree
         - I have chosen to use Minimdom as it seems a bit simpler and it formats the tags nicely (puts them on new lines)
             - References for using Mindom:
