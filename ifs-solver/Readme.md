@@ -19,7 +19,8 @@ This project is being developed using Java (as the CPSolver is available in Java
 5. Studying the Data Format of the UniTime Student Sectioning solver
 6. Creating my Excel template input files
 7. [Incomplete] Creating input files for CAES-2020-Sem1-Wvl according to my templates
-8. [Incomplete] Creating a Python program script to read in and process input files, and produce an XML file (input data file) for the UniTime Student Sectioning solver
+8. [Incomplete] Creating a Python program script to read in and process input files, and produce an XML file (input data file)
+ for the UniTime Student Sectioning solver according to their data format structure/template
     - How to run Python in IntelliJ:
         - Links
             - https://www.jetbrains.com/help/idea/configuring-local-python-interpreters.html

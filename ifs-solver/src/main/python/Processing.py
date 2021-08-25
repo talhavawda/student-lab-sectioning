@@ -22,8 +22,7 @@ def main():
     # Load the first (and only) sheet | First line of data is taken as the column headings
     # ALT sheet_name="Sheet1"
     coursesDF = pd.read_excel(coursesFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'labNum':int, 'sectionNum':int, 'allocatedTimeslot':int, 'venueCapacity':int, 'sessionLength':int})
-    totalLabSections = len(coursesDF)
-    coursesColDF = coursesDF["course"]
+    #coursesColDF = coursesDF["course"]
 
     print(coursesDF)
 
@@ -39,35 +38,71 @@ def main():
     inputFileXML = minidom.Document()
 
     # Student Sectioning
-    sectioning = inputFileXML.createElement("sectioning") # Create the root element 'sectioning'
-    inputFileXML.appendChild(sectioning)
+    sectioningElement = inputFileXML.createElement("sectioning") # Create the root element 'sectioning'
 
     """ Add the attributes of the 'sectioning element' - this is the problem specification information (having being extracted 
     and stored in specificationDict)"""
-    sectioning.setAttribute("version", specificationDict["version"])
-    sectioning.setAttribute("initiative", specificationDict["initiative"])
-    sectioning.setAttribute("term", specificationDict["term"])
-    sectioning.setAttribute("year", specificationDict["year"])
-    sectioning.setAttribute("created", specificationDict["created"])
-    sectioning.setAttribute("nrDays", specificationDict["nrDays"])
-    sectioning.setAttribute("slotsPerDay", specificationDict["slotsPerDay"])
+    sectioningElement.setAttribute("version", specificationDict["version"])
+    sectioningElement.setAttribute("initiative", specificationDict["initiative"])
+    sectioningElement.setAttribute("term", specificationDict["term"])
+    sectioningElement.setAttribute("year", specificationDict["year"])
+    sectioningElement.setAttribute("created", specificationDict["created"])
+    sectioningElement.setAttribute("nrDays", specificationDict["nrDays"])
+    sectioningElement.setAttribute("slotsPerDay", specificationDict["slotsPerDay"])
+
+    inputFileXML.appendChild(sectioningElement)
 
     """ Create the 'offerings' and 'students' sub-elements of the sectioning element"""
 
-    offerings = inputFileXML.createElement("offerings")
-    sectioning.appendChild(offerings)
+    offeringsElement = inputFileXML.createElement("offerings")
+    sectioningElement.appendChild(offeringsElement)
 
-    students = inputFileXML.createElement("students")
-    sectioning.appendChild(students)
+    studentsElement = inputFileXML.createElement("students")
+    sectioningElement.appendChild(studentsElement)
 
-    # Initialise all the ID's that are going to be used
+    # Initialise all the ID variables's that are going to be used
+    # All id's start with 1 in the UniTime SS Data Format so the variables will be incremented before they'll be assigned
     currentCourse = ""
-    currentCourseID = 1  # used for 'offering', 'course', and 'config' tags/elements for their 'id' attributes
-    currentLabID = 1  # used for 'subpart' tag/element for its 'id' attribute | labID is a unique course-labNum combination (from the Courses.xlsx file)
-    currentSectionID = 1  # used for 'section' tag/element for its 'id' attribute | sectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
-    currentStudentID = 1
+    currentCourseID = 0  # used for 'offering', 'course', and 'config' tags/elements for their 'id' attributes | for my SS problem, all offerings consists of only 1 course and 1 configuration, so the id's will be matching for all
+    currentLabID = 0  # used for 'subpart' tag/element for its 'id' attribute | labID is a unique course-labNum combination (from the Courses.xlsx file)
+    currentSectionID = 0  # used for 'section' tag/element for its 'id' attribute | sectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
+    currentStudentID = 0
+
+    # Process all course offerings
+    """
+        Links/References to read for iterating/traversing DataFrames:
+            https://www.geeksforgeeks.org/different-ways-to-iterate-over-rows-in-pandas-dataframe/
+            https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas
+            https://www.geeksforgeeks.org/iterating-over-rows-and-columns-in-pandas-dataframe/
+              
+    """
+    totalLabSections = len(coursesDF)
+    for labSection in range(totalLabSections): # Each row/entry in the Courses.xlsx file is a LabSection - a section of a lab for a Course
+        courseName = coursesDF.loc[labSection, "course"] # The course that this LabSection belongs to
+
+        if courseName != currentCourse:  # Create new offering element
+
+            currentOfferingElement = inputFileXML.createElement("offering")
+            currentCourseID += 1
+            currentOfferingElement.setAttribute("id", str(currentCourseID))
+            offeringsElement.appendChild(currentOfferingElement)
+
+            courseElement = inputFileXML.createElement("course")
+            courseElement.setAttribute("id", str(currentCourseID))
+            currentOfferingElement.appendChild(courseElement)
+
+            configElement = inputFileXML.createElement("config")
+            configElement.setAttribute("id", str(currentCourseID))
+            currentOfferingElement.appendChild(configElement)
 
 
+            currentCourse = courseName
+
+        # else continue with the currentOffering variable unmodified
+
+
+
+        #print(labSection, coursesDF.loc[labSection, "sectionNum"])
 
 
 

@@ -21,8 +21,8 @@
 	 ME: Since UniTime defines a sectioning differently from me (and the norm) - a section is an identical instance of a course;
 	 they refer to this as a "subpart" above - their 'section' for me is a lab session for a course -->
 	<offerings>
-		<offering id ="1">
-			<course id="<>" /> <!-- PUT relevant course id -->
+		<offering id="1">
+			<course id="<1>" /> <!-- PUT relevant course id -->
 			<!-- can have more than one course listed - this doesn't apply to my case -->
 			<config id ="1">
 

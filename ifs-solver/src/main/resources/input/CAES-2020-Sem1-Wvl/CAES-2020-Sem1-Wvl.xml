@@ -1,5 +1,50 @@
 <?xml version="1.0" ?>
 <sectioning version="1.0" initiative="CAES-Wvl" term="1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2">
-	<offerings/>
+	<offerings>
+		<offering id="1">
+			<course id="1"/>
+			<config id="1"/>
+		</offering>
+		<offering id="2">
+			<course id="2"/>
+			<config id="2"/>
+		</offering>
+		<offering id="3">
+			<course id="3"/>
+			<config id="3"/>
+		</offering>
+		<offering id="4">
+			<course id="4"/>
+			<config id="4"/>
+		</offering>
+		<offering id="5">
+			<course id="5"/>
+			<config id="5"/>
+		</offering>
+		<offering id="6">
+			<course id="6"/>
+			<config id="6"/>
+		</offering>
+		<offering id="7">
+			<course id="7"/>
+			<config id="7"/>
+		</offering>
+		<offering id="8">
+			<course id="8"/>
+			<config id="8"/>
+		</offering>
+		<offering id="9">
+			<course id="9"/>
+			<config id="9"/>
+		</offering>
+		<offering id="10">
+			<course id="10"/>
+			<config id="10"/>
+		</offering>
+		<offering id="11">
+			<course id="11"/>
+			<config id="11"/>
+		</offering>
+	</offerings>
 	<students/>
 </sectioning>
