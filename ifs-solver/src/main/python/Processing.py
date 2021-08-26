@@ -92,7 +92,7 @@ def main():
 
 	""" Process all course offerings (All LabSections for each Lab for each Course) """
 
-	# [DONE] Todo - Add course code, labNum, sectionNum, allocatedDay (from the Courses.xlsx to the offering elements) and the studentNumber, surname, firstnames (from the Students.xlsx to the student elements) to the XML input doc as additional attributes to their elements
+	# [DONE] Todo - Add course name/code, labNum, sectionNum, allocatedDay (from the Courses.xlsx to the offering elements) and the studentNumber, surname, firstnames (from the Students.xlsx to the student elements), as well as the course name (to each course request) to the XML input doc as additional attributes to their elements
 	# Since XML is extensible, this shoudn't break/affect the solver, and it will still appear in the solver's solution xml file (hopefully)
 	# which will make me reading that xml file easier (to understand what the id is referring to which specific course/labNum/sectionNum) and
 	# reduce processing to generate a readable solution
@@ -172,8 +172,6 @@ def main():
 
 	""" Process all student enrollments (lab sessions requests) """
 
-	# courseIdDict - dictionary of course ID's
-
 	numStudents = len(studentsDF)
 
 	for student in range(numStudents):
@@ -200,8 +198,35 @@ def main():
 		currentMajorElement.setAttribute("area", str(qualification))
 		currentStudentElement.appendChild(currentMajorElement)
 
+
 		# Add the student's courses
-		
+
+		numCourses = studentsDF.loc[student, "numCourses"] # I set the data type to 'int' when I read in the Excel file into the DataFrame
+
+		for course in range(1, numCourses+1): # For each course the student is registered for (course number starting from 1)
+			courseName = studentsDF.loc[student, "course" + str(course)]
+
+			"""
+				Some courses that some students may be doing (enrolled/registered for) may not be in the problem input's Courses.xlsx input file.
+				CURRENTLY, we shall ignore such a course enrollment/registration for the sectioning process (as we do not have 
+				the details about that course's lab sessions and allocated timeslots)
+				
+				If such a course was not in the Courses.xlsx input file then we shall get a KeyError when trying
+				to get its courseID from the courseIdDict
+			"""
+			try:
+				courseID = courseIdDict[courseName] # Get the courseID of this course
+			except KeyError:
+				# Do Nothing - Do not add this course enrollment for sectioning
+				print("Invalid Course: '" + courseName + "' was not specified in the problem input's Courses.xlsx file")
+			else: # if no KeyError thrown - code executed perfectly -> we were able to get the courseID of this course -> this course was specified in the input
+				# Process this course enrollment - add it to the student for sectioning
+				currentCourseRequestElement = inputFileXML.createElement("course")
+				currentCourseRequestID += 1
+				currentCourseRequestElement.setAttribute("id", str(currentCourseRequestID))
+				currentCourseRequestElement.setAttribute("course", str(courseID))
+				currentCourseRequestElement.setAttribute("courseName", str(courseName))  # My own additional attribute to the XML input doc (See Todo above)
+				currentStudentElement.appendChild(currentCourseRequestElement)
 
 		# Todo - add 'school' field from the Students.xlsx file
 
