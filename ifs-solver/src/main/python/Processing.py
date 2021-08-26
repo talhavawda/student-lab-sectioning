@@ -5,9 +5,10 @@ from xml.dom import minidom # For creating and writing to XML files
 #Installed the openpyxl, beautifulsoup4 and lxml packages
 
 def main():
-	coursesFilePath = "src/main/resources/input/CAES-2020-Sem1-Wvl/Courses.xlsx"
-	studentsFilePath = "src/main/resources/input/CAES-2020-Sem1-Wvl/Students.xlsx"
-	problemSpecificationFilePath = "src/main/resources/input/CAES-2020-Sem1-Wvl/Specification.xml" # Make txt ?
+	problemInstanceName = "2020-Sem1-CAES-Wvl"
+	coursesFilePath = "src/main/resources/input/" + problemInstanceName + "/Courses.xlsx"
+	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx"
+	problemSpecificationFilePath = "src/main/resources/input/" + problemInstanceName + "/Specification.xml" # Make txt ?
 
 	#coursesEF = pandas.ExcelFile(coursesFile, engine="openpyxl") # Load the Courses spreadsheet as an Excel File
 	#coursesDF = coursesEF.parse("Sheet1") # Load the first (and only) sheet as a DataFrame
@@ -171,7 +172,7 @@ def main():
 
 	inputFileXML = inputFileXML.toprettyxml(indent="\t")
 
-	xmlFileName = "src/main/resources/input/CAES-2020-Sem1-Wvl/CAES-2020-Sem1-Wvl.xml"
+	xmlFileName = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml"
 
 	# Write the input data XML file
 	with open(xmlFileName, "w") as xmlFile:

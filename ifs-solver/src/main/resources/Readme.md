@@ -1,5 +1,5 @@
 Each problem instance must be in its own folder (named appropriately: year-term-initiative) within the 'input' folder
-and must contained the following files named as is: "Courses.xlsx", "Students.xlsx", "Specification.xml"
+and must contained the following files named as is: "Courses.xlsx", "Students.xlsx", and "Specification.xml"
 
 ###### CoursesInputTemplate.xlsx:
 The venueCapacity field in my CourseInputTemplate.xlsx doc matches with the
@@ -33,4 +33,4 @@ I am working with the global/universal terms 'Faculty' and 'School' for the acad
  User must ensure that the course specified for each student matches the numCourses value as the
  numCourses value will be used to extract the courses of that student from the succeeding columns 
  (I am not going to go through all 10 columns and check for courses (if the field is non-empty) as
-  this will be more time intensive )
+  this will be more time intensive)
