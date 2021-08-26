@@ -43,7 +43,8 @@ I am working with the global/universal terms 'Faculty' and 'School' for the acad
  The 'qualification' field matches with the 'major' element (sub-element of the 'student' element) 
  in the CPSolver
  
+ TODO - see if I should add the school field as an element or attribute
+  
  The user using the program must ensure that all data in the input files are valid - all characters must
  be valid Unicode characters (specifically limit them to letters, numbers, whitespace and keyboard symbols) otherwise an error will result
  
- TODO - see if I should add the school field as an element or attribute

@@ -177,18 +177,33 @@ def main():
 	numStudents = len(studentsDF)
 
 	for student in range(numStudents):
-		#print(student)
+
+		# Student's details
 		currentStudentElement = inputFileXML.createElement("student")
 		currentStudentID += 1
 		currentStudentElement.setAttribute("id", str(currentStudentID))
 		studentNumber = studentsDF.loc[student, "studentNumber"]
-		currentStudentElement.setAttribute("studentNumber", str(studentNumber))
+		currentStudentElement.setAttribute("studentNumber", str(studentNumber))  # My own additional atrribute to the XML input doc (See Todo above)
 		surname = studentsDF.loc[student, "surname"]
-		currentStudentElement.setAttribute("surname", str(surname))
+		currentStudentElement.setAttribute("surname", str(surname))  # My own additional atrribute to the XML input doc (See Todo above)
 		firstnames = studentsDF.loc[student, "firstnames"]
-		#print(firstnames)
-		currentStudentElement.setAttribute("firstnames", str(firstnames))
+		currentStudentElement.setAttribute("firstnames", str(firstnames))  # My own additional atrribute to the XML input doc (See Todo above)
 		studentsElement.appendChild(currentStudentElement)
+
+		currentClassifcationElement = inputFileXML.createElement("classification")
+		faculty = studentsDF.loc[student, "faculty"]
+		currentClassifcationElement.setAttribute("area", str(faculty))
+		currentStudentElement.appendChild(currentClassifcationElement)
+
+		currentMajorElement = inputFileXML.createElement("major")
+		qualification = studentsDF.loc[student, "qualification"]
+		currentMajorElement.setAttribute("area", str(qualification))
+		currentStudentElement.appendChild(currentMajorElement)
+
+		# Add the student's courses
+		
+
+		# Todo - add 'school' field from the Students.xlsx file
 
 	# Todo - cater for qualifications/degrees having their students be allocated to specific timeslots for specific courses
 		#try and implement this by having an input file for the degree-course specific allocations, and when processing students
@@ -207,8 +222,9 @@ def main():
 		except UnicodeEncodeError as error:
 			print("ERROR:", error)
 			print("\tOne of the input files contains a (at least one) character that is not a valid Unicode symbol.")
-			print("\tWriting to input data XML file has been aborted. Please fix Error and re-run this program.")
-
+			print("\tWriting to input data XML file has been unsuccessful. Process aborted. Please fix Error and re-run this program.")
+		else:
+			print("Writing to input data XML file '" + xmlFileName + "' has been successful.")
 
 
 def processProblemSpecification(problemSpecificationFilePath):
