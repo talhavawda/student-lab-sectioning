@@ -47,3 +47,7 @@ This project is being developed using Java (as the CPSolver is available in Java
     - For the 2020-Sem1-CAES-Wvl's Students.xlsx input file, I used the COUNTA() Excel function (with the cell range being the 10 courses for that row)
      to populate the numCourses column as the "CAES Tutorial Allocations 2020BC1 - WVC" given by the College did not have 
      column specifying the number of modules (courses) the student is doing.
+        - The default Excel cell format is 'General' and if a cell is empty (in our case, the extra courses columns up till course10), then 
+        when reading into a Pandas' DataFrame, the value 'NaN' will be stored 
+            - I will be using the numCourses value for that student to extract the courses that that student will be doing as it will be quicker 
+            than iterating through all 10 columns and checking if the cell value is non-empty/non-NaN

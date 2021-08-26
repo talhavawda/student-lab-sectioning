@@ -25,9 +25,17 @@ def main():
 	coursesDF = pd.read_excel(coursesFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'labNum':int, 'sectionNum':int, 'allocatedTimeslot':int, 'venueCapacity':int, 'sessionLength':int})
 	#coursesColDF = coursesDF["course"]
 
-	print(coursesDF)
+	#print(coursesDF)
 
-	# studentsDF =
+	studentsDF = pd.read_excel(studentsFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'numCourses':int})
+	#print(studentsDF)
+
+	"""
+	for student in range(20):
+		for col in range(len(studentsDF.columns)):
+			print(studentsDF.iloc[student, col], end="\t")
+		print()
+	"""
 
 	specificationDict = processProblemSpecification(problemSpecificationFilePath)
 	#print(specificationDict)
@@ -70,6 +78,7 @@ def main():
 	currentCourseID = 0  # used for 'offering', 'course', and 'config' tags/elements for their 'id' attributes | for my SS problem, all offerings consists of only 1 course and 1 configuration, so the id's will be matching for all
 	currentLabID = 0  # used for 'subpart' tag/element for its 'id' attribute | currentLabID is a unique course-labNum combination (from the Courses.xlsx file)
 	currentLabSectionID = 0  # used for 'section' tag/element for its 'id' attribute | currentLabSectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
+
 	currentStudentID = 0
 	currentCourseRequestID = 0 # A 'course request' is a student-course combination where the student is (already) registered/enrolled for this course (for my SS problem specification) and wants to be assigned to a section for each of the labs (A UniTime Solver 'subpart') of this course
 
@@ -79,9 +88,11 @@ def main():
 
 	"""
 	courseIdDict = {}
+
+
 	""" Process all course offerings (All LabSections for each Lab for each Course) """
 
-	# [DONE] Todo - Add course code, labNum, sectionNum, allocatedDay to the XML input doc as additional attributes to their elements
+	# [DONE] Todo - Add course code, labNum, sectionNum, allocatedDay (from the Courses.xlsx to the offering elements) and the studentNumber, surname, firstnames (from the Students.xlsx to the student elements) to the XML input doc as additional attributes to their elements
 	# Since XML is extensible, this shoudn't break/affect the solver, and it will still appear in the solver's solution xml file (hopefully)
 	# which will make me reading that xml file easier (to understand what the id is referring to which specific course/labNum/sectionNum) and
 	# reduce processing to generate a readable solution
@@ -94,8 +105,8 @@ def main():
 			https://www.geeksforgeeks.org/iterating-over-rows-and-columns-in-pandas-dataframe/
 			  
 	"""
-	totalLabSections = len(coursesDF)
-	for labSection in range(totalLabSections): # Each row/entry in the Courses.xlsx file is a LabSection - a section of a lab for a Course
+	numLabSections = len(coursesDF)
+	for labSection in range(numLabSections): # Each row/entry in the Courses.xlsx file is a LabSection - a section of a lab for a Course
 		courseName = coursesDF.loc[labSection, "course"] # The course that this LabSection belongs to
 
 		# if a different course - i.e. a new course to process
@@ -163,6 +174,21 @@ def main():
 
 	# courseIdDict - dictionary of course ID's
 
+	numStudents = len(studentsDF)
+
+	for student in range(numStudents):
+		#print(student)
+		currentStudentElement = inputFileXML.createElement("student")
+		currentStudentID += 1
+		currentStudentElement.setAttribute("id", str(currentStudentID))
+		studentNumber = studentsDF.loc[student, "studentNumber"]
+		currentStudentElement.setAttribute("studentNumber", str(studentNumber))
+		surname = studentsDF.loc[student, "surname"]
+		currentStudentElement.setAttribute("surname", str(surname))
+		firstnames = studentsDF.loc[student, "firstnames"]
+		#print(firstnames)
+		currentStudentElement.setAttribute("firstnames", str(firstnames))
+		studentsElement.appendChild(currentStudentElement)
 
 	# Todo - cater for qualifications/degrees having their students be allocated to specific timeslots for specific courses
 		#try and implement this by having an input file for the degree-course specific allocations, and when processing students
@@ -176,9 +202,13 @@ def main():
 
 	# Write the input data XML file
 	with open(xmlFileName, "w") as xmlFile:
-		xmlFile.write(inputFileXML)
+		try:
+			xmlFile.write(inputFileXML)
+		except UnicodeEncodeError as error:
+			print("ERROR:", error)
+			print("\tOne of the input files contains a (at least one) character that is not a valid Unicode symbol.")
+			print("\tWriting to input data XML file has been aborted. Please fix Error and re-run this program.")
 
-	#print(inputFileXML.childNodes[0].toxml())
 
 
 def processProblemSpecification(problemSpecificationFilePath):
