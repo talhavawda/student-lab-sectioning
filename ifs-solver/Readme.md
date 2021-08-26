@@ -44,4 +44,6 @@ This project is being developed using Java (as the CPSolver is available in Java
                 - https://stackoverflow.com/questions/192907/xml-parsing-elementtree-vs-sax-and-dom
                 - https://www.mirketa.com/xml-parsing-python/
                 - https://www.edureka.co/community/52537/difference-between-elementtree-and-minidom
-                
+    - For the 2020-Sem1-CAES-Wvl's Students.xlsx input file, I used the COUNTA() Excel function (with the cell range being the 10 courses for that row)
+     to populate the numCourses column as the "CAES Tutorial Allocations 2020BC1 - WVC" given by the College did not have 
+     column specifying the number of modules (courses) the student is doing.

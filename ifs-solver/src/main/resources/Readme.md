@@ -1,3 +1,7 @@
+Each problem instance must be in its own folder (named appropriately: year-term-initiative) within the 'input' folder
+and must contained the following files named as is: "Courses.xlsx", "Students.xlsx", "Specification.xml"
+
+###### CoursesInputTemplate.xlsx:
 The venueCapacity field in my CourseInputTemplate.xlsx doc matches with the
 'limit' field of the 'section' tag in the CPSolver (See SSDataFormatTemplate.xml)
 
@@ -15,7 +19,7 @@ The sessionLength field in my CourseInputTemplate.xlsx doc matches with the
 <br>
 <br>
 
-###### StudentInputTemplate.xlsx:
+###### StudentsInputTemplate.xlsx:
 I am working with the global/universal terms 'Faculty' and 'School' for the academic structure.
  UKZN refers to a 'Faculty' as a 'College'.
  What I refer to as a 'course', UKZN refers to as a 'module'

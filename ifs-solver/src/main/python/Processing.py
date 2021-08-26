@@ -70,9 +70,14 @@ def main():
 	currentLabID = 0  # used for 'subpart' tag/element for its 'id' attribute | currentLabID is a unique course-labNum combination (from the Courses.xlsx file)
 	currentLabSectionID = 0  # used for 'section' tag/element for its 'id' attribute | currentLabSectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
 	currentStudentID = 0
+	currentCourseRequestID = 0 # A 'course request' is a student-course combination where the student is (already) registered/enrolled for this course (for my SS problem specification) and wants to be assigned to a section for each of the labs (A UniTime Solver 'subpart') of this course
 
-	courseIdDict = {} # A dictionary (map) to keep track of all the assigned ID's for the courses | to be used when processing students' course enrollments/requests
+	"""
+		A dictionary (map) to keep track of all the assigned ID's for the courses | to be used when processing students' course enrollments/requests
+		key = course; value = courseID
 
+	"""
+	courseIdDict = {}
 	""" Process all course offerings (All LabSections for each Lab for each Course) """
 
 	# [DONE] Todo - Add course code, labNum, sectionNum, allocatedDay to the XML input doc as additional attributes to their elements
@@ -155,7 +160,7 @@ def main():
 
 	""" Process all student enrollments (lab sessions requests) """
 
-	# courseIdDict - docitionary of course ID's
+	# courseIdDict - dictionary of course ID's
 
 
 	# Todo - cater for qualifications/degrees having their students be allocated to specific timeslots for specific courses
