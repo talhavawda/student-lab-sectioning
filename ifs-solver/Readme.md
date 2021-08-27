@@ -5,10 +5,20 @@ to solve my Student Sectioning problem.
 
 This project is being developed using Java (as the CPSolver is available in Java only) in IntelliJ IDEA.
 
+UniTime Student Sectioning Solver (UniTime site Links):
+ - Constraint Solver Examples: Constraint Solver Examples: https://www.cpsolver.org/cpsolver_examples.php
+ - Student Sectioning Problem Description: https://www.unitime.org/sct_description.php
+ - Student Sectioning Data Format: https://www.unitime.org/sct_dataformat.php
+ - Student Sectioning Benchmark Datasets: https://www.unitime.org/sct_datasets.php
+ - Student Sectioning Solver Execution: https://www.unitime.org/sct_execution.php
+ - CPSolver API Documentation: https://www.unitime.org/api/cpsolver-1.3/index.html
+ 
+
 ## What I've done (Steps)
 1. Created this project (ifs-solver) in IntelliJ inside my local copy of the student-lab-sectioning repository
     - This automatically adds the project to Git and I can access Git features inside IntelliJ
-2. I created a 'lib' folder (Right Click -> New -> Directory) and added the CPSolver javadoc files to the lib folder.
+2. I created a 'lib' folder (Right Click -> New -> Directory), created a sub-folder inside it called 'cpsolver-1.3.232'
+ and added the CPSolver jar files (and the dom4j and log4j jar files) to the cpsolver-1.3.232 folder.
 3. I right-clicked the 'lib' folder and selected 'Add as library'
 4. Created sub-directories in the src folder
     - 'main' and 'test' sub-directories
@@ -18,15 +28,16 @@ This project is being developed using Java (as the CPSolver is available in Java
         as Tests in the Project Structure
 5. Studying the Data Format of the UniTime Student Sectioning solver
 6. Creating my Excel template input files
-7. [Incomplete] Creating input files for CAES-2020-Sem1-Wvl according to my templates
-8. [Incomplete] Creating a Python program script to read in and process input files, and produce an XML file (input data file)
+7. Creating input files for CAES-2020-Sem1-Wvl according to my templates
+8. Creating a Python program script (InputProcessing.py) inside this ifs-solver project to read in and process input files, and produce an XML file (input data file)
  for the UniTime Student Sectioning solver according to their data format structure/template
+    - Current input files I'm using are the CAES-2020-Sem1-Wvl problem instance
     - How to run Python in IntelliJ:
         - Links
             - https://www.jetbrains.com/help/idea/configuring-local-python-interpreters.html
             - https://www.jetbrains.com/help/idea/configuring-python-sdk.html
             - https://www.jetbrains.com/help/idea/run-debug-configuration-python.html#1
-        - Then go to Project Settings -> Moudules -> Dependencies -> Add Python interpreter
+        - Then go to Project Settings -> Modules -> Dependencies -> Add Python interpreter
         - When wanting to run a Python script, switch to the Python configuration in the 'Edit Run/Debug Configurations' dialog dropdown 
     - For the main software, when adding the Python interpreter, consider using a virtual environment interpreter
     instead of the System interpreter
@@ -38,16 +49,19 @@ This project is being developed using Java (as the CPSolver is available in Java
             - References for using Mindom:
                 - https://www.geeksforgeeks.org/create-xml-documents-using-python/
                 - https://www.guru99.com/manipulating-xml-with-python.html
-                
         - However apparently ElementTree is faster for parsing (reading in) XML files, but I don't think this will affect me (hopefully) as I'm just creating the XML files
             - References:
                 - https://stackoverflow.com/questions/192907/xml-parsing-elementtree-vs-sax-and-dom
                 - https://www.mirketa.com/xml-parsing-python/
                 - https://www.edureka.co/community/52537/difference-between-elementtree-and-minidom
-    - For the 2020-Sem1-CAES-Wvl's Students.xlsx input file, I used the COUNTA() Excel function (with the cell range being the 10 courses for that row)
-     to populate the numCourses column as the "CAES Tutorial Allocations 2020BC1 - WVC" given by the College did not have 
-     column specifying the number of modules (courses) the student is doing.
+                
+    - For the 2020-Sem1-CAES-Wvl's Students.xlsx input file, I used the COUNTA() Excel function (with the cell range being the 10 courses for that row) 
+    to populate the numCourses column as the "CAES Tutorial Allocations 2020BC1 - WVC" given by the College did not have 
+    column specifying the number of modules (courses) the student is doing.
         - The default Excel cell format is 'General' and if a cell is empty (in our case, the extra courses columns up till course10), then 
         when reading into a Pandas' DataFrame, the value 'NaN' will be stored 
             - I will be using the numCourses value for that student to extract the courses that that student will be doing as it will be quicker 
             than iterating through all 10 columns and checking if the cell value is non-empty/non-NaN
+ 9. Running the UniTime's Student Sectioning CPSolver
+    - CMD command I'm using:
+        - java -Xmx1g -jar lib/cpsolver-1.3.232/cpsolver-1.3.232.jar src/main/resources/SolverConfigurationFile.cfg src/main/resources/input/2020-Sem1-CAES-Wvl/2020-Sem1-CAES-Wvl.xml src/main/resources/input/2020-Sem1-CAES-Wvl

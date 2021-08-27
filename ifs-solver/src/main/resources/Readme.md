@@ -1,5 +1,5 @@
 Each problem instance must be in its own folder (named appropriately: year-term-initiative) within the 'input' folder
-and must contained the following files named as is: "Courses.xlsx", "Students.xlsx", and "Specification.xml"
+and must contain the following files named as is: "Courses.xlsx", "Students.xlsx", and "Specification.xml"
 <br>
 <br>
 
