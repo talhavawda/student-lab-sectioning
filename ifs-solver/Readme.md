@@ -72,10 +72,20 @@ UniTime Student Sectioning Solver (UniTime site Links):
         - CMD command I settled on using that didn't give an error:
             - java -Xmx1g -jar lib/cpsolver-1.3.232/cpsolver-1.3.232.jar src/main/resources/SolverConfigurationFile.cfg src/main/resources/input/2020-Sem1-CAES-Wvl/2020-Sem1-CAES-Wvl.xml src/main/resources/input/2020-Sem1-CAES-Wvl
         - However, the solver interpreted the problem I'm trying to solve as a Course Timetabling problem and gave an error about input being incorrect.
+             - `Reading 2020-Sem1-CAES-Wvl.x: [main] Test failed.
+               java.lang.IllegalArgumentException: Given XML file is not large lecture room timetabling problem.
+                       at org.cpsolver.coursett.TimetableXMLLoader.load(TimetableXMLLoader.java:159)
+                       at org.cpsolver.coursett.TimetableXMLLoader.load(TimetableXMLLoader.java:147)
+                       at org.cpsolver.coursett.Test.<init>(Test.java:231)
+                       at org.cpsolver.coursett.Test.main(Test.java:292)`
     - So I decided to skip cmd and go straight to executing from code. 
         - Created a org.talhavawda.ifssolver package inside the src/main/java directory and added a Main file with a main() method. 
         Then I added code to my Main.main() method to set up the string parameter variables, and then called org.cpsolver.studentsect.Test.main() with its arg param being the array of my string parameter variables.
-        - Was getting a NullPointerException error during the XML Loading process (I didn't specify a 'dates' attribute for te 'time' element of the 'section' element in my XML input file generation), so I modified the default configuration file given by UniTime to tune it to my 
-        specific Student Sectioning Problem (I was going to have to modify the configuration file anyway but I wanted to run ion default first)
+        - Was getting a NullPointerException error during the XML Loading process - I didn't specify a 'dates' attribute for the 'time' element of the 'section' element in my XML input file generation
+            - I fixed this by setting a 'dates' attribute with the value being an empty string
+                - Todo: Consider changing this 'dates' value to something more meaningful
+        - Then I was getting an error cos I didn't put priority attribute for course requests (NumberFormatException). Fixed that also.
+        - It's working now 
+        - I modified the default configuration file given by UniTime to tune it to my specific Student Sectioning Problem
             - SEE src/main/resources/Readme.md for info about the configuration file I'm using for the solver
         

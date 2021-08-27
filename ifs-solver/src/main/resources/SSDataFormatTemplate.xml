@@ -4,7 +4,7 @@
 
 	<!-- The initiative differentiates between the multiple independent timetables/sectionings required for the same Academic
 	 Session/period (term-year) -->
-	<sectioning version="1.0" initiative="CAES-Wvl" term="1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2" >
+	<sectioning version="1.0" initiative="CAES-Wvl" term="Sem1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2" >
 		 <!-- version: file version -->
 		 <!-- initiative: campus designation -->
 		 <!-- term: semester  -->
@@ -75,7 +75,8 @@
 
 			<!-- Each course specified here is a course request of the student-->
 			<!-- course PARAMS:
-				id: unique id of this course request; priority:	priority of this course request;
+				id: unique id of this course request;
+				priority: priority of this course request (lower priority value means more preferred);
 				weight: weight of this course request, by default 1.0, defines the amount of space which will be taken in the section by this course request;
 				course: course id of the requested course; alternative:	true, when alternative request (false by default)
 				[IGNORE] waitlist: true (false by default), when the student should be put on waitlist when he/she cannot be enrolled in the course (e.g., an alternative request cannot be assigned instead)

@@ -166,6 +166,7 @@ def main():
 		currentTimeElement.setAttribute("start", str(allocatedTimeslot))
 		sessionLength = coursesDF.loc[labSection, "sessionLength"] # The length of this LabSection session
 		currentTimeElement.setAttribute("length", str(sessionLength))
+		currentTimeElement.setAttribute("dates", "") # Setting a random dates binary string
 		currentTimeElement.setAttribute("allocatedDay", str(allocatedDay)) # My own additional atrribute to the XML input doc (See Todo above)
 		currentSectionElement.appendChild(currentTimeElement)
 
@@ -224,6 +225,7 @@ def main():
 				currentCourseRequestElement = inputFileXML.createElement("course")
 				currentCourseRequestID += 1
 				currentCourseRequestElement.setAttribute("id", str(currentCourseRequestID))
+				currentCourseRequestElement.setAttribute("priority", "0") # All course requests will have the lowest priority value - all are equal
 				currentCourseRequestElement.setAttribute("course", str(courseID))
 				currentCourseRequestElement.setAttribute("courseName", str(courseName))  # My own additional attribute to the XML input doc (See Todo above)
 				currentStudentElement.appendChild(currentCourseRequestElement)
