@@ -1,7 +1,8 @@
 package com.talhavawda.ifssolver;
-import org.cpsolver;
+
 //import org.cpsolver.studentsct.*;
-//import org.cpsolver.*;
+
+import org.cpsolver.studentsct.Test;
 
 public class Main {
 	public static void main(String [] args) {
@@ -12,6 +13,6 @@ public class Main {
 		String configurationFilePath = "src/main/resources/SolverConfigurationFile.cfg";
 
 		String[] cpsolverArgs = {configurationFilePath, xmlInputFilePath, problemInstanceDirectoryPath};
-		Test.main();
+		Test.main(cpsolverArgs);
 	}
 }

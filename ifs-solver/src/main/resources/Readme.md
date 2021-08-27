@@ -48,3 +48,14 @@ I am working with the global/universal terms 'Faculty' and 'School' for the acad
  The user using the program must ensure that all data in the input files are valid - all characters must
  be valid Unicode characters (specifically limit them to letters, numbers, whitespace and keyboard symbols) otherwise an error will result
  
+ <br>
+ <br>
+ 
+###### Configuration File (for CPSolver)
+The default file given on the UniTime's website is the 'configFileDefault.cfg' file
+I made a copy of it and named it "SolverConfiguration.cfg".
+My com.talhavawda.ifssolver.Main.main() accesses it from this resource folder, so don't move it 
+
+Changes made:
+- Line 41-43:  Use student distance conflicts
+    - changed it to false
