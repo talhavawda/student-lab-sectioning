@@ -93,7 +93,7 @@
 			SECTIONS OF THAT SUBPART] OF A COURSE THAT A STUDENT REQUESTS
 			-->
 			<course id="" priority="0" weight="1.0" course =""/>
-				<best>
+				<best course=""> <!-- course id here is same as in above line-->
 					<!-- The best assigned section for each subpart of the course -->
 					<section id="1832"/>
 					<section id="1841"/>

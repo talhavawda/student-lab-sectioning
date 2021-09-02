@@ -85,7 +85,32 @@ UniTime Student Sectioning Solver (UniTime site Links):
             - I fixed this by setting a 'dates' attribute with the value being an empty string
                 - Todo: Consider changing this 'dates' value to something more meaningful
         - Then I was getting an error cos I didn't put priority attribute for course requests (NumberFormatException). Fixed that also.
-        - It's working now 
+        - It's working now
+            - Observations:
+                - The solution file did not include all the attributes I added to the input file in addition
+                 to what was in the UniTime's SS Data Format
+                 - request.priorities.csv in the solution folder seems to indicate that if a student has more than 1 course request,
+                 then the priorities of their course requests will be in the listed/ascending order (and not the same priority)
+                 even if the priority attribute values for those course requests are the same.
+                - Config file changes I made (see below)
         - I modified the default configuration file given by UniTime to tune it to my specific Student Sectioning Problem
+            - Default values were Termination.StopWhenComplete=false and Termination.TimeOut=28800 so it was continuing even though it was solved.
+            I changed Timeout to 60 secs and upon observation of the log file (210902_105758), the CAES-Wvl case was solved
+            within 4 seconds. The solution kept finding other solutions for the remaining 56 seconds, but returned the BEST 
+            solution at the end. The BEST solution wasn't a very big improvement on the first solution, and the quality of the solutions
+            seemed to have decreased over time. 
+            
             - SEE src/main/resources/Readme.md for info about the configuration file I'm using for the solver
+ 
+Todo: CHECK LOG FILE OF RUN AND CHANGE CONFIG FILE TO STOP EXECUTION SOONER
+Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions
+Todo: Try out different heuristics. (modify config file)
+
+Todo: Change Xmx option (Memory heap size of JVM)
+    - See:
+        - https://stackoverflow.com/questions/5374455/what-does-java-option-xmx-stand-for
+        - https://www.jetbrains.com/help/idea/increasing-memory-heap.html
+        - https://www.jetbrains.com/help/idea/tuning-the-ide.html
+        - https://intellij-support.jetbrains.com/hc/en-us/articles/206544869-Configuring-JVM-options-and-platform-properties
+        
         
