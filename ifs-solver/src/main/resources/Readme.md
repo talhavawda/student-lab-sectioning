@@ -57,5 +57,10 @@ I made a copy of it and named it "SolverConfiguration.cfg".
 My com.talhavawda.ifssolver.Main.main() accesses it from this resource folder, so don't move it 
 
 Changes made:
-- Line 41-43:  Use student distance conflicts
+- Use student distance conflicts (StudentSct.StudentDist)
     - changed it to false
+- Maximal solver time (Termination.TimeOut)
+    - changed it to 60 from 28800
+    - changed it to 300 from 60
+- Stop when a complete solution if found (Termination.StopWhenComplete)
+    - changed it to true

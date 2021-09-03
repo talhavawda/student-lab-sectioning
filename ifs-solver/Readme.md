@@ -87,9 +87,11 @@ UniTime Student Sectioning Solver (UniTime site Links):
         - Then I was getting an error cos I didn't put priority attribute for course requests (NumberFormatException). Fixed that also.
         - It's working now
             - Observations:
-                - The solution file did not include all the attributes I added to the input file in addition
+                - The solution.xml file did not include all the attributes I added to the input file in addition
                  to what was in the UniTime's SS Data Format
-                 - request.priorities.csv in the solution folder seems to indicate that if a student has more than 1 course request,
+                 - tableau.csv is a csv file of the solution - it indicates the sections assigned to each course request (1 section per subpart of a course)
+                    - Each row is a course request
+                 - request-priorities.csv and tableau.csv in the solution folder seems to indicate that if a student has more than 1 course request,
                  then the priorities of their course requests will be in the listed/ascending order (and not the same priority)
                  even if the priority attribute values for those course requests are the same.
                 - Config file changes I made (see below)
