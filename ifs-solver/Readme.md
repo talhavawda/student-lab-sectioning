@@ -107,7 +107,8 @@ UniTime Student Sectioning Solver (UniTime site Links):
          file (also containing the scheduled practical timetables but for both campuses), I have noticed that it includes additional 
          courses that were not included in the  Wvl/pmb" sem1 2020 table" files. So I need to go remodify the Courses.xlsx input file
          for the 2020-Sem1-CAES-Wvl problem instance
-         
+
+Todo: Readme of what each solution folder is         
 Todo: CHECK LOG FILE OF RUN AND CHANGE CONFIG FILE TO STOP EXECUTION SOONER
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions
 Todo: Try out different heuristics. (modify config file)
