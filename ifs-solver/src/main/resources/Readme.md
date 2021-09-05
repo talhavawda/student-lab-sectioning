@@ -69,3 +69,15 @@ Changes made:
         - all thus does (to the solution) is add the time of the session (as actual text in between the tags)
         to the time sub-element of the section element in the offerings part, and the to the allocated
         section element in the students part 
+
+<br>
+
+###### Solutions explanations
+##### 2020-Sem1-CAES-Wvl-OLD
+- 210828_003504
+- 210902_105758
+- 210903_204021
+- 210903_223248
+<br>
+
+##### 2020-Sem1-CAES-Wvl

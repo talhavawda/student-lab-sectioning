@@ -107,8 +107,12 @@ UniTime Student Sectioning Solver (UniTime site Links):
          file (also containing the scheduled practical timetables but for both campuses), I have noticed that it includes additional 
          courses that were not included in the  Wvl/pmb" sem1 2020 table" files. So I need to go remodify the Courses.xlsx input file
          for the 2020-Sem1-CAES-Wvl problem instance
+         - I have updated the Courses.xlsx file for the 2020-Sem1-CAES-Wvl problem instance with the additional
+          courses (and their scheduled allocations), and ran InputProcessing.py on the now updated dataset to create the updated
+           2020-Sem1-CAES-Wvl input data file
 
-Todo: Readme of what each solution folder is         
+Todo: Readme of what each solution folder is
+Todo: RUN IFS-SOLVER ON UPDATED 2020-Sem1-CAES-Wvl PROBLEM INSTANCE         
 Todo: CHECK LOG FILE OF RUN AND CHANGE CONFIG FILE TO STOP EXECUTION SOONER
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions
 Todo: Try out different heuristics. (modify config file)
