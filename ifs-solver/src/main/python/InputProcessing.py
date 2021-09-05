@@ -25,7 +25,7 @@ def main():
 	coursesDF = pd.read_excel(coursesFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'labNum':int, 'sectionNum':int, 'allocatedTimeslot':int, 'venueCapacity':int, 'sessionLength':int})
 	#coursesColDF = coursesDF["course"]
 
-	#print(coursesDF)
+	print(coursesDF)
 
 	studentsDF = pd.read_excel(studentsFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'numCourses':int})
 	#print(studentsDF)
