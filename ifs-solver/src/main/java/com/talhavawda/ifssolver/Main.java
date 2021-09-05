@@ -13,6 +13,6 @@ public class Main {
 		String configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
 
 		String[] cpsolverArgs = {configurationFilePath, xmlInputFilePath, problemInstanceDirectoryPath};
-		Test.main(cpsolverArgs);
+		Test.main(cpsolverArgs); //Does Batch Sectioning by default. Will do Online Sectioning if specify a 4th parameter in the args [], with it being the string "online"
 	}
 }

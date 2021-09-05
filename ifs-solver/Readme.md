@@ -13,7 +13,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
  - Student Sectioning Solver Execution: https://www.unitime.org/sct_execution.php
  - CPSolver API Documentation: https://www.unitime.org/api/cpsolver-1.3/index.html
  
-
+#hi
 ## What I've done (Steps)
 1. Created this project (ifs-solver) in IntelliJ inside my local copy of the student-lab-sectioning repository
     - This automatically adds the project to Git and I can access Git features inside IntelliJ
@@ -102,7 +102,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
             solution at the end. The BEST solution wasn't a very big improvement on the first solution, and the quality of the solutions
             seemed to have decreased over time. 
             - Further changed StopWhenComplete to true and Timeout to 300      
-            - SEE src/main/resources/Readme.md for info about the configuration file I'm using for the solver
+            - SEE src/main/resources/Readme.md for info about the configuration file I'm using for the solver (and more changes I made to it)
          - Upon relooking at the raw input data files given by UKZN, I noticed that in the "Final Practical allocations Semester 1 2020 Overall"
          file (also containing the scheduled practical timetables but for both campuses), I have noticed that it includes additional 
          courses that were not included in the  Wvl/pmb" sem1 2020 table" files. So I need to go remodify the Courses.xlsx input file
@@ -110,10 +110,9 @@ UniTime Student Sectioning Solver (UniTime site Links):
          - I have updated the Courses.xlsx file for the 2020-Sem1-CAES-Wvl problem instance with the additional
           courses (and their scheduled allocations), and ran InputProcessing.py on the now updated dataset to create the updated
            2020-Sem1-CAES-Wvl input data file
+            - Tried running IFS-Solver on updated 2020-Sem1-CAES-Wvl problem instance. See [here](src/main/resources/Readme.md#2020-sem1-caes-wvl).
+        
 
-Todo: Readme of what each solution folder is
-Todo: RUN IFS-SOLVER ON UPDATED 2020-Sem1-CAES-Wvl PROBLEM INSTANCE         
-Todo: CHECK LOG FILE OF RUN AND CHANGE CONFIG FILE TO STOP EXECUTION SOONER
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions
 Todo: Try out different heuristics. (modify config file)
 

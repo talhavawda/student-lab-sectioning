@@ -75,9 +75,24 @@ Changes made:
 ###### Solutions explanations
 ##### 2020-Sem1-CAES-Wvl-OLD
 - 210828_003504
+    - First run. Didn't stop running (due to the high TimeOut value) so I terminated it. 
 - 210902_105758
+    - Configuration File change: changed Maximal solver time (Termination.TimeOut)  to 60 from 28800
+    - solver took 1m
 - 210903_204021
+    - Configuration File change: changed Stop when a complete solution if found (Termination.StopWhenComplete) to true,
+    and Termination.TimeOut to 300 (from 60)
+    - solver took 0.21m (12.64s)
 - 210903_223248
+    - Configuration File change: changed Anonymize XML file (no names) (Xml.ShowNames) to true
+    - solver took 0.24m (14.66s)
 <br>
 
 ##### 2020-Sem1-CAES-Wvl
+- 210905_212507
+    - Running IFS-Solver on updated 2020-Sem1-CAES-Wvl problem instance
+    - According to Debug.log file, the program continued running as the initial solution and subsequent solutions
+    were not complete solutions, and the solver continued till it reached the TimeOut termination condition (300s),
+    and when ShutdownHook was printing info about the solution (before writing to the solution.xml file) in the studentsct.Test class,
+    there was a java.lang.NullPointerException with an error message "Test failed.". Thus, there was no output student.xml
+    file given.
