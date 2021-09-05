@@ -29,7 +29,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
         as Tests in the Project Structure
 5. Studying the Data Format of the UniTime Student Sectioning solver
 6. Creating my Excel template input files
-7. Creating input files for CAES-2020-Sem1-Wvl according to my templates
+7. Creating input files for CAES-2020-Sem1-Wvl dataset (/problem instance) according to my templates
 8. Creating a Python program script (InputProcessing.py) inside this ifs-solver project to read in and process input files, and produce an XML file (input data file)
  for the UniTime Student Sectioning solver according to their data format structure/template
     - Current input files I'm using are the CAES-2020-Sem1-Wvl problem instance
@@ -64,7 +64,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
             - I will be using the numCourses value for that student to extract the courses that that student will be doing as it will be quicker 
             than iterating through all 10 columns and checking if the cell value is non-empty/non-NaN
     - SEE src/main/resources/Readme.md        
- 9. Running the UniTime's Student Sectioning CPSolver
+ 9. Running the UniTime's Student Sectioning CPSolver (on the CAES-2020-Sem1-Wvl problem instance)
     - Tried running from command line first (using the execution command on the UniTime website) and was playing around with the command to get the file paths right
         - The execution command on the UniTime website has the java jar file to run called 'studentsct-1.3.jar' but there doesn't exist such a file (and the output was
         giving an error about that file not being found) - we're only given the cpsolver jar file that contains everything.
@@ -79,7 +79,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
                        at org.cpsolver.coursett.Test.<init>(Test.java:231)
                        at org.cpsolver.coursett.Test.main(Test.java:292)`
     - So I decided to skip cmd and go straight to executing from code. 
-        - Created a org.talhavawda.ifssolver package inside the src/main/java directory and added a Main file with a main() method. 
+        - Created an org.talhavawda.ifssolver package inside the src/main/java directory and added a Main file with a main() method. 
         Then I added code to my Main.main() method to set up the string parameter variables, and then called org.cpsolver.studentsect.Test.main() with its arg param being the array of my string parameter variables.
         - Was getting a NullPointerException error during the XML Loading process - I didn't specify a 'dates' attribute for the 'time' element of the 'section' element in my XML input file generation
             - I fixed this by setting a 'dates' attribute with the value being an empty string
@@ -101,9 +101,13 @@ UniTime Student Sectioning Solver (UniTime site Links):
             within 4 seconds. The solution kept finding other solutions for the remaining 56 seconds, but returned the BEST 
             solution at the end. The BEST solution wasn't a very big improvement on the first solution, and the quality of the solutions
             seemed to have decreased over time. 
-            
+            - Further changed StopWhenComplete to true and Timeout to 300      
             - SEE src/main/resources/Readme.md for info about the configuration file I'm using for the solver
- 
+         - Upon relooking at the raw input data files given by UKZN, I noticed that in the "Final Practical allocations Semester 1 2020 Overall"
+         file (also containing the scheduled practical timetables but for both campuses), I have noticed that it includes additional 
+         courses that were not included in the  Wvl/pmb" sem1 2020 table" files. So I need to go remodify the Courses.xlsx input file
+         for the 2020-Sem1-CAES-Wvl problem instance
+         
 Todo: CHECK LOG FILE OF RUN AND CHANGE CONFIG FILE TO STOP EXECUTION SOONER
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions
 Todo: Try out different heuristics. (modify config file)
