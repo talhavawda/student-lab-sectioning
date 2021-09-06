@@ -104,11 +104,13 @@ Changes made:
     - Running solver after fixing previous NullPointerException error.
     - No complete solution found - best solution had 56 course requests unassigned (6118/6174 [99.09%] assigned). 
         - Unassigned course requests in the solution.xml file will not have a <best> sub-element added to it.
+            - In the tableau.csv file in the solution folder, the request's Enrolled attribute value will be 'No',
+            and the Section value will be empty. In the request-priorities.csv file, the Enrolled value will be 0.
         
 - 210906_143728
     - Changed Termination.TimeOut to 900 (changed it back to 300 after this run)
     - No complete solution found. THe same 56 unassigned course requests as the previous solution.
         - Upon further digging, it seems that 2 courses are filled to capacity and have more course requests than their capacity:
-        The availability-conflicts-real.csv says that Course C2 (BIOL103) has 18 availability conflicts for its (only) Section S5
+        The availability-conflicts-real.csv (and conflicts-real.csv, and section-conflicts-real.csv) says that Course C2 (BIOL103) has 18 availability conflicts for its (only) Section S5
         and that Course C3 (BIOL195) has 38 availability conflicts for its (only) Section S6 [both these sections have a capacity of 200]
         If we count the number of Course Requests for BIOL103 and BIOL195, it is indeed 218 and 238 respectively.
