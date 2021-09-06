@@ -140,6 +140,7 @@ def main():
 			currentSubpartElement = inputFileXML.createElement("subpart")
 			currentLabID += 1
 			currentSubpartElement.setAttribute("id", str(currentLabID))
+			currentSubpartElement.setAttribute("itype", "Laboratory") #itype: Instructional Type | All events in this lab sectioning project are Labs
 			currentSubpartElement.setAttribute("courseLabNum", str(labNum)) # My own additional atrribute to the XML input doc (See Todo above)
 			currentConfigElement.appendChild(currentSubpartElement)
 

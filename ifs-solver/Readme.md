@@ -103,14 +103,20 @@ UniTime Student Sectioning Solver (UniTime site Links):
             seemed to have decreased over time. 
             - Further changed StopWhenComplete to true and Timeout to 300      
             - SEE src/main/resources/Readme.md for info about the configuration file I'm using for the solver (and more changes I made to it)
-         - Upon relooking at the raw input data files given by UKZN, I noticed that in the "Final Practical allocations Semester 1 2020 Overall"
-         file (also containing the scheduled practical timetables but for both campuses), I have noticed that it includes additional 
-         courses that were not included in the  Wvl/pmb" sem1 2020 table" files. So I need to go remodify the Courses.xlsx input file
-         for the 2020-Sem1-CAES-Wvl problem instance
-         - I have updated the Courses.xlsx file for the 2020-Sem1-CAES-Wvl problem instance with the additional
-          courses (and their scheduled allocations), and ran InputProcessing.py on the now updated dataset to create the updated
-           2020-Sem1-CAES-Wvl input data file
-            - Tried running IFS-Solver on updated 2020-Sem1-CAES-Wvl problem instance. See [here](src/main/resources/Readme.md#2020-sem1-caes-wvl).
+    - Upon relooking at the raw input data files given by UKZN, I noticed that in the "Final Practical allocations Semester 1 2020 Overall"
+    file (also containing the scheduled practical timetables but for both campuses), that it includes additional 
+    courses that were not included in the  Wvl/pmb" sem1 2020 table" files. So I need to go remodify the Courses.xlsx input file
+    for the 2020-Sem1-CAES-Wvl problem instance
+        - I have updated the Courses.xlsx file for the 2020-Sem1-CAES-Wvl problem instance with the additional
+        courses (and their scheduled allocations), and ran InputProcessing.py on the now updated dataset to create the updated
+        2020-Sem1-CAES-Wvl XML input data file
+            - Tried running IFS-Solver on updated 2020-Sem1-CAES-Wvl problem instance. 
+            See [src/main/resources/Readme.md#2020-sem1-caes-wvl - 210905_212507 solution](src/main/resources/Readme.md#2020-sem1-caes-wvl) 
+            for the error that occurred. I found the error to be in the following line of code: 
+            `cmp = a.getSubpart().getInstructionalType().compareTo(b.getSubpart().getInstructionalType());`
+            in the SectionConflictTable.java file. I remember now that I did not set an Instructional Type attribute for the subparts of the courses in the XML input file.
+            I fixed the error by updating the Python program script (InputProcessing.py) to add a "Laboratory" to each of the subparts, then reran
+            InputProcessing.py and then the IFS-Solver
         
 
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions

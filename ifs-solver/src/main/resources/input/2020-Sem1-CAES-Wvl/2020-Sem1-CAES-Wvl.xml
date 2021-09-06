@@ -4,7 +4,7 @@
 		<offering id="1">
 			<course id="1" name="BIOL101"/>
 			<config id="1">
-				<subpart id="1" courseLabNum="1">
+				<subpart id="1" itype="Laboratory" courseLabNum="1">
 					<section id="1" courseLabSectionNum="1" limit="200">
 						<time days="1000000" start="2" length="1" dates="" allocatedDay="Monday"/>
 					</section>
@@ -23,7 +23,7 @@
 		<offering id="2">
 			<course id="2" name="BIOL103"/>
 			<config id="2">
-				<subpart id="2" courseLabNum="1">
+				<subpart id="2" itype="Laboratory" courseLabNum="1">
 					<section id="5" courseLabSectionNum="1" limit="200">
 						<time days="0000100" start="2" length="1" dates="" allocatedDay="Friday"/>
 					</section>
@@ -33,7 +33,7 @@
 		<offering id="3">
 			<course id="3" name="BIOL195"/>
 			<config id="3">
-				<subpart id="3" courseLabNum="1">
+				<subpart id="3" itype="Laboratory" courseLabNum="1">
 					<section id="6" courseLabSectionNum="1" limit="200">
 						<time days="0000100" start="1" length="1" dates="" allocatedDay="Friday"/>
 					</section>
@@ -43,7 +43,7 @@
 		<offering id="4">
 			<course id="4" name="BIOL196"/>
 			<config id="4">
-				<subpart id="4" courseLabNum="1">
+				<subpart id="4" itype="Laboratory" courseLabNum="1">
 					<section id="7" courseLabSectionNum="1" limit="200">
 						<time days="0010000" start="1" length="1" dates="" allocatedDay="Wednesday"/>
 					</section>
@@ -53,7 +53,7 @@
 		<offering id="5">
 			<course id="5" name="CHEM110"/>
 			<config id="5">
-				<subpart id="5" courseLabNum="1">
+				<subpart id="5" itype="Laboratory" courseLabNum="1">
 					<section id="8" courseLabSectionNum="1" limit="144">
 						<time days="1000000" start="2" length="1" dates="" allocatedDay="Monday"/>
 					</section>
@@ -78,7 +78,7 @@
 		<offering id="6">
 			<course id="6" name="CHEM195"/>
 			<config id="6">
-				<subpart id="6" courseLabNum="1">
+				<subpart id="6" itype="Laboratory" courseLabNum="1">
 					<section id="14" courseLabSectionNum="1" limit="192">
 						<time days="0100000" start="1" length="1" dates="" allocatedDay="Tuesday"/>
 					</section>
@@ -91,7 +91,7 @@
 		<offering id="7">
 			<course id="7" name="CHEM196"/>
 			<config id="7">
-				<subpart id="7" courseLabNum="1">
+				<subpart id="7" itype="Laboratory" courseLabNum="1">
 					<section id="16" courseLabSectionNum="1" limit="48">
 						<time days="1000000" start="2" length="1" dates="" allocatedDay="Monday"/>
 					</section>
@@ -110,7 +110,7 @@
 		<offering id="8">
 			<course id="8" name="COMP100"/>
 			<config id="8">
-				<subpart id="8" courseLabNum="1">
+				<subpart id="8" itype="Laboratory" courseLabNum="1">
 					<section id="20" courseLabSectionNum="1" limit="250">
 						<time days="1000000" start="2" length="1" dates="" allocatedDay="Monday"/>
 					</section>
@@ -123,7 +123,7 @@
 		<offering id="9">
 			<course id="9" name="GEOG110"/>
 			<config id="9">
-				<subpart id="9" courseLabNum="1">
+				<subpart id="9" itype="Laboratory" courseLabNum="1">
 					<section id="22" courseLabSectionNum="1" limit="260">
 						<time days="0010000" start="2" length="1" dates="" allocatedDay="Wednesday"/>
 					</section>
@@ -133,7 +133,7 @@
 		<offering id="10">
 			<course id="10" name="GEOL101"/>
 			<config id="10">
-				<subpart id="10" courseLabNum="1">
+				<subpart id="10" itype="Laboratory" courseLabNum="1">
 					<section id="23" courseLabSectionNum="1" limit="40">
 						<time days="1000000" start="2" length="1" dates="" allocatedDay="Monday"/>
 					</section>
@@ -149,7 +149,7 @@
 		<offering id="11">
 			<course id="11" name="MATH130"/>
 			<config id="11">
-				<subpart id="11" courseLabNum="1">
+				<subpart id="11" itype="Laboratory" courseLabNum="1">
 					<section id="26" courseLabSectionNum="1" limit="154">
 						<time days="0100000" start="2" length="1" dates="" allocatedDay="Tuesday"/>
 					</section>
@@ -162,7 +162,7 @@
 		<offering id="12">
 			<course id="12" name="MATH134"/>
 			<config id="12">
-				<subpart id="12" courseLabNum="1">
+				<subpart id="12" itype="Laboratory" courseLabNum="1">
 					<section id="28" courseLabSectionNum="1" limit="750">
 						<time days="0010000" start="1" length="1" dates="" allocatedDay="Wednesday"/>
 					</section>
@@ -178,7 +178,7 @@
 		<offering id="13">
 			<course id="13" name="MATH140"/>
 			<config id="13">
-				<subpart id="13" courseLabNum="1">
+				<subpart id="13" itype="Laboratory" courseLabNum="1">
 					<section id="31" courseLabSectionNum="1" limit="165">
 						<time days="0000100" start="2" length="1" dates="" allocatedDay="Friday"/>
 					</section>
@@ -188,7 +188,7 @@
 		<offering id="14">
 			<course id="14" name="MATH150"/>
 			<config id="14">
-				<subpart id="14" courseLabNum="1">
+				<subpart id="14" itype="Laboratory" courseLabNum="1">
 					<section id="32" courseLabSectionNum="1" limit="491">
 						<time days="0100000" start="2" length="1" dates="" allocatedDay="Tuesday"/>
 					</section>
@@ -204,7 +204,7 @@
 		<offering id="15">
 			<course id="15" name="MATH196"/>
 			<config id="15">
-				<subpart id="15" courseLabNum="1">
+				<subpart id="15" itype="Laboratory" courseLabNum="1">
 					<section id="35" courseLabSectionNum="1" limit="106">
 						<time days="0010000" start="1" length="1" dates="" allocatedDay="Wednesday"/>
 					</section>
@@ -214,7 +214,7 @@
 		<offering id="16">
 			<course id="16" name="PHYS113"/>
 			<config id="16">
-				<subpart id="16" courseLabNum="1">
+				<subpart id="16" itype="Laboratory" courseLabNum="1">
 					<section id="36" courseLabSectionNum="1" limit="320">
 						<time days="0010000" start="2" length="1" dates="" allocatedDay="Wednesday"/>
 					</section>
@@ -224,7 +224,7 @@
 		<offering id="17">
 			<course id="17" name="PHYS131"/>
 			<config id="17">
-				<subpart id="17" courseLabNum="1">
+				<subpart id="17" itype="Laboratory" courseLabNum="1">
 					<section id="37" courseLabSectionNum="1" limit="270">
 						<time days="1000000" start="2" length="1" dates="" allocatedDay="Monday"/>
 					</section>
@@ -243,7 +243,7 @@
 		<offering id="18">
 			<course id="18" name="PHYS195"/>
 			<config id="18">
-				<subpart id="18" courseLabNum="1">
+				<subpart id="18" itype="Laboratory" courseLabNum="1">
 					<section id="41" courseLabSectionNum="1" limit="320">
 						<time days="0001000" start="1" length="1" dates="" allocatedDay="Thursday"/>
 					</section>
@@ -253,7 +253,7 @@
 		<offering id="19">
 			<course id="19" name="STAT130"/>
 			<config id="19">
-				<subpart id="19" courseLabNum="1">
+				<subpart id="19" itype="Laboratory" courseLabNum="1">
 					<section id="42" courseLabSectionNum="1" limit="491">
 						<time days="1000000" start="2" length="1" dates="" allocatedDay="Monday"/>
 					</section>
