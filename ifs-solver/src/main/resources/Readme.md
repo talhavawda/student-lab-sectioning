@@ -66,7 +66,7 @@ Changes made:
     - changed it to true
 - Anonymize XML file (no names) (Xml.ShowNames)
     - changed it to true (to make it non-anonymised)
-        - all thus does (to the solution) is add the time of the session (as actual text in between the tags)
+        - all this does (to the solution) is add the time of the session (as actual text in between the tags)
         to the time sub-element of the section element in the offerings part, and the to the allocated
         section element in the students part 
 
