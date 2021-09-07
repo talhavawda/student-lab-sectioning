@@ -76,19 +76,33 @@ Changes made:
 ##### 2020-Sem1-CAES-Wvl-OLD
 - 210828_003504
     - First run. Didn't stop running (due to the high TimeOut value) so I terminated it. 
+    
 - 210902_105758
     - Configuration File change: changed Maximal solver time (Termination.TimeOut)  to 60 from 28800
     - solver took 1m
     - Complete solution found.
+    
 - 210903_204021
     - Configuration File change: changed Stop when a complete solution if found (Termination.StopWhenComplete) to true,
     and Termination.TimeOut to 300 (from 60)
     - solver took 0.21m (12.64s)
     - Complete solution found.
+    
 - 210903_223248
     - Configuration File change: changed Anonymize XML file (no names) (Xml.ShowNames) to true
     - solver took 0.24m (14.66s)
     - Complete solution found.
+    
+- 210907_091307
+    - Wanted to test the quality of the solution after the initial complete solution is obtained (whether the solution quality increases
+    or decreases) since we solving the Optimization Problem of Student Sectioning (we want an optimized solution, not just the initial complete one)
+        - Wanted to test it on this OLD problem instance where we managed to obtain a complete solution (100% initial allocation). Cannot obtain a complete
+        solution in the current problem instance due to availability conflicts in the BIOL103 and BIOL195 courses
+    - Configuration File change (for this solution attempt only): changed Termination.StopWhenComplete to false and Termination.TimeOut to 900
+    (so that the solver will continue running after an  initial complete solution is found and will generate many new solutions)
+    - See this output folder for results
+        - BEST solution value increased very little from initial solution value (maybe because we have already assigned all course request successfully)
+        and later solutions seemed to decrease a little (dipping below 100% allocations) but came up again to 100%, and this cycle continued.  
 <br>
 
 ##### 2020-Sem1-CAES-Wvl
@@ -101,7 +115,7 @@ Changes made:
     file given.
 
 - 210906_114246
-    - Running solver after fixing previous NullPointerException error.
+    - Running solver after fixing previous NullPointerException error (added "itype" attribute to each subpart element in the XML input fike).
     - No complete solution found - best solution had 56 course requests unassigned (6118/6174 [99.09%] assigned). 
         - Unassigned course requests in the solution.xml file will not have a <best> sub-element added to it.
             - In the tableau.csv file in the solution folder, the request's Enrolled attribute value will be 'No',
@@ -109,7 +123,7 @@ Changes made:
         
 - 210906_143728
     - Changed Termination.TimeOut to 900 (changed it back to 300 after this run)
-    - No complete solution found. THe same 56 unassigned course requests as the previous solution.
+    - No complete solution found. The same 56 unassigned course requests as the previous solution.
         - Upon further digging, it seems that 2 courses are filled to capacity and have more course requests than their capacity:
         The availability-conflicts-real.csv (and conflicts-real.csv, and section-conflicts-real.csv) says that Course C2 (BIOL103) has 18 availability conflicts for its (only) Section S5
         and that Course C3 (BIOL195) has 38 availability conflicts for its (only) Section S6 [both these sections have a capacity of 200]

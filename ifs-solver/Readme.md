@@ -13,7 +13,6 @@ UniTime Student Sectioning Solver (UniTime site Links):
  - Student Sectioning Solver Execution: https://www.unitime.org/sct_execution.php
  - CPSolver API Documentation: https://www.unitime.org/api/cpsolver-1.3/index.html
  
-#hi
 ## What I've done (Steps)
 1. Created this project (ifs-solver) in IntelliJ inside my local copy of the student-lab-sectioning repository
     - This automatically adds the project to Git and I can access Git features inside IntelliJ
@@ -114,13 +113,15 @@ UniTime Student Sectioning Solver (UniTime site Links):
             See [src/main/resources/Readme.md#2020-sem1-caes-wvl - 210905_212507 solution](src/main/resources/Readme.md#2020-sem1-caes-wvl) 
             for the error that occurred. I found the error to be in the following line of code: 
             `cmp = a.getSubpart().getInstructionalType().compareTo(b.getSubpart().getInstructionalType());`
-            in the SectionConflictTable.java file. I remember now that I did not set an Instructional Type attribute for the subparts of the courses in the XML input file.
-            I fixed the error by updating the Python program script (InputProcessing.py) to add a "Laboratory" to each of the subparts, then reran
-            InputProcessing.py and then the IFS-Solver
+            in the SectionConflictTable.java file. I remember now that I did not set an Instructional Type attribute for the subparts of the courses 
+            in the XML input file.
+            I fixed the error by updating the Python program script (InputProcessing.py) to add the "itype" attribute (with "Laboratory" value)
+            to each of the subparts, then reran InputProcessing.py and then the IFS-Solver
         
 
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions
 Todo: Try out different heuristics. (modify config file)
+Todo: DO A COMPLETE USER-SYSTEM OF THIS CPSOLVER FIRST
 
 Todo: Change Xmx option (Memory heap size of JVM)
     - See:
