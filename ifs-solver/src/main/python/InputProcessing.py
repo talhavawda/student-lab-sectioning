@@ -93,7 +93,7 @@ def main():
 
 	""" Process all course offerings (All LabSections for each Lab for each Course) """
 
-	# [DONE] Todo - Add course name/code, labNum, sectionNum, allocatedDay (from the Courses.xlsx to the offering elements) and the studentNumber, surname, firstnames, numCourses (from the Students.xlsx to the student elements), as well as the course name (to each course request) to the XML input doc as additional attributes to their elements
+	# [DONE] Todo - Add course name/code/numLabs, labNum, sectionNum, sessionDay (from the Courses.xlsx to the offering elements) and the studentNumber, surname, firstnames, numCourses (from the Students.xlsx to the student elements), as well as the course name (to each course request) to the XML input doc as additional attributes to their elements
 	# Since XML is extensible, this shoudn't break/affect the solver, and it will still appear in the solver's solution xml file (hopefully)
 	# which will make me reading that xml file easier (to understand what the id is referring to which specific course/labNum/sectionNum) and
 	# reduce processing to generate a readable solution
@@ -115,7 +115,7 @@ def main():
 
 			if currentCourseID > 0:
 				previousCourseNumLabs = labNum
-				currentCourseElement.setAttribute("numLabs", str(previousCourseNumLabs)) # the previous course element as I haven't reassigned it yet
+				currentCourseElement.setAttribute("numLabs", str(previousCourseNumLabs)) # the previous course element as I haven't reassigned it yet | My own additional attribute to the XML input doc (See Todo above)
 
 
 			currentOfferingElement = inputFileXML.createElement("offering")
