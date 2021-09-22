@@ -18,8 +18,13 @@ public class Main {
 		String[] cpsolverArgs = {configurationFilePath, xmlInputFilePath, problemInstanceDirectoryPath};
 
 		java.text.SimpleDateFormat sDateFormat = new java.text.SimpleDateFormat("yyMMdd_HHmmss", java.util.Locale.US);
-		String solutionDirectoryName = sDateFormat.format(new Date()); //The name of the folder of this solution instance that shall be run - it is the current date and time
+
+		//The name of the folder of this solution instance that shall be run - it is the current date and time
+		//The actual folder name may be 1 second later
+		String solutionDirectoryName = sDateFormat.format(new Date());
+
 		System.out.println(solutionDirectoryName);
+
 		Test.main(cpsolverArgs); //Does Batch Sectioning by default. Will do Online Sectioning if specify a 4th parameter in the args [], with it being the string "online"
 
 	}

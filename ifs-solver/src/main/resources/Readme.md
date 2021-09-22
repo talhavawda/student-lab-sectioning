@@ -149,7 +149,7 @@ Changes made:
         
     - 2020-Sem1-CAES-Wvl-no-extra-requests
             - This modified problem instance fixes the extra capacity 'error' (availability conflict) in its parent instance (2020-Sem1-CAES-Wvl)
-            by increasing the capacities of the 2 modules in the Courses.xlsx input file, allowing us to get a complete solution
+            by increasing the capacities of the 2 modules (BIOL103 and BIOL195) in the Courses.xlsx input file, allowing us to get a complete solution
         - 210922_125809
             - solver took 0.12m (7.13s)
             - Complete solution found.
