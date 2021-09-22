@@ -28,10 +28,10 @@ UniTime Student Sectioning Solver (UniTime site Links):
         as Tests in the Project Structure
 5. Studying the Data Format of the UniTime Student Sectioning solver
 6. Creating my Excel template input files
-7. Creating input files for CAES-2020-Sem1-Wvl dataset (/problem instance) according to my templates
+7. Creating input files for 2020-Sem1-CAES-Wvl dataset (/problem instance) according to my templates
 8. Creating a Python program script (InputProcessing.py) inside this ifs-solver project to read in and process input files, and produce an XML file (input data file)
  for the UniTime Student Sectioning solver according to their data format structure/template
-    - Current input files I'm using are the CAES-2020-Sem1-Wvl problem instance
+    - Current input files I'm using are the 2020-Sem1-CAES-Wvl problem instance
     - How to run Python in IntelliJ:
         - Links
             - https://www.jetbrains.com/help/idea/configuring-local-python-interpreters.html
@@ -63,7 +63,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
             - I will be using the numCourses value for that student to extract the courses that that student will be doing as it will be quicker 
             than iterating through all 10 columns and checking if the cell value is non-empty/non-NaN
     - SEE src/main/resources/Readme.md        
- 9. Running the UniTime's Student Sectioning CPSolver (on the CAES-2020-Sem1-Wvl problem instance)
+ 9. Running the UniTime's Student Sectioning CPSolver (on the 2020-Sem1-CAES-Wvl problem instance)
     - Tried running from command line first (using the execution command on the UniTime website) and was playing around with the command to get the file paths right
         - The execution command on the UniTime website has the java jar file to run called 'studentsct-1.3.jar' but there doesn't exist such a file (and the output was
         giving an error about that file not being found) - we're only given the cpsolver jar file that contains everything.
@@ -123,7 +123,16 @@ UniTime Student Sectioning Solver (UniTime site Links):
         - Timeslots are now according to the default of 288 slots per day and thus 5 minutes per slot
         - I modified the CoursesInputTemplate.xlsx and the corresponding Courses input file for the current 2020-Sem1-CAES-Wvl problem instance, 
         as well as the 2020-Sem1-CAES-Wvl-OLD problem instance, and generated their new/updated input data XML files.        
+    - Dealing with the unassigned course requests due to filled capacities. 
+        - I created a modified instance (2020-Sem1-CAES-Wvl-no-extra-requests) of this 2020-Sem1-CAES-Wvl problem instance and
+        increased the capacities of the BIOL103 and BIOL195 courses to 218 and 238 respectively in the Courses.xlsx input file
+        so that there is no extra requests above the capacity for these courses (the number of requests matches the capacity),
+        and ran the solver to obtain a complete solution
+        - I did this as I want a complete solution that I can use to do the Minimal Perturbation 
+        experimentation part - making changes to the input and resolving
 
+        
+        
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions<br>
 Todo: Try out different heuristics. (modify config file)<br>
 Todo: DO A COMPLETE USER-SYSTEM OF THIS CPSOLVER FIRST<br>

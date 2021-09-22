@@ -89,7 +89,7 @@ Changes made:
 - 210903_204021
     - Configuration File change: changed Stop when a complete solution if found (Termination.StopWhenComplete) to true,
     and Termination.TimeOut to 300 (from 60)
-    - solver took 0.21m (12.64s)
+    - solver took 0.21m (12.64s) [including trying to get a better solution on the initial complete solution]
     - Complete solution found.
     
 - 210903_223248
@@ -146,3 +146,10 @@ Changes made:
     - 210922_021529
         - Running solver on the modified input where the field names in the Courses.xlsx input file were updated (to sessionDay and sessionStartTime)
         - Changed Termination.TimeOut to 60 (changed it back to 300 after this run)
+        
+    - 2020-Sem1-CAES-Wvl-no-extra-requests
+            - This modified problem instance fixes the extra capacity 'error' (availability conflict) in its parent instance (2020-Sem1-CAES-Wvl)
+            by increasing the capacities of the 2 modules in the Courses.xlsx input file, allowing us to get a complete solution
+        - 210922_125809
+            - solver took 0.12m (7.13s)
+            - Complete solution found.

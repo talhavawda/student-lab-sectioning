@@ -5,7 +5,7 @@ from xml.dom import minidom # For creating and writing to XML files
 #Installed the openpyxl, beautifulsoup4 and lxml packages
 
 def main():
-	problemInstanceName = "2020-Sem1-CAES-Wvl"
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests"
 	coursesFilePath = "src/main/resources/input/" + problemInstanceName + "/Courses.xlsx"
 	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx"
 	problemSpecificationFilePath = "src/main/resources/input/" + problemInstanceName + "/Specification.xml" # Make txt ?
