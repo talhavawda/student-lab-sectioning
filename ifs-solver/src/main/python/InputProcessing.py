@@ -235,6 +235,9 @@ def main():
 				currentCourseRequestElement.setAttribute("courseName", str(courseName))  # My own additional attribute to the XML input doc (See Todo above)
 				currentStudentElement.appendChild(currentCourseRequestElement)
 
+	sectioningElement.setAttribute("numStudents", str(currentStudentID))
+	sectioningElement.setAttribute("numCourseRequests", str(currentCourseRequestID))
+
 		# Todo - add 'school' field from the Students.xlsx file
 
 	# Todo - cater for qualifications/degrees having their students be allocated to specific timeslots for specific courses
