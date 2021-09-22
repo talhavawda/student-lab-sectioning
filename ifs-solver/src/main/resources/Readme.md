@@ -10,13 +10,17 @@ The venueCapacity field in my CoursesInputTemplate.xlsx doc matches with the
 The sessionLength field in my CourseInputTemplate.xlsx doc matches with the
 'length' field/attribute of the 'time' tag/element (which is a sub-tag/element of the 'section' tag/element)
  in the CPSolver (See SSDataFormatTemplate.xml). 
- - This represents the number
+ - [OLD] This represents the number
  of timeslots a session takes up. The default value is 1, and it should only
  be changed when the problem instance contains lab sessions of differing time durations.
     - The number of timeslots per day for the problem instances would've been modified accordingly
     such that 1 represents the shortest duration of a session.
     - The UKZN CAES problem has all lab sessions being of the same duration so it should
     not be affected by this (i.e. all sessionLength values will remain the default 1) 
+ - This number represents the length of the lab session in the hh:mm format. It no longer matches with the 'length' attribute
+ of the 'time' element. In the code when processing the course offerings in InputProcessing.py, I had to convert from the
+  sessionLength time to the number of timeslots. See https://github.com/talhavawda/student-lab-sectioning/issues/10 
+ for details about the change from the initial value above
     
 <br>
 <br>
@@ -97,7 +101,7 @@ Changes made:
     - Wanted to test the quality of the solution after the initial complete solution is obtained (whether the solution quality increases
     or decreases) since we solving the Optimization Problem of Student Sectioning (we want an optimized solution, not just the initial complete one)
         - Wanted to test it on this OLD problem instance where we managed to obtain a complete solution (100% initial allocation). Cannot obtain a complete
-        solution in the current problem instance due to availability conflicts in the BIOL103 and BIOL195 courses
+        solution in the current problem instance (2020-Sem1-CAES-Wvl) due to availability conflicts in the BIOL103 and BIOL195 courses
     - Configuration File change (for this solution attempt only): changed Termination.StopWhenComplete to false and Termination.TimeOut to 900
     (so that the solver will continue running after an  initial complete solution is found and will generate many new solutions)
     - See this output folder for results
@@ -128,3 +132,17 @@ Changes made:
         The availability-conflicts-real.csv (and conflicts-real.csv, and section-conflicts-real.csv) says that Course C2 (BIOL103) has 18 availability conflicts for its (only) Section S5
         and that Course C3 (BIOL195) has 38 availability conflicts for its (only) Section S6 [both these sections have a capacity of 200]
         If we count the number of Course Requests for BIOL103 and BIOL195, it is indeed 218 and 238 respectively.
+        
+- 2020-Sem1-CAES-Wvl-fixing-timeslots (Solutions can be ignored)
+    - 210921_213541
+        - Decreased timeslot values by 1 in the Courses.xlsx  data file and processed the input, and ran the solver on the 
+        updated input data xml file. 
+            - This didn't fix the Timeslots issue.
+        - Changed Termination.TimeOut to 60 (changed it back to 300 after this run)
+    - 210921_222536
+        - Running solver after changing the Courses file to adhere to the default timeslot values.
+            - See https://github.com/talhavawda/student-lab-sectioning/issues/10 for details.
+        - Changed Termination.TimeOut to 60 (changed it back to 300 after this run)
+    - 210922_021529
+        - Running solver on the modified input where the field names in the Courses.xlsx input file were updated (to sessionDay and sessionStartTime)
+        - Changed Termination.TimeOut to 60 (changed it back to 300 after this run)

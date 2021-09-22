@@ -117,11 +117,13 @@ UniTime Student Sectioning Solver (UniTime site Links):
             in the XML input file.
             I fixed the error by updating the Python program script (InputProcessing.py) to add the "itype" attribute (with "Laboratory" value)
             to each of the subparts, then reran InputProcessing.py and then the IFS-Solver
-        
+    - Attended to and fixed the Timeslots issue (See https://github.com/talhavawda/student-lab-sectioning/issues/10 for details)
+        - Timeslots are now according to the default of 288 slots per day and thus 5 minutes per slot
+        - I modified the CoursesInputTemplate.xlsx and the corresponding Courses input file for the current 2020-Sem1-CAES-Wvl problem instance        
 
-Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions
-Todo: Try out different heuristics. (modify config file)
-Todo: DO A COMPLETE USER-SYSTEM OF THIS CPSOLVER FIRST
+Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions<br>
+Todo: Try out different heuristics. (modify config file)<br>
+Todo: DO A COMPLETE USER-SYSTEM OF THIS CPSOLVER FIRST<br>
 
 Todo: Change Xmx option (Memory heap size of JVM)
     - See:

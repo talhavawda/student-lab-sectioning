@@ -19,10 +19,11 @@ def main():
 		Using "openpyxl" engine instead of the default "xlrd" engine as xlrd only supports old-style Excel files (.xls)
 		whilst openpyxl supports newer Excel formats
 	"""
-	# Although the data types are of int in the Excel file, we are forcing the conversion in case they were entered/read differently
+	# Although some of the data types are of int in the Excel file, we are forcing the conversion in case they were entered/read differently
+	# sessionStartTime also needs to be specified as a string otherwise Pandas will interpret it as a datatime.time object
 	# Load the first (and only) sheet | First line of data is taken as the column headings
 	# ALT sheet_name="Sheet1"
-	coursesDF = pd.read_excel(coursesFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'labNum':int, 'sectionNum':int, 'allocatedTimeslot':int, 'venueCapacity':int, 'sessionLength':int})
+	coursesDF = pd.read_excel(coursesFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'labNum':int, 'sectionNum':int, 'sessionStartTime':str, 'sessionLength':str, 'venueCapacity':int})
 	#coursesColDF = coursesDF["course"]
 
 	print(coursesDF)
@@ -160,15 +161,17 @@ def main():
 
 		# Add 'time' tag for this Lab Section
 		currentTimeElement = inputFileXML.createElement("time")
-		allocatedDay = coursesDF.loc[labSection, "allocatedDay"] # The allocated day of this LabSection session
-		allocatedDayBinary = generateDaysValue(allocatedDay)
-		currentTimeElement.setAttribute("days", str(allocatedDayBinary))
-		allocatedTimeslot = coursesDF.loc[labSection, "allocatedTimeslot"] # The allocated timeslot of this LabSection session
-		currentTimeElement.setAttribute("start", str(allocatedTimeslot))
+		sessionDay = coursesDF.loc[labSection, "sessionDay"] # The allocated day of this LabSection session
+		sessionDayBinary = generateDaysValue(sessionDay)
+		currentTimeElement.setAttribute("days", str(sessionDayBinary))
+		sessionStartTime = coursesDF.loc[labSection, "sessionStartTime"]
+		startTimeslot = generateTimeslot(sessionStartTime) # The timeslot number that this LabSection session starts at
+		currentTimeElement.setAttribute("start", str(startTimeslot))
 		sessionLength = coursesDF.loc[labSection, "sessionLength"] # The length of this LabSection session
+		sessionLength = generateTimeslot(sessionLength) # sessionLength in terms of a timeslot value
 		currentTimeElement.setAttribute("length", str(sessionLength))
 		currentTimeElement.setAttribute("dates", "") # Setting a random dates binary string
-		currentTimeElement.setAttribute("allocatedDay", str(allocatedDay)) # My own additional atrribute to the XML input doc (See Todo above)
+		currentTimeElement.setAttribute("sessionDay", str(sessionDay)) # My own additional atrribute to the XML input doc (See Todo above)
 		currentSectionElement.appendChild(currentTimeElement)
 
 
@@ -323,6 +326,28 @@ def generateDaysValue(allocatedDay: str) -> str:
 	"""
 	return dayConverter.get(allocatedDay, "1000000")
 
+
+def generateTimeslot(timeslotTime: str) -> int:
+	"""
+		Generate the timeslot number of this time (that UniTime's CP Solver uses) based on this time in the 24 hour format (hh:mm).
+
+		The number of tineslots per day is 288 and the length of each slot is 5 minutes. The timeslot numbers are 0 to 277,
+		with the first timeslot 0 being 00:00 - 00:05.
+
+	:param time: the time (in a hh:mm format) to convert to a CP Solver timeslot
+	:return: a CP Solver timeslot value for the specified time
+	"""
+
+	try:
+		hour = int(timeslotTime[0:2])
+		minute = int(timeslotTime[3:5])
+	except ValueError as error:
+		print("ERROR:", error)
+		print("\tOne of the times specifies in the Courses.xlsx input file is not in the specified time format.")
+		print("\tPlease ensure that all times (both in the startTime and sessionLength fields) are in the following format: hh:mm")
+		print("\tWriting to input data XML file has been unsuccessful. Process aborted. Please fix Error and re-run this program.")
+
+	return ((hour * 60) + minute) // 5
 
 
 
