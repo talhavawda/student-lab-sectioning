@@ -41,9 +41,27 @@ def main():
 		and will update it using the modified Students.xlsx input file. 
 	"""
 
-	problemInstanceName = input("Enter problem instance name: ")
+	#problemInstanceName = input("Enter problem instance name: ")
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests"
+
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
-	inputXmlFileName = problemInstanceDirectory + "/" + problemInstanceName + ".xml" # input data XML file
+	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml" # input data XML file
+	problemInstanceSolutionsFile = problemInstanceDirectoryPath + "/Solutions.txt"
+
+	problemInstanceSolutions = list()
+
+	with open(problemInstanceSolutionsFile) as solutionsFile:
+		for line in solutionsFile:
+			line = line[:len(line)-2]  # Remove the "\n" part at the end of the string
+			problemInstanceSolutions.append(line)
+
+	latestSolution = problemInstanceSolutions[-1] # The last element of the list
+	problemInstanceLatestSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + latestSolution
+	latestSolutionFilePath = problemInstanceLatestSolutionDirectoryPath + "/solution.xml"
+
+	
+
+
 
 
 

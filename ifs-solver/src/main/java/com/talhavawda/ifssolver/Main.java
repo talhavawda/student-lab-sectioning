@@ -24,7 +24,6 @@ public class Main {
 		//The actual folder name may be 1 second later
 		String solutionDirectoryName = sDateFormat.format(new Date());
 
-		//PrintWriter solutionsFile = new PrintWriter(problemInstanceDirectoryPath + "/solutions.txt", "UTF-8");// a Text File containing the names of the directories of all the solutions generated for this problem input
 
 		try {
 			//Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(problemInstanceDirectoryPath + "/Solutions.txt"), StandardCharsets.UTF_8));
