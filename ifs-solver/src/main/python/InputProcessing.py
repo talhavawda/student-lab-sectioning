@@ -113,6 +113,11 @@ def main():
 		# if a different course - i.e. a new course to process
 		if courseName != currentCourse:  # Create new 'offering' element with its own 'course' and 'config' sub-elements
 
+			if currentCourseID > 0:
+				previousCourseNumLabs = labNum
+				currentCourseElement.setAttribute("numLabs", str(previousCourseNumLabs)) # the previous course element as I haven't reassigned it yet
+
+
 			currentOfferingElement = inputFileXML.createElement("offering")
 			currentCourseID += 1
 			currentOfferingElement.setAttribute("id", str(currentCourseID)) # str() because arguments to xmlFile.write() must all be strings - XML attribute values are all strings
@@ -174,6 +179,8 @@ def main():
 		currentTimeElement.setAttribute("sessionDay", str(sessionDay)) # My own additional atrribute to the XML input doc (See Todo above)
 		currentSectionElement.appendChild(currentTimeElement)
 
+	# For the last course
+	currentCourseElement.setAttribute("numLabs", str(labNum))
 
 	""" Process all student enrollments (lab sessions requests) """
 
