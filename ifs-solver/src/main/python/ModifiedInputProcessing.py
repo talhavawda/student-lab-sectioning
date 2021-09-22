@@ -34,5 +34,23 @@ def main():
 		
 		We are making the key be the student number (or ID, according to the institute. This differs from the id attribute of the student
 		in the XML file). The id attribute orders the students in that XML file and does not help us with identifying a specific student. 
+		This also helps us quickly check if a student we encounter in the modified Students.xlsx file already exists in
+		our initial solution or is a new student.
+		
+		We will initially populate it with the data from the initial input data XML file and initial solution XML file,
+		and will update it using the modified Students.xlsx input file. 
 	"""
-	students = dict()
+
+	problemInstanceName = input("Enter problem instance name: ")
+	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
+	inputXmlFileName = problemInstanceDirectory + "/" + problemInstanceName + ".xml" # input data XML file
+
+
+
+	studentsDict = dict()
+	studentsDict.clear()
+
+
+	print("Test")
+
+main()

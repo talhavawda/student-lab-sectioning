@@ -151,9 +151,16 @@ Changes made:
         - Running solver on the modified input where the field names in the Courses.xlsx input file were updated (to sessionDay and sessionStartTime)
         - Changed Termination.TimeOut to 60 (changed it back to 300 after this run)
         
-    - 2020-Sem1-CAES-Wvl-no-extra-requests
-            - This modified problem instance fixes the exceeded course capacity 'error' (availability conflict) in its parent instance (2020-Sem1-CAES-Wvl)
-            by increasing the capacities of the 2 modules (BIOL103 and BIOL195) in the Courses.xlsx input file, allowing us to get a complete solution
-        - 210922_125809
-            - solver took 0.12m (7.13s)
-            - Complete solution found.
+- 2020-Sem1-CAES-Wvl-no-extra-requests
+        - This modified problem instance fixes the exceeded course capacity 'error' (availability conflict) in its parent instance (2020-Sem1-CAES-Wvl)
+        by increasing the capacities of the 2 courses (BIOL103 and BIOL195) in the Courses.xlsx input file to match the number of requests for those courses, 
+        allowing us to get a complete solution
+    - 210922_125809
+        - solver took 0.12m (7.13s)
+        - Complete solution found.
+    - 210922_212224
+        - solver took 0.07m (4.40s)
+        - Complete solution found.
+    - 210922_212403
+        - solver took 0.15m (8.92s)
+        - Complete solution found.
