@@ -51,7 +51,7 @@ def main():
 
 
 	"""
-		Read in the initial input data XML file and solution XML file
+		Read in the initial input data XML file, initial solution XML file, and the modified Students.xlsx input file
 	"""
 
 	with open(inputXmlFilePath, "r") as inputXMLFile:
@@ -61,6 +61,7 @@ def main():
 		solutionXML = solutionXMLFile.read()
 
 	# Todo - read in the modified Students.xlsx input file (See InputProcessing.py)
+
 
 	"""
 		Maintain a dictionary (Map) of student details, their course requests, and assigned sections for each of their requests

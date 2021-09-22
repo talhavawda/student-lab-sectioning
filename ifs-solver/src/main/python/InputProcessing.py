@@ -96,7 +96,7 @@ def main():
 	# [DONE] Todo - Add course name/code/numLabs, labNum, sectionNum, sessionDay (from the Courses.xlsx to the offering elements) and the studentNumber, surname, firstnames,
 	#  numCourses, numProcessedCourses (from the Students.xlsx to the student elements), as well as the course name (to each course request) to the XML input doc as additional
 	#  attributes to their elements
-	
+
 	# Since XML is extensible, this shoudn't break/affect the solver, and it will still appear in the solver's solution xml file (hopefully)
 	# which will make me reading that xml file easier (to understand what the id is referring to which specific course/labNum/sectionNum) and
 	# reduce processing to generate a readable solution
