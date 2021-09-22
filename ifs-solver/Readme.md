@@ -119,7 +119,8 @@ UniTime Student Sectioning Solver (UniTime site Links):
             to each of the subparts, then reran InputProcessing.py and then the IFS-Solver
     - Attended to and fixed the Timeslots issue (See https://github.com/talhavawda/student-lab-sectioning/issues/10 for details)
         - Timeslots are now according to the default of 288 slots per day and thus 5 minutes per slot
-        - I modified the CoursesInputTemplate.xlsx and the corresponding Courses input file for the current 2020-Sem1-CAES-Wvl problem instance        
+        - I modified the CoursesInputTemplate.xlsx and the corresponding Courses input file for the current 2020-Sem1-CAES-Wvl problem instance, 
+        as well as the 2020-Sem1-CAES-Wvl-OLD problem instance, and generated their new/updated input data XML files.        
 
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions<br>
 Todo: Try out different heuristics. (modify config file)<br>
