@@ -4,6 +4,10 @@ and must contain the following files named as is: "Courses.xlsx", "Students.xlsx
 <br>
 
 ###### CoursesInputTemplate.xlsx:
+The course offerings - the courses, their labs, sections, and capacities, and the allocated/scheduled dates and times 
+for their lab sessions (the timeslot allocations for the lab sections).
+
+
 The venueCapacity field in my CoursesInputTemplate.xlsx doc matches with the
 'limit' field of the 'section' tag/element in the CPSolver (See SSDataFormatTemplate.xml)
 
@@ -148,7 +152,7 @@ Changes made:
         - Changed Termination.TimeOut to 60 (changed it back to 300 after this run)
         
     - 2020-Sem1-CAES-Wvl-no-extra-requests
-            - This modified problem instance fixes the extra capacity 'error' (availability conflict) in its parent instance (2020-Sem1-CAES-Wvl)
+            - This modified problem instance fixes the exceeded course capacity 'error' (availability conflict) in its parent instance (2020-Sem1-CAES-Wvl)
             by increasing the capacities of the 2 modules (BIOL103 and BIOL195) in the Courses.xlsx input file, allowing us to get a complete solution
         - 210922_125809
             - solver took 0.12m (7.13s)

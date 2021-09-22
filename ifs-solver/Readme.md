@@ -131,7 +131,20 @@ UniTime Student Sectioning Solver (UniTime site Links):
         - I did this as I want a complete solution that I can use to do the Minimal Perturbation 
         experimentation part - making changes to the input and resolving
 
-        
+10. Creating modified inputs (adding new or updating student course requests) to this problem instance and processing them
+(will be using the 2020-Sem1-CAES-Wvl-no-extra-requests instance as it gives a complete initial solution)
+    - The file that will be changed will be the Students.xslx input file
+    - Rule/assumption when modifying the input - the number of course requests for each course (for this problem instance, each 
+    course only has one lab, so a request for a course is for that course's lab) shall not be more than the total capacity for that
+    course (the sum of the capacities of each section of that course's lab). Thus we shall not have any availability conflicts.
+    - Todo: Since in the user system we won't have any control over the modified input given, we'll also need to ensure that there
+    are no availability conflicts (See https://github.com/talhavawda/student-lab-sectioning/issues/9). 
+    - 10.1 Creating multiple modified Student.xslx input files representing different scenarios (% of additions and modifications, 
+    % of individual capacities filled etc.)
+    - 10.2 Creating a Python program script (ModifiedInputProcessing.py) to process a modified Students.xslx input file 
+    and the initial solution file (solution.xml), and produce an updated XML file (input data file) that is a partial solution (the
+    unchanged course requests are still assigned as is, the new course requests are unassigned/unallocated and the old course requests removed)
+    
         
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions<br>
 Todo: Try out different heuristics. (modify config file)<br>
