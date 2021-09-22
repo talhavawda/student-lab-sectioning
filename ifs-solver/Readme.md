@@ -117,6 +117,8 @@ UniTime Student Sectioning Solver (UniTime site Links):
             in the XML input file.
             I fixed the error by updating the Python program script (InputProcessing.py) to add the "itype" attribute (with "Laboratory" value)
             to each of the subparts, then reran InputProcessing.py and then the IFS-Solver
+        - There are 56 unassigned course requests as  2 courses are filled to capacity and have more course requests than their capacity (See 210906_143728 solution)
+        
     - Attended to and fixed the Timeslots issue (See https://github.com/talhavawda/student-lab-sectioning/issues/10 for details)
         - Timeslots are now according to the default of 288 slots per day and thus 5 minutes per slot
         - I modified the CoursesInputTemplate.xlsx and the corresponding Courses input file for the current 2020-Sem1-CAES-Wvl problem instance, 
