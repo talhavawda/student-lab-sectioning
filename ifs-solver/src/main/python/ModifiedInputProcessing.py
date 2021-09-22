@@ -59,16 +59,16 @@ def main():
 	problemInstanceLatestSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + latestSolution
 	latestSolutionFilePath = problemInstanceLatestSolutionDirectoryPath + "/solution.xml"
 
-	
-
-
-
-
-
 	studentsDict = dict()
 	studentsDict.clear()
 
+	studentCourseRequestsList = list()
+	courseRequest = {'courseRequestID': , 'courseID': , 'courseName': , 'allocatedSection':}
+	studentCourseRequestsList.append(courseRequest)
 
-	print("Test")
+	studentsDict[studentNumber] = {'id':, 'surname': , 'firstnames': , 'numCourses': , 'classificationArea': , 'majorArea': , studentCourseRequestsList}
+
+
+
 
 main()
