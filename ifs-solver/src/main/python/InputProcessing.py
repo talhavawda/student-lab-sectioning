@@ -93,7 +93,10 @@ def main():
 
 	""" Process all course offerings (All LabSections for each Lab for each Course) """
 
-	# [DONE] Todo - Add course name/code/numLabs, labNum, sectionNum, sessionDay (from the Courses.xlsx to the offering elements) and the studentNumber, surname, firstnames, numCourses (from the Students.xlsx to the student elements), as well as the course name (to each course request) to the XML input doc as additional attributes to their elements
+	# [DONE] Todo - Add course name/code/numLabs, labNum, sectionNum, sessionDay (from the Courses.xlsx to the offering elements) and the studentNumber, surname, firstnames,
+	#  numCourses, numProcessedCourses (from the Students.xlsx to the student elements), as well as the course name (to each course request) to the XML input doc as additional
+	#  attributes to their elements
+	
 	# Since XML is extensible, this shoudn't break/affect the solver, and it will still appear in the solver's solution xml file (hopefully)
 	# which will make me reading that xml file easier (to understand what the id is referring to which specific course/labNum/sectionNum) and
 	# reduce processing to generate a readable solution
@@ -188,8 +191,6 @@ def main():
 
 	for student in range(numStudents):
 
-		numCourses = studentsDF.loc[student, "numCourses"] # The number of courses that this student is registered for | I set the data type to 'int' when I read in the Excel file into the DataFrame
-
 		# Student's details
 		currentStudentElement = inputFileXML.createElement("student")
 		currentStudentID += 1
@@ -200,7 +201,7 @@ def main():
 		currentStudentElement.setAttribute("surname", str(surname))  # My own additional atrribute to the XML input doc (See Todo above)
 		firstnames = studentsDF.loc[student, "firstnames"]
 		currentStudentElement.setAttribute("firstnames", str(firstnames))  # My own additional atrribute to the XML input doc (See Todo above)
-		currentStudentElement.setAttribute("numCourses", str(numCourses)) # My own additional atrribute to the XML input doc (See Todo above)
+
 		studentsElement.appendChild(currentStudentElement)
 
 		currentClassifcationElement = inputFileXML.createElement("classification")
@@ -215,7 +216,9 @@ def main():
 
 
 		# Add the student's courses
+		numCourses = studentsDF.loc[student, "numCourses"] # The number of courses that this student is registered for | I set the data type to 'int' when I read in the Excel file into the DataFrame
 
+		numProcessedCourses = 0  # The number of course of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
 		for course in range(1, numCourses+1): # For each course the student is registered for (course number starting from 1)
 			courseName = studentsDF.loc[student, "course" + str(course)]
 
@@ -234,6 +237,7 @@ def main():
 				print("Invalid Course: '" + courseName + "' was not specified in the problem input's Courses.xlsx file")
 			else: # if no KeyError thrown - code executed perfectly -> we were able to get the courseID of this course -> this course was specified in the input
 				# Process this course enrollment - add it to the student for sectioning
+				numProcessedCourses += 1
 				currentCourseRequestElement = inputFileXML.createElement("course")
 				currentCourseRequestID += 1
 				currentCourseRequestElement.setAttribute("id", str(currentCourseRequestID))
@@ -241,6 +245,9 @@ def main():
 				currentCourseRequestElement.setAttribute("course", str(courseID))
 				currentCourseRequestElement.setAttribute("courseName", str(courseName))  # My own additional attribute to the XML input doc (See Todo above)
 				currentStudentElement.appendChild(currentCourseRequestElement)
+
+		currentStudentElement.setAttribute("numCourses", str(numCourses)) # My own additional atrribute to the XML input doc (See Todo above)
+		currentStudentElement.setAttribute("numProcessedCourses", str(numProcessedCourses)) # My own additional atrribute to the XML input doc (See Todo above)
 
 	sectioningElement.setAttribute("numStudents", str(currentStudentID))
 	sectioningElement.setAttribute("numCourseRequests", str(currentCourseRequestID))
@@ -278,7 +285,7 @@ def processProblemSpecification(problemSpecificationFilePath):
 	:return:
 	"""
 
-	# Read in the problem specfication info from it's XML file specified
+	# Read in the problem specification info from it's XML file specified
 	with open(problemSpecificationFilePath, "r") as specXMLFile:
 		specification = specXMLFile.read()
 
