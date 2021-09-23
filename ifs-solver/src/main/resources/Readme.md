@@ -1,5 +1,9 @@
 Each problem instance must be in its own folder (named appropriately: year-term-initiative) within the 'input' folder
 and must contain the following files named as is: "Courses.xlsx", "Students.xlsx", and "Specification.xml"
+
+If the user cannot modify a copy of the SpecificationInputTemplate.xml file in the resources folder, they may use a
+copy of the DefaultSpecification.xml file from the resources folder by renaming the copy to "Specification.xml",
+and placing it insidr the problem instance's folder 
 <br>
 <br>
 
@@ -164,3 +168,7 @@ Changes made:
     - 210922_212403
         - solver took 0.15m (8.92s)
         - Complete solution found.
+    - 210924_010657
+        - Changed the students' id attribute in the input data XML file to be their actual student number's/id's according to their institute,
+        instead of starting from 1 for the first student and incrementing by 1 for each student.
+        See Issue #13 (https://github.com/talhavawda/student-lab-sectioning/issues/13)

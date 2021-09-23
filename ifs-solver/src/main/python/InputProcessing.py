@@ -194,8 +194,8 @@ def main():
 		# Student's details
 		currentStudentElement = inputFileXML.createElement("student")
 		currentStudentID += 1
-		currentStudentElement.setAttribute("id", str(currentStudentID))
 		studentNumber = studentsDF.loc[student, "studentNumber"]
+		currentStudentElement.setAttribute("id", str(studentNumber))
 		currentStudentElement.setAttribute("studentNumber", str(studentNumber))  # My own additional atrribute to the XML input doc (See Todo above)
 		surname = studentsDF.loc[student, "surname"]
 		currentStudentElement.setAttribute("surname", str(surname))  # My own additional atrribute to the XML input doc (See Todo above)
