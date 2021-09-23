@@ -80,7 +80,6 @@ def main():
 	currentLabID = 0  # used for 'subpart' tag/element for its 'id' attribute | currentLabID is a unique course-labNum combination (from the Courses.xlsx file)
 	currentLabSectionID = 0  # used for 'section' tag/element for its 'id' attribute | currentLabSectionID is a unique course-labNum-sectionNum combination (from the Courses.xlsx file)
 
-	currentStudentID = 0
 	currentCourseRequestID = 0 # A 'course request' is a student-course combination where the student is (already) registered/enrolled for this course (for my SS problem specification) and wants to be assigned to a section for each of the labs (A UniTime Solver 'subpart') of this course
 
 	"""
@@ -193,7 +192,6 @@ def main():
 
 		# Student's details
 		currentStudentElement = inputFileXML.createElement("student")
-		currentStudentID += 1
 		studentNumber = studentsDF.loc[student, "studentNumber"]
 		currentStudentElement.setAttribute("id", str(studentNumber))
 		currentStudentElement.setAttribute("studentNumber", str(studentNumber))  # My own additional atrribute to the XML input doc (See Todo above)
@@ -249,7 +247,7 @@ def main():
 		currentStudentElement.setAttribute("numCourses", str(numCourses)) # My own additional atrribute to the XML input doc (See Todo above)
 		currentStudentElement.setAttribute("numProcessedCourses", str(numProcessedCourses)) # My own additional atrribute to the XML input doc (See Todo above)
 
-	sectioningElement.setAttribute("numStudents", str(currentStudentID))
+	sectioningElement.setAttribute("numStudents", str(numStudents))
 	sectioningElement.setAttribute("numCourseRequests", str(currentCourseRequestID))
 
 		# Todo - add 'school' field from the Students.xlsx file
