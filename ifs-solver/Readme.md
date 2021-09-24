@@ -108,7 +108,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
     for the 2020-Sem1-CAES-Wvl problem instance
         - I have updated the Courses.xlsx file for the 2020-Sem1-CAES-Wvl problem instance with the additional
         courses (and their scheduled allocations), and ran InputProcessing.py on the now updated dataset to create the updated
-        2020-Sem1-CAES-Wvl XML input data file
+        2020-Sem1-CAES-Wvl XML input data file. The initial problem instance before this update is now called 2020-Sem1-CAES-Wvl-OLD 
             - Tried running IFS-Solver on updated 2020-Sem1-CAES-Wvl problem instance. 
             See [src/main/resources/Readme.md#2020-sem1-caes-wvl - 210905_212507 solution](src/main/resources/Readme.md#2020-sem1-caes-wvl) 
             for the error that occurred. I found the error to be in the following line of code: 

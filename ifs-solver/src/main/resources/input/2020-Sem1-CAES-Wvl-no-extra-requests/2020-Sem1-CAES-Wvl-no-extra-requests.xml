@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sectioning version="1.0" initiative="CAES-Wvl" term="Sem1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2" numStudents="2547" numCourseRequests="6174">
+<sectioning version="1.0" initiative="CAES-Wvl" term="Sem1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2" numStudents="2547" numCourses="19" numCourseRequests="6174">
 	<offerings>
 		<offering id="1">
 			<course id="1" name="BIOL101" numLabs="1"/>
@@ -16628,4 +16628,25 @@
 			<course id="6174" priority="0" course="14" courseName="MATH150"/>
 		</student>
 	</students>
+	<courses>
+		<course id="1" courseName="BIOL101"/>
+		<course id="2" courseName="BIOL103"/>
+		<course id="3" courseName="BIOL195"/>
+		<course id="4" courseName="BIOL196"/>
+		<course id="5" courseName="CHEM110"/>
+		<course id="6" courseName="CHEM195"/>
+		<course id="7" courseName="CHEM196"/>
+		<course id="8" courseName="COMP100"/>
+		<course id="9" courseName="GEOG110"/>
+		<course id="10" courseName="GEOL101"/>
+		<course id="11" courseName="MATH130"/>
+		<course id="12" courseName="MATH134"/>
+		<course id="13" courseName="MATH140"/>
+		<course id="14" courseName="MATH150"/>
+		<course id="15" courseName="MATH196"/>
+		<course id="16" courseName="PHYS113"/>
+		<course id="17" courseName="PHYS131"/>
+		<course id="18" courseName="PHYS195"/>
+		<course id="19" courseName="STAT130"/>
+	</courses>
 </sectioning>

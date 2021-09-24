@@ -83,11 +83,22 @@ def main():
 	currentCourseRequestID = 0 # A 'course request' is a student-course combination where the student is (already) registered/enrolled for this course (for my SS problem specification) and wants to be assigned to a section for each of the labs (A UniTime Solver 'subpart') of this course
 
 	"""
-		A dictionary (map) to keep track of all the assigned ID's for the courses | to be used when processing students' course enrollments/requests
+		courseIdDict: A dictionary (map) to keep track of all the assigned ID's for the courses | to be used when processing students' course enrollments/requests
 		key = course; value = courseID
+		
+		courseNameDict: A 	dictionary (map) to keep track of all the course names for the assigned course ID's | opposite to / reverse of courseIdDict
+		key = courseID; value = courseName 
+		
+		I am going to add a 'courses' element to the input data XML file as a sub-element of the sectioning element that
+		stores the courseID-courseName mappings so that I can access the name of a course based on its ID later on if 
+		I want to (for e.g. in ModifiedInputProcessing.py).
 
 	"""
 	courseIdDict = {}
+	courseNameDict = {}
+
+	coursesElement = inputFileXML.createElement("courses")
+	sectioningElement.appendChild(coursesElement)
 
 
 	""" Process all course offerings (All LabSections for each Lab for each Course) """
@@ -115,7 +126,7 @@ def main():
 		# if a different course - i.e. a new course to process
 		if courseName != currentCourse:  # Create new 'offering' element with its own 'course' and 'config' sub-elements
 
-			if currentCourseID > 0:
+			if currentCourseID > 0: # If this course is not the first course to be processed
 				previousCourseNumLabs = labNum
 				currentCourseElement.setAttribute("numLabs", str(previousCourseNumLabs)) # the previous course element as I haven't reassigned it yet | My own additional attribute to the XML input doc (See Todo above)
 
@@ -135,6 +146,7 @@ def main():
 			currentOfferingElement.appendChild(currentConfigElement)
 
 			courseIdDict[courseName] = currentCourseID # Add this course as a key and its courseID as the value
+			courseNameDict[currentCourseID] = courseName # Add this courseID as a key and this course's name as the value
 
 			currentCourse = courseName
 			currentLabNum = 0 # Reset lab num (to 0 so that when the first lab (labNum=1) of the next course is read, a new subpart tag will be created)
@@ -184,6 +196,7 @@ def main():
 	# For the last course
 	currentCourseElement.setAttribute("numLabs", str(labNum))
 
+
 	""" Process all student enrollments (lab sessions requests) """
 
 	numStudents = len(studentsDF)
@@ -214,10 +227,10 @@ def main():
 
 
 		# Add the student's courses
-		numCourses = studentsDF.loc[student, "numCourses"] # The number of courses that this student is registered for | I set the data type to 'int' when I read in the Excel file into the DataFrame
+		numCoursesStudent = studentsDF.loc[student, "numCourses"] # The number of courses that this student is registered for | I set the data type to 'int' when I read in the Excel file into the DataFrame
 
 		numProcessedCourses = 0  # The number of course of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
-		for course in range(1, numCourses+1): # For each course the student is registered for (course number starting from 1)
+		for course in range(1, numCoursesStudent+1): # For each course the student is registered for (course number starting from 1)
 			courseName = studentsDF.loc[student, "course" + str(course)]
 
 			"""
@@ -244,10 +257,22 @@ def main():
 				currentCourseRequestElement.setAttribute("courseName", str(courseName))  # My own additional attribute to the XML input doc (See Todo above)
 				currentStudentElement.appendChild(currentCourseRequestElement)
 
-		currentStudentElement.setAttribute("numCourses", str(numCourses)) # My own additional atrribute to the XML input doc (See Todo above)
+		currentStudentElement.setAttribute("numCourses", str(numCoursesStudent)) # My own additional atrribute to the XML input doc (See Todo above)
 		currentStudentElement.setAttribute("numProcessedCourses", str(numProcessedCourses)) # My own additional atrribute to the XML input doc (See Todo above)
 
+
+	numCourses = currentCourseID # The number of courses in the problem instance | the last course id used = num courses since first course id == 1
+
+	"""Add the course id-name pairs"""
+	for courseID in range(1, numCourses+1):
+		currentCourseElement = inputFileXML.createElement("course")
+		currentCourseElement.setAttribute("id", str(courseID))
+		currentCourseElement.setAttribute("courseName", courseNameDict[courseID])
+		coursesElement.appendChild(currentCourseElement)
+
+
 	sectioningElement.setAttribute("numStudents", str(numStudents))
+	sectioningElement.setAttribute("numCourses", str(numCourses))
 	sectioningElement.setAttribute("numCourseRequests", str(currentCourseRequestID))
 
 		# Todo - add 'school' field from the Students.xlsx file
