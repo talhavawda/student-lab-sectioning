@@ -6,16 +6,16 @@
 			<config id="1">
 				<subpart id="1" itype="Laboratory" courseLabNum="1">
 					<section id="1" courseLabSectionNum="1" limit="200">
-						<time days="1000000" start="170" length="36" dates="" sessionDay="Monday"/>
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
 					</section>
 					<section id="2" courseLabSectionNum="2" limit="200">
-						<time days="0100000" start="170" length="36" dates="" sessionDay="Tuesday"/>
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
 					</section>
 					<section id="3" courseLabSectionNum="3" limit="200">
-						<time days="0010000" start="170" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 					<section id="4" courseLabSectionNum="4" limit="200">
-						<time days="0001000" start="170" length="36" dates="" sessionDay="Thursday"/>
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
 					</section>
 				</subpart>
 			</config>
@@ -25,7 +25,7 @@
 			<config id="2">
 				<subpart id="2" itype="Laboratory" courseLabNum="1">
 					<section id="5" courseLabSectionNum="1" limit="218">
-						<time days="0000100" start="170" length="36" dates="" sessionDay="Friday"/>
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
 					</section>
 				</subpart>
 			</config>
@@ -35,7 +35,7 @@
 			<config id="3">
 				<subpart id="3" itype="Laboratory" courseLabNum="1">
 					<section id="6" courseLabSectionNum="1" limit="238">
-						<time days="0000100" start="115" length="36" dates="" sessionDay="Friday"/>
+						<time days="0000100" start="115" length="36" dates="1" sessionDay="Friday"/>
 					</section>
 				</subpart>
 			</config>
@@ -45,7 +45,7 @@
 			<config id="4">
 				<subpart id="4" itype="Laboratory" courseLabNum="1">
 					<section id="7" courseLabSectionNum="1" limit="200">
-						<time days="0010000" start="115" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 				</subpart>
 			</config>
@@ -55,7 +55,7 @@
 			<config id="5">
 				<subpart id="5" itype="Laboratory" courseLabNum="1">
 					<section id="8" courseLabSectionNum="1" limit="1">
-						<time days="0010000" start="115" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 				</subpart>
 			</config>
@@ -65,22 +65,22 @@
 			<config id="6">
 				<subpart id="6" itype="Laboratory" courseLabNum="1">
 					<section id="9" courseLabSectionNum="1" limit="144">
-						<time days="1000000" start="170" length="36" dates="" sessionDay="Monday"/>
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
 					</section>
 					<section id="10" courseLabSectionNum="2" limit="144">
-						<time days="0100000" start="170" length="36" dates="" sessionDay="Tuesday"/>
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
 					</section>
 					<section id="11" courseLabSectionNum="3" limit="144">
-						<time days="0010000" start="115" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 					<section id="12" courseLabSectionNum="4" limit="144">
-						<time days="0010000" start="170" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 					<section id="13" courseLabSectionNum="5" limit="144">
-						<time days="0001000" start="170" length="36" dates="" sessionDay="Thursday"/>
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
 					</section>
 					<section id="14" courseLabSectionNum="6" limit="144">
-						<time days="0000100" start="170" length="36" dates="" sessionDay="Friday"/>
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
 					</section>
 				</subpart>
 			</config>
@@ -90,10 +90,10 @@
 			<config id="7">
 				<subpart id="7" itype="Laboratory" courseLabNum="1">
 					<section id="15" courseLabSectionNum="1" limit="192">
-						<time days="0100000" start="115" length="36" dates="" sessionDay="Tuesday"/>
+						<time days="0100000" start="115" length="36" dates="1" sessionDay="Tuesday"/>
 					</section>
 					<section id="16" courseLabSectionNum="2" limit="48">
-						<time days="0010000" start="170" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 				</subpart>
 			</config>
@@ -103,16 +103,16 @@
 			<config id="8">
 				<subpart id="8" itype="Laboratory" courseLabNum="1">
 					<section id="17" courseLabSectionNum="1" limit="48">
-						<time days="1000000" start="170" length="36" dates="" sessionDay="Monday"/>
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
 					</section>
 					<section id="18" courseLabSectionNum="2" limit="48">
-						<time days="0100000" start="170" length="36" dates="" sessionDay="Tuesday"/>
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
 					</section>
 					<section id="19" courseLabSectionNum="3" limit="48">
-						<time days="0001000" start="170" length="36" dates="" sessionDay="Thursday"/>
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
 					</section>
 					<section id="20" courseLabSectionNum="4" limit="48">
-						<time days="0000100" start="170" length="36" dates="" sessionDay="Friday"/>
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
 					</section>
 				</subpart>
 			</config>
@@ -122,10 +122,10 @@
 			<config id="9">
 				<subpart id="9" itype="Laboratory" courseLabNum="1">
 					<section id="21" courseLabSectionNum="1" limit="250">
-						<time days="1000000" start="170" length="36" dates="" sessionDay="Monday"/>
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
 					</section>
 					<section id="22" courseLabSectionNum="2" limit="250">
-						<time days="0001000" start="170" length="36" dates="" sessionDay="Thursday"/>
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
 					</section>
 				</subpart>
 			</config>
@@ -135,7 +135,7 @@
 			<config id="10">
 				<subpart id="10" itype="Laboratory" courseLabNum="1">
 					<section id="23" courseLabSectionNum="1" limit="260">
-						<time days="0010000" start="170" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 				</subpart>
 			</config>
@@ -145,13 +145,13 @@
 			<config id="11">
 				<subpart id="11" itype="Laboratory" courseLabNum="1">
 					<section id="24" courseLabSectionNum="1" limit="40">
-						<time days="1000000" start="170" length="36" dates="" sessionDay="Monday"/>
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
 					</section>
 					<section id="25" courseLabSectionNum="2" limit="40">
-						<time days="0001000" start="170" length="36" dates="" sessionDay="Thursday"/>
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
 					</section>
 					<section id="26" courseLabSectionNum="3" limit="40">
-						<time days="0000100" start="170" length="36" dates="" sessionDay="Friday"/>
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
 					</section>
 				</subpart>
 			</config>
@@ -161,10 +161,10 @@
 			<config id="12">
 				<subpart id="12" itype="Laboratory" courseLabNum="1">
 					<section id="27" courseLabSectionNum="1" limit="154">
-						<time days="0100000" start="170" length="36" dates="" sessionDay="Tuesday"/>
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
 					</section>
 					<section id="28" courseLabSectionNum="2" limit="136">
-						<time days="0010000" start="170" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 				</subpart>
 			</config>
@@ -174,13 +174,13 @@
 			<config id="13">
 				<subpart id="13" itype="Laboratory" courseLabNum="1">
 					<section id="29" courseLabSectionNum="1" limit="750">
-						<time days="0010000" start="115" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 					<section id="30" courseLabSectionNum="2" limit="500">
-						<time days="0010000" start="170" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 					<section id="31" courseLabSectionNum="3" limit="250">
-						<time days="0001000" start="170" length="36" dates="" sessionDay="Thursday"/>
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
 					</section>
 				</subpart>
 			</config>
@@ -190,7 +190,7 @@
 			<config id="14">
 				<subpart id="14" itype="Laboratory" courseLabNum="1">
 					<section id="32" courseLabSectionNum="1" limit="165">
-						<time days="0000100" start="170" length="36" dates="" sessionDay="Friday"/>
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
 					</section>
 				</subpart>
 			</config>
@@ -200,13 +200,13 @@
 			<config id="15">
 				<subpart id="15" itype="Laboratory" courseLabNum="1">
 					<section id="33" courseLabSectionNum="1" limit="491">
-						<time days="0100000" start="170" length="36" dates="" sessionDay="Tuesday"/>
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
 					</section>
 					<section id="34" courseLabSectionNum="2" limit="350">
-						<time days="0010000" start="115" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 					<section id="35" courseLabSectionNum="3" limit="491">
-						<time days="0000100" start="170" length="36" dates="" sessionDay="Friday"/>
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
 					</section>
 				</subpart>
 			</config>
@@ -216,7 +216,7 @@
 			<config id="16">
 				<subpart id="16" itype="Laboratory" courseLabNum="1">
 					<section id="36" courseLabSectionNum="1" limit="106">
-						<time days="0010000" start="115" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 				</subpart>
 			</config>
@@ -226,7 +226,7 @@
 			<config id="17">
 				<subpart id="17" itype="Laboratory" courseLabNum="1">
 					<section id="37" courseLabSectionNum="1" limit="320">
-						<time days="0010000" start="170" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 				</subpart>
 			</config>
@@ -236,16 +236,16 @@
 			<config id="18">
 				<subpart id="18" itype="Laboratory" courseLabNum="1">
 					<section id="38" courseLabSectionNum="1" limit="270">
-						<time days="1000000" start="170" length="36" dates="" sessionDay="Monday"/>
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
 					</section>
 					<section id="39" courseLabSectionNum="2" limit="320">
-						<time days="0100000" start="170" length="36" dates="" sessionDay="Tuesday"/>
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
 					</section>
 					<section id="40" courseLabSectionNum="3" limit="320">
-						<time days="0010000" start="115" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 					<section id="41" courseLabSectionNum="4" limit="320">
-						<time days="0001000" start="170" length="36" dates="" sessionDay="Thursday"/>
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
 					</section>
 				</subpart>
 			</config>
@@ -255,7 +255,7 @@
 			<config id="19">
 				<subpart id="19" itype="Laboratory" courseLabNum="1">
 					<section id="42" courseLabSectionNum="1" limit="320">
-						<time days="0001000" start="115" length="36" dates="" sessionDay="Thursday"/>
+						<time days="0001000" start="115" length="36" dates="1" sessionDay="Thursday"/>
 					</section>
 				</subpart>
 			</config>
@@ -265,10 +265,10 @@
 			<config id="20">
 				<subpart id="20" itype="Laboratory" courseLabNum="1">
 					<section id="43" courseLabSectionNum="1" limit="491">
-						<time days="1000000" start="170" length="36" dates="" sessionDay="Monday"/>
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
 					</section>
 					<section id="44" courseLabSectionNum="2" limit="544">
-						<time days="0010000" start="115" length="36" dates="" sessionDay="Wednesday"/>
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
 					</section>
 				</subpart>
 			</config>

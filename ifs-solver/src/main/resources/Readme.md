@@ -91,18 +91,18 @@ Changes made:
     
 - 210902_105758
     - Configuration File change: changed Maximal solver time (Termination.TimeOut)  to 60 from 28800
-    - solver took 1m
+    - Solver took 1m
     - Complete solution found.
     
 - 210903_204021
     - Configuration File change: changed Stop when a complete solution if found (Termination.StopWhenComplete) to true,
     and Termination.TimeOut to 300 (from 60)
-    - solver took 0.21m (12.64s) [including trying to get a better solution on the initial complete solution]
+    - Solver took 0.21m (12.64s) [including trying to get a better solution on the initial complete solution]
     - Complete solution found.
     
 - 210903_223248
     - Configuration File change: changed Anonymize XML file (no names) (Xml.ShowNames) to true
-    - solver took 0.24m (14.66s)
+    - Solver took 0.24m (14.66s)
     - Complete solution found.
     
 - 210907_091307
@@ -129,6 +129,7 @@ Changes made:
 - 210906_114246
     - Running solver after fixing previous NullPointerException error (added "itype" attribute to each subpart element in the XML input fike).
     - No complete solution found - best solution had 56 course requests unassigned (6118/6174 [99.09%] assigned). 
+        - Solution file has "Students missing 1 course: 100,00% (56)"
         - Unassigned course requests in the solution.xml file will not have a <best> sub-element added to it.
             - In the tableau.csv file in the solution folder, the request's Enrolled attribute value will be 'No',
             and the Section value will be empty. In the request-priorities.csv file, the Enrolled value will be 0.
@@ -162,13 +163,13 @@ Changes made:
         by increasing the capacities of the 2 courses (BIOL103 and BIOL195) in the Courses.xlsx input file to match the number of requests for those courses, 
         allowing us to get a complete solution
     - 210922_125809
-        - solver took 0.12m (7.13s)
+        - Solver took 0.12m (7.13s)
         - Complete solution found.
     - 210922_212224
-        - solver took 0.07m (4.40s)
+        - Solver took 0.07m (4.40s)
         - Complete solution found.
     - 210922_212403
-        - solver took 0.15m (8.92s)
+        - Solver took 0.15m (8.92s)
         - Complete solution found.
     - 210924_010657
         - Changed the students' id attribute in the input data XML file to be their actual student number's/id's according to their institute,
@@ -182,12 +183,22 @@ Changes made:
         So now this student had two course requests for BIOL196. When I generated the updated input data XML file, and 
         ran the solver on it, to my surprise a complete solution was found, and  I saw that the (same) section of BIOL196 
         was assigned to both course requests (thus a time overlap conflict)
-        - solver took 0.35m (20.82s)
+        - Solver took 0.35m (20.82s)
+        - Complete solution found.
     - 210926_204519
         - After the above solution's (210926_202819) results, I thought that maybe the solver detects if two course requests are for the 
         same course and doesn't consider time conflicts for it. So for the second BIOL196 course request for this student, I replaced BIOL196 with another course,
         BIOL222, a course that doesn't (currently) exist, and went to Courses.xlsx and added BIOL222 with only 1 section, whose timeslot 
         is the exact same as that of BIOL196 and set the capacity to 1, so that I can test time overlap conflict for two different courses.
         Yet, still a complete solution was found, and both course requests were assigned to the respective sections (both of which occur at the same time) 
-        - solver took 0.25m (15.18s)
-        
+        - Solver took 0.25m (15.18s)
+        - Complete solution found.
+    - 210926_225901
+        - Running the solver after fixing the Time overlaps conflicts bug that I discovered above
+            - See 10.2 in this project's main Readme file (../Readme.md) for how I found where the bug occurred and how I fixed it. 
+            - All previously obtained solutions above probably have Time overlap conflicts within them, and that they went unchecked, 
+            and that the time taken are quite shorter than what they should have been. 
+        - Solver took 5m (300s - the Maximal solver time (Termination.TimeOut's value); with the message that 'Timeout reached')
+        - NO complete solution found (as expected) 
+            - Best solution had 9 course requests unassigned (6166/6175 [99,85%] assigned) (8 more than I was expecting). 
+

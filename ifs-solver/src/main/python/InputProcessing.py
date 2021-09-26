@@ -189,7 +189,7 @@ def main():
 		sessionLength = coursesDF.loc[labSection, "sessionLength"] # The length of this LabSection session
 		sessionLength = generateTimeslot(sessionLength) # sessionLength in terms of a timeslot value
 		currentTimeElement.setAttribute("length", str(sessionLength))
-		currentTimeElement.setAttribute("dates", "") # Setting a random dates binary string
+		currentTimeElement.setAttribute("dates", "1") # Setting a random dates binary string (cannot make it an empty string as it is being used to detect time overlap conflicts)
 		currentTimeElement.setAttribute("sessionDay", str(sessionDay)) # My own additional atrribute to the XML input doc (See Todo above)
 		currentSectionElement.appendChild(currentTimeElement)
 

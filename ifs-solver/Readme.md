@@ -129,7 +129,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
         so that there is no extra requests above the capacity for these courses (the number of requests matches the capacity),
         and ran the solver to obtain a complete solution
         - I did this as I want a complete solution that I can use to do the Minimal Perturbation 
-        experimentation part - making changes to the input and resolving
+        experimentation part - making changes to the input and resolving.
 
 10. Creating modified inputs (adding new or updating student course requests) to this problem instance and processing them
 (will be using the 2020-Sem1-CAES-Wvl-no-extra-requests instance as it gives a complete initial solution)
@@ -147,7 +147,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
     and the initial solution file (solution.xml), and produce an updated XML file (input data file) that is a partial solution (the
     unchanged course requests are still assigned as is, the new course requests are unassigned/unallocated and the old course requests removed)
         - Discovered a bug when preparing to add the solutions (assigned sections) to the studentsDict. 
-            - Bug: Time overlap conflicts are not being detected by the solver and student's in my problem instance are 
+            - BUG: Time overlap conflicts are not being detected by the solver and student's in my problem instance are 
             being assigned to sections that occur at the same time
             - I discovered this bug as I was thinking what will reflect in the solution.xml file if there is a time 
             conflict and thus the student will not be assigned a section for that course request. So I took a student (218047643)
@@ -161,8 +161,27 @@ UniTime Student Sectioning Solver (UniTime site Links):
             is the exact same as that of BIOL196 and set the capacity to 1, so that I can test time overlap conflict for two different courses.
             Yet, still both course requests were assigned to the respective sections (both of which occur at the same time) [See solution 210926_204519]. 
             - I've looked in the SolverConfiguration.cfg file and Use Time Overlaps (StudentSct.TimeOverlaps) is set to true.
-            - This also means that all my previously obtained solutions up to this point probably have Time overlap conflicts
-            within them, and that they went unchecked, and that the time taken are quite shorter than what they should have been. 
+            - **This also means that all my previously obtained solutions up to this point probably have Time overlap conflicts
+            within them, and that they went unchecked, and that the time taken are quite shorter than what they should have been.** 
+            - BUG FOUND AND FIXED
+                - On the UniTime CPSolver's Student Sectioning Data Format link (https://www.unitime.org/sct_dataformat.php),
+                for the two time placements overlap condition, the 'dates', 'days', and 'times' conditions are all joined by
+                'AND'. This means that for there to be a time overlap conflict for a student, two  sections have to also be taking
+                place on the same date. In InputProcessing.py, when I added the 'dates' attribute for a section, I set it to an
+                empty string (i.e. it will be an empty string for all sections [Lab Section sessions]). 
+                So a binary XOR of two empty strings probably returns a zero value by the solver, meaning that
+                according to the solver there is no date overlap thus no time overlap. 
+                - So I fixed the bug by setting the 'dates' attribute of a section's time element to "1". 
+                - Solution obtained is 210926_225901. Solution had 9 course requests unassigned, meaning there is 8 time overlap conflicts
+                in this solution to the the actual input of this problem instance.
+                - To answer my question: In the solution.xml, for a course request that has a Time Overlap conflict with an existing assigned 
+                section of a course request for that student (i.e. no section was assigned to the course request) 
+                there is no 'best' element added as a sub-element to this course request's ('course') element
+                    - i.e. Unassigned course requests in the solution.xml file will not have a <best> sub-element added to it.
+
+ 
+                
+                
             
             
             

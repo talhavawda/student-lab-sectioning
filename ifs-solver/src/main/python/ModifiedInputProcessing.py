@@ -74,6 +74,7 @@ def main():
 		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
 
 	problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
+	# Todo - test if this directory exists - The actual folder name may be 1 second later (or a few) (since I obtain the time just berfore running the CPSolver)
 	currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
 
 
