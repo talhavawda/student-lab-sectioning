@@ -178,7 +178,8 @@ UniTime Student Sectioning Solver (UniTime site Links):
                 section of a course request for that student (i.e. no section was assigned to the course request) 
                 there is no 'best' element added as a sub-element to this course request's ('course') element
                     - i.e. Unassigned course requests in the solution.xml file will not have a <best> sub-element added to it.
-
+                - After I obtained the 210926_225901 solution, I undid the changes that I made to the Courses.xslx and Students.xlsx file
+                to test the time overlap conflict (i.e. removed the BIOL222 course and its course request for the student 218047643)
  
                 
                 

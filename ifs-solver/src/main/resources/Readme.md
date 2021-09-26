@@ -201,4 +201,31 @@ Changes made:
         - Solver took 5m (300s - the Maximal solver time (Termination.TimeOut's value); with the message that 'Timeout reached')
         - NO complete solution found (as expected) 
             - Best solution had 9 course requests unassigned (6166/6175 [99,85%] assigned) (8 more than I was expecting). 
-
+            - From looking at the debug.log file, the initial solution (6166 requests assigned) is the best solution obtained (in terms of number of requests assigned).
+            No other solution obtained more assigned requests (though many other solutions did also get 6166 assigned requests)
+        - What the csv files say:
+            - conflicts-real:
+                - Course C16 (the unassigned course) has 8 students conflicting with C4 with the following reason: P16 W 9:35a - 12:35p  vs P4 W 9:35a - 12:35p
+                    - 'P' stands for Subpart (i.e. a lab). It's used in the name of the subpart - 'name' attribute for a subpart 
+                    is added in the solution.xml file. Since each course only has 1 lab in this problem instance, the subpart number
+                    should match up with the course number
+                    - Course C4 is BIOL196 and Course C16 is MATH196
+                - Course C5 has 1 student conflicting with C4 for the same reason as C16. Course C5 is the BIOL222 course I added for testing.
+            - time-conflicts-real
+                - contains the class (lab section) of the unassigned course that is causing the conflict, as well as the meeting time
+            - section-conflicts-real
+                - contains more info than conflicts-real, including the course and class (lab section) enrolments (student course requests successfully assigned)
+                and class limit for courses C16 and C5. 
+            - tableau
+                - Course requests of students with their assigned sections in a tabular format
+                - Each row is a course request
+                - If a course request was unassigned in the solution, its value for the "Enrolled" field will be "No",
+                and the "Sections" field will be empty
+        - There's also a time-overlaps-real.csv file (with no info) implying the solver makes a distinction between an actual time conflict and a time overlap
+    - 210927_010236
+        - Running the solver after undoing the changes that I made to the Courses.xslx and Students.xlsx file to test the time 
+        overlap conflict (i.e. removed the BIOL222 course and its course request for the student 218047643)
+        - Solver took 5m (300s - the Maximal solver time (Termination.TimeOut's value); with the message that 'Timeout reached')
+        - NO complete solution found (as expected) 
+            - 8 unassigned course requests  (6166/6174 [99,87%] assigned)
+            - Basically same as previous solution - 8 students of MATH196 (now course C15) conflicting with course C4
