@@ -109,13 +109,16 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	solutionBS = BeautifulSoup(solutionXML, "xml")
 
 	"""
-		Maintain a dictionary (Map) of student details, their course requests, and assigned sections for each of their requests
-		from the current solution. 
+		studentsDict: A dictionary (Map) of student details (the student's personal info, their course requests, and 
+		assigned sections for each of their requests from the current solution.) 
 		
-		We are making the key be the student number (or ID, according to the institute. This is also the id attribute value of the student
-		in the XML file). 
-		Usung the students' student number as the key helps us quickly check if a student we encounter in the 
-		modified Students.xlsx file already exists in our current solution or is a new student.
+		key = studentNumber (their ID); value = a dictionary of the student's details
+		
+		We are making the key be the students' student number (or ID) according to the institute. This is also the
+		id attribute value of the student in the XML file. 
+		Using the students' student number as the key helps us quickly check if a student we encounter in the 
+		modified Students.xlsx file already exists in our current solution or is a new student, and also to find a particular student
+		with their details (this wouldn't have been possible if we had used a list as the outermost container / data structure).
 		
 		We will initially populate it with the data from the current input data XML file and current solution XML file,
 		and will update it using the modified Students.xlsx input file. 
@@ -130,6 +133,62 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 
 
 	"""Obtain student details and course requests from the current input data XML file and process them into studentsDict"""
+	inputstudentsTags = inputBS.find_all("student")  # Extract all 'student' tags from the input data XML file
+	count = 0
+	for student in inputstudentsTags: # each student is a Tag object
+		studentDict = dict() # A dictionary to store the details (attributes from the input data XML file) of this student. This will be the value to the studentNumber key in studentsDict
+
+		studentNumber = student.get("id")
+
+		studentSurname = student.get("surname")
+		studentDict["surname"] = studentSurname
+		studentFirstnames = student.get("firstnames")
+		studentDict["firstnames"] = studentFirstnames
+		studentNumCourses = student.get("numCourses")
+		studentDict["numCourses"] = studentNumCourses
+		studentNumProcessedCourses = student.get("numProcessedCourses")
+		studentDict["numProcessedCourses"] = studentNumProcessedCourses
+
+		studentClassificationTag = student.find("classification")
+		studentClassificationArea = studentClassificationTag.get("area")
+
+		studentMajorTag = student.find("major")
+		studentMajorArea = studentMajorTag.get("area")
+
+		studentCourseRequestsList = list() # A list of dictionaries, each dictionary representing a course request
+		studentCourseRequestsTags = student.find_all("course")
+
+
+		for courseRequest in studentCourseRequestsTags:
+			courseRequestDict = dict() # Each key is an attribute of this course request and the value is the corresponding value of the key
+
+			courseRequestID = courseRequest.get("id")
+			courseRequestDict["courseRequestID"] = courseRequestID
+			courseRequestPriority = courseRequest.get("priority")
+			courseRequestDict["courseRequestPriority"] = courseRequestPriority
+			courseRequestCourseID = courseRequest.get("course")
+			courseRequestDict["courseRequestCourseID"] = courseRequestCourseID
+			courseRequestCourseName = courseRequest.get("courseName")
+			courseRequestDict["courseRequestCourseName"] = courseRequestCourseName
+
+			#courseRequestCourseLabsList = list()
+			#courseRequestDict["courseRequestCourseLabs"]
+
+
+			studentCourseRequestsList.append(courseRequestDict)
+
+		studentDict["courseRequests"] = studentCourseRequestsList
+
+		studentsDict[studentNumber] = studentDict
+
+		count += 1
+		print(count, "\t", studentNumber)
+
+		if count == 5:
+			break
+
+	print(studentsDict)
+
 
 
 	"""Obtain assigned sections for student course requests from the current solution XML file and process them into studentsDict"""
@@ -143,8 +202,6 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 
 	# Todo - each course can have multiple labs so remove allocatedSection field and add a list of labs to hold the allocatedSection value for each lab
 
-	#courseRequest = {'courseRequestID': , 'courseID': , 'courseName': , 'allocatedSection':}
-	#studentCourseRequestsList.append(courseRequest)
 	#studentsDict[studentNumber] = {'id':, 'surname': , 'firstnames': , 'numCourses': , 'classificationArea': , 'majorArea': , studentCourseRequestsList}
 
 

@@ -140,6 +140,8 @@ Changes made:
         The availability-conflicts-real.csv (and conflicts-real.csv, and section-conflicts-real.csv) says that Course C2 (BIOL103) has 18 availability conflicts for its (only) Section S5
         and that Course C3 (BIOL195) has 38 availability conflicts for its (only) Section S6 [both these sections have a capacity of 200]
         If we count the number of Course Requests for BIOL103 and BIOL195, it is indeed 218 and 238 respectively.
+            - If we look in the solution.xml file, for those students who were not assigned to a section due to the availability conflicts,
+            there is no 'best' element added as a sub-element of their course request ('course') element 
         
 - 2020-Sem1-CAES-Wvl-fixing-timeslots (Solutions can be ignored)
     - 210921_213541
@@ -172,3 +174,20 @@ Changes made:
         - Changed the students' id attribute in the input data XML file to be their actual student number's/id's according to their institute,
         instead of starting from 1 for the first student and incrementing by 1 for each student.
         See Issue #13 (https://github.com/talhavawda/student-lab-sectioning/issues/13)
+    - 210926_202819
+        - When working on ModifiedInputProcessing.py to prepare to add the solutions (assigned sections) to the studentsDict,
+        I wanted to test what will reflect in the solution.xml file if there is a time  conflict and thus the student 
+        will not be assigned a section for that course request. So I took a student (218047643) and added a course request 
+        for them in the Students.xslx input file for a course that they were already doing that contained only 1 section for its lab (BIOL196).
+        So now this student had two course requests for BIOL196. When I generated the updated input data XML file, and 
+        ran the solver on it, to my surprise a complete solution was found, and  I saw that the (same) section of BIOL196 
+        was assigned to both course requests (thus a time overlap conflict)
+        - solver took 0.35m (20.82s)
+    - 210926_204519
+        - After the above solution's (210926_202819) results, I thought that maybe the solver detects if two course requests are for the 
+        same course and doesn't consider time conflicts for it. So for the second BIOL196 course request for this student, I replaced BIOL196 with another course,
+        BIOL222, a course that doesn't (currently) exist, and went to Courses.xlsx and added BIOL222 with only 1 section, whose timeslot 
+        is the exact same as that of BIOL196 and set the capacity to 1, so that I can test time overlap conflict for two different courses.
+        Yet, still a complete solution was found, and both course requests were assigned to the respective sections (both of which occur at the same time) 
+        - solver took 0.25m (15.18s)
+        

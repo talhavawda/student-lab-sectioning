@@ -138,12 +138,34 @@ UniTime Student Sectioning Solver (UniTime site Links):
     course only has one lab, so a request for a course is for that course's lab) shall not be more than the total capacity for that
     course (the sum of the capacities of each section of that course's lab). Thus we shall not have any availability conflicts.
     - Todo: Since in the user system we won't have any control over the modified input given, we'll also need to ensure that there
-    are no availability conflicts (See https://github.com/talhavawda/student-lab-sectioning/issues/9). 
+    are no availability conflicts (See https://github.com/talhavawda/student-lab-sectioning/issues/9; we may even allow availability conflicts). 
     - 10.1 Creating multiple modified Student.xslx input files representing different scenarios (% of additions and modifications, 
-    % of individual capacities filled etc.)
+    % of individual capacities filled etc.) for this problem instance.
+        - The modified Students.xslx files are the entire Students' input data for the problem instance, not just containing
+        the course requests that need to be added/removed. 
     - 10.2 Creating a Python program script (ModifiedInputProcessing.py) to process a modified Students.xslx input file 
     and the initial solution file (solution.xml), and produce an updated XML file (input data file) that is a partial solution (the
     unchanged course requests are still assigned as is, the new course requests are unassigned/unallocated and the old course requests removed)
+        - Discovered a bug when preparing to add the solutions (assigned sections) to the studentsDict. 
+            - Bug: Time overlap conflicts are not being detected by the solver and student's in my problem instance are 
+            being assigned to sections that occur at the same time
+            - I discovered this bug as I was thinking what will reflect in the solution.xml file if there is a time 
+            conflict and thus the student will not be assigned a section for that course request. So I took a student (218047643)
+            and added a course request for a course that they were already doing that contained only 1 section for its lab (BIOL196).
+            So now this student had two course requests for BIOL196. When I generated the updated input data XML file, and 
+            ran the solver on it, to my surprise I saw that the (same) section of BIOL196 was assigned to both 
+            course requests (thus a time overlap conflict) [See solution 210926_202819].
+            I then thought that maybe the solver detects if two course requests are for the same course and doesn't consider
+            time conflicts for it. So for the second BIOL196 course request for this student, I replaced BIOL196 with another course,
+            BIOL222, a course that doesn't (currently) exist, and went to Courses.xlsx and added BIOL222 with only 1 section, whose timeslot
+            is the exact same as that of BIOL196 and set the capacity to 1, so that I can test time overlap conflict for two different courses.
+            Yet, still both course requests were assigned to the respective sections (both of which occur at the same time) [See solution 210926_204519]. 
+            - I've looked in the SolverConfiguration.cfg file and Use Time Overlaps (StudentSct.TimeOverlaps) is set to true.
+            - This also means that all my previously obtained solutions up to this point probably have Time overlap conflicts
+            within them, and that they went unchecked, and that the time taken are quite shorter than what they should have been. 
+            
+            
+            
     
         
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions<br>
