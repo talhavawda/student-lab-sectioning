@@ -77,6 +77,7 @@ def main():
 	currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
 
 	# Todo - test if this directory exists - The actual folder name may be 1 second later (or a few) (since I obtain the time just before running the CPSolver)
+	# Increment the date and time by 1 second until the directory path is valid
 	while True:
 		try:
 			open(currentSolutionFilePath, "r")
@@ -140,6 +141,35 @@ def main():
 
 
 # END main()
+
+
+def isEndofMonth(day: int, month: int, year: int):
+	"""
+		Determine whether the current day of a month is the last day of that month or not.
+		Assume day and month are valid values (the initial date-time we got as the initial solution is a valid date-time
+		and  we are validating the date-time when incrementing the date-time by 1 second).
+
+		:param day: day of a month (as an int). Range: 1-31
+		:param month: month of a year (as an int). Range: 1-12
+		:param year: year (as a 2-digit int). Range: 0-99
+		:return: boolean, whether the current date (day-month) is the end of that month or not
+	"""
+	lastDayOfMonth = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+
+	# The year value in the date-time of the current solution is specificed in 2-digits so we need to convert it into 4 digits to check for leap year. Assume 21st century
+	yearStr = "20" + str(year)
+	year = int(yearStr)
+
+	# A sub-function of this function
+	def isLeapYear(year):
+		return (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0)
+
+	if isLeapYear(year) and month == 2:
+		return day == 29
+	else:
+		return day == lastDayOfMonth[month]
+
+
 
 def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	"""
