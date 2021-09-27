@@ -76,12 +76,20 @@ def main():
 	problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
 	currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
 
-	# Todo - test if this directory exists - The actual folder name may be 1 second later (or a few) (since I obtain the time just before running the CPSolver)
-	# Increment the date and time by 1 second until the directory path is valid
+	"""
+		The actual folder name (the current  date and time that the solver started, in the yymmdd_hhmmss format) of the
+		directory of the current solution instance may not be exactly the same as the name I got from the Solutions.txt file. 
+		In my Main.java program where I ran the solver on the current problem instance's input data XML file, I obtained
+		the current date and time just before running the solver, and stored it in the Solutions.txt file thereafter. 
+		So the actual folder name of the solution (that the solver obtained) may be 1 (or a few) second later than the
+		 current date-time that I obtained and stored.
+		So if the current solution path doesn't exist, increment the date-time of the current solution by 1 second each 
+		time till the path is valid.
+	"""
 	while True:
 		try:
 			open(currentSolutionFilePath, "r")
-			break
+			break  # currentSolutionFilePath is valid - we have found the current solution folder
 		except FileNotFoundError:
 
 			seconds = int(currentSolution[-2] + currentSolution[-1])
@@ -92,27 +100,54 @@ def main():
 			month = int(currentSolution[2] + currentSolution[3])
 			day = int(currentSolution[4] + currentSolution[5])
 
-			print(year, month, day, hours, minutes, seconds)
+			#print(year, month, day, hours, minutes, seconds)  # For testing
 
+			# Increment time by 1 second
 			if seconds < 59:
 				seconds += 1
 			elif minutes < 59:  # and seconds == 59
 				seconds = 0
 				minutes += 1
-			elif hours < 23: # and minutes == 59 and seconds == 59
+			elif hours < 23:  # and minutes == 59 and seconds == 59
 				seconds = 0
 				minutes = 0
 				hours += 1
-			else: # hours == 23 and minutes == 59 and seconds == 59
+			else:  # hours == 23 and minutes == 59 and seconds == 59
 				seconds = 0
 				minutes = 0
 				hours = 0
-				# TODO - increment date
 
+				# Increment date by 1 day
+				if not isEndofMonth(day, month, year):
+					day += 1
+				elif month != 12:  # and isEndofMonth(day, month, year)
+					day = 1
+					month += 1
+				else:  # isEndofMonth(day, month, year) and month == 12
+					day = 1
+					month = 1
 
+					# year value is specified in 2 digits only
+					if year < 99:
+						year += 1
+					else:
+						year = 0
+
+			yearStr = str(year)
+			monthStr = str(month)
+			dayStr = str(day)
 			hoursStr = str(hours)
 			minutesStr = str(minutes)
 			secondsStr = str(seconds)
+
+			if year < 10:
+				yearStr = "0" + yearStr
+
+			if month < 10:
+				monthStr = "0" + monthStr
+
+			if day < 10:
+				dayStr = "0" + dayStr
 
 			if hours < 10:
 				hoursStr = "0" + hoursStr
@@ -124,17 +159,18 @@ def main():
 				secondsStr = "0" + secondsStr
 
 
-			currentSolution = currentSolution[:-6] + hoursStr + minutesStr + secondsStr
-			#problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
-			#currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
-			print(currentSolution)
+			currentSolution = yearStr + monthStr + dayStr + "_" + hoursStr + minutesStr + secondsStr
+			#print(currentSolution)   # For testing
+
+			problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
+			currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
 
 
+	print("Current solution:\t", currentSolution)
 
 
 
 	# Todo - get and read in the modified Students.xlsx input file (See InputProcessing.py)
-
 
 
 	studentsDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
