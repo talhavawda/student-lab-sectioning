@@ -166,7 +166,7 @@ def main():
 			currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
 
 
-	print("Current solution:\t", currentSolution)
+	print("Current solution:\t", currentSolution, end="\n\n")
 
 
 
@@ -210,26 +210,31 @@ def isEndofMonth(day: int, month: int, year: int):
 def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	"""
 		Read in the current input data XML file and the current solution XML file, and process the data into a dictionary
-		that stores all the student details, course requests and assigned sections
+		that stores all the student details, their course requests and allocated/assigned sections and assigned sections
+		for each of their requests from the current solution.
 
 		:param inputXmlFilePath: the file path of the current input data XML file
 		:param currentSolutionFilePath: the file path of the current solution XML file
-		:return: studentsDict, a dictionary of student details, their course requests, and assigned sections for each of their requests
-		from the current solution.
+		:return: currentSolutionDict, a dictionary containing the number of students, the number of courses, the number
+		of course requests and a sub-dictionary containing the student details, requests and allocations, from the current
+		solution
 	"""
+	print("Processing the current input data XML file and current solution XML file...")
+
+	print("\tReading in and parsing the input data and solution XML files...")
 
 	with open(inputXmlFilePath, "r") as inputXMLFile:
 		inputXML = inputXMLFile.read()
 
-
-
 	with open(currentSolutionFilePath, "r") as solutionXMLFile:
 		solutionXML = solutionXMLFile.read()
-
 
 	# Passing the current input and solution XML files to BeatifulSoup parsers
 	inputBS = BeautifulSoup(inputXML, "xml")
 	solutionBS = BeautifulSoup(solutionXML, "xml")
+
+	print("\tFiles have been read in and parsed.")
+
 
 	"""
 		studentsDict: A dictionary (Map) of student details (the student's personal info, their course requests, and 
@@ -254,13 +259,13 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	numCourses = int(inputSectioningTag.get("numCourses"))
 	numCourseRequests = int(inputSectioningTag.get("numCourseRequests"))
 
-	# solutionSectioningTag = solutionBS.find("sectioning")  # Extract the 'sectioning' tag/element and its attributes from the solution XML file
-	#print(solutionSectioningTag)
 
 	"""
 		Obtain student details and course requests from the current input data XML file, the allocated/assigned sections 
 		for student course requests from the current solution XML file and process them into studentsDict
 	"""
+	print("\tObtaining student details, their course requests, and allocated sections...")
+	print("\t\tProcessing student:")
 	inputstudentsTags = inputBS.find_all("student")  # Extract all 'student' tags from the input data XML file
 
 	for student in inputstudentsTags: # each student is a Tag object
@@ -268,6 +273,7 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 
 		studentNumber = student.get("id")
 		solutionStudentTag = solutionBS.find("student", id=studentNumber) # Get the student tag/element of this student in the solution.xml file | Source: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#the-keyword-arguments
+		print("\t\t\t", studentNumber)
 
 		studentSurname = student.get("surname")
 		studentDict["surname"] = studentSurname
@@ -318,8 +324,17 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 
 		studentsDict[studentNumber] = studentDict
 
-	print("Current input data XML file and current solution XML file has been processed.")
-	return studentsDict
+	print("\n\tStudent details, course requests, and section allocations have been obtained.")
+	print("Current input data and solution XML files have been processed.")
+
+
+	currentSolutionDict = dict()
+	currentSolutionDict["numStudents"] = numStudents
+	currentSolutionDict["numCourses"] = numCourses
+	currentSolutionDict["numCourseRequests"] = numCourseRequests
+	currentSolutionDict["studentsDictionary"] = studentDict
+
+	return currentSolutionDict
 
 
 
