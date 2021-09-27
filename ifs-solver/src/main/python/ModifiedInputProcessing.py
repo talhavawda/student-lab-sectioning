@@ -72,7 +72,7 @@ def main():
 	except TypeError:
 		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
 
-	currentSolutionFilePath = getActualCurrentSolution(currentSolution, problemInstanceDirectoryPath)
+	currentSolutionFilePath = getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)
 
 
 	# Todo - get and read in the modified Students.xlsx input file (See InputProcessing.py)
@@ -111,7 +111,7 @@ def isEndofMonth(day: int, month: int, year: int):
 		return day == lastDayOfMonth[month]
 
 
-def getActualCurrentSolution(currentSolution, problemInstanceDirectoryPath):
+def getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath):
 	"""
 		The actual folder name (the current  date and time that the solver started, in the yymmdd_hhmmss format) of the
 		directory of the current solution instance may not be exactly the same as the name I got from the Solutions.txt file.
