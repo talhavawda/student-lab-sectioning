@@ -74,8 +74,61 @@ def main():
 		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
 
 	problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
-	# Todo - test if this directory exists - The actual folder name may be 1 second later (or a few) (since I obtain the time just berfore running the CPSolver)
 	currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
+
+	# Todo - test if this directory exists - The actual folder name may be 1 second later (or a few) (since I obtain the time just before running the CPSolver)
+	while True:
+		try:
+			open(currentSolutionFilePath, "r")
+			break
+		except FileNotFoundError:
+
+			seconds = int(currentSolution[-2] + currentSolution[-1])
+			minutes = int(currentSolution[-4] + currentSolution[-3])
+			hours = int(currentSolution[-6] + currentSolution[-5])
+
+			year = int(currentSolution[0] + currentSolution[1])
+			month = int(currentSolution[2] + currentSolution[3])
+			day = int(currentSolution[4] + currentSolution[5])
+
+			print(year, month, day, hours, minutes, seconds)
+
+			if seconds < 59:
+				seconds += 1
+			elif minutes < 59:  # and seconds == 59
+				seconds = 0
+				minutes += 1
+			elif hours < 23: # and minutes == 59 and seconds == 59
+				seconds = 0
+				minutes = 0
+				hours += 1
+			else: # hours == 23 and minutes == 59 and seconds == 59
+				seconds = 0
+				minutes = 0
+				hours = 0
+				# TODO - increment date
+
+
+			hoursStr = str(hours)
+			minutesStr = str(minutes)
+			secondsStr = str(seconds)
+
+			if hours < 10:
+				hoursStr = "0" + hoursStr
+
+			if minutes < 10:
+				minutesStr = "0" + minutesStr
+
+			if seconds < 10:
+				secondsStr = "0" + secondsStr
+
+
+			currentSolution = currentSolution[:-6] + hoursStr + minutesStr + secondsStr
+			#problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
+			#currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
+			print(currentSolution)
+
+
 
 
 
@@ -102,8 +155,11 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	with open(inputXmlFilePath, "r") as inputXMLFile:
 		inputXML = inputXMLFile.read()
 
+
+
 	with open(currentSolutionFilePath, "r") as solutionXMLFile:
 		solutionXML = solutionXMLFile.read()
+
 
 	# Passing the current input and solution XML files to BeatifulSoup parsers
 	inputBS = BeautifulSoup(inputXML, "xml")
@@ -132,6 +188,8 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	numCourses = int(inputSectioningTag.get("numCourses"))
 	numCourseRequests = int(inputSectioningTag.get("numCourseRequests"))
 
+	solutionSectioningTag = solutionBS.find("sectioning")
+	print(solutionSectioningTag)
 
 	"""Obtain student details and course requests from the current input data XML file and process them into studentsDict"""
 	inputstudentsTags = inputBS.find_all("student")  # Extract all 'student' tags from the input data XML file
