@@ -37,7 +37,6 @@ def main():
 		:return: None
 	"""
 
-
 	#problemInstanceName = input("Enter problem instance name: ")
 	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests"
 
@@ -73,19 +72,63 @@ def main():
 	except TypeError:
 		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
 
+	currentSolutionFilePath = getActualCurrentSolution(currentSolution, problemInstanceDirectoryPath)
+
+
+	# Todo - get and read in the modified Students.xlsx input file (See InputProcessing.py)
+
+
+	studentsDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
+
+
+# END main()
+
+
+def isEndofMonth(day: int, month: int, year: int):
+	"""
+		Determine whether the current day of a month is the last day of that month or not.
+		Assume day and month are valid values (the initial date-time we got as the initial solution is a valid date-time
+		and  we are validating the date-time when incrementing the date-time by 1 second).
+
+		:param day: day of a month (as an int). Range: 1-31
+		:param month: month of a year (as an int). Range: 1-12
+		:param year: year (as a 2-digit int). Range: 0-99
+		:return: boolean, whether the current date (day-month) is the end of that month or not
+	"""
+	lastDayOfMonth = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+
+	# The year value in the date-time of the current solution is specificed in 2-digits so we need to convert it into 4 digits to check for leap year. Assume 21st century
+	yearStr = "20" + str(year)
+	year = int(yearStr)
+
+	# A sub-function of this function
+	def isLeapYear(year):
+		return (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0)
+
+	if isLeapYear(year) and month == 2:
+		return day == 29
+	else:
+		return day == lastDayOfMonth[month]
+
+
+def getActualCurrentSolution(currentSolution, problemInstanceDirectoryPath):
+	"""
+		The actual folder name (the current  date and time that the solver started, in the yymmdd_hhmmss format) of the
+		directory of the current solution instance may not be exactly the same as the name I got from the Solutions.txt file.
+		In my Main.java program where I ran the solver on the current problem instance's input data XML file, I obtained
+		the current date and time just before running the solver, and stored it in the Solutions.txt file thereafter.
+		So the actual folder name of the solution (that the solver obtained) may possibly be 1 (or a few) second later than
+		the current date-time that I obtained and stored.
+		So if the current solution path doesn't exist, increment the date-time of the current solution by 1 second each
+		time till the path is valid.
+
+		:param currentSolution: the current solution name obtained from the Solutions.txt file
+		:param problemInstanceDirectoryPath:
+		:return: currentSolutionFilePath
+	"""
 	problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
 	currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
 
-	"""
-		The actual folder name (the current  date and time that the solver started, in the yymmdd_hhmmss format) of the
-		directory of the current solution instance may not be exactly the same as the name I got from the Solutions.txt file. 
-		In my Main.java program where I ran the solver on the current problem instance's input data XML file, I obtained
-		the current date and time just before running the solver, and stored it in the Solutions.txt file thereafter. 
-		So the actual folder name of the solution (that the solver obtained) may be 1 (or a few) second later than the
-		 current date-time that I obtained and stored.
-		So if the current solution path doesn't exist, increment the date-time of the current solution by 1 second each 
-		time till the path is valid.
-	"""
 	while True:
 		try:
 			open(currentSolutionFilePath, "r")
@@ -168,43 +211,7 @@ def main():
 
 	print("Current solution:\t", currentSolution, end="\n\n")
 
-
-
-	# Todo - get and read in the modified Students.xlsx input file (See InputProcessing.py)
-
-
-	studentsDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
-
-
-# END main()
-
-
-def isEndofMonth(day: int, month: int, year: int):
-	"""
-		Determine whether the current day of a month is the last day of that month or not.
-		Assume day and month are valid values (the initial date-time we got as the initial solution is a valid date-time
-		and  we are validating the date-time when incrementing the date-time by 1 second).
-
-		:param day: day of a month (as an int). Range: 1-31
-		:param month: month of a year (as an int). Range: 1-12
-		:param year: year (as a 2-digit int). Range: 0-99
-		:return: boolean, whether the current date (day-month) is the end of that month or not
-	"""
-	lastDayOfMonth = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
-
-	# The year value in the date-time of the current solution is specificed in 2-digits so we need to convert it into 4 digits to check for leap year. Assume 21st century
-	yearStr = "20" + str(year)
-	year = int(yearStr)
-
-	# A sub-function of this function
-	def isLeapYear(year):
-		return (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0)
-
-	if isLeapYear(year) and month == 2:
-		return day == 29
-	else:
-		return day == lastDayOfMonth[month]
-
+	return currentSolutionFilePath
 
 
 def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
