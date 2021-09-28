@@ -3,7 +3,30 @@ and must contain the following files named as is: "Courses.xlsx", "Students.xlsx
 
 If the user cannot modify a copy of the SpecificationInputTemplate.xml file in the resources folder, they may use a
 copy of the DefaultSpecification.xml file from the resources folder by renaming the copy to "Specification.xml",
-and placing it insidr the problem instance's folder 
+and placing it inside the problem instance's folder
+
+When the input files of this problem instance are processed, an input data XML file of the same name as the problem instance
+will be generated and stored in this problem instance's folder. And each time the solver is run (on the current input data XML file) 
+to obtain a (new/first/initial) solution, a folder will be created for that solution (with its name being the date and time that the solver was run for that solution)
+and will be placed inside this problem instance's folder.
+
+Each time the solver is run (on the current problem instance), the name of the solution (its probable folder name) is 
+appended to a new line of the Solutions.txt file in the problem instance's folder.
+Furthermore, each time the input data XML file is generated (either for the first time or being updated, in either 
+InputProcessing.py or ModifiedInputProcessing.py), a blank/empty CurrentSolutions.txt file is created and placed in the 
+problem instance's folder, and each time the solver is run on the current input data XML file, the name of the solution 
+(its probable folder name) is appended to a new line of this text file. 
+So Solutions.txt represents all the solutions obtained for this problem instance, and CurrentSolutions.txt represents 
+all the solutions obtained (sibling [independent] solutions to each other) on the current input data XML file of this 
+problem instance. 
+
+**_Modified input and resolving_**:
+I would like to keep the initial Students.xlsx input file as is (it should not be re-written), so that I can obtain a new solution
+to the initial input of the problem instance from scratch if I want to. So a modified Students file will be initialised
+to a copy of the current Students input file (whether the initial Students.xlsx or a modified Students input file) and will
+be renamed similarly to Students.xlsx but with a number appended to it, starting from 1, indicating the first modified Students input file. 
+ModifiedInputProcessing will ask for the number of the modified input file.
+
 <br>
 <br>
 
@@ -179,7 +202,7 @@ Changes made:
         - When working on ModifiedInputProcessing.py to prepare to add the solutions (assigned sections) to the studentsDict,
         I wanted to test what will reflect in the solution.xml file if there is a time  conflict and thus the student 
         will not be assigned a section for that course request. So I took a student (218047643) and added a course request 
-        for them in the Students.xslx input file for a course that they were already doing that contained only 1 section for its lab (BIOL196).
+        for them in the Students.xlsx input file for a course that they were already doing that contained only 1 section for its lab (BIOL196).
         So now this student had two course requests for BIOL196. When I generated the updated input data XML file, and 
         ran the solver on it, to my surprise a complete solution was found, and  I saw that the (same) section of BIOL196 
         was assigned to both course requests (thus a time overlap conflict)
@@ -223,7 +246,7 @@ Changes made:
                 and the "Sections" field will be empty
         - There's also a time-overlaps-real.csv file (with no info) implying the solver makes a distinction between an actual time conflict and a time overlap
     - 210927_010236
-        - Running the solver after undoing the changes that I made to the Courses.xslx and Students.xlsx file to test the time 
+        - Running the solver after undoing the changes that I made to the Courses.xlsx and Students.xlsx file to test the time 
         overlap conflict (i.e. removed the BIOL222 course and its course request for the student 218047643)
         - Solver took 5m (300s - the Maximal solver time (Termination.TimeOut's value); with the message that 'Timeout reached')
         - NO complete solution found (as expected) 

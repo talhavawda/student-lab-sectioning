@@ -29,7 +29,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
 5. Studying the Data Format of the UniTime Student Sectioning solver
 6. Creating my Excel template input files
 7. Creating input files for 2020-Sem1-CAES-Wvl dataset (/problem instance) according to my templates
-8. Creating a Python program script (InputProcessing.py) inside this ifs-solver project to read in and process input files, and produce an XML file (input data file)
+8. Creating a Python program script (InputProcessing.py) inside this ifs-solver project to read in and process input files, and produce an XML file (input data XML file)
  for the UniTime Student Sectioning solver according to their data format structure/template
     - Current input files I'm using are the 2020-Sem1-CAES-Wvl problem instance
     - How to run Python in IntelliJ:
@@ -133,17 +133,17 @@ UniTime Student Sectioning Solver (UniTime site Links):
 
 10. Creating modified inputs (adding new or updating student course requests) to this problem instance and processing them
 (will be using the 2020-Sem1-CAES-Wvl-no-extra-requests instance as it gives a complete initial solution)
-    - The file that will be changed will be the Students.xslx input file
+    - The file that will be changed will be the Students.xlsx input file
     - Rule/assumption when modifying the input - the number of course requests for each course (for this problem instance, each 
     course only has one lab, so a request for a course is for that course's lab) shall not be more than the total capacity for that
     course (the sum of the capacities of each section of that course's lab). Thus we shall not have any availability conflicts.
     - Todo: Since in the user system we won't have any control over the modified input given, we'll also need to ensure that there
     are no availability conflicts (See https://github.com/talhavawda/student-lab-sectioning/issues/9; we may even allow availability conflicts). 
-    - 10.1 Creating multiple modified Student.xslx input files representing different scenarios (% of additions and modifications, 
+    - 10.1 Creating multiple modified Students.xlsx input files representing different scenarios (% of additions and modifications, 
     % of individual capacities filled etc.) for this problem instance.
-        - The modified Students.xslx files are the entire Students' input data for the problem instance, not just containing
+        - The modified Students.xlsx files are the entire Students' input data for the problem instance, not just containing
         the course requests that need to be added/removed. 
-    - 10.2 Creating a Python program script (ModifiedInputProcessing.py) to process a modified Students.xslx input file 
+    - 10.2 Creating a Python program script (ModifiedInputProcessing.py) to process a modified Students.xlsx input file 
     and the initial solution file (solution.xml), and produce an updated XML file (input data file) that is a partial solution (the
     unchanged course requests are still assigned as is, the new course requests are unassigned/unallocated and the old course requests removed)
         - Discovered a bug when preparing to add the solutions (assigned sections) to the studentsDict. 

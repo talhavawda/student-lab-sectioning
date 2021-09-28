@@ -27,13 +27,18 @@ public class Main {
 
 		try {
 			//Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(problemInstanceDirectoryPath + "/Solutions.txt"), StandardCharsets.UTF_8));
-			Writer writer = new BufferedWriter(new FileWriter(problemInstanceDirectoryPath + "/Solutions.txt",  StandardCharsets.UTF_8, true)); //ensuring data is appended to file instead of overwriting
-			writer.append(solutionDirectoryName + "\n");
-			writer.close();
-			System.out.println("\tWriting to Solutions.txt file has been successful.");
+			Writer solutionsWriter = new BufferedWriter(new FileWriter(problemInstanceDirectoryPath + "/Solutions.txt",  StandardCharsets.UTF_8, true)); //ensuring data is appended to file instead of overwriting
+			solutionsWriter.append(solutionDirectoryName + "\n");
+			solutionsWriter.close();
+
+			Writer currentSolutionsWriter = new BufferedWriter(new FileWriter(problemInstanceDirectoryPath + "/CurrentSolutions.txt",  StandardCharsets.UTF_8, true)); //ensuring data is appended to file instead of overwriting
+			currentSolutionsWriter.append(solutionDirectoryName + "\n");
+			currentSolutionsWriter.close();
+
+			System.out.println("\tWriting to Solutions.txt and CurrentSolutions.txt files has been successful.");
 		} catch (IOException e) { //if FileNotFoundException is thrown (it implements IOException)
 			System.out.println("ERROR: " + e);
-			System.out.println("\tWriting to Solutions.txt file has been unsuccessful.");
+			System.out.println("\tWriting to Solutions.txt and CurrentSolutions.txt files has been unsuccessful.");
 			System.out.println("\tPlease update the Solutions.txt file of this problem instance manually with the following entry: " + solutionDirectoryName);
 		}
 

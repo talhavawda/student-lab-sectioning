@@ -298,6 +298,15 @@ def main():
 		else:
 			print("Writing to input data XML file '" + xmlFileName + "' has been successful.")
 
+	# Reset/Overwrite CurrentSolutions.txt file to an empty file
+	currentSolutionsFilePath = "src/main/resources/input/" + problemInstanceName + "/CurrentSolutions.txt"
+	currentSolutionsFile = open(currentSolutionsFilePath, "w")
+	currentSolutionsFile.write()
+	currentSolutionsFile.close()
+
+
+# END main()
+
 
 def processProblemSpecification(problemSpecificationFilePath):
 	"""

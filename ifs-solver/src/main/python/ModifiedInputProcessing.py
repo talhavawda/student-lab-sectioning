@@ -11,17 +11,18 @@ from xml.dom import minidom # For creating and writing to XML files
 	requests are unassigned/unallocated and the old course requests removed)
 	
 	This current input data XML file and current solution file do not have to be the first/initial solution to the problem instance.
-	This means that the user can modify the Students.xlsx input file as many times as they want and obtain a new updated solution. 
+	This means that the user can modify the Students data  as many times as they want and obtain a new updated solution. 
 	
 	Everytime an updated input data XML file is generated based on the modified/updated Students input, it replaces/overrides
 	the previous input data XML file (as my solver code (Main.java) assumes that the name of input data XML file is the same as that
 	of the problem instance). So over here, we make the same assumption and the input data XML file that we obtained is the 
 	current one instead of the first input data XML file for this problem instance.
 	If the user wants to obtain a completely new solution from scratch, they can rerun the InputProcessing.py script
-	to obtain an input data XML file will all course requests being unassigned.
-	The reason why I ask the user to select the current solution to work with (and not also for the input XML file, and not
-	just taking the latest solution) is that the solver can be run many times on the current input data XML file and they
-	may not want to use the last solution obtained. 
+	to obtain an input data XML file with all course requests being unassigned.
+	The reason why I ask the user to select the solution (of the current input data XML file) to work with as the 
+	current solution (and not also for the input XML file, and not just taking the latest solution) is that the solver can 
+	be run many times on the current input data XML file (obtaining parallel/sibling independent solutions to each other) 
+	and they may not want to use the last solution obtained. 
 	
 	This program script assumes that the Courses.xlsx input file remains the same. If the Courses.xlsx file has been updated,
 	a new solution needs to be obtained from scratch using the InputProcessing.py script.
@@ -42,29 +43,30 @@ def main():
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml" # current input data XML file
-	problemInstanceSolutionsFile = problemInstanceDirectoryPath + "/Solutions.txt"
+	problemInputInstanceSolutionsFile = problemInstanceDirectoryPath + "/CurrentSolutions.txt"
 
-	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx" # Todo - get file path of the modified students file
+	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx" # Todo - get file path of the modified students file (ask user for number of modified Studrnts input file)
 
 
-	""" Get the solution of this problem instance that we want to work with (the current solution) """
+	""" Get the solution of this problem instance's input data XML file instance that we want to work with (the current solution, to the current input data XML file) """
 
 	problemInstanceSolutions = list()
 	solutionIndex = 0
 
-	print("Solutions of this problem instance:")
+	print("Solutions of this problem instance's input data XML file instance:")
 
-	with open(problemInstanceSolutionsFile) as solutionsFile:
+	with open(problemInputInstanceSolutionsFile) as solutionsFile:
 		for line in solutionsFile:
 			line = line[:len(line)-1]  # Remove the "\n" part at the end of the string | Doing -2 cuts out the last digit in the solution name so it seems that '\n' is being treated as one character
 			problemInstanceSolutions.append(line)
 			print("\t", solutionIndex,":", line)
 			solutionIndex += 1
+		solutionsFile.close()
 
 	print()
 
 	try:
-		currentSolution = input("Enter the solution (it's number above) that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: ")
+		currentSolution = input("Enter the number of the solution that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: ")
 
 		if currentSolution < 0 or currentSolution > solutionIndex:
 			currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver) | Alt. we can use solutionIndex
@@ -77,8 +79,18 @@ def main():
 
 	# Todo - get and read in the modified Students.xlsx input file (See InputProcessing.py)
 
+	""" Get the modified Students.xlsx input file """
 
+	""" Process the current input data and solution XML files and store them in a dictionary """
 	studentsDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
+
+
+	# Write the input data XML file
+
+	# Reset/Overwrite CurrentSolutions.txt file to an empty file
+	currentSolutionsFile = open(problemInputInstanceSolutionsFile, "w")
+	currentSolutionsFile.write()
+	currentSolutionsFile.close()
 
 
 # END main()
@@ -114,15 +126,15 @@ def isEndofMonth(day: int, month: int, year: int):
 def getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath):
 	"""
 		The actual folder name (the current  date and time that the solver started, in the yymmdd_hhmmss format) of the
-		directory of the current solution instance may not be exactly the same as the name I got from the Solutions.txt file.
+		directory of the current solution instance may not be exactly the same as the name I got from the CurrentSolutions.txt file.
 		In my Main.java program where I ran the solver on the current problem instance's input data XML file, I obtained
-		the current date and time just before running the solver, and stored it in the Solutions.txt file thereafter.
+		the current date and time just before running the solver, and stored it in the CurrentSolutions.txt file thereafter.
 		So the actual folder name of the solution (that the solver obtained) may possibly be 1 (or a few) second later than
 		the current date-time that I obtained and stored.
 		So if the current solution path doesn't exist, increment the date-time of the current solution by 1 second each
 		time till the path is valid.
 
-		:param currentSolution: the current solution name obtained from the Solutions.txt file
+		:param currentSolution: the current solution name obtained from the CurrentSolutions.txt file
 		:param problemInstanceDirectoryPath:
 		:return: currentSolutionFilePath
 	"""
