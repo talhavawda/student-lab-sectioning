@@ -83,12 +83,13 @@ def main():
 
 
 	""" Process the current input data and solution XML files and store them in a dictionary """
-	studentsDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
+	currentSolutionDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
 
 	""" Process the modified Students input Excel file"""
 
 
-	# Write the input data XML file
+	# Generate/Produce the updated input data XML file
+
 
 	# Reset/Overwrite CurrentSolutions.txt file to an empty file
 	currentSolutionsFile = open(problemInputInstanceSolutionsFile, "w")
@@ -254,13 +255,13 @@ def getModifiedStudentsFilePath(problemInstanceDirectoryPath):
 def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	"""
 		Read in the current input data XML file and the current solution XML file, and process the data into a dictionary
-		that stores all the student details, their course requests and allocated/assigned sections and assigned sections
-		for each of their requests from the current solution.
+		that stores all the student details, their course requests and allocated/assigned sections for each of their
+		requests from the current solution.
 
 		:param inputXmlFilePath: the file path of the current input data XML file
 		:param currentSolutionFilePath: the file path of the current solution XML file
-		:return: currentSolutionDict, a dictionary containing the number of students, the number of courses, the number
-		of course requests and a sub-dictionary containing the student details, requests and allocations, from the current
+		:return: currentSolutionDict: , a dictionary containing the number of students, the number of courses, the number
+		of course requests and a sub-dictionary (studentsDict) containing the student details, requests and allocations, from the current
 		solution
 	"""
 	print("Processing the current input data XML file and current solution XML file...")
@@ -380,6 +381,21 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 
 	return currentSolutionDict
 
+
+def processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict):
+	"""
+		Read in the modified Students input Excel file, the dictionary containing the current solution (that stores all
+		the student details, their course requests and allocated/assigned sections for each of their requests),
+		process the modified Students data (the updated students and course requests details) by updating the dictionary,
+		and return the updated dictionary, which represents the updated input for the problem instance.
+		This updated dictionary (updatedInputDict) represents a partial solution containing the allocations of the
+		unchanged course requests from the current solution.
+
+
+		:param modifiedStudentsFilePath: the file path of the modified Students input Excel file
+		:param currentSolutionDict: a dictionary representing the current solution
+		:return: updatedInputDict, containing the updated input data for this problem instance
+	"""
 
 
 
