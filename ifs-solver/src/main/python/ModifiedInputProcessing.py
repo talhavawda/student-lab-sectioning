@@ -106,9 +106,9 @@ def isEndofMonth(day: int, month: int, year: int):
 		Assume day and month are valid values (the initial date-time we got as the initial solution is a valid date-time
 		and  we are validating the date-time when incrementing the date-time by 1 second).
 
-		:param day: day of a month (as an int). Range: 1-31
-		:param month: month of a year (as an int). Range: 1-12
-		:param year: year (as a 2-digit int). Range: 0-99
+		:param day: int: day of a month (as an int). Range: 1-31
+		:param month: int: month of a year (as an int). Range: 1-12
+		:param year: int: year (as a 2-digit int). Range: 0-99
 		:return: boolean, whether the current date (day-month) is the end of that month or not
 	"""
 	lastDayOfMonth = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
@@ -127,7 +127,7 @@ def isEndofMonth(day: int, month: int, year: int):
 		return day == lastDayOfMonth[month]
 
 
-def getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath):
+def getCurrentSolutionFilePath(currentSolution: str, problemInstanceDirectoryPath: str):
 	"""
 		The actual folder name (the current  date and time that the solver started, in the yymmdd_hhmmss format) of the
 		directory of the current solution instance may not be exactly the same as the name I got from the CurrentSolutions.txt file.
@@ -138,9 +138,9 @@ def getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath):
 		So if the current solution path doesn't exist, increment the date-time of the current solution by 1 second each
 		time till the path is valid.
 
-		:param currentSolution: the current solution name obtained from the CurrentSolutions.txt file
-		:param problemInstanceDirectoryPath:
-		:return: currentSolutionFilePath
+		:param currentSolution: str: the current solution name obtained from the CurrentSolutions.txt file
+		:param problemInstanceDirectoryPath: str:
+		:return: currentSolutionFilePath: str:
 	"""
 	problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
 	currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
@@ -230,11 +230,11 @@ def getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath):
 	return currentSolutionFilePath
 
 
-def getModifiedStudentsFilePath(problemInstanceDirectoryPath):
+def getModifiedStudentsFilePath(problemInstanceDirectoryPath: str):
 	"""
 		Get the the correct file name of the modified Students input Excel file from the user, and return
 		the file path of the modified Students input file
-		:param problemInstanceDirectoryPath:
+		:param problemInstanceDirectoryPath: str:
 		:return: modifiedStudentsFilePath
 	"""
 	while True:
@@ -252,14 +252,14 @@ def getModifiedStudentsFilePath(problemInstanceDirectoryPath):
 	return modifiedStudentsFilePath
 
 
-def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
+def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 	"""
 		Read in the current input data XML file and the current solution XML file, and process the data into a dictionary
 		that stores all the student details, their course requests and allocated/assigned sections for each of their
 		requests from the current solution.
 
-		:param inputXmlFilePath: the file path of the current input data XML file
-		:param currentSolutionFilePath: the file path of the current solution XML file
+		:param inputXmlFilePath: str: the file path of the current input data XML file
+		:param currentSolutionFilePath: str: the file path of the current solution XML file
 		:return: currentSolutionDict: , a dictionary containing the number of students, the number of courses, the number
 		of course requests and a sub-dictionary (studentsDict) containing the student details, requests and allocations, from the current
 		solution
@@ -276,6 +276,9 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 
 	# Passing the current input and solution XML files to BeatifulSoup parsers
 	inputBS = BeautifulSoup(inputXML, "xml")
+
+	# For efficiency, we are going to concurrently traverse the solution XML file as we traverse the input data XML file to build the studentsDict
+	# i.e. so that we do not have to traverse the entire studentsDict afterwards to add the allocated sections to the students' course requests
 	solutionBS = BeautifulSoup(solutionXML, "xml")
 
 	print("\tFiles have been read in and parsed.")
@@ -382,7 +385,7 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	return currentSolutionDict
 
 
-def processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict):
+def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDict: dict):
 	"""
 		Read in the modified Students input Excel file, the dictionary containing the current solution (that stores all
 		the student details, their course requests and allocated/assigned sections for each of their requests),
@@ -391,14 +394,49 @@ def processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict):
 		This updated dictionary (updatedInputDict) represents a partial solution containing the allocations of the
 		unchanged course requests from the current solution.
 
-
-		:param modifiedStudentsFilePath: the file path of the modified Students input Excel file
-		:param currentSolutionDict: a dictionary representing the current solution
+		:param modifiedStudentsFilePath: the file path of the modified Students input Excel file, obtained and validated
+		using getModifiedStudentsFilePath()
+		:param currentSolutionDict: dict: a dictionary representing the current solution. See processCurrentSolution() for
+		its' structure
 		:return: updatedInputDict, containing the updated input data for this problem instance
 	"""
+	updatedInputDict = currentSolutionDict
 
+
+	modifiedStudentsDF = pd.read_excel(modifiedStudentsFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'numCourses':int})
+
+	# Since the modifiedStudentsFilePath has been generated by getModifiedStudentsFilePath, it will definitely
+	# contain a "-", so a valid index value definitely gets returned. And there's nothing I can do here if it does not
+	# contain the dash ("-"). So I will be using index() (which raises a ValueError exception if substring not found)
+	# instead of find() (which returns a  -1 if substring not found).
+	# Converting the modification version number to an int type will also raise a ValueError exception if the string is not a valid number
+	dashIndex = modifiedStudentsFilePath.index("-")
+	modVerNum = int(modifiedStudentsFilePath[dashIndex+1:]) # the modification version number of this modified Students input file
+
+	"""
+		Get the file path of the current Students input file (either the initial Students input file or the previous 
+		modified Students file) - the input file that was used to produce the current input data XML file that was used 
+		to generate the current solution, and use it to read in the current Students input file as a Pandas Data Frame 
+	"""
+	if modVerNum == 1: # the first modified Students file
+		currentStudentsFilePath = modifiedStudentsFilePath[:dashIndex]
+	else:
+		currentStudentsFilePath = modifiedStudentsFilePath[:dashIndex+1] + str(modVerNum-1)
+
+	currentStudentsDF = pd.read_excel(currentStudentsFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'numCourses':int})
+
+	print()
+
+
+	# Consider also writing to the input data XML file here to improve efficiency / lower the execution time (doing the writing after processing
+	# the entire data first will lead to double execution time as we will have to traverse the entire dictionary again from the beginning
+
+	return updatedInputDict
 
 
 # Todo - update (re processes) the input data XML file for all other problem instances (based on additions made to InputProcessing.py on 22/09/2021
 
-main()
+#main()
+#modifiedStudentsDF = pd.read_excel("src/main/resources/input/2020-Sem1-CAES-Wvl-no-extra-requests/Students.xlsx", sheet_name=0, header=0, engine="openpyxl", dtype={'numCourses':int})
+#print(modifiedStudentsDF)
+
