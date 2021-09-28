@@ -6,12 +6,15 @@ from xml.dom import minidom # For creating and writing to XML files
 
 """
 	Process the current solution file (solution.xml) along with the input data XML file that was used to obtain it,
-	a modified/updated Students.xlsx input file, and produce an updated input data XML file that is a partial solution 
+	a modified/updated Students input file, and produce an updated input data XML file that is a partial solution 
 	(the unchanged course requests from the current input data XML file are still assigned as is, the new course 
 	requests are unassigned/unallocated and the old course requests removed)
 	
 	This current input data XML file and current solution file do not have to be the first/initial solution to the problem instance.
-	This means that the user can modify the Students data  as many times as they want and obtain a new updated solution. 
+	This means that the user can modify the Students data as many times as they want and obtain a new updated solution. 
+	[Each modified version (later modified versions being a modification of the previous modified version) of the initial 
+	Students.xlsx input file has a (version modification) number and will be named (by the user) as follows: 'Students-<ModVerNum>.xlsx',
+	with the first modified Students input file having the version num being 1, the second being 2, and so on.]
 	
 	Everytime an updated input data XML file is generated based on the modified/updated Students input, it replaces/overrides
 	the previous input data XML file (as my solver code (Main.java) assumes that the name of input data XML file is the same as that
@@ -45,8 +48,6 @@ def main():
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml" # current input data XML file
 	problemInputInstanceSolutionsFile = problemInstanceDirectoryPath + "/CurrentSolutions.txt"
 
-	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx" # Todo - get file path of the modified students file (ask user for number of modified Studrnts input file)
-
 
 	""" Get the solution of this problem instance's input data XML file instance that we want to work with (the current solution, to the current input data XML file) """
 
@@ -55,7 +56,7 @@ def main():
 
 	print("Solutions of this problem instance's input data XML file instance:")
 
-	with open(problemInputInstanceSolutionsFile) as solutionsFile:
+	with open(problemInputInstanceSolutionsFile, "r") as solutionsFile:
 		for line in solutionsFile:
 			line = line[:len(line)-1]  # Remove the "\n" part at the end of the string | Doing -2 cuts out the last digit in the solution name so it seems that '\n' is being treated as one character
 			problemInstanceSolutions.append(line)
@@ -77,19 +78,21 @@ def main():
 	currentSolutionFilePath = getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)
 
 
-	# Todo - get and read in the modified Students.xlsx input file (See InputProcessing.py)
+	# Get the modified Students input file
+	modifiedStudentsFilePath = getModifiedStudentsFilePath(problemInstanceDirectoryPath)
 
-	""" Get the modified Students.xlsx input file """
 
 	""" Process the current input data and solution XML files and store them in a dictionary """
 	studentsDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
+
+	""" Process the modified Students input Excel file"""
 
 
 	# Write the input data XML file
 
 	# Reset/Overwrite CurrentSolutions.txt file to an empty file
 	currentSolutionsFile = open(problemInputInstanceSolutionsFile, "w")
-	currentSolutionsFile.write()
+	#currentSolutionsFile.write("") # The above line will overwrite so I don't need this line
 	currentSolutionsFile.close()
 
 
@@ -226,6 +229,28 @@ def getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath):
 	return currentSolutionFilePath
 
 
+def getModifiedStudentsFilePath(problemInstanceDirectoryPath):
+	"""
+		Get the the correct file name of the modified Students input Excel file from the user, and return
+		the file path of the modified Students input file
+		:param problemInstanceDirectoryPath:
+		:return: modifiedStudentsFilePath
+	"""
+	while True:
+		try:
+			modVerNum = input("Enter the modification version number of the modified Students input file that you want to process: ")
+			modifiedStudentsFilePath = problemInstanceDirectoryPath + "/Students-" + modVerNum + ".xlsx"
+			modifiedStudentsFile = open(modifiedStudentsFilePath, "r")
+			break  # If the file was opened successfully
+		except FileNotFoundError:
+			print("Invalid modification version number entered. You will be prompted to re-enter\n")
+		finally:
+			modifiedStudentsFile.close()
+
+	print("Modified Students file:\t", "Students-" + modVerNum + ".xlsx", end="\n\n")
+	return modifiedStudentsFilePath
+
+
 def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 	"""
 		Read in the current input data XML file and the current solution XML file, and process the data into a dictionary
@@ -264,11 +289,11 @@ def processCurrentSolution(inputXmlFilePath, currentSolutionFilePath):
 		We are making the key be the students' student number (or ID) according to the institute. This is also the
 		id attribute value of the student in the XML file. 
 		Using the students' student number as the key helps us quickly check if a student we encounter in the 
-		modified Students.xlsx file already exists in our current solution or is a new student, and also to find a particular student
+		modified Students file already exists in our current solution or is a new student, and also to find a particular student
 		with their details (this wouldn't have been possible if we had used a list as the outermost container / data structure).
 		
 		We will initially populate it with the data from the current input data XML file and current solution XML file,
-		and will update it using the modified Students.xlsx input file. 
+		and will update it using the modified Students input file. 
 	"""
 	studentsDict = dict()
 	studentsDict.clear()

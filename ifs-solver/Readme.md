@@ -182,12 +182,13 @@ UniTime Student Sectioning Solver (UniTime site Links):
                 to test the time overlap conflict (i.e. removed the BIOL222 course and its course request for the student 218047643)
  
                 
+## Reference and Acknowledgement Links
+https://www.geeksforgeeks.org/with-statement-in-python/
                 
             
             
             
     
-        
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions<br>
 Todo: Try out different heuristics. (modify config file)<br>
 Todo: DO A COMPLETE USER-SYSTEM OF THIS CPSOLVER FIRST<br>

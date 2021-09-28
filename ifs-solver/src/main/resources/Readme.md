@@ -24,7 +24,10 @@ problem instance.
 I would like to keep the initial Students.xlsx input file as is (it should not be re-written), so that I can obtain a new solution
 to the initial input of the problem instance from scratch if I want to. So a modified Students file will be initialised
 to a copy of the current Students input file (whether the initial Students.xlsx or a modified Students input file) and will
-be renamed similarly to Students.xlsx but with a number appended to it, starting from 1, indicating the first modified Students input file. 
+be renamed similarly to Students.xlsx but with a number (modification version number) appended/suffixed to it, starting 
+from 1, indicating the first modified Students input file. E.g. "Students-1.xlsx" for the first modified version of the 
+Students.xlsx, and "Students-2.xlsx" for the modified version of Students-1.xlsx, etc. All the modified Students input files 
+will be stored in the folder of this problem instance.
 ModifiedInputProcessing will ask for the number of the modified input file.
 
 <br>

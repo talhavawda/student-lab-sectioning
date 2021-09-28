@@ -301,7 +301,7 @@ def main():
 	# Reset/Overwrite CurrentSolutions.txt file to an empty file
 	currentSolutionsFilePath = "src/main/resources/input/" + problemInstanceName + "/CurrentSolutions.txt"
 	currentSolutionsFile = open(currentSolutionsFilePath, "w")
-	currentSolutionsFile.write()
+	#currentSolutionsFile.write("") # The above line will overwrite so I don't need this line
 	currentSolutionsFile.close()
 
 
