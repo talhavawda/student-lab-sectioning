@@ -31,13 +31,15 @@ initial solution of this problem instance, "Students-2.xlsx" for the modified ve
 which was used to obtain the first updated solution of this problem instance etc. <br>
 All the modified Students input files will be stored in the folder of this problem instance. <br>
 ModifiedInputProcessing will ask for the number of the modified input file. <br>
-NB. A modified Students file MUST contain the dash, and the mod. ver. number <br>
+NB. A modified Students file MUST contain the dash, and the mod. ver. number, with no whitespace in between 'Students', 
+the dash, and the mod. ver. number <br>
 NB. The first modified Students file must have the mod. ver. number to be 1 (and not 2. Assume the initial Students file 
-to implicitly have the mod. ver. number of 0)
+to implicitly have the mod. ver. number of 0). <br>
+NB. Each new modified Students input file must increment the mod. ver. number by exactly 1. i.e. no integers may be skipped.
 <br>
 <br>
 
-###### CoursesInputTemplate.xlsx:
+### CoursesInputTemplate.xlsx:
 The course offerings - the courses, their labs, sections, and capacities, and the allocated/scheduled dates and times 
 for their lab sessions (the timeslot allocations for the lab sections).
 
@@ -63,7 +65,7 @@ The sessionLength field in my CourseInputTemplate.xlsx doc matches with the
 <br>
 <br>
 
-###### StudentsInputTemplate.xlsx:
+### StudentsInputTemplate.xlsx:
 I am working with the global/universal terms 'Faculty' and 'School' for the academic structure.
  UKZN refers to a 'Faculty' as a 'College'.
  What I refer to as a 'course', UKZN refers to as a 'module'
@@ -93,7 +95,7 @@ I am working with the global/universal terms 'Faculty' and 'School' for the acad
  <br>
  <br>
  
-###### Configuration File (for CPSolver)
+### Configuration File (for CPSolver)
 The default file given on the UniTime's website is the 'configFileDefault.cfg' file
 I made a copy of it and named it "SolverConfiguration.cfg".
 My com.talhavawda.ifssolver.Main.main() accesses it from this resource folder, so don't move it 
@@ -114,8 +116,8 @@ Changes made:
 
 <br>
 
-###### Solutions explanations
-##### 2020-Sem1-CAES-Wvl-OLD
+### Solutions explanations
+#### 2020-Sem1-CAES-Wvl-OLD
 - 210828_003504
     - First run. Didn't stop running (due to the high TimeOut value) so I terminated it. 
     
@@ -147,7 +149,7 @@ Changes made:
         and later solutions seemed to decrease a little (dipping below 100% allocations) but came up again to 100%, and this cycle continued.  
 <br>
 
-##### 2020-Sem1-CAES-Wvl
+#### 2020-Sem1-CAES-Wvl
 - 210905_212507
     - Running IFS-Solver on updated 2020-Sem1-CAES-Wvl problem instance
     - According to Debug.log file, the program continued running as the initial solution and subsequent solutions
@@ -259,3 +261,17 @@ Changes made:
         - NO complete solution found (as expected) 
             - 8 unassigned course requests  (6166/6174 [99,87%] assigned)
             - Basically same as previous solution - 8 students of MATH196 (now course C15) conflicting with course C4
+
+
+### Modified Students input files
+#### 2020-Sem1-CAES-Wvl-no-extra-requests
+- Students-1.xlsx
+    - Initialised to a copy of Students.xlsx
+    - Made simple changes (1 for each case) to identify what the resulting modificationsDF in 
+    ModifiedInputProcessing.processModifiedStudentsData() will look like
+    - All modifications were made at the end of the file
+    - Modifications:
+        - Added student: 220120001 with 3 course requests.
+        - Removed student: 220111511.
+        - Modified student: 220112040. Removed course request for MGNT102.
+        - Modified student: 220112256. Added course request for STAT130.

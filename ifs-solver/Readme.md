@@ -184,6 +184,16 @@ UniTime Student Sectioning Solver (UniTime site Links):
                 
 ## Reference and Acknowledgement Links
 https://www.geeksforgeeks.org/with-statement-in-python/
+
+https://www.pythontutorial.net/python-string-methods/python-string-index/
+https://www.tutorialsteacher.com/python/error-types-in-python
+https://docs.python.org/3/library/exceptions.html
+https://stackoverflow.com/questions/9572490/find-index-of-last-occurrence-of-a-substring-in-a-string?rq=1
+
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
+https://stackoverflow.com/questions/21800169/python-pandas-get-index-of-rows-which-column-matches-certain-value
+
                 
             
             
