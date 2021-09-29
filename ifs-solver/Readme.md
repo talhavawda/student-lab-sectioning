@@ -193,7 +193,7 @@ https://stackoverflow.com/questions/9572490/find-index-of-last-occurrence-of-a-s
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
 https://stackoverflow.com/questions/21800169/python-pandas-get-index-of-rows-which-column-matches-certain-value
-
+https://stackoverflow.com/questions/5844672/delete-an-element-from-a-dictionary
                 
             
             

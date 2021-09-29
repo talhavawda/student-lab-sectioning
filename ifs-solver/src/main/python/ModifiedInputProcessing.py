@@ -90,12 +90,12 @@ def main():
 
 	# Generate/Produce the updated input data XML file
 
-
+	"""
 	# Reset/Overwrite CurrentSolutions.txt file to an empty file
 	currentSolutionsFile = open(problemInputInstanceSolutionsFile, "w")
 	#currentSolutionsFile.write("") # The above line will overwrite so I don't need this line
 	currentSolutionsFile.close()
-
+	"""
 
 # END main()
 
@@ -506,15 +506,10 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 		else:  # if this student only appears once in modificationsDF
 			print("Only appearance")
 			if studentNumber in currentStudentsDF["studentNumber"].values:  # If this only appearance is in currentStudentsDF
-				# this student has been removed from the updated Students input
-				# so remove them from the studentsDict
-				print("IN currentStudentsDF")
-				print(studentsDict[str(studentNumber)])
+				# this student has been removed from the updated Students input, so remove them from the studentsDict
 				numStudentProcessedCourses = int(studentsDict[str(studentNumber)]["numProcessedCourses"])
-				print(numStudentProcessedCourses)
 				numCourseRequests -= numStudentProcessedCourses
-				del studentsDict[str(studentNumber)]
-				print(studentsDict[str(studentNumber)])
+				del studentsDict[str(studentNumber)] # This will raise a KeyError exception if studentNumber is invalid, but it will always be valid for this case
 			else: # if studentNumber in modifiedStudentsDF["studentNumber"].values # If this only appearance is in modifiedStudentsDF
 				# this student has been added to the updated Students input
 				# so add them from the studentsDict
