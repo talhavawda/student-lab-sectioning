@@ -285,6 +285,40 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 
 
 	"""
+		Obtain the courseID-courseName mappings
+	"""
+	print("\tObtaining course IDs and names...")
+
+	"""
+		courseIdDict: A dictionary (map) to keep track of all the assigned ID's for the courses (the courses from the 
+		Courses.xlsx input file - the courses in this problem instance's input). 
+		To be used when processing students' new course enrollments/requests i.e. to check if a course that a student is 
+		registered for exists in this problem instance's input.
+		key = course; value = courseID
+		
+		courseNameDict: A 	dictionary (map) to keep track of all the course names for the assigned course ID's | opposite 
+		to / reverse of courseIdDict
+		key = courseID; value = courseName 
+		
+		The input data XML file has a 'courses' element, as a sub-element of the sectioning element, that stores the 
+		courseID-courseName mappings.
+	"""
+	courseIdDict = {}
+	courseNameDict = {}
+
+	inputCoursesTag = inputBS.find("courses") # Extract the 'courses' tag/element and its attributes from the input data XML file (BS considers an XML element as a 'tag')
+	courseMappingsTags = inputCoursesTag.find_all("course")
+
+	for course in courseMappingsTags:  # Each course is a tag object
+		courseID = course.get("id")
+		courseName = course.get("courseName")
+		courseNameDict[courseID] = courseName
+		courseIdDict[courseName] = courseID
+
+	print("\tCourse IDs and names have been obtained.")
+
+
+	"""
 		studentsDict: A dictionary (Map) of student details (the student's personal info, their course requests, and 
 		assigned sections for each of their requests from the current solution.) 
 		
@@ -312,7 +346,7 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 		Obtain student details and course requests from the current input data XML file, the allocated/assigned sections 
 		for student course requests from the current solution XML file and process them into studentsDict
 	"""
-	print("\tObtaining student details, their course requests, and allocated sections...")
+	print("\n\tObtaining student details, their course requests, and allocated sections...")
 	print("\t\tProcessing student:")
 	inputStudentsTags = inputBS.find_all("student")  # Extract all 'student' tags from the input data XML file
 
@@ -384,6 +418,8 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 	currentSolutionDict["numCourseRequests"] = numCourseRequests
 	currentSolutionDict["lastCourseRequestID"] = lastCourseRequestID
 	currentSolutionDict["studentsDictionary"] = studentsDict
+	currentSolutionDict["courseIDDict"] = courseIdDict
+	currentSolutionDict["courseNameDict"] = courseNameDict
 
 	return currentSolutionDict
 
@@ -410,7 +446,8 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	numCourseRequests = updatedInputDict["numCourseRequests"]
 	lastCourseRequestID = updatedInputDict["lastCourseRequestID"]
 	studentsDict = updatedInputDict["studentsDictionary"]
-
+	courseIdDict = updatedInputDict["courseIDDict"]
+	courseNameDict = updatedInputDict["courseNameDict"]
 
 	modifiedStudentsDF = pd.read_excel(modifiedStudentsFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'numCourses':int})
 
@@ -474,8 +511,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	numModifications = len(modificationsDF)
 
 	print(modificationsDF)
-	print(modificationsDF[0:5].values)
-	print(modificationsDF.studentNumber.value_counts()[220112256]) #Number of times the value 220112256 appears in the studentNumber column
+	print(modificationsDF[0:6].values)
 
 	"""
 		In the updated input data XML file, we want the unchanged course requests to maintain their same course request 
@@ -507,6 +543,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 			print("Only appearance")
 			if studentNumber in currentStudentsDF["studentNumber"].values:  # If this only appearance is in currentStudentsDF
 				# this student has been removed from the updated Students input, so remove them from the studentsDict
+				print("IN currentStudentsDF")
 				numStudentProcessedCourses = int(studentsDict[str(studentNumber)]["numProcessedCourses"])
 				numCourseRequests -= numStudentProcessedCourses
 				del studentsDict[str(studentNumber)] # This will raise a KeyError exception if studentNumber is invalid, but it will always be valid for this case
@@ -522,7 +559,11 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				numProcessedCourses = 0 # The number of course of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
 
 				for course in range(1, numCoursesStudent+1): # For each course the student is registered for (course number starting from 1)
-					courseName = studentsDF.loc[student, "course" + str(course)]
+					# todo - See InputProcessing.py from line 236
+					# todo - remove print()'s above when done
+					courseName = row["course" + str(course)]
+					print(courseName)
+
 					"""
 						Issue #1:
 						
@@ -533,6 +574,15 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 						If such a course was not in the Courses.xlsx input file then we shall get a KeyError when trying
 						to get its courseID from the courseIdDict
 					"""
+					try:
+						courseID = courseIdDict[courseName] # Get the courseID of this course
+					except KeyError:
+						# Do Nothing - Do not add this registered/enrolled course as a course request  for sectioning
+						print("Invalid Course: '" + courseName + "' was not specified in the problem input's Courses.xlsx file")
+					else:  # if no KeyError thrown - code executed perfectly -> we were able to get the courseID of this course -> this course was specified in the input
+						# Process this course enrollment - add it to the student for sectioning
+						numProcessedCourses += 1
+
 
 	#for j in indexesOfThisStudent:
 		#	modificationsDF.drop(index=j, inplace=True)

@@ -83,7 +83,10 @@ def main():
 	currentCourseRequestID = 0 # A 'course request' is a student-course combination where the student is (already) registered/enrolled for this course (for my SS problem specification) and wants to be assigned to a section for each of the labs (A UniTime Solver 'subpart') of this course
 
 	"""
-		courseIdDict: A dictionary (map) to keep track of all the assigned ID's for the courses | to be used when processing students' course enrollments/requests
+		courseIdDict: A dictionary (map) to keep track of all the assigned ID's for the courses (the courses from the 
+		Courses.xlsx input file - the courses in this problem instance's input). 
+		To be used when processing students' new course enrollments/requests i.e. to check if a course that a student is 
+		registered for exists in this problem instance's input.
 		key = course; value = courseID
 		
 		courseNameDict: A 	dictionary (map) to keep track of all the course names for the assigned course ID's | opposite to / reverse of courseIdDict
@@ -246,7 +249,7 @@ def main():
 			try:
 				courseID = courseIdDict[courseName] # Get the courseID of this course
 			except KeyError:
-				# Do Nothing - Do not add this course enrollment for sectioning
+				# Do Nothing - Do not add this registered/enrolled course as a course request  for sectioning
 				print("Invalid Course: '" + courseName + "' was not specified in the problem input's Courses.xlsx file")
 			else: # if no KeyError thrown - code executed perfectly -> we were able to get the courseID of this course -> this course was specified in the input
 				# Process this course enrollment - add it to the student for sectioning
