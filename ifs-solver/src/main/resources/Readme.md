@@ -261,10 +261,15 @@ Changes made:
         - NO complete solution found (as expected) 
             - 8 unassigned course requests  (6166/6174 [99,87%] assigned)
             - Basically same as previous solution - 8 students of MATH196 (now course C15) conflicting with course C4
-
+            
+    - 2020-Sem1-CAES-Wvl-no-extra-requests-testing
+            - Created this problem instance so that in ModifiedInputProcessing.py, I can test processModifiedStudentsData() 
+            without having to wait for processCurrentSolution() to process the entire Students input (which takes long) 
+                - I only kept the last 100 students from the initial Students.xlsx and removed the rest above. 
 
 ### Modified Students input files
-#### 2020-Sem1-CAES-Wvl-no-extra-requests
+
+#### 2020-Sem1-CAES-Wvl-no-extra-requests-testing
 - Students-1.xlsx
     - Initialised to a copy of Students.xlsx
     - Made simple changes (1 for each case) to identify what the resulting modificationsDF in 

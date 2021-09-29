@@ -1,0 +1,2290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Student Sectioning-->
+<!--Solution Info:
+    Assigned course requests: 100,00% (257/257)
+    Assigned course requests (priority students): Normal: 100,00% (257/257)
+    Assigned priority course requests: 100.00% (257/257)
+    Assigned variables: 100.00% (257/257)
+    Average disbalance: 3,90% (0,29)
+    Best Iteration: 202
+    Best Time: 0.05 min (73.98 it/s)
+    Choice: Average assigned choice: 1,00
+    Choice: assigned 1st course choice: 100,00% (257)
+    Iteration: 202
+    Overall solution value: -89.92
+    Sections disbalanced by 10% or more: 0,00% (0)
+    Speed: 73.98 it/s
+    Students with complete schedule: 100.00% (100/100)
+    Students with complete schedule (priority students): Normal: 100.00% (100/100)
+    Time: 0.05 min
+-->
+<sectioning version="1.0" initiative="CAES-Wvl" term="Sem1" year="2020" created="Wed Sep 29 14:39:01 SAST 2021">
+  <offerings>
+    <offering id="1" name="O1">
+      <course id="1" subjectArea="" courseNbr="C1"/>
+      <config id="1" name="G1">
+        <subpart id="1" itype="Laboratory" name="P1">
+          <section id="1" limit="200" name="S1">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="2" limit="200" name="S2">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="3" limit="200" name="S3">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+          <section id="4" limit="200" name="S4">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="2" name="O2">
+      <course id="2" subjectArea="" courseNbr="C2"/>
+      <config id="2" name="G2">
+        <subpart id="2" itype="Laboratory" name="P2">
+          <section id="5" limit="218" name="S5">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="3" name="O3">
+      <course id="3" subjectArea="" courseNbr="C3"/>
+      <config id="3" name="G3">
+        <subpart id="3" itype="Laboratory" name="P3">
+          <section id="6" limit="238" name="S6">
+            <time days="0000100" start="115" length="36" dates="1">F 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="4" name="O4">
+      <course id="4" subjectArea="" courseNbr="C4"/>
+      <config id="4" name="G4">
+        <subpart id="4" itype="Laboratory" name="P4">
+          <section id="7" limit="200" name="S7">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="5" name="O5">
+      <course id="5" subjectArea="" courseNbr="C5"/>
+      <config id="5" name="G5">
+        <subpart id="5" itype="Laboratory" name="P5">
+          <section id="8" limit="144" name="S8">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="9" limit="144" name="S9">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="10" limit="144" name="S10">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+          <section id="11" limit="144" name="S11">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+          <section id="12" limit="144" name="S12">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+          <section id="13" limit="144" name="S13">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="6" name="O6">
+      <course id="6" subjectArea="" courseNbr="C6"/>
+      <config id="6" name="G6">
+        <subpart id="6" itype="Laboratory" name="P6">
+          <section id="14" limit="192" name="S14">
+            <time days="0100000" start="115" length="36" dates="1">T 9:35a - 12:35p</time>
+          </section>
+          <section id="15" limit="48" name="S15">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="7" name="O7">
+      <course id="7" subjectArea="" courseNbr="C7"/>
+      <config id="7" name="G7">
+        <subpart id="7" itype="Laboratory" name="P7">
+          <section id="16" limit="48" name="S16">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="17" limit="48" name="S17">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="18" limit="48" name="S18">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+          <section id="19" limit="48" name="S19">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="8" name="O8">
+      <course id="8" subjectArea="" courseNbr="C8"/>
+      <config id="8" name="G8">
+        <subpart id="8" itype="Laboratory" name="P8">
+          <section id="20" limit="250" name="S20">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="21" limit="250" name="S21">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="9" name="O9">
+      <course id="9" subjectArea="" courseNbr="C9"/>
+      <config id="9" name="G9">
+        <subpart id="9" itype="Laboratory" name="P9">
+          <section id="22" limit="260" name="S22">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="10" name="O10">
+      <course id="10" subjectArea="" courseNbr="C10"/>
+      <config id="10" name="G10">
+        <subpart id="10" itype="Laboratory" name="P10">
+          <section id="23" limit="40" name="S23">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="24" limit="40" name="S24">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+          <section id="25" limit="40" name="S25">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="11" name="O11">
+      <course id="11" subjectArea="" courseNbr="C11"/>
+      <config id="11" name="G11">
+        <subpart id="11" itype="Laboratory" name="P11">
+          <section id="26" limit="154" name="S26">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="27" limit="136" name="S27">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="12" name="O12">
+      <course id="12" subjectArea="" courseNbr="C12"/>
+      <config id="12" name="G12">
+        <subpart id="12" itype="Laboratory" name="P12">
+          <section id="28" limit="750" name="S28">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+          <section id="29" limit="500" name="S29">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+          <section id="30" limit="250" name="S30">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="13" name="O13">
+      <course id="13" subjectArea="" courseNbr="C13"/>
+      <config id="13" name="G13">
+        <subpart id="13" itype="Laboratory" name="P13">
+          <section id="31" limit="165" name="S31">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="14" name="O14">
+      <course id="14" subjectArea="" courseNbr="C14"/>
+      <config id="14" name="G14">
+        <subpart id="14" itype="Laboratory" name="P14">
+          <section id="32" limit="491" name="S32">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="33" limit="350" name="S33">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+          <section id="34" limit="491" name="S34">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="15" name="O15">
+      <course id="15" subjectArea="" courseNbr="C15"/>
+      <config id="15" name="G15">
+        <subpart id="15" itype="Laboratory" name="P15">
+          <section id="35" limit="106" name="S35">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="16" name="O16">
+      <course id="16" subjectArea="" courseNbr="C16"/>
+      <config id="16" name="G16">
+        <subpart id="16" itype="Laboratory" name="P16">
+          <section id="36" limit="320" name="S36">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="17" name="O17">
+      <course id="17" subjectArea="" courseNbr="C17"/>
+      <config id="17" name="G17">
+        <subpart id="17" itype="Laboratory" name="P17">
+          <section id="37" limit="270" name="S37">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="38" limit="320" name="S38">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="39" limit="320" name="S39">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+          <section id="40" limit="320" name="S40">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="18" name="O18">
+      <course id="18" subjectArea="" courseNbr="C18"/>
+      <config id="18" name="G18">
+        <subpart id="18" itype="Laboratory" name="P18">
+          <section id="41" limit="320" name="S41">
+            <time days="0001000" start="115" length="36" dates="1">Th 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="19" name="O19">
+      <course id="19" subjectArea="" courseNbr="C19"/>
+      <config id="19" name="G19">
+        <subpart id="19" itype="Laboratory" name="P19">
+          <section id="42" limit="491" name="S42">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="43" limit="544" name="S43">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+  </offerings>
+  <students>
+    <student id="220090008">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSBLS"/>
+      <course id="1" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="10">S10 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="2" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="40">S40 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="3" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="2">S2 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="4" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090042">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="5" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="6" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="7" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090131">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="8" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090331">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="9" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="12">S12 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="10" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="38">S38 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="11" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="3">S3 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="12" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="33">S33 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090400">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCMB"/>
+      <course id="13" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="10">S10 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="14" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="40">S40 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="15" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="3">S3 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="16" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090498">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-MDSC"/>
+      <course id="17" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="12">S12 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="18" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="37">S37 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="19" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="2">S2 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="20" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="33">S33 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090539">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="21" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="22" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="23" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090592">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="24" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="8">S8 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="25" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="2">S2 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="26" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090734">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="27" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090857">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="28" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090908">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="BOPT"/>
+      <course id="29" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="11">S11 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="30" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="38">S38 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="31" priority="0" waitlist="false" course="2">
+        <best course="2">
+          <section id="5">S5 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="32" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="33">S33 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220091060">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="33" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="34" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="13">S13 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="35" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="1">S1 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="36" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220091067">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-MDSC"/>
+      <course id="37" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="9">S9 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="38" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="37">S37 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="39" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="4">S4 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="40" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220091285">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="41" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="42" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="12">S12 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="43" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="1">S1 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="44" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220091447">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="45" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="12">S12 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="46" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="47" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="26">S26 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="48" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220091494">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="49" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220091957">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSBLS"/>
+      <course id="50" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="11">S11 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="51" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="39">S39 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="52" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="1">S1 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="53" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220092242">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="54" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220092480">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="55" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220092484">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="56" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220092495">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="57" priority="0" waitlist="false" course="8">
+        <best course="8">
+          <section id="20">S20 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="58" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="26">S26 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="59" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220092772">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-MDSC"/>
+      <course id="60" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="11">S11 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="61" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="38">S38 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="62" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="1">S1 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="63" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220092834">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="64" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="65" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="66" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220092945">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSGLS"/>
+      <course id="67" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="68" priority="0" waitlist="false" course="10">
+        <best course="10">
+          <section id="24">S24 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="69" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="8">S8 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220093104">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="70" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="10">S10 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="71" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="37">S37 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="72" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="4">S4 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="73" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220093486">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="74" priority="0" waitlist="false" course="8">
+        <best course="8">
+          <section id="21">S21 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="75" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="27">S27 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="76" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220094238">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="77" priority="0" waitlist="false" course="10">
+        <best course="10">
+          <section id="23">S23 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="78" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="13">S13 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="79" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="80" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="26">S26 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220094399">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="81" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="82" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="83" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220094511">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-PHAM"/>
+      <course id="84" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="39">S39 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="85" priority="0" waitlist="false" course="2">
+        <best course="2">
+          <section id="5">S5 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="86" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220094573">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="87" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="30">S30 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220094863">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="88" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220094896">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="89" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="15">S15 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="90" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="91" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220095053">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="92" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220095439">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="93" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220095481">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="BOPT"/>
+      <course id="94" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="10">S10 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="95" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="40">S40 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="96" priority="0" waitlist="false" course="2">
+        <best course="2">
+          <section id="5">S5 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="97" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220095734">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="98" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220095762">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="99" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="8">S8 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="100" priority="0" waitlist="false" course="8">
+        <best course="8">
+          <section id="21">S21 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="101" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="26">S26 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="102" priority="0" waitlist="false" course="13">
+        <best course="13">
+          <section id="31">S31 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="103" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220096250">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="104" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220096325">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="105" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="30">S30 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220096568">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="106" priority="0" waitlist="false" course="8">
+        <best course="8">
+          <section id="21">S21 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="107" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="27">S27 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="108" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220096640">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="109" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="10">S10 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="110" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="111" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="26">S26 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="112" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220097221">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSGLS"/>
+      <course id="113" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="114" priority="0" waitlist="false" course="10">
+        <best course="10">
+          <section id="25">S25 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="115" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="9">S9 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="116" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="33">S33 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220097270">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOA"/>
+      <course id="117" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220097641">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="118" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220097838">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="119" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="120" priority="0" waitlist="false" course="8">
+        <best course="8">
+          <section id="20">S20 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="121" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="26">S26 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="122" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220097845">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="123" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="13">S13 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="124" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="4">S4 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="125" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220097848">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="126" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="127" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="8">S8 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="128" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="2">S2 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="129" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220098040">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="130" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220098157">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="131" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220098812">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="132" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="15">S15 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="133" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="134" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220098911">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="135" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="136" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="137" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220098965">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="138" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220098971">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="139" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="30">S30 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220099008">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="BOPT"/>
+      <course id="140" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="11">S11 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="141" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="37">S37 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="142" priority="0" waitlist="false" course="2">
+        <best course="2">
+          <section id="5">S5 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="143" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220099069">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="144" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="145" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="146" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220099231">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="147" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="148" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="8">S8 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="149" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="2">S2 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="150" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="33">S33 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220099453">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-PHYS"/>
+      <course id="151" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="38">S38 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="152" priority="0" waitlist="false" course="2">
+        <best course="2">
+          <section id="5">S5 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220099588">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="153" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="13">S13 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="154" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="155" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="26">S26 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="156" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220099788">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="157" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="9">S9 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="158" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="40">S40 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="159" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="3">S3 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="160" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220099799">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BBSC-F"/>
+      <course id="161" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="27">S27 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="162" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220100558">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="163" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="15">S15 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="164" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="165" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220101584">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="166" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220102020">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="167" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="168" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="169" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220102083">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="170" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220102368">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="171" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="9">S9 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="172" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="40">S40 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="173" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="3">S3 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="174" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220102990">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="175" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220103199">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="176" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220103338">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="177" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="178" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="8">S8 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="179" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="2">S2 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="180" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="33">S33 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220103649">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="181" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="10">S10 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="182" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="3">S3 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="183" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220103941">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="184" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220104933">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="185" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="30">S30 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220105144">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="186" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="187" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="12">S12 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="188" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="1">S1 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="189" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220105304">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="190" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="191" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="13">S13 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="192" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="4">S4 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="193" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="33">S33 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220105611">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="194" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220106519">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="195" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220106590">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="196" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220106865">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="197" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="13">S13 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="198" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="39">S39 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="199" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="3">S3 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="200" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220106925">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="201" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="202" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="203" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220107577">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCMB"/>
+      <course id="204" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="11">S11 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="205" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="38">S38 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="206" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="4">S4 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="207" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220107581">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="208" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="9">S9 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="209" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="210" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="4">S4 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="211" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220107721">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="212" priority="0" waitlist="false" course="8">
+        <best course="8">
+          <section id="20">S20 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="213" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220107886">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BBSC-F"/>
+      <course id="214" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="27">S27 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="215" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220108079">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="216" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="217" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="218" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220108297">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="219" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="9">S9 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="220" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="221" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="1">S1 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="222" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220108381">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCMB"/>
+      <course id="223" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="12">S12 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="224" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="37">S37 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="225" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="3">S3 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="226" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="34">S34 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220108523">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="227" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="228" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="229" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220108727">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="230" priority="0" waitlist="false" course="6">
+        <best course="6">
+          <section id="14">S14 T 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="231" priority="0" waitlist="false" course="18">
+        <best course="18">
+          <section id="41">S41 Th 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="232" priority="0" waitlist="false" course="3">
+        <best course="3">
+          <section id="6">S6 F 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220110291">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="233" priority="0" waitlist="false" course="9">
+        <best course="9">
+          <section id="22">S22 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="234" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="8">S8 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="235" priority="0" waitlist="false" course="1">
+        <best course="1">
+          <section id="4">S4 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="236" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="33">S33 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220110389">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="237" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220110562">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="238" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220110855">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BBSC-F"/>
+      <course id="239" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="27">S27 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="240" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220110859">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+      <course id="241" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220110999">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="BOPT"/>
+      <course id="242" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="11">S11 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="243" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="39">S39 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="244" priority="0" waitlist="false" course="2">
+        <best course="2">
+          <section id="5">S5 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="245" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220111047">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="246" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="9">S9 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="247" priority="0" waitlist="false" course="8">
+        <best course="8">
+          <section id="20">S20 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="248" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="27">S27 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="249" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220111417">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="250" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220111481">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="251" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="30">S30 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220111493">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="252" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="28">S28 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220111511">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="253" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="29">S29 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220112040">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="254" priority="0" waitlist="false" course="12">
+        <best course="12">
+          <section id="30">S30 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220112256">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-PHAM"/>
+      <course id="255" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="39">S39 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="256" priority="0" waitlist="false" course="2">
+        <best course="2">
+          <section id="5">S5 F 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="257" priority="0" waitlist="false" course="14">
+        <best course="14">
+          <section id="32">S32 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+  </students>
+  <constraints/>
+  <travel-times/>
+  <log>
+    <msg level="4" msg="Restoring from backup ..." date="1632919137878"/>
+    <msg level="4" msg="Solving problem ..." date="1632919137968"/>
+    <msg level="2" msg="Initializing solver" date="1632919137970"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:-0,00, DC:0, TOC:0, %:-0,00" date="1632919138293"/>
+    <msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1632919138297"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138299"/>
+    <msg level="2" msg="Critical Backtracking (priority students)..." date="1632919138305"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138306"/>
+    <msg level="2" msg="Critical Ifs (priority students)..." date="1632919138306"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138308"/>
+    <msg level="2" msg="Critical Backtracking (priority students)..." date="1632919138311"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138311"/>
+    <msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1632919138312"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138313"/>
+    <msg level="2" msg="Important Backtracking (priority students)..." date="1632919138315"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138316"/>
+    <msg level="2" msg="Important Ifs (priority students)..." date="1632919138316"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138317"/>
+    <msg level="2" msg="Important Backtracking (priority students)..." date="1632919138318"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138320"/>
+    <msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1632919138323"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138325"/>
+    <msg level="2" msg="Normal Backtracking (priority students)..." date="1632919138331"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138332"/>
+    <msg level="2" msg="Normal Ifs (priority students)..." date="1632919138333"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138336"/>
+    <msg level="2" msg="Normal Backtracking (priority students)..." date="1632919138338"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138343"/>
+    <msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1632919138344"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138347"/>
+    <msg level="2" msg="Critical Backtracking (senior students)..." date="1632919138350"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138352"/>
+    <msg level="2" msg="Critical Ifs (senior students)..." date="1632919138353"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138355"/>
+    <msg level="2" msg="Critical Backtracking (senior students)..." date="1632919138358"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138363"/>
+    <msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1632919138365"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138367"/>
+    <msg level="2" msg="Important Backtracking (senior students)..." date="1632919138367"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138370"/>
+    <msg level="2" msg="Important Ifs (senior students)..." date="1632919138371"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138375"/>
+    <msg level="2" msg="Important Backtracking (senior students)..." date="1632919138376"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138377"/>
+    <msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1632919138388"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138389"/>
+    <msg level="2" msg="Normal Backtracking (senior students)..." date="1632919138395"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138397"/>
+    <msg level="2" msg="Normal Ifs (senior students)..." date="1632919138398"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138399"/>
+    <msg level="2" msg="Normal Backtracking (senior students)..." date="1632919138407"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138441"/>
+    <msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1632919138441"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138456"/>
+    <msg level="2" msg="Critical Backtracking (junior students)..." date="1632919138457"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138458"/>
+    <msg level="2" msg="Critical Ifs (junior students)..." date="1632919138458"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138459"/>
+    <msg level="2" msg="Critical Backtracking (junior students)..." date="1632919138461"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138462"/>
+    <msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1632919138462"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138463"/>
+    <msg level="2" msg="Important Backtracking (junior students)..." date="1632919138473"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138474"/>
+    <msg level="2" msg="Important Ifs (junior students)..." date="1632919138474"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138479"/>
+    <msg level="2" msg="Important Backtracking (junior students)..." date="1632919138481"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138482"/>
+    <msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1632919138485"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138486"/>
+    <msg level="2" msg="Normal Backtracking (junior students)..." date="1632919138488"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138492"/>
+    <msg level="2" msg="Normal Ifs (junior students)..." date="1632919138492"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138493"/>
+    <msg level="2" msg="Normal Backtracking (junior students)..." date="1632919138495"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138511"/>
+    <msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1632919138512"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138513"/>
+    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1632919138514"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138515"/>
+    <msg level="2" msg="Critical Ifs (sophomore students)..." date="1632919138515"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138516"/>
+    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1632919138517"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138517"/>
+    <msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1632919138517"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138518"/>
+    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1632919138518"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138519"/>
+    <msg level="2" msg="Important Ifs (sophomore students)..." date="1632919138519"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138526"/>
+    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1632919138527"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138528"/>
+    <msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1632919138531"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138532"/>
+    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1632919138533"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138534"/>
+    <msg level="2" msg="Normal Ifs (sophomore students)..." date="1632919138534"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138535"/>
+    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1632919138537"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138538"/>
+    <msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1632919138539"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138540"/>
+    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1632919138558"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138561"/>
+    <msg level="2" msg="Critical Ifs (frehmen students)..." date="1632919138561"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138562"/>
+    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1632919138563"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138563"/>
+    <msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1632919138570"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138572"/>
+    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1632919138573"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138574"/>
+    <msg level="2" msg="Important Ifs (frehmen students)..." date="1632919138574"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138580"/>
+    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1632919138584"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138588"/>
+    <msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1632919138590"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138591"/>
+    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1632919138595"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138598"/>
+    <msg level="2" msg="Normal Ifs (frehmen students)..." date="1632919138598"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138607"/>
+    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1632919138614"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138615"/>
+    <msg level="2" msg="Critical Courses B&amp;B..." date="1632919138615"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138626"/>
+    <msg level="2" msg="Critical Backtracking..." date="1632919138628"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138628"/>
+    <msg level="2" msg="Critical Ifs..." date="1632919138629"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138638"/>
+    <msg level="2" msg="Critical Backtracking..." date="1632919138647"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138647"/>
+    <msg level="2" msg="Important Courses B&amp;B..." date="1632919138648"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138663"/>
+    <msg level="2" msg="Important Backtracking..." date="1632919138663"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138665"/>
+    <msg level="2" msg="Important Ifs..." date="1632919138665"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138668"/>
+    <msg level="2" msg="Important Backtracking..." date="1632919138671"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138671"/>
+    <msg level="2" msg="Min Credit B&amp;B..." date="1632919138675"/>
+    <msg level="1" msg="RRq:0/257, RS:0/100, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1632919138688"/>
+    <msg level="2" msg="Branch&amp;bound..." date="1632919138694"/>
+    <msg level="1" msg="Timing of BranchBoundSelection: 7,22 ms/it (100 iterations, 0,00% time limit of 5,00 seconds reached)" date="1632919139233"/>
+    <msg level="1" msg="RRq:253/257, RS:99/100, CR:98,44%, V:88,96, DC:0, TOC:0, %:88,96" date="1632919139234"/>
+    <msg level="2" msg="Student swap..." date="1632919139241"/>
+    <msg level="1" msg="RRq:253/257, RS:99/100, CR:98,44%, V:89,02, DC:0, TOC:0, %:89,02" date="1632919139250"/>
+    <msg level="2" msg="Backtracking..." date="1632919139252"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139361"/>
+    <msg level="2" msg="Enrollment swaps..." date="1632919139388"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139391"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139392"/>
+    <msg level="2" msg="Student swap..." date="1632919139397"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139585"/>
+    <msg level="2" msg="Random unassignment of problematic students..." date="1632919139586"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139599"/>
+    <msg level="2" msg="Resection incomplete students..." date="1632919139599"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139606"/>
+    <msg level="2" msg="Resection unassigned students..." date="1632919139606"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139615"/>
+    <msg level="2" msg="Student swap..." date="1632919139616"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139622"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139623"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139628"/>
+    <msg level="2" msg="Enrollment swaps..." date="1632919139629"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139632"/>
+    <msg level="2" msg="Backtracking..." date="1632919139633"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139634"/>
+    <msg level="1" msg="RRq:257/257, RS:100/100, CR:100,00%, V:89,91, DC:0, TOC:0, %:89,91" date="1632919139634"/>
+    <msg level="2" msg="Random unassignment..." date="1632919139634"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139693"/>
+    <msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1632919139696"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139696"/>
+    <msg level="2" msg="Critical Backtracking (priority students)..." date="1632919139696"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139697"/>
+    <msg level="2" msg="Critical Ifs (priority students)..." date="1632919139697"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139699"/>
+    <msg level="2" msg="Critical Backtracking (priority students)..." date="1632919139699"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139701"/>
+    <msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1632919139701"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139701"/>
+    <msg level="2" msg="Important Backtracking (priority students)..." date="1632919139702"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139702"/>
+    <msg level="2" msg="Important Ifs (priority students)..." date="1632919139702"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139703"/>
+    <msg level="2" msg="Important Backtracking (priority students)..." date="1632919139703"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139705"/>
+    <msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1632919139706"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139707"/>
+    <msg level="2" msg="Normal Backtracking (priority students)..." date="1632919139707"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139709"/>
+    <msg level="2" msg="Normal Ifs (priority students)..." date="1632919139709"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139710"/>
+    <msg level="2" msg="Normal Backtracking (priority students)..." date="1632919139710"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139714"/>
+    <msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1632919139714"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139718"/>
+    <msg level="2" msg="Critical Backtracking (senior students)..." date="1632919139718"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139721"/>
+    <msg level="2" msg="Critical Ifs (senior students)..." date="1632919139721"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139725"/>
+    <msg level="2" msg="Critical Backtracking (senior students)..." date="1632919139726"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139727"/>
+    <msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1632919139728"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139731"/>
+    <msg level="2" msg="Important Backtracking (senior students)..." date="1632919139731"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139732"/>
+    <msg level="2" msg="Important Ifs (senior students)..." date="1632919139732"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139734"/>
+    <msg level="2" msg="Important Backtracking (senior students)..." date="1632919139734"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139746"/>
+    <msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1632919139747"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139758"/>
+    <msg level="2" msg="Normal Backtracking (senior students)..." date="1632919139758"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139761"/>
+    <msg level="2" msg="Normal Ifs (senior students)..." date="1632919139761"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139765"/>
+    <msg level="2" msg="Normal Backtracking (senior students)..." date="1632919139765"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139782"/>
+    <msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1632919139783"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139783"/>
+    <msg level="2" msg="Critical Backtracking (junior students)..." date="1632919139784"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139784"/>
+    <msg level="2" msg="Critical Ifs (junior students)..." date="1632919139784"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139785"/>
+    <msg level="2" msg="Critical Backtracking (junior students)..." date="1632919139785"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139824"/>
+    <msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1632919139825"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139826"/>
+    <msg level="2" msg="Important Backtracking (junior students)..." date="1632919139826"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139827"/>
+    <msg level="2" msg="Important Ifs (junior students)..." date="1632919139827"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139829"/>
+    <msg level="2" msg="Important Backtracking (junior students)..." date="1632919139829"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139834"/>
+    <msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1632919139836"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139837"/>
+    <msg level="2" msg="Normal Backtracking (junior students)..." date="1632919139837"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139838"/>
+    <msg level="2" msg="Normal Ifs (junior students)..." date="1632919139839"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139842"/>
+    <msg level="2" msg="Normal Backtracking (junior students)..." date="1632919139842"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139846"/>
+    <msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1632919139846"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139848"/>
+    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1632919139849"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139854"/>
+    <msg level="2" msg="Critical Ifs (sophomore students)..." date="1632919139855"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139856"/>
+    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1632919139857"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139862"/>
+    <msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1632919139862"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139863"/>
+    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1632919139863"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139864"/>
+    <msg level="2" msg="Important Ifs (sophomore students)..." date="1632919139865"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139872"/>
+    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1632919139872"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139873"/>
+    <msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1632919139874"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139875"/>
+    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1632919139875"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139875"/>
+    <msg level="2" msg="Normal Ifs (sophomore students)..." date="1632919139876"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139876"/>
+    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1632919139877"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139878"/>
+    <msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1632919139878"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139882"/>
+    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1632919139882"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139883"/>
+    <msg level="2" msg="Critical Ifs (frehmen students)..." date="1632919139883"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139884"/>
+    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1632919139884"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139887"/>
+    <msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1632919139887"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139887"/>
+    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1632919139887"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139888"/>
+    <msg level="2" msg="Important Ifs (frehmen students)..." date="1632919139888"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139889"/>
+    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1632919139889"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139889"/>
+    <msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1632919139890"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139890"/>
+    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1632919139891"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139891"/>
+    <msg level="2" msg="Normal Ifs (frehmen students)..." date="1632919139891"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139892"/>
+    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1632919139892"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139893"/>
+    <msg level="2" msg="Critical Courses B&amp;B..." date="1632919139893"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139896"/>
+    <msg level="2" msg="Critical Backtracking..." date="1632919139896"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139896"/>
+    <msg level="2" msg="Critical Ifs..." date="1632919139896"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139897"/>
+    <msg level="2" msg="Critical Backtracking..." date="1632919139897"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139898"/>
+    <msg level="2" msg="Important Courses B&amp;B..." date="1632919139898"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139900"/>
+    <msg level="2" msg="Important Backtracking..." date="1632919139900"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139901"/>
+    <msg level="2" msg="Important Ifs..." date="1632919139902"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139904"/>
+    <msg level="2" msg="Important Backtracking..." date="1632919139904"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139905"/>
+    <msg level="2" msg="Min Credit B&amp;B..." date="1632919139906"/>
+    <msg level="1" msg="RRq:241/257, RS:94/100, CR:93,77%, V:84,51, DC:0, TOC:0, %:84,51" date="1632919139906"/>
+    <msg level="2" msg="Branch&amp;bound..." date="1632919139907"/>
+    <msg level="2" msg="Done" date="1632919141627"/>
+    <msg level="4" msg="Solver done." date="1632919141637"/>
+  </log>
+</sectioning>

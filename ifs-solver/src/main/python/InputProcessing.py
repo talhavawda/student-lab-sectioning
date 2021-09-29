@@ -5,7 +5,7 @@ from xml.dom import minidom # For creating and writing to XML files
 #Installed the openpyxl, beautifulsoup4 and lxml packages
 
 def main():
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests"
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests-testing"
 	coursesFilePath = "src/main/resources/input/" + problemInstanceName + "/Courses.xlsx"
 	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx"
 	problemSpecificationFilePath = "src/main/resources/input/" + problemInstanceName + "/Specification.xml" # Make txt ?
@@ -273,7 +273,12 @@ def main():
 
 	sectioningElement.setAttribute("numStudents", str(numStudents))
 	sectioningElement.setAttribute("numCourses", str(numCourses))
+
+	# Since this is the initial/first/original input XML file for this problem instance, num course requests is the last CR ID used as CR ID started from 1 for this input data XML file
 	sectioningElement.setAttribute("numCourseRequests", str(currentCourseRequestID))
+
+	# last CR ID used
+	sectioningElement.setAttribute("lastCourseRequestID", str(currentCourseRequestID))
 
 		# Todo - add 'school' field from the Students.xlsx file
 

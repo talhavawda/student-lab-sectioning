@@ -42,7 +42,7 @@ def main():
 	"""
 
 	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests"
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests-testing"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml" # current input data XML file
@@ -86,7 +86,7 @@ def main():
 	currentSolutionDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
 
 	""" Process the modified Students input Excel file"""
-
+	updatedInputDict = processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict)
 
 	# Generate/Produce the updated input data XML file
 
@@ -306,7 +306,7 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 	numStudents = int(inputSectioningTag.get("numStudents"))
 	numCourses = int(inputSectioningTag.get("numCourses"))
 	numCourseRequests = int(inputSectioningTag.get("numCourseRequests"))
-
+	lastCourseRequestID = int(inputSectioningTag.get("lastCourseRequestID"))
 
 	"""
 		Obtain student details and course requests from the current input data XML file, the allocated/assigned sections 
@@ -318,6 +318,8 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 
 	for student in inputstudentsTags: # each student is a Tag object
 		studentDict = dict() # A dictionary to store the details (attributes from the input data XML file) of this student. This will be the value to the studentNumber key in studentsDict
+
+		# Since all values for attributes in an XML file are strings, all the values obtained below are strings, and will be stored as strings
 
 		studentNumber = student.get("id")
 		solutionStudentTag = solutionBS.find("student", id=studentNumber) # Get the student tag/element of this student in the solution.xml file | Source: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#the-keyword-arguments
@@ -380,7 +382,8 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 	currentSolutionDict["numStudents"] = numStudents
 	currentSolutionDict["numCourses"] = numCourses
 	currentSolutionDict["numCourseRequests"] = numCourseRequests
-	currentSolutionDict["studentsDictionary"] = studentDict
+	currentSolutionDict["lastCourseRequestID"] = lastCourseRequestID
+	currentSolutionDict["studentsDictionary"] = studentsDict
 
 	return currentSolutionDict
 
@@ -401,6 +404,12 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 		:return: updatedInputDict, containing the updated input data for this problem instance
 	"""
 	updatedInputDict = currentSolutionDict
+
+	numStudents = updatedInputDict["numStudents"]
+	numCourses = updatedInputDict["numCourses"]
+	numCourseRequests = updatedInputDict["numCourseRequests"]
+	lastCourseRequestID = updatedInputDict["lastCourseRequestID"]
+	studentsDict = updatedInputDict["studentsDictionary"]
 
 
 	modifiedStudentsDF = pd.read_excel(modifiedStudentsFilePath, sheet_name=0, header=0, engine="openpyxl", dtype={'numCourses':int})
@@ -468,6 +477,18 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	print(modificationsDF[0:5].values)
 	print(modificationsDF.studentNumber.value_counts()[220112256]) #Number of times the value 220112256 appears in the studentNumber column
 
+	"""
+		In the updated input data XML file, we want the unchanged course requests to maintain their same course request 
+		IDs (so that it is easier to check if existing section allocations were preserved in the updated solution).
+		So if a course request of an existing student gets deleted (or we remove an entire student), we will not reset 
+		the course request IDs by 'shifting down' the IDs of all the course requests that follow. 
+		And also if a course request(s) gets added, we will not be 'shifting up' the IDs of all the course requests that 
+		follow.
+		So all the new course requests that get added (even for existing students with existing course requests) will 
+		have their course request ID's be after than the last course request ID used in the current input data XML file.
+	"""
+	currentCourseRequestID = lastCourseRequestID + 1
+
 	for i, row in modificationsDF.iterrows(): #i represents the index
 		studentNumber = row["studentNumber"]
 		numOccurrences = modificationsDF.studentNumber.value_counts()[studentNumber] # The number of times this student appears in modificationsDF (including this occurrence)
@@ -480,11 +501,26 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				# Do nothing ?
 				print("First occurrence")
 			else:  # if it is the student's second appearance in modificationsDF
-				# Get their updated details and course requests and update it in the studentDict
+				# Get their updated details and course requests and update it in the studentsDict
 				print("Second occurrence")
 		else:  # if this student only appears once in modificationsDF
 			print("Only appearance")
-		#for j in indexesOfThisStudent:
+			if studentNumber in currentStudentsDF["studentNumber"].values:  # If this only appearance is in currentStudentsDF
+				# this student has been removed from the updated Students input
+				# so remove them from the studentsDict
+				print("IN currentStudentsDF")
+				print(studentsDict[str(studentNumber)])
+				numStudentProcessedCourses = int(studentsDict[str(studentNumber)]["numProcessedCourses"])
+				print(numStudentProcessedCourses)
+				numCourseRequests -= numStudentProcessedCourses
+				del studentsDict[str(studentNumber)]
+				print(studentsDict[str(studentNumber)])
+			else: # if studentNumber in modifiedStudentsDF["studentNumber"].values # If this only appearance is in modifiedStudentsDF
+				# this student has been added to the updated Students input
+				# so add them from the studentsDict
+				print("IN modifiedStudentsDF")
+
+	#for j in indexesOfThisStudent:
 		#	modificationsDF.drop(index=j, inplace=True)
 		#if :
 		#	modificationsDF.drop(index=i, inplace=True)
