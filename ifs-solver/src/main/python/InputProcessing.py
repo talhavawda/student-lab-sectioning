@@ -234,6 +234,8 @@ def main():
 			courseName = studentsDF.loc[student, "course" + str(course)]
 
 			"""
+				Issue #1:
+				
 				Some courses that some students may be doing (enrolled/registered for) may not be in the problem input's Courses.xlsx input file.
 				CURRENTLY, we shall ignore such a course enrollment/registration for the sectioning process (as we do not have 
 				the details about that course's lab sessions and allocated timeslots)

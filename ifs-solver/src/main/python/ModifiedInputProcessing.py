@@ -314,9 +314,9 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 	"""
 	print("\tObtaining student details, their course requests, and allocated sections...")
 	print("\t\tProcessing student:")
-	inputstudentsTags = inputBS.find_all("student")  # Extract all 'student' tags from the input data XML file
+	inputStudentsTags = inputBS.find_all("student")  # Extract all 'student' tags from the input data XML file
 
-	for student in inputstudentsTags: # each student is a Tag object
+	for student in inputStudentsTags: # each student is a Tag object
 		studentDict = dict() # A dictionary to store the details (attributes from the input data XML file) of this student. This will be the value to the studentNumber key in studentsDict
 
 		# Since all values for attributes in an XML file are strings, all the values obtained below are strings, and will be stored as strings
@@ -489,7 +489,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	"""
 	currentCourseRequestID = lastCourseRequestID + 1
 
-	for i, row in modificationsDF.iterrows(): #i represents the index
+	for i, row in modificationsDF.iterrows(): #i represents the index, row represents the student (a row) at this index
 		studentNumber = row["studentNumber"]
 		numOccurrences = modificationsDF.studentNumber.value_counts()[studentNumber] # The number of times this student appears in modificationsDF (including this occurrence)
 		print(i, studentNumber, numOccurrences, sep="\t")
@@ -510,10 +510,29 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				numStudentProcessedCourses = int(studentsDict[str(studentNumber)]["numProcessedCourses"])
 				numCourseRequests -= numStudentProcessedCourses
 				del studentsDict[str(studentNumber)] # This will raise a KeyError exception if studentNumber is invalid, but it will always be valid for this case
-			else: # if studentNumber in modifiedStudentsDF["studentNumber"].values # If this only appearance is in modifiedStudentsDF
-				# this student has been added to the updated Students input
-				# so add them from the studentsDict
+			else:  # if studentNumber in modifiedStudentsDF["studentNumber"].values | If this only appearance is in modifiedStudentsDF
+				# this student has been added to the updated Students input, so add them to the studentsDict by processing their details and course requests
 				print("IN modifiedStudentsDF")
+				surname = row["surname"]
+				firstnames = row["firstnames"]
+				faculty = row["faculty"]  # XML file: Student.Classification.area
+				qualification = row["qualification"]  # XML file: Student.Major.area
+				numCoursesStudent = row["numCourses"] # The number of courses that this student is registered for | I set the data type to 'int' when I read in the Excel file into the DataFrame
+
+				numProcessedCourses = 0 # The number of course of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
+
+				for course in range(1, numCoursesStudent+1): # For each course the student is registered for (course number starting from 1)
+					courseName = studentsDF.loc[student, "course" + str(course)]
+					"""
+						Issue #1:
+						
+						Some courses that some students may be doing (enrolled/registered for) may not be in the problem 
+						input's Courses.xlsx input file.
+						CURRENTLY, we shall ignore such a course enrollment/registration for the sectioning process (as we do not have 
+						the details about that course's lab sessions and allocated timeslots)
+						If such a course was not in the Courses.xlsx input file then we shall get a KeyError when trying
+						to get its courseID from the courseIdDict
+					"""
 
 	#for j in indexesOfThisStudent:
 		#	modificationsDF.drop(index=j, inplace=True)
