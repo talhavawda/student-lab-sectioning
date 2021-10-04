@@ -529,7 +529,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 		So all the new course requests that get added (even for existing students with existing course requests) will 
 		have their course request ID's be after than the last course request ID used in the current input data XML file.
 	"""
-	currentCourseRequestID = lastCourseRequestID + 1
+	currentCourseRequestID = lastCourseRequestID
 
 	for i, row in modificationsDF.iterrows(): #i represents the index, row represents the student (a row) at this index
 		studentNumber = row["studentNumber"]
@@ -554,6 +554,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				print("IN currentStudentsDF")
 				studentNumProcessedCourses = int(studentsDict[str(studentNumber)]["numProcessedCourses"]) # The number of courses of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
 				numCourseRequests -= studentNumProcessedCourses
+				numStudents -= 1
 				del studentsDict[str(studentNumber)] # This will raise a KeyError exception if studentNumber is invalid, but it will always be valid for this case
 			else:  # if studentNumber in modifiedStudentsDF["studentNumber"].values | If this only appearance is in modifiedStudentsDF
 				# this student has been added to the updated Students input, so add them to the studentsDict by processing their details and course requests
@@ -572,12 +573,11 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				studentProcessedCourses = list()
 				studentNumProcessedCourses = 0  # The number of courses of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
 
-				for course in range(1, studentNumCourses + 1):  # For each course the student is registered for (course number starting from 1)
+				for courseName in range(1, studentNumCourses + 1):  # For each course the student is registered for (course number starting from 1)
 					# todo - See InputProcessing.py from line 236
 					# todo - see Toby for the  chrome tabs I had open
 					# todo - remove print()'s above when done
-					courseName = row["course" + str(course)]
-					print(courseName)
+					courseName = row["course" + str(courseName)]
 
 					"""
 						Issue #1:
@@ -607,17 +607,27 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				qualification = row["qualification"]  # XML file: Student.Major.area
 				studentDict["majorArea"] = qualification
 
-				studentCourseRequestsList = list()
+				studentCourseRequestsDict = dict()
 
-				for course in studentProcessedCourses: # Each course is the name of the course for the course requests of the student that have been processed
+				for courseName in studentProcessedCourses: # Each course is the name of the course for the course requests of the student that have been processed
 					courseRequestDict = dict()
 
+					courseRequestDict["priority"] = "0"
+					courseRequestCourseID = courseIdDict[courseName]
+					courseRequestDict["courseID"] = courseRequestCourseID
+					courseRequestDict["courseName"] = courseName
+
+					courseRequestDict["allocations"] = list()  # an empty list since this is a new course request (no allocations from the current solution)
+
 					currentCourseRequestID += 1
+					studentCourseRequestsDict[str(currentCourseRequestID)] = courseRequestDict
 
 
-				studentDict["courseRequests"] = studentCourseRequestsList
+
+				studentDict["courseRequests"] = studentCourseRequestsDict
 
 				studentsDict[str(studentNumber)] = studentDict
+				numStudents += 1
 
 
 	#for j in indexesOfThisStudent:
@@ -628,12 +638,14 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 
 	#print(modificationsDF.loc[2545, "studentNumber"])
 
-	# Consider also writing to the input data XML file here to improve efficiency / lower the execution time (doing the writing after processing
-	# the entire data first will lead to double execution time as we will have to traverse the entire dictionary again from the beginning
 
-	# Todo - what numbers do i give the course requests in the updated input data XML file (really applicable when this isnt the first modification - CANT start from numCourseRequests+! for first new course request)
-	# maybe add a filed to the sectioning element that states the last course request id used?
 
+	# Update the updated input dict: the numCourses, courseIdDict, and courseNameDict remain unchanged so we don't have to update them
+	updatedInputDict["numStudents"] = numStudents
+	updatedInputDict["numCourseRequests"] = numCourseRequests
+	updatedInputDict["lastCourseRequestID"] = currentCourseRequestID
+	updatedInputDict["studentsDictionary"] = studentsDict
+	print(updatedInputDict["studentsDictionary"])
 	return updatedInputDict
 
 

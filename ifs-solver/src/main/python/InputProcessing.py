@@ -285,12 +285,6 @@ def main():
 	# last CR ID used
 	sectioningElement.setAttribute("lastCourseRequestID", str(currentCourseRequestID))
 
-		# Todo - add 'school' field from the Students.xlsx file
-
-	# Todo - cater for qualifications/degrees having their students be allocated to specific timeslots for specific courses
-		#try and implement this by having an input file for the degree-course specific allocations, and when processing students
-		# add that timeslot as a current allocation for their course request
-
 
 
 	inputFileXML = inputFileXML.toprettyxml(indent="\t")
