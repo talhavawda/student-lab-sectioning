@@ -468,7 +468,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 		modified Students file) - the input file that was used to produce the current input data XML file that was used 
 		to generate the current solution, and use it to read in the current Students input file as a Pandas Data Frame 
 	"""
-	if modVerNum == 1: # the first modified Students file
+	if modVerNum == 1:  # the first modified Students file
 		currentStudentsFilePath = modifiedStudentsFilePath[:dashIndex] + ".xlsx"
 	else:
 		currentStudentsFilePath = modifiedStudentsFilePath[:dashIndex+1] + str(modVerNum-1) + ".xlsx"
@@ -478,7 +478,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 
 	"""
 		Get the modifications (to student registrations) made to the current Students input file (which are reflected in 
-		the modified students  input file) by finding rows that are not in both Data Frames that represent these 2 files 
+		the modified students input file) by finding rows that are not in both Data Frames that represent these 2 files 
 		(i.e. removing all rows that are duplicated in both). We do this by first merging both Data Frames into one (doing 
 		concatenation).
 		
@@ -516,6 +516,8 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	"""
 		In the updated input data XML file, we want the unchanged course requests to maintain their same course request 
 		IDs (so that it is easier to check if existing section allocations were preserved in the updated solution).
+		[In the initial input data XML file, students were adding according to the order in which they were in, in the
+		Students input file, which is probably in some sorted order]
 		So if a course request of an existing student gets deleted (or we remove an entire student), we will not reset 
 		the course request IDs by 'shifting down' the IDs of all the course requests that follow. 
 		And also if a course request(s) gets added, we will not be 'shifting up' the IDs of all the course requests that 
@@ -534,9 +536,11 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 			studentIndexes = modificationsDF.index[modificationsDF["studentNumber"] == studentNumber].tolist()
 
 			if i == studentIndexes[0]:  # if it is the student's first appearance in modificationsDF
+				# todo
 				# Do nothing ?
 				print("First occurrence")
 			else:  # if it is the student's second appearance in modificationsDF
+				# todo
 				# Get their updated details and course requests and update it in the studentsDict
 				print("Second occurrence")
 		else:  # if this student only appears once in modificationsDF
@@ -544,22 +548,29 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 			if studentNumber in currentStudentsDF["studentNumber"].values:  # If this only appearance is in currentStudentsDF
 				# this student has been removed from the updated Students input, so remove them from the studentsDict
 				print("IN currentStudentsDF")
-				numStudentProcessedCourses = int(studentsDict[str(studentNumber)]["numProcessedCourses"])
-				numCourseRequests -= numStudentProcessedCourses
+				studentNumProcessedCourses = int(studentsDict[str(studentNumber)]["numProcessedCourses"]) # The number of courses of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
+				numCourseRequests -= studentNumProcessedCourses
 				del studentsDict[str(studentNumber)] # This will raise a KeyError exception if studentNumber is invalid, but it will always be valid for this case
 			else:  # if studentNumber in modifiedStudentsDF["studentNumber"].values | If this only appearance is in modifiedStudentsDF
 				# this student has been added to the updated Students input, so add them to the studentsDict by processing their details and course requests
 				print("IN modifiedStudentsDF")
+
+				studentDict = dict() # The dictionary for this student. The values element in studentsDict to the studentNumber key
+				
 				surname = row["surname"]
+				studentDict["surname"] = surname
 				firstnames = row["firstnames"]
-				faculty = row["faculty"]  # XML file: Student.Classification.area
-				qualification = row["qualification"]  # XML file: Student.Major.area
-				numCoursesStudent = row["numCourses"] # The number of courses that this student is registered for | I set the data type to 'int' when I read in the Excel file into the DataFrame
+				studentDict["firstnames"] = firstnames
+				
+				studentNumCourses = row["numCourses"]  # The number of courses that this student is registered for | I set the data type to 'int' when I read in the Excel file into the DataFrame
+				studentDict["numCourses"] = str(studentNumCourses)  # All 'primitive' values in the dict are strings
 
-				numProcessedCourses = 0 # The number of course of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
+				studentProcessedCourses = list()
+				studentNumProcessedCourses = 0  # The number of courses of this student that are processed and added (i.e. the courses that were specified in the problem input's Courses.xlsx file)
 
-				for course in range(1, numCoursesStudent+1): # For each course the student is registered for (course number starting from 1)
+				for course in range(1, studentNumCourses + 1):  # For each course the student is registered for (course number starting from 1)
 					# todo - See InputProcessing.py from line 236
+					# todo - see Toby for the  chrome tabs I had open
 					# todo - remove print()'s above when done
 					courseName = row["course" + str(course)]
 					print(courseName)
@@ -575,13 +586,34 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 						to get its courseID from the courseIdDict
 					"""
 					try:
-						courseID = courseIdDict[courseName] # Get the courseID of this course
+						courseID = courseIdDict[courseName]  # Get the courseID of this course
 					except KeyError:
 						# Do Nothing - Do not add this registered/enrolled course as a course request  for sectioning
 						print("Invalid Course: '" + courseName + "' was not specified in the problem input's Courses.xlsx file")
 					else:  # if no KeyError thrown - code executed perfectly -> we were able to get the courseID of this course -> this course was specified in the input
-						# Process this course enrollment - add it to the student for sectioning
-						numProcessedCourses += 1
+						# Process this course enrollment - add it to the student details for sectioning
+						studentProcessedCourses.append(courseName)
+						studentNumProcessedCourses += 1
+
+				studentDict["numProcessedCourses"] = studentNumProcessedCourses
+				numCourseRequests += studentNumProcessedCourses
+
+				faculty = row["faculty"]  # XML file: Student.Classification.area
+				studentDict["classificationArea"] = faculty
+				qualification = row["qualification"]  # XML file: Student.Major.area
+				studentDict["majorArea"] = qualification
+
+				studentCourseRequestsList = list()
+
+				for course in studentProcessedCourses: # Each course is the name of the course for the course requests of the student that have been processed
+					courseRequestDict = dict()
+
+					currentCourseRequestID += 1
+
+
+				studentDict["courseRequests"] = studentCourseRequestsList
+
+				studentsDict[str(studentNumber)] = studentDict
 
 
 	#for j in indexesOfThisStudent:

@@ -183,6 +183,14 @@ UniTime Student Sectioning Solver (UniTime site Links):
  
                 
 ## Reference and Acknowledgement Links
+
+https://realpython.com/python-dicts/
+https://www.geeksforgeeks.org/python-dictionary/
+https://docs.python.org/3/tutorial/datastructures.html
+
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/#the-keyword-arguments
+
 https://www.geeksforgeeks.org/with-statement-in-python/
 
 https://www.pythontutorial.net/python-string-methods/python-string-index/

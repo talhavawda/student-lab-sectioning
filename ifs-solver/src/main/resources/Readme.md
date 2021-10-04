@@ -252,7 +252,7 @@ Changes made:
                 - Course requests of students with their assigned sections in a tabular format
                 - Each row is a course request
                 - If a course request was unassigned in the solution, its value for the "Enrolled" field will be "No",
-                and the "Sections" field will be empty
+                and the "Sections" field will be empty  
         - There's also a time-overlaps-real.csv file (with no info) implying the solver makes a distinction between an actual time conflict and a time overlap
     - 210927_010236
         - Running the solver after undoing the changes that I made to the Courses.xlsx and Students.xlsx file to test the time 
