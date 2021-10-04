@@ -376,14 +376,16 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 		studentMajorArea = studentMajorTag.get("area")
 		studentDict["majorArea"] = studentMajorArea
 
-		studentCourseRequestsList = list() # A list of dictionaries, each dictionary representing a course request
+		# Changed studentCourseRequests from a List to a Dict
+		# studentCourseRequestsList = list() # A list of dictionaries, each dictionary representing a course request
+		studentCourseRequestsDict = dict() # A dictionary of course requests; key = courseRequestID, value = dictionary representing the course request details
 		studentCourseRequestsTags = student.find_all("course")
 
 		for courseRequest in studentCourseRequestsTags:
 			courseRequestDict = dict() # Each key is an attribute of this course request and the value is the corresponding value of the key
 
 			courseRequestID = courseRequest.get("id")
-			courseRequestDict["courseRequestID"] = courseRequestID
+			#courseRequestDict["courseRequestID"] = courseRequestID
 			courseRequestPriority = courseRequest.get("priority")
 			courseRequestDict["priority"] = courseRequestPriority
 			courseRequestCourseID = courseRequest.get("course")
@@ -391,7 +393,7 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 			courseRequestCourseName = courseRequest.get("courseName")
 			courseRequestDict["courseName"] = courseRequestCourseName
 
-			solutionStudentCourseRequestTag = solutionStudentTag.find("course", id=courseRequestID) # The course request tag/element of this course request of thus student
+			solutionStudentCourseRequestTag = solutionStudentTag.find("course", id=courseRequestID) # The course request tag/element of this course request of this student in the solution XML file
 
 			courseRequestAllocationsList = list() # To store the allocated sections for each subpart class (Lab) of this course (Each course can have multiple labs, with (at most) one allocated section for each lab
 			courseRequestAllocationsTags = solutionStudentCourseRequestTag.find_all("section")
@@ -402,9 +404,11 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 
 			courseRequestDict["allocations"] = courseRequestAllocationsList
 
-			studentCourseRequestsList.append(courseRequestDict)
+			# studentCourseRequestsList.append(courseRequestDict)
+			studentCourseRequestsDict[courseRequestID] = courseRequestDict
 
-		studentDict["courseRequests"] = studentCourseRequestsList
+		# studentDict["courseRequests"] = studentCourseRequestsList
+		studentDict["courseRequests"] = studentCourseRequestsDict
 
 		studentsDict[studentNumber] = studentDict
 
