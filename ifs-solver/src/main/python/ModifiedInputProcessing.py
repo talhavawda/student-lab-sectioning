@@ -354,7 +354,7 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 	print("\t\tProcessing student:")
 	inputStudentsTags = inputBS.find_all("student")  # Extract all 'student' tags from the input data XML file
 
-	for student in inputStudentsTags: # each student is a Tag object
+	for student in inputStudentsTags:  # each student is a Tag object
 		studentDict = dict() # A dictionary to store the details (attributes from the input data XML file) of this student. This will be the value to the studentNumber key in studentsDict
 
 		# Since all values for attributes in an XML file are strings, all the values obtained below are strings, and will be stored as strings
@@ -825,7 +825,7 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	updatedInputFileXML.appendChild(sectioningElement)
 
 
-	""" Create the 'offerings' and 'students' sub-elements of the sectioning element"""
+	""" Create the 'offerings', 'students', and 'courses' sub-elements of the sectioning element """
 
 	offeringsElement = updatedInputFileXML.createElement("offerings")
 	sectioningElement.appendChild(offeringsElement)
@@ -833,12 +833,61 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	studentsElement = updatedInputFileXML.createElement("students")
 	sectioningElement.appendChild(studentsElement)
 
+	coursesElement = updatedInputFileXML.createElement("courses")
+sectioningElement.appendChild(coursesElement)
 
-	print("\t\tExtracting courses data...")
 
-	print("\t\tWriting courses data to updated input data XML file...")
+	print("\t\tExtracting courses data from current input data XML file and writing it to the updated input data XML file...")
 
-	# Todo - process courses data
+	currentInputOfferingTags = currentInputSectioningTag.find_all("offering")
+
+	for currentInputOfferingTag in currentInputOfferingTags:  # each offering is a Tag object
+		offeringElement = updatedInputFileXML.createElement("offering")
+		offeringElement.setAttribute("id", currentInputOfferingTag.get("id"))
+		offeringsElement.appendChild(offeringElement)
+
+		currentInputCourseTag = currentInputOfferingTag.find("course")  # There's only 1 "course" tag/element of this offering tag
+		courseElement = updatedInputFileXML.createElement("course")
+		courseElement.setAttribute("id", currentInputCourseTag.get("id"))
+		courseElement.setAttribute("name", currentInputCourseTag.get("name"))
+		courseElement.setAttribute("numLabs", currentInputCourseTag.get("numLabs"))
+		offeringElement.appendChild(courseElement)
+
+		currentInputConfigTag = currentInputOfferingTag.find("config")  # There's only 1 "config" tag/element of this offering tag
+		configElement = updatedInputFileXML.createElement("config")
+		configElement.setAttribute("id", currentInputConfigTag.get("id"))
+		offeringElement.appendChild(configElement)
+
+		currentInputSubpartTags = currentInputConfigTag.find_all("subpart")
+
+		for currentInputSubpartTag in currentInputSubpartTags:
+			subpartElement = updatedInputFileXML.createElement("subpart")
+			subpartElement.setAttribute("id", currentInputSubpartTag.get("id"))
+			subpartElement.setAttribute("itype", currentInputSubpartTag.get("itype"))
+			subpartElement.setAttribute("courseLabNum", currentInputSubpartTag.get("courseLabNum"))
+			configElement.appendChild(subpartElement)
+
+
+			currentInputSectionTags = currentInputSubpartTag.find_all("section")
+
+			for currentInputSectionTag in currentInputSectionTags:
+				sectionElement = updatedInputFileXML.createElement("section")
+				sectionElement.setAttribute("id", currentInputSectionTag.get("id"))
+				sectionElement.setAttribute("courseLabSectionNum", currentInputSectionTag.get("courseLabSectionNum"))
+				sectionElement.setAttribute("limit", currentInputSectionTag.get("limit"))
+				subpartElement.appendChild(sectionElement)
+
+				currentInputTimeTag = currentInputSectionTag.find("time")  # There's only 1 "time" tag/element of this offering tag
+				timeElement = updatedInputFileXML.createElement("time")
+				timeElement.setAttribute("days", currentInputTimeTag.get("days"))
+				timeElement.setAttribute("start", currentInputTimeTag.get("start"))
+				timeElement.setAttribute("length", currentInputTimeTag.get("length"))
+				timeElement.setAttribute("dates", currentInputTimeTag.get("dates"))
+				timeElement.setAttribute("sessionDay", currentInputTimeTag.get("sessionDay"))
+				sectionElement.appendChild(timeElement)
+
+
+	# Todo - write courses-name dict to the updated file (see coursesElement in InputProcessing.py, line 103)
 
 	print("\t\tCourses data has been written to the updated input data XML file.")
 

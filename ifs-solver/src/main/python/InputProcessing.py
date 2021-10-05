@@ -64,7 +64,7 @@ def main():
 
 	inputFileXML.appendChild(sectioningElement)
 
-	""" Create the 'offerings' and 'students' sub-elements of the sectioning element"""
+	""" Create the 'offerings' and 'students' sub-elements of the sectioning element """
 
 	offeringsElement = inputFileXML.createElement("offerings")
 	sectioningElement.appendChild(offeringsElement)
@@ -72,7 +72,7 @@ def main():
 	studentsElement = inputFileXML.createElement("students")
 	sectioningElement.appendChild(studentsElement)
 
-	# Initialise all the ID variables's that are going to be used
+	# Initialise all the ID variables that are going to be used
 	# All id's start with 1 in the UniTime SS Data Format so the variables will be incremented before they'll be assigned
 	currentCourse = ""
 	currentLabNum = 0
