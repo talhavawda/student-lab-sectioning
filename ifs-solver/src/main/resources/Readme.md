@@ -278,5 +278,5 @@ Changes made:
     - Modifications:
         - Added student: 220120001 with 3 course requests.
         - Removed student: 220111511.
-        - Modified student: 220112040. Removed course request for MGNT102.
+        - Modified student: 220112040. Removed course request for MATH134. Added course request for STAT130. 
         - Modified student: 220112256. Added course request for STAT130.

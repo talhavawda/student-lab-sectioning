@@ -202,6 +202,9 @@ https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.ht
 https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
 https://stackoverflow.com/questions/21800169/python-pandas-get-index-of-rows-which-column-matches-certain-value
 https://stackoverflow.com/questions/5844672/delete-an-element-from-a-dictionary
+
+https://www.geeksforgeeks.org/python-get-dictionary-keys-as-a-list/
+https://stackoverflow.com/questions/1679384/converting-dictionary-to-list
                 
             
             
