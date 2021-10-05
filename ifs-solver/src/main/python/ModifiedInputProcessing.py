@@ -7,7 +7,7 @@ from xml.dom import minidom # For creating and writing to XML files
 """
 	Process the current solution file (solution.xml) along with the input data XML file that was used to obtain it,
 	a modified/updated Students input file, and produce an updated input data XML file that is a partial solution 
-	(the unchanged course requests from the current input data XML file are still assigned as is, the new course 
+	(the unchanged/existing course requests from the current input data XML file are still assigned as is, the new course 
 	requests are unassigned/unallocated and the old course requests removed)
 	
 	This current input data XML file and current solution file do not have to be the first/initial solution to the problem instance.
@@ -45,7 +45,7 @@ def main():
 	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests-testing"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
-	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml" # current input data XML file
+	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file
 	problemInputInstanceSolutionsFile = problemInstanceDirectoryPath + "/CurrentSolutions.txt"
 
 
@@ -88,7 +88,9 @@ def main():
 	""" Process the modified Students input Excel file"""
 	updatedInputDict = processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict)
 
-	# Generate/Produce the updated input data XML file
+	""" Generate/Produce the updated input data XML file """
+	generateUpdatedInputXmlfile(updatedInputDict)
+
 
 	"""
 	# Reset/Overwrite CurrentSolutions.txt file to an empty file
@@ -260,7 +262,7 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 
 		:param inputXmlFilePath: str: the file path of the current input data XML file
 		:param currentSolutionFilePath: str: the file path of the current solution XML file
-		:return: currentSolutionDict: , a dictionary containing the number of students, the number of courses, the number
+		:return: currentSolutionDict: a dictionary containing the number of students, the number of courses, the number
 		of course requests and a sub-dictionary (studentsDict) containing the student details, requests and allocations, from the current
 		solution
 	"""
@@ -732,8 +734,32 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 
 	return updatedInputDict
 
+
+def generateUpdatedInputXmlfile(updatedInputDict: dict):
+	"""
+		Create an updated input data XML file (that is a partial solution) based on the updated input data (the
+		unchanged/existing course requests from the current input data XML file are still assigned as is, the new course
+		requests are unassigned/unallocated and the old course requests removed)
+
+		:param updatedInputDict: the updated input data for this problem instance, containing a partial solution - a
+		dictionary containing the number of students, the number of courses, the number of course requests and a
+		sub-dictionary (studentsDict) containing the student details, course requests, and allocations from the current
+		solution (for existing course requests)
+		:return: None
+	"""
+	numStudents = updatedInputDict["numStudents"]
+	numCourses = updatedInputDict["numCourses"]
+	numCourseRequests = updatedInputDict["numCourseRequests"]
+	lastCourseRequestID = updatedInputDict["lastCourseRequestID"]
+	studentsDict = updatedInputDict["studentsDictionary"]
+	courseIdDict = updatedInputDict["courseIDDict"]
+	courseNameDict = updatedInputDict["courseNameDict"]
+
+	print("\nGenerating updated input data XML file...")
+
+
+
 # todo - see Toby for the  chrome tabs I had open
-# todo - remove print()'s above when done
 # Todo - update (re processes) the input data XML file for all other problem instances (based on additions made to InputProcessing.py on 22/09/2021
 
 main()
