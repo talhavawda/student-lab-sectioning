@@ -733,7 +733,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 
 	# for student in studentsDict.items():
 	# 	print(student)
-
+	print(updatedInputDict)
 	return updatedInputDict
 
 
@@ -750,17 +750,18 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 		:param inputXmlFilePath: str: the file path of the current input data XML file. To be used to extract courses data
 		:return: None
 	"""
-	numStudents = updatedInputDict["numStudents"]
-	numCourses = updatedInputDict["numCourses"]
-	numCourseRequests = updatedInputDict["numCourseRequests"]
-	lastCourseRequestID = updatedInputDict["lastCourseRequestID"]
+	# Convert values to strings as an XML file stores all attribute values as strings
+	numStudents = str(updatedInputDict["numStudents"])
+	numCourses = str(updatedInputDict["numCourses"])
+	numCourseRequests = str(updatedInputDict["numCourseRequests"])
+	lastCourseRequestID = str(updatedInputDict["lastCourseRequestID"])
 	studentsDict = updatedInputDict["studentsDictionary"]
 	courseIdDict = updatedInputDict["courseIDDict"]
 	courseNameDict = updatedInputDict["courseNameDict"]
 
 	print("\nGenerating updated input data XML file...")
 	print("\tReading in and parsing the current input data XML file...")
-	print("\t\tExtracting courses data...")
+
 
 	with open(inputXmlFilePath, "r") as inputXMLFile:
 		inputXML = inputXMLFile.read()
@@ -768,8 +769,6 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	# Passing the current input and solution XML files to BeatifulSoup parsers
 	inputBS = BeautifulSoup(inputXML, "xml")
 
-
-	print("\t\tWriting courses data to updated input data XML file...")
 
 	"""
 	Create the updated XML input data file for this input
@@ -803,7 +802,7 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	else:  # updating the subversion instead if there is one
 		modVerNum = int(currentVersion[periodIndex+1:]) + 1
 		updatedVersion = currentVersion[:periodIndex+1] + str(modVerNum)
-	print(updatedVersion)
+
 
 	sectioningElement.setAttribute("version", updatedVersion)
 
@@ -823,9 +822,31 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	sectioningElement.setAttribute("numCourseRequests", numCourseRequests)
 	sectioningElement.setAttribute("lastCourseRequestID", lastCourseRequestID)
 
-	# Todo
+	updatedInputFileXML.appendChild(sectioningElement)
 
-	print("\t\tCourses data has been written the updated input data XML file.")
+
+	""" Create the 'offerings' and 'students' sub-elements of the sectioning element"""
+
+	offeringsElement = updatedInputFileXML.createElement("offerings")
+	sectioningElement.appendChild(offeringsElement)
+
+	studentsElement = updatedInputFileXML.createElement("students")
+	sectioningElement.appendChild(studentsElement)
+
+
+	print("\t\tExtracting courses data...")
+
+	print("\t\tWriting courses data to updated input data XML file...")
+
+	# Todo - process courses data
+
+	print("\t\tCourses data has been written to the updated input data XML file.")
+
+	print("\tWriting updated students data to the updated input data XML file...")
+
+
+	print("\tThe updated students data has been written to the updated input data XML file...")
+
 
 	updatedInputFileXML = updatedInputFileXML.toprettyxml(indent="\t")
 

@@ -276,7 +276,7 @@ Changes made:
     ModifiedInputProcessing.processModifiedStudentsData() will look like
     - All modifications were made at the end of the file
     - Modifications:
-        - Removed student: 220111511.
+        - Removed student: 220111511. (Had 1 processed course request for MATH134)
         - Modified student: 220112040. Removed course request for MATH134. Added course request for STAT130. 
         - Modified student: 220112256. Added course request for STAT130.
-        - Added student: 220120001 with 3 course requests.
+        - Added student: 220120001 with 3 processed course requests.
