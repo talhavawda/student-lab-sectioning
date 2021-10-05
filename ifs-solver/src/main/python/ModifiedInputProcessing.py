@@ -1,6 +1,8 @@
-import pandas as pd # Following naming convention
-from bs4 import BeautifulSoup # For reading from XML files (bs4 needs to be installed first)
-from xml.dom import minidom # For creating and writing to XML files
+import pandas as pd  # Following naming convention
+from bs4 import BeautifulSoup  # For reading from XML files (bs4 needs to be installed first)
+from xml.dom import minidom  # For creating and writing to XML files
+# from time import time, ctime, localtime
+import time
 
 #Installed the openpyxl, beautifulsoup4 and lxml packages (lxml is a parser)
 
@@ -89,7 +91,7 @@ def main():
 	updatedInputDict = processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict)
 
 	""" Generate/Produce the updated input data XML file """
-	generateUpdatedInputXmlfile(updatedInputDict)
+	generateUpdatedInputXmlFile(updatedInputDict, inputXmlFilePath)
 
 
 	"""
@@ -735,7 +737,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	return updatedInputDict
 
 
-def generateUpdatedInputXmlfile(updatedInputDict: dict):
+def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	"""
 		Create an updated input data XML file (that is a partial solution) based on the updated input data (the
 		unchanged/existing course requests from the current input data XML file are still assigned as is, the new course
@@ -745,6 +747,7 @@ def generateUpdatedInputXmlfile(updatedInputDict: dict):
 		dictionary containing the number of students, the number of courses, the number of course requests and a
 		sub-dictionary (studentsDict) containing the student details, course requests, and allocations from the current
 		solution (for existing course requests)
+		:param inputXmlFilePath: str: the file path of the current input data XML file. To be used to extract courses data
 		:return: None
 	"""
 	numStudents = updatedInputDict["numStudents"]
@@ -756,6 +759,94 @@ def generateUpdatedInputXmlfile(updatedInputDict: dict):
 	courseNameDict = updatedInputDict["courseNameDict"]
 
 	print("\nGenerating updated input data XML file...")
+	print("\tReading in and parsing the current input data XML file...")
+	print("\t\tExtracting courses data...")
+
+	with open(inputXmlFilePath, "r") as inputXMLFile:
+		inputXML = inputXMLFile.read()
+
+	# Passing the current input and solution XML files to BeatifulSoup parsers
+	inputBS = BeautifulSoup(inputXML, "xml")
+
+
+	print("\t\tWriting courses data to updated input data XML file...")
+
+	"""
+	Create the updated XML input data file for this input
+	"""
+
+	# Create XML document with XML Prolog
+	updatedInputFileXML = minidom.Document()
+
+	# Student Sectioning
+	sectioningElement = updatedInputFileXML.createElement("sectioning")  # Create the root element 'sectioning'
+
+	""" 
+		Add the attributes of the 'sectioning element' - this is the problem specification information along with the
+		current input information. Extracting it from the current input data XML file
+	"""
+	currentInputSectioningTag = inputBS.find("sectioning") # Extract the 'sectioning' tag/element and its attributes from the current input data XML file (BS considers an XML element as a 'tag')
+
+	currentVersion = currentInputSectioningTag.get("version")
+	periodIndex = currentVersion.rfind(".")
+
+	# Todo - ensure the Problem Specification XML file part in the comment below
+	"""
+		modVerNum is the modification version number of the modified Students input data XML file.
+		The Problem Specification XML file, used to create the first/initial input data XML file for this problem
+		instance should have the "version" attribute be either "0" or "<x>.0" so that modVerNum here matches up with the 
+		modification version number of the modified Students input data XML file 
+	"""
+	if periodIndex < 0:
+		modVerNum = int(currentVersion) + 1
+		updatedVersion = str(modVerNum)
+	else:  # updating the subversion instead if there is one
+		modVerNum = int(currentVersion[periodIndex+1:]) + 1
+		updatedVersion = currentVersion[:periodIndex+1] + str(modVerNum)
+	print(updatedVersion)
+
+	sectioningElement.setAttribute("version", updatedVersion)
+
+	sectioningElement.setAttribute("initiative", currentInputSectioningTag.get("initiative"))
+	sectioningElement.setAttribute("term", currentInputSectioningTag.get("term"))
+	sectioningElement.setAttribute("year", currentInputSectioningTag.get("year"))
+
+	currentDateTime = time.ctime(time.time())  # current time as a string
+	# timezone = time.localtime().tm_zone
+	sectioningElement.setAttribute("created", currentDateTime)
+
+	sectioningElement.setAttribute("nrDays", currentInputSectioningTag.get("nrDays"))
+	sectioningElement.setAttribute("slotsPerDay", currentInputSectioningTag.get("slotsPerDay"))
+
+	sectioningElement.setAttribute("numStudents", numStudents)
+	sectioningElement.setAttribute("numCourses", numCourses)
+	sectioningElement.setAttribute("numCourseRequests", numCourseRequests)
+	sectioningElement.setAttribute("lastCourseRequestID", lastCourseRequestID)
+
+	# Todo
+
+	print("\t\tCourses data has been written the updated input data XML file.")
+
+	updatedInputFileXML = updatedInputFileXML.toprettyxml(indent="\t")
+
+	print("\nUpdated input data XML file has been generated.")
+
+
+	# updatedXmlFileName = inputXmlFilePath  # Overwrite current input data XML file (user system version)
+
+	# For my experimentation process, I will be using a different XML file name for the updated input data XML file, to
+	# allow for easy comparison, and multiple independent solver runs (with different modifed Students input file) on the
+	# same input data XML file
+	periodIndex = inputXmlFilePath.rfind(".xml")
+	updatedXmlFileName = inputXmlFilePath[:periodIndex] + "-updated-1.xml"
+
+
+	# Write the updated input data XML file
+	with open(updatedXmlFileName, "w") as updatedXmlFile:
+		updatedXmlFile.write(updatedInputFileXML)
+
+	print("Updated input data XML file has been written to file: '" + updatedXmlFileName + "'.")
+
 
 
 

@@ -205,6 +205,11 @@ https://stackoverflow.com/questions/5844672/delete-an-element-from-a-dictionary
 
 https://www.geeksforgeeks.org/python-get-dictionary-keys-as-a-list/
 https://stackoverflow.com/questions/1679384/converting-dictionary-to-list
+
+https://realpython.com/iterate-through-dictionary-python/
+
+https://realpython.com/python-time-module/#python-time-in-seconds-as-a-string-representing-local-time
+
                 
             
             

@@ -50,7 +50,7 @@ def main():
 	inputFileXML = minidom.Document()
 
 	# Student Sectioning
-	sectioningElement = inputFileXML.createElement("sectioning") # Create the root element 'sectioning'
+	sectioningElement = inputFileXML.createElement("sectioning")  # Create the root element 'sectioning'
 
 	""" Add the attributes of the 'sectioning element' - this is the problem specification information (having being extracted 
 	and stored in specificationDict)"""
