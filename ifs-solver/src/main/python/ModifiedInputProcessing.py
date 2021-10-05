@@ -834,10 +834,12 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	sectioningElement.appendChild(studentsElement)
 
 	coursesElement = updatedInputFileXML.createElement("courses")
-sectioningElement.appendChild(coursesElement)
+	sectioningElement.appendChild(coursesElement)
 
 
 	print("\t\tExtracting courses data from current input data XML file and writing it to the updated input data XML file...")
+
+	""" Process all course offerings (All LabSections for each Lab for each Course) """
 
 	currentInputOfferingTags = currentInputSectioningTag.find_all("offering")
 
@@ -887,12 +889,18 @@ sectioningElement.appendChild(coursesElement)
 				sectionElement.appendChild(timeElement)
 
 
-	# Todo - write courses-name dict to the updated file (see coursesElement in InputProcessing.py, line 103)
+	""" Add the course id-name pairs"""
+	print(courseNameDict)
+	for courseID in range(1, int(numCourses)+1):
+		courseElement = updatedInputFileXML.createElement("course")
+		courseElement.setAttribute("id", str(courseID))
+		courseElement.setAttribute("courseName", courseNameDict[str(courseID)])
+		coursesElement.appendChild(courseElement)
 
 	print("\t\tCourses data has been written to the updated input data XML file.")
 
 	print("\tWriting updated students data to the updated input data XML file...")
-
+	# todo...
 
 	print("\tThe updated students data has been written to the updated input data XML file...")
 
