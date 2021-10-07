@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Tue Oct  5 20:55:16 2021" nrDays="5" slotsPerDay="2" numStudents="100" numCourses="19" numCourseRequests="260" lastCourseRequestID="262">
+<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Fri Oct  8 01:29:36 2021" nrDays="5" slotsPerDay="2" numStudents="100" numCourses="19" numCourseRequests="260" lastCourseRequestID="262">
 	<offerings>
 		<offering id="1">
 			<course id="1" name="BIOL101" numLabs="1"/>
@@ -264,7 +264,668 @@
 			</config>
 		</offering>
 	</offerings>
-	<students/>
+	<students>
+		<student id="220090008" surname="Mchunu" firstnames="Londiwe Lynda" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSBLS"/>
+			<course id="1" priority="0" course="5" courseName="CHEM110"/>
+			<course id="2" priority="0" course="17" courseName="PHYS131"/>
+			<course id="3" priority="0" course="1" courseName="BIOL101"/>
+			<course id="4" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220090042" surname="Mkhize" firstnames="Lungile Nothando" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="5" priority="0" course="6" courseName="CHEM195"/>
+			<course id="6" priority="0" course="18" courseName="PHYS195"/>
+			<course id="7" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220090131" surname="Mbuyisa" firstnames="Malibongwe Bongani" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="8" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220090331" surname="Miya" firstnames="Nkosikhona Sanele" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="9" priority="0" course="5" courseName="CHEM110"/>
+			<course id="10" priority="0" course="17" courseName="PHYS131"/>
+			<course id="11" priority="0" course="1" courseName="BIOL101"/>
+			<course id="12" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220090400" surname="Zungu" firstnames="Olwethu Junior" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCMB"/>
+			<course id="13" priority="0" course="5" courseName="CHEM110"/>
+			<course id="14" priority="0" course="17" courseName="PHYS131"/>
+			<course id="15" priority="0" course="1" courseName="BIOL101"/>
+			<course id="16" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220090498" surname="Mbatha" firstnames="Bongani" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-MDSC"/>
+			<course id="17" priority="0" course="5" courseName="CHEM110"/>
+			<course id="18" priority="0" course="17" courseName="PHYS131"/>
+			<course id="19" priority="0" course="1" courseName="BIOL101"/>
+			<course id="20" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220090539" surname="Motha" firstnames="Luyanda" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="21" priority="0" course="6" courseName="CHEM195"/>
+			<course id="22" priority="0" course="18" courseName="PHYS195"/>
+			<course id="23" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220090592" surname="Pillay" firstnames="Mesantha" numCourses="3" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="24" priority="0" course="5" courseName="CHEM110"/>
+			<course id="25" priority="0" course="1" courseName="BIOL101"/>
+			<course id="26" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220090734" surname="Jhavary" firstnames="Raeesah" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="27" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220090857" surname="Qwathekana" firstnames="Lonwabo" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="28" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220090908" surname="Mkhwanazi" firstnames="Gugulethu Ntobeko Masibonisane" numCourses="5" numProcessedCourses="4">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="BOPT"/>
+			<course id="29" priority="0" course="5" courseName="CHEM110"/>
+			<course id="30" priority="0" course="17" courseName="PHYS131"/>
+			<course id="31" priority="0" course="2" courseName="BIOL103"/>
+			<course id="32" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220091060" surname="Ndlela" firstnames="Sifundo Bukhulubakhe" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="33" priority="0" course="9" courseName="GEOG110"/>
+			<course id="34" priority="0" course="5" courseName="CHEM110"/>
+			<course id="35" priority="0" course="1" courseName="BIOL101"/>
+			<course id="36" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220091067" surname="Mtsweni" firstnames="Khanyisile Felicia" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-MDSC"/>
+			<course id="37" priority="0" course="5" courseName="CHEM110"/>
+			<course id="38" priority="0" course="17" courseName="PHYS131"/>
+			<course id="39" priority="0" course="1" courseName="BIOL101"/>
+			<course id="40" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220091285" surname="Mncube" firstnames="Sandiso Lindokuhle" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="41" priority="0" course="9" courseName="GEOG110"/>
+			<course id="42" priority="0" course="5" courseName="CHEM110"/>
+			<course id="43" priority="0" course="1" courseName="BIOL101"/>
+			<course id="44" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220091447" surname="Onuorah" firstnames="Ifaenyi Chukwu Gift" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="45" priority="0" course="5" courseName="CHEM110"/>
+			<course id="46" priority="0" course="16" courseName="PHYS113"/>
+			<course id="47" priority="0" course="11" courseName="MATH130"/>
+			<course id="48" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220091494" surname="Mzobe" firstnames="Anele Precious" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="49" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220091957" surname="Keto" firstnames="Coceka" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSBLS"/>
+			<course id="50" priority="0" course="5" courseName="CHEM110"/>
+			<course id="51" priority="0" course="17" courseName="PHYS131"/>
+			<course id="52" priority="0" course="1" courseName="BIOL101"/>
+			<course id="53" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220092242" surname="Msimango" firstnames="Sizwe Sebastian" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="54" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220092480" surname="Thusi" firstnames="Nkosingiphile" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="55" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220092484" surname="Zamisa" firstnames="Thamsanqa" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="56" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220092495" surname="Isaac" firstnames="Jacquiline Tamara" numCourses="4" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="57" priority="0" course="8" courseName="COMP100"/>
+			<course id="58" priority="0" course="11" courseName="MATH130"/>
+			<course id="59" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220092772" surname="Mahlalela" firstnames="Unathi Satya Anele" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-MDSC"/>
+			<course id="60" priority="0" course="5" courseName="CHEM110"/>
+			<course id="61" priority="0" course="17" courseName="PHYS131"/>
+			<course id="62" priority="0" course="1" courseName="BIOL101"/>
+			<course id="63" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220092834" surname="Mgamle" firstnames="Nkululeko" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="64" priority="0" course="6" courseName="CHEM195"/>
+			<course id="65" priority="0" course="18" courseName="PHYS195"/>
+			<course id="66" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220092945" surname="Ngobese" firstnames="Ntobeko Aphiwe" numCourses="3" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSGLS"/>
+			<course id="67" priority="0" course="9" courseName="GEOG110"/>
+			<course id="68" priority="0" course="10" courseName="GEOL101"/>
+			<course id="69" priority="0" course="5" courseName="CHEM110"/>
+		</student>
+		<student id="220093104" surname="Moodley" firstnames="Tiara" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="70" priority="0" course="5" courseName="CHEM110"/>
+			<course id="71" priority="0" course="17" courseName="PHYS131"/>
+			<course id="72" priority="0" course="1" courseName="BIOL101"/>
+			<course id="73" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220093486" surname="Joseph" firstnames="Jamie-Lee" numCourses="4" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="74" priority="0" course="8" courseName="COMP100"/>
+			<course id="75" priority="0" course="11" courseName="MATH130"/>
+			<course id="76" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220094238" surname="Naicker" firstnames="Kaylan" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="77" priority="0" course="10" courseName="GEOL101"/>
+			<course id="78" priority="0" course="5" courseName="CHEM110"/>
+			<course id="79" priority="0" course="16" courseName="PHYS113"/>
+			<course id="80" priority="0" course="11" courseName="MATH130"/>
+		</student>
+		<student id="220094399" surname="Hlatshwayo" firstnames="Nonkululeko Minenhle" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="81" priority="0" course="6" courseName="CHEM195"/>
+			<course id="82" priority="0" course="18" courseName="PHYS195"/>
+			<course id="83" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220094511" surname="Jikija" firstnames="Siphumeze" numCourses="4" numProcessedCourses="3">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-PHAM"/>
+			<course id="84" priority="0" course="17" courseName="PHYS131"/>
+			<course id="85" priority="0" course="2" courseName="BIOL103"/>
+			<course id="86" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220094573" surname="Otto" firstnames="Ariah" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="87" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220094863" surname="Dhanpal" firstnames="Saiesha Orian" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="88" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220094896" surname="Mshibe" firstnames="Lulama" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="89" priority="0" course="6" courseName="CHEM195"/>
+			<course id="90" priority="0" course="18" courseName="PHYS195"/>
+			<course id="91" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220095053" surname="Naidoo" firstnames="Rhea" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="92" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220095439" surname="Simjee" firstnames="Usaamah" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="93" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220095481" surname="Shangase" firstnames="Olwethu Terry Phiwayinkosi" numCourses="5" numProcessedCourses="4">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="BOPT"/>
+			<course id="94" priority="0" course="5" courseName="CHEM110"/>
+			<course id="95" priority="0" course="17" courseName="PHYS131"/>
+			<course id="96" priority="0" course="2" courseName="BIOL103"/>
+			<course id="97" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220095734" surname="Pooran" firstnames="Tarrik Avinesh" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="98" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220095762" surname="Shangase" firstnames="Musawakhe" numCourses="5" numProcessedCourses="5">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="99" priority="0" course="5" courseName="CHEM110"/>
+			<course id="100" priority="0" course="8" courseName="COMP100"/>
+			<course id="101" priority="0" course="11" courseName="MATH130"/>
+			<course id="102" priority="0" course="13" courseName="MATH140"/>
+			<course id="103" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220096250" surname="Zondi" firstnames="Junior" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="104" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220096325" surname="Ramsuroop" firstnames="Aman" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="105" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220096568" surname="Seolall" firstnames="Rahul" numCourses="4" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="106" priority="0" course="8" courseName="COMP100"/>
+			<course id="107" priority="0" course="11" courseName="MATH130"/>
+			<course id="108" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220096640" surname="Naicker" firstnames="Nivashen Sholin" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="109" priority="0" course="5" courseName="CHEM110"/>
+			<course id="110" priority="0" course="16" courseName="PHYS113"/>
+			<course id="111" priority="0" course="11" courseName="MATH130"/>
+			<course id="112" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220097221" surname="Dludla" firstnames="Nolwazi Angelica" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSGLS"/>
+			<course id="113" priority="0" course="9" courseName="GEOG110"/>
+			<course id="114" priority="0" course="10" courseName="GEOL101"/>
+			<course id="115" priority="0" course="5" courseName="CHEM110"/>
+			<course id="116" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220097270" surname="Mkhize" firstnames="Bahlebonke Malibongwe" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOA"/>
+			<course id="117" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220097641" surname="Amod" firstnames="Mahomed Rehaan" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="118" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220097838" surname="Gumede" firstnames="Tsepo Phiwayinkosi" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="119" priority="0" course="16" courseName="PHYS113"/>
+			<course id="120" priority="0" course="8" courseName="COMP100"/>
+			<course id="121" priority="0" course="11" courseName="MATH130"/>
+			<course id="122" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220097845" surname="Ngubane" firstnames="Phumla Queeneth" numCourses="3" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="123" priority="0" course="5" courseName="CHEM110"/>
+			<course id="124" priority="0" course="1" courseName="BIOL101"/>
+			<course id="125" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220097848" surname="Mncube" firstnames="Bonginkosi Zama Ayanda" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="126" priority="0" course="9" courseName="GEOG110"/>
+			<course id="127" priority="0" course="5" courseName="CHEM110"/>
+			<course id="128" priority="0" course="1" courseName="BIOL101"/>
+			<course id="129" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220098040" surname="Mullah" firstnames="Muhammed Yaseen" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="130" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220098157" surname="Majozi" firstnames="Zwakele Bantubonke" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="131" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220098812" surname="Mapumulo" firstnames="Kwanele Nqobile" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="132" priority="0" course="6" courseName="CHEM195"/>
+			<course id="133" priority="0" course="18" courseName="PHYS195"/>
+			<course id="134" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220098911" surname="Dlamini" firstnames="Nomzamo Bonakele" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="135" priority="0" course="6" courseName="CHEM195"/>
+			<course id="136" priority="0" course="18" courseName="PHYS195"/>
+			<course id="137" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220098965" surname="Mhlongo" firstnames="Mlungisi Lindokuhle" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="138" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220098971" surname="Mdladla" firstnames="Ntobeko Prince" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="139" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220099008" surname="Jugdeo" firstnames="Priyanka" numCourses="5" numProcessedCourses="4">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="BOPT"/>
+			<course id="140" priority="0" course="5" courseName="CHEM110"/>
+			<course id="141" priority="0" course="17" courseName="PHYS131"/>
+			<course id="142" priority="0" course="2" courseName="BIOL103"/>
+			<course id="143" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220099069" surname="Ntshulana" firstnames="Luyanda" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="144" priority="0" course="6" courseName="CHEM195"/>
+			<course id="145" priority="0" course="18" courseName="PHYS195"/>
+			<course id="146" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220099231" surname="Memela" firstnames="Nontando Happiness" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="147" priority="0" course="9" courseName="GEOG110"/>
+			<course id="148" priority="0" course="5" courseName="CHEM110"/>
+			<course id="149" priority="0" course="1" courseName="BIOL101"/>
+			<course id="150" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220099453" surname="Saul" firstnames="Azisiwe" numCourses="4" numProcessedCourses="2">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-PHYS"/>
+			<course id="151" priority="0" course="17" courseName="PHYS131"/>
+			<course id="152" priority="0" course="2" courseName="BIOL103"/>
+		</student>
+		<student id="220099588" surname="Ngcobo" firstnames="Cindy" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="153" priority="0" course="5" courseName="CHEM110"/>
+			<course id="154" priority="0" course="16" courseName="PHYS113"/>
+			<course id="155" priority="0" course="11" courseName="MATH130"/>
+			<course id="156" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220099788" surname="Khumalo" firstnames="Palisa" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="157" priority="0" course="5" courseName="CHEM110"/>
+			<course id="158" priority="0" course="17" courseName="PHYS131"/>
+			<course id="159" priority="0" course="1" courseName="BIOL101"/>
+			<course id="160" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220099799" surname="Zungu" firstnames="Sinethemba Persevearance" numCourses="5" numProcessedCourses="2">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BBSC-F"/>
+			<course id="161" priority="0" course="11" courseName="MATH130"/>
+			<course id="162" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220100558" surname="Nyathi" firstnames="Busisiwe Sicelimpilo" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="163" priority="0" course="6" courseName="CHEM195"/>
+			<course id="164" priority="0" course="18" courseName="PHYS195"/>
+			<course id="165" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220101584" surname="Mchunu" firstnames="Kellisha" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="166" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220102020" surname="Gasa" firstnames="Mthobisi" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="167" priority="0" course="6" courseName="CHEM195"/>
+			<course id="168" priority="0" course="18" courseName="PHYS195"/>
+			<course id="169" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220102083" surname="Mbokazi" firstnames="Sthembiso Makabongwi" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="170" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220102368" surname="Thwala" firstnames="Siphiwe" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="171" priority="0" course="5" courseName="CHEM110"/>
+			<course id="172" priority="0" course="17" courseName="PHYS131"/>
+			<course id="173" priority="0" course="1" courseName="BIOL101"/>
+			<course id="174" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220102990" surname="Lutchman" firstnames="Kushav Nival" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="175" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220103199" surname="Essack" firstnames="Zaheer Mohammed" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="176" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220103338" surname="Shabalala" firstnames="Phumzile Nokwanda" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="177" priority="0" course="9" courseName="GEOG110"/>
+			<course id="178" priority="0" course="5" courseName="CHEM110"/>
+			<course id="179" priority="0" course="1" courseName="BIOL101"/>
+			<course id="180" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220103649" surname="Ngoveni" firstnames="Mpimo Kalman" numCourses="3" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="181" priority="0" course="5" courseName="CHEM110"/>
+			<course id="182" priority="0" course="1" courseName="BIOL101"/>
+			<course id="183" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220103941" surname="Madziba" firstnames="Luxolo" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="184" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220104933" surname="Langa" firstnames="Dineo Mhleli Simphiwe" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="185" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220105144" surname="Shabalala" firstnames="Sthandiwe Sphokazi" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="186" priority="0" course="9" courseName="GEOG110"/>
+			<course id="187" priority="0" course="5" courseName="CHEM110"/>
+			<course id="188" priority="0" course="1" courseName="BIOL101"/>
+			<course id="189" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220105304" surname="Khanyile" firstnames="Xolani Emmanuel Melisizwe" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="190" priority="0" course="9" courseName="GEOG110"/>
+			<course id="191" priority="0" course="5" courseName="CHEM110"/>
+			<course id="192" priority="0" course="1" courseName="BIOL101"/>
+			<course id="193" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220105611" surname="Sevpersad" firstnames="Tasheel" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="194" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220106519" surname="Mngoma" firstnames="Ndumiso Thandokuhle Sibongumusa" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="195" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220106590" surname="Gasa" firstnames="Zizipho" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="196" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220106865" surname="Manci" firstnames="Anezwa" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="197" priority="0" course="5" courseName="CHEM110"/>
+			<course id="198" priority="0" course="17" courseName="PHYS131"/>
+			<course id="199" priority="0" course="1" courseName="BIOL101"/>
+			<course id="200" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220106925" surname="Zondi" firstnames="Kwandokuhle" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="201" priority="0" course="6" courseName="CHEM195"/>
+			<course id="202" priority="0" course="18" courseName="PHYS195"/>
+			<course id="203" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220107577" surname="Maqokolo" firstnames="Tina Trudy" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCMB"/>
+			<course id="204" priority="0" course="5" courseName="CHEM110"/>
+			<course id="205" priority="0" course="17" courseName="PHYS131"/>
+			<course id="206" priority="0" course="1" courseName="BIOL101"/>
+			<course id="207" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220107581" surname="Mlimela" firstnames="Belhah Lebogang" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="208" priority="0" course="5" courseName="CHEM110"/>
+			<course id="209" priority="0" course="16" courseName="PHYS113"/>
+			<course id="210" priority="0" course="1" courseName="BIOL101"/>
+			<course id="211" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220107721" surname="Thompson" firstnames="Dylan Winston" numCourses="3" numProcessedCourses="2">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="212" priority="0" course="8" courseName="COMP100"/>
+			<course id="213" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220107886" surname="Petker" firstnames="Waseefa" numCourses="5" numProcessedCourses="2">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BBSC-F"/>
+			<course id="214" priority="0" course="11" courseName="MATH130"/>
+			<course id="215" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220108079" surname="Ntshangase" firstnames="Nkanyezi Sbongakonke" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="216" priority="0" course="6" courseName="CHEM195"/>
+			<course id="217" priority="0" course="18" courseName="PHYS195"/>
+			<course id="218" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220108297" surname="Mfekayi" firstnames="Thanduxolo Thobeka" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="219" priority="0" course="5" courseName="CHEM110"/>
+			<course id="220" priority="0" course="16" courseName="PHYS113"/>
+			<course id="221" priority="0" course="1" courseName="BIOL101"/>
+			<course id="222" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220108381" surname="Sayner" firstnames="Kayla" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCMB"/>
+			<course id="223" priority="0" course="5" courseName="CHEM110"/>
+			<course id="224" priority="0" course="17" courseName="PHYS131"/>
+			<course id="225" priority="0" course="1" courseName="BIOL101"/>
+			<course id="226" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220108523" surname="Mvuna" firstnames="Nselelo Edmund" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="227" priority="0" course="6" courseName="CHEM195"/>
+			<course id="228" priority="0" course="18" courseName="PHYS195"/>
+			<course id="229" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220108727" surname="Mthembu" firstnames="Noxolo Ayanda" numCourses="5" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="230" priority="0" course="6" courseName="CHEM195"/>
+			<course id="231" priority="0" course="18" courseName="PHYS195"/>
+			<course id="232" priority="0" course="3" courseName="BIOL195"/>
+		</student>
+		<student id="220110291" surname="Ngcobo" firstnames="Kwanele Sduduzo" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="233" priority="0" course="9" courseName="GEOG110"/>
+			<course id="234" priority="0" course="5" courseName="CHEM110"/>
+			<course id="235" priority="0" course="1" courseName="BIOL101"/>
+			<course id="236" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220110389" surname="Mabaso" firstnames="Asanda" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="237" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220110562" surname="Naidoo" firstnames="Santhini" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="238" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220110855" surname="Pillay" firstnames="Santhiran" numCourses="4" numProcessedCourses="2">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BBSC-F"/>
+			<course id="239" priority="0" course="11" courseName="MATH130"/>
+			<course id="240" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220110859" surname="Zwane" firstnames="Thuthukile Phindile" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+			<course id="241" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220110999" surname="Akoon" firstnames="Ammaarah" numCourses="5" numProcessedCourses="4">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="BOPT"/>
+			<course id="242" priority="0" course="5" courseName="CHEM110"/>
+			<course id="243" priority="0" course="17" courseName="PHYS131"/>
+			<course id="244" priority="0" course="2" courseName="BIOL103"/>
+			<course id="245" priority="0" course="14" courseName="MATH150"/>
+		</student>
+		<student id="220111047" surname="Mathonsi" firstnames="Mveliso" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="246" priority="0" course="5" courseName="CHEM110"/>
+			<course id="247" priority="0" course="8" courseName="COMP100"/>
+			<course id="248" priority="0" course="11" courseName="MATH130"/>
+			<course id="249" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220111417" surname="Maseko" firstnames="Siyethemba Sipho" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="250" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220111481" surname="Maphalala" firstnames="LETHUTHANDO" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="251" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220111493" surname="Mahomed Sadick" firstnames="Zain" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="252" priority="0" course="12" courseName="MATH134"/>
+		</student>
+		<student id="220112040" surname="Kuzwayo" firstnames="Mthokozisi Goodboy" numCourses="5" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="258" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220112256" surname="Khan" firstnames="Barira Mohammed" numCourses="5" numProcessedCourses="4">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-PHAM"/>
+			<course id="255" priority="0" course="17" courseName="PHYS131"/>
+			<course id="256" priority="0" course="2" courseName="BIOL103"/>
+			<course id="257" priority="0" course="14" courseName="MATH150"/>
+			<course id="259" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220120001" surname="Student" firstnames="New" numCourses="3" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="260" priority="0" course="8" courseName="COMP100"/>
+			<course id="261" priority="0" course="11" courseName="MATH130"/>
+			<course id="262" priority="0" course="19" courseName="STAT130"/>
+		</student>
+	</students>
 	<courses>
 		<course id="1" courseName="BIOL101"/>
 		<course id="2" courseName="BIOL103"/>

@@ -825,7 +825,15 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	updatedInputFileXML.appendChild(sectioningElement)
 
 
-	""" Create the 'offerings', 'students', and 'courses' sub-elements of the sectioning element """
+	"""
+		Create the 'offerings', 'students', and 'courses' sub-elements of the sectioning element 
+		
+		Even though I'll be adding the course id-name pairs (via the coursesElement) in the code before I add the 
+		student course requests and allocations (via the studentsElement) [as I want to do all the data related to the 
+		courses first], the 'students' element has been added here to the 'sectioning' element before the 'courses' 
+		element, so in the XML file, the student's element will come before the 'courses' element, as I want (as in the 
+		initial input data XML file, it was in the order of 'offerings', 'students' and 'courses')
+	"""
 
 	offeringsElement = updatedInputFileXML.createElement("offerings")
 	sectioningElement.appendChild(offeringsElement)
@@ -890,7 +898,6 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 
 
 	""" Add the course id-name pairs"""
-	print(courseNameDict)
 	for courseID in range(1, int(numCourses)+1):
 		courseElement = updatedInputFileXML.createElement("course")
 		courseElement.setAttribute("id", str(courseID))
@@ -900,7 +907,53 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	print("\t\tCourses data has been written to the updated input data XML file.")
 
 	print("\tWriting updated students data to the updated input data XML file...")
+
+	""" Process all student enrollments (lab sessions requests and section allocations) """
 	# todo...
+	studentNumbersList = list(studentsDict.keys())
+
+	for studentNumber in studentNumbersList:
+		studentDict = studentsDict[studentNumber]
+
+		# Add the student's details
+
+		studentElement = updatedInputFileXML.createElement("student")
+		studentElement.setAttribute("id", studentNumber)
+		studentElement.setAttribute("surname", studentDict["surname"])
+		studentElement.setAttribute("firstnames", studentDict["firstnames"])
+		studentElement.setAttribute("numCourses", studentDict["numCourses"])
+		studentElement.setAttribute("numProcessedCourses", studentDict["numProcessedCourses"])
+		studentsElement.appendChild(studentElement)
+
+		classificationElement = updatedInputFileXML.createElement("classification")
+		classificationElement.setAttribute("area", studentDict["classificationArea"])
+		studentElement.appendChild(classificationElement)
+
+		majorElement = updatedInputFileXML.createElement("major")
+		majorElement.setAttribute("area", studentDict["majorArea"])
+		studentElement.appendChild(majorElement)
+
+
+		# Add the student's course requests (and allocations, if any, from current solution)
+
+		studentCourseRequestsDict = studentDict["courseRequests"]
+		studentCourseRequestsIdsList = list(studentCourseRequestsDict.keys())
+
+		for courseRequestID in studentCourseRequestsIdsList:
+			courseRequestDict = studentCourseRequestsDict[courseRequestID]
+
+			courseRequestElement = updatedInputFileXML.createElement("course")
+			courseRequestElement.setAttribute("id", courseRequestID)
+			courseRequestElement.setAttribute("priority", courseRequestDict["priority"])
+			courseRequestElement.setAttribute("course", courseRequestDict["courseID"])
+			courseRequestElement.setAttribute("courseName", courseRequestDict["courseName"])
+			studentElement.appendChild(courseRequestElement)
+
+
+
+
+	#print(studentNumbersList)
+
 
 	print("\tThe updated students data has been written to the updated input data XML file...")
 
