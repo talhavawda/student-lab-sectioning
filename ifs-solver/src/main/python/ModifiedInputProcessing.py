@@ -949,10 +949,18 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 			courseRequestElement.setAttribute("courseName", courseRequestDict["courseName"])
 			studentElement.appendChild(courseRequestElement)
 
+			courseRequestAllocationsList = courseRequestDict["allocations"]
 
+			if courseRequestAllocationsList:  # if courseRequestAllocationsList contains any elements (if it is not empty)
+				bestElement = updatedInputFileXML.createElement("best")
+				bestElement.setAttribute("course", courseRequestDict["courseID"])
+				courseRequestElement.appendChild(bestElement)
 
+				for allocatedSectionID in courseRequestAllocationsList:
+					sectionElement = updatedInputFileXML.createElement("section")
+					sectionElement.setAttribute("id", allocatedSectionID)
+					bestElement.appendChild(sectionElement)
 
-	#print(studentNumbersList)
 
 
 	print("\tThe updated students data has been written to the updated input data XML file...")
