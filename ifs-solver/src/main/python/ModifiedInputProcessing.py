@@ -400,6 +400,9 @@ def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
 			solutionStudentCourseRequestTag = solutionStudentTag.find("course", id=courseRequestID) # The course request tag/element of this course request of this student in the solution XML file
 
 			courseRequestAllocationsList = list() # To store the allocated sections for each subpart class (Lab) of this course (Each course can have multiple labs, with (at most) one allocated section for each lab
+			# If there is no allocations for this course request, this course request will not have a 'best' sub-element, and thus will not have any 'section' sub-sub-elements
+			# Thus the list will remain empty
+
 			courseRequestAllocationsTags = solutionStudentCourseRequestTag.find_all("section")
 
 			for sectionAllocation in courseRequestAllocationsTags:
@@ -988,12 +991,5 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 
 
 
-
-# todo - see Toby for the  chrome tabs I had open
-# Todo - update (re processes) the input data XML file for all other problem instances (based on additions made to InputProcessing.py on 22/09/2021
-
 main()
-#processModifiedStudentsData("src/main/resources/input/2020-Sem1-CAES-Wvl-no-extra-requests/Students-1.xlsx")
-#modifiedStudentsDF = pd.read_excel("src/main/resources/input/2020-Sem1-CAES-Wvl-no-extra-requests/Students.xlsx", sheet_name=0, header=0, engine="openpyxl", dtype={'numCourses':int})
-#print(modifiedStudentsDF)
 
