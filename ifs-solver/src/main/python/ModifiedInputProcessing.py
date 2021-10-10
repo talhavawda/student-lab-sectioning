@@ -44,7 +44,7 @@ def main():
 	"""
 
 	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests-testing"
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file

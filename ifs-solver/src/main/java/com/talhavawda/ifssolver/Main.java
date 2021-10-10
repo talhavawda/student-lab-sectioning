@@ -11,7 +11,7 @@ import java.util.Date;
 public class Main {
 	public static void main(String [] args) {
 
-		String problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests-testing";
+		String problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts";
 		String problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName; // input data XML file's directory (directory also used to store output)
 		String xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml"; //path of the input file (its name + relative path from Source directory preceding it)
 		String configurationFilePath = "src/main/resources/SolverConfiguration.cfg";

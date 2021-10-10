@@ -1,11 +1,12 @@
 import pandas as pd # Following naming convention
 from bs4 import BeautifulSoup # For reading from XML files (bs4 needs to be installed first)
 from xml.dom import minidom # For creating and writing to XML files
+import time
 
 #Installed the openpyxl, beautifulsoup4 and lxml packages
 
 def main():
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-extra-requests-testing"
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
 	coursesFilePath = "src/main/resources/input/" + problemInstanceName + "/Courses.xlsx"
 	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx"
 	problemSpecificationFilePath = "src/main/resources/input/" + problemInstanceName + "/Specification.xml" # Make txt ?
@@ -58,7 +59,7 @@ def main():
 	sectioningElement.setAttribute("initiative", specificationDict["initiative"])
 	sectioningElement.setAttribute("term", specificationDict["term"])
 	sectioningElement.setAttribute("year", specificationDict["year"])
-	sectioningElement.setAttribute("created", specificationDict["created"])
+	sectioningElement.setAttribute("created", time.ctime(time.time()))  # current time as a string
 	sectioningElement.setAttribute("nrDays", specificationDict["nrDays"])
 	sectioningElement.setAttribute("slotsPerDay", specificationDict["slotsPerDay"])
 

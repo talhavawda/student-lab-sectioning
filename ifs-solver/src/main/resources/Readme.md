@@ -274,7 +274,9 @@ Changes made:
         allowing us to get a complete initial solution
             - Removed the 8 course requests for MATH196 from those 8 students who also do BIOL196. [Discovered this conflict in solution 210926_225901]
                 - Students: 219009466, 219013287, 219018827, 219021664, 219027743, 219030037, 219033547, 218000612
-    - 
+                
+    - 211011_011710
+        - Initial complete solution that I shall be working with.
 
 
 
