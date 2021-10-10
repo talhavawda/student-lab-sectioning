@@ -227,7 +227,7 @@ Changes made:
         - Complete solution found.
     - 210926_225901
         - Running the solver after fixing the Time overlaps conflicts bug that I discovered above
-            - See 10.2 in this project's main Readme file (../Readme.md) for how I found where the bug occurred and how I fixed it. 
+            - See 10. in this project's main Readme file (../Readme.md) for how I found where the bug occurred and how I fixed it. 
             - All previously obtained solutions above probably have Time overlap conflicts within them, and that they went unchecked, 
             and that the time taken are quite shorter than what they should have been. 
         - Solver took 5m (300s - the Maximal solver time (Termination.TimeOut's value); with the message that 'Timeout reached')
@@ -253,7 +253,7 @@ Changes made:
                 - Each row is a course request
                 - If a course request was unassigned in the solution, its value for the "Enrolled" field will be "No",
                 and the "Sections" field will be empty  
-        - There's also a time-overlaps-real.csv file (with no info) implying the solver makes a distinction between an actual time conflict and a time overlap
+        - There's also a time-overlaps-real.csv file (with no info) implying the solver makes a distinction between an actual time conflict, and a time overlap
     - 210927_010236
         - Running the solver after undoing the changes that I made to the Courses.xlsx and Students.xlsx file to test the time 
         overlap conflict (i.e. removed the BIOL222 course and its course request for the student 218047643)
@@ -266,6 +266,11 @@ Changes made:
             - Created this problem instance so that in ModifiedInputProcessing.py, I can test processModifiedStudentsData() 
             without having to wait for processCurrentSolution() to process the entire Students input (which takes long) 
                 - I only kept the last 100 students from the initial Students.xlsx and removed the rest above. 
+                    - Thus there is no Time overlaps conflicts, as was the case in this problem instance's parent
+
+                                
+- 2020-Sem1-CAES-Wvl-no-conflicts
+
 
 ### Modified Students input files
 

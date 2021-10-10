@@ -16,6 +16,7 @@ UniTime Student Sectioning Solver (UniTime site Links):
 ## What I've done (Steps)
 1. Created this project (ifs-solver) in IntelliJ inside my local copy of the student-lab-sectioning repository
     - This automatically adds the project to Git and I can access Git features inside IntelliJ
+        - I've also got the repository opened in GitHub Desktop and I'm using this as my main tool for version control
 2. I created a 'lib' folder (Right Click -> New -> Directory), created a sub-folder inside it called 'cpsolver-1.3.232'
  and added the CPSolver jar files (and the dom4j and log4j jar files) to the 'cpsolver-1.3.232' folder.
 3. I right-clicked the 'cpsolver-1.3.232' folder and selected 'Add as library'
@@ -131,8 +132,9 @@ UniTime Student Sectioning Solver (UniTime site Links):
         - I did this as I want a complete solution that I can use to do the Minimal Perturbation 
         experimentation part - making changes to the input and resolving.
 
-10. Creating modified inputs (adding new or updating student course requests) to this problem instance and processing them
-(will be using the 2020-Sem1-CAES-Wvl-no-extra-requests instance as it gives a complete initial solution)
+**10. Creating modified inputs (adding new or updating student course requests) to this problem instance and processing them 
+along with the current solution (and the input data XML file that was used to obtain it) 
+    - Will be using the 2020-Sem1-CAES-Wvl-no-extra-requests instance as it gives a complete initial solution
     - The file that will be changed will be the Students.xlsx input file
     - Rule/assumption when modifying the input - the number of course requests for each course (for this problem instance, each 
     course only has one lab, so a request for a course is for that course's lab) shall not be more than the total capacity for that
@@ -143,45 +145,63 @@ UniTime Student Sectioning Solver (UniTime site Links):
     % of individual capacities filled etc.) for this problem instance.
         - The modified Students.xlsx files are the entire Students' input data for the problem instance, not just containing
         the course requests that need to be added/removed. 
-    - 10.2 Creating a Python program script (ModifiedInputProcessing.py) to process a modified Students.xlsx input file 
-    and the initial solution file (solution.xml), and produce an updated XML file (input data file) that is a partial solution (the
-    unchanged course requests are still assigned as is, the new course requests are unassigned/unallocated and the old course requests removed)
-        - Discovered a bug when preparing to add the solutions (assigned sections) to the studentsDict. 
-            - BUG: Time overlap conflicts are not being detected by the solver and student's in my problem instance are 
-            being assigned to sections that occur at the same time
-            - I discovered this bug as I was thinking what will reflect in the solution.xml file if there is a time 
-            conflict and thus the student will not be assigned a section for that course request. So I took a student (218047643)
-            and added a course request for a course that they were already doing that contained only 1 section for its lab (BIOL196).
-            So now this student had two course requests for BIOL196. When I generated the updated input data XML file, and 
-            ran the solver on it, to my surprise I saw that the (same) section of BIOL196 was assigned to both 
-            course requests (thus a time overlap conflict) [See solution 210926_202819].
-            I then thought that maybe the solver detects if two course requests are for the same course and doesn't consider
-            time conflicts for it. So for the second BIOL196 course request for this student, I replaced BIOL196 with another course,
-            BIOL222, a course that doesn't (currently) exist, and went to Courses.xlsx and added BIOL222 with only 1 section, whose timeslot
-            is the exact same as that of BIOL196 and set the capacity to 1, so that I can test time overlap conflict for two different courses.
-            Yet, still both course requests were assigned to the respective sections (both of which occur at the same time) [See solution 210926_204519]. 
-            - I've looked in the SolverConfiguration.cfg file and Use Time Overlaps (StudentSct.TimeOverlaps) is set to true.
-            - **This also means that all my previously obtained solutions up to this point probably have Time overlap conflicts
-            within them, and that they went unchecked, and that the time taken are quite shorter than what they should have been.** 
-            - BUG FOUND AND FIXED
-                - On the UniTime CPSolver's Student Sectioning Data Format link (https://www.unitime.org/sct_dataformat.php),
-                for the two time placements overlap condition, the 'dates', 'days', and 'times' conditions are all joined by
-                'AND'. This means that for there to be a time overlap conflict for a student, two  sections have to also be taking
-                place on the same date. In InputProcessing.py, when I added the 'dates' attribute for a section, I set it to an
-                empty string (i.e. it will be an empty string for all sections [Lab Section sessions]). 
-                So a binary XOR of two empty strings probably returns a zero value by the solver, meaning that
-                according to the solver there is no date overlap thus no time overlap. 
-                - So I fixed the bug by setting the 'dates' attribute of a section's time element to "1". 
-                - Solution obtained is 210926_225901. Solution had 9 course requests unassigned, meaning there is 8 time overlap conflicts
-                in this solution to the the actual input of this problem instance.
-                - To answer my question: In the solution.xml, for a course request that has a Time Overlap conflict with an existing assigned 
-                section of a course request for that student (i.e. no section was assigned to the course request) 
-                there is no 'best' element added as a sub-element to this course request's ('course') element
-                    - i.e. Unassigned course requests in the solution.xml file will not have a <best> sub-element added to it.
-                - After I obtained the 210926_225901 solution, I undid the changes that I made to the Courses.xslx and Students.xlsx file
-                to test the time overlap conflict (i.e. removed the BIOL222 course and its course request for the student 218047643)
- 
-                
+        
+10. Creating a Python program script (ModifiedInputProcessing.py) to process a modified/updated Students.xlsx input file, 
+the initial solution file (solution.xml), along with the input data XML file that was used to obtain it, and to produce 
+an updated XML file (input data file) that is a partial solution (the unchanged course requests are still assigned as is, 
+the new course requests are unassigned/unallocated, and the old course requests removed)
+        - Will be using the 2020-Sem1-CAES-Wvl-no-extra-requests instance as it gives a complete initial solution
+    - Discovered a bug when preparing to add the solutions (assigned sections) to the studentsDict. 
+        - BUG: Time overlap conflicts are not being detected by the solver and students' in my problem instance are 
+        being assigned to sections that occur at the same time
+        - I discovered this bug as I was thinking what will reflect in the solution.xml file if there is a time 
+        conflict and thus the student will not be assigned a section for that course request. So I took a student (218047643)
+        and added a course request  for a course that they were already doing that contained only 1 section for its lab (BIOL196).
+        So now this student had two course requests for BIOL196. When I generated the updated input data XML file, and 
+        ran the solver on it, to my surprise I saw that the (same) section of BIOL196 was assigned to both 
+        course requests (thus a time overlap conflict) [See solution 210926_202819].
+        I then thought that maybe the solver detects if two course requests are for the same course and doesn't consider
+        time conflicts for it. So for the second BIOL196 course request for this student, I replaced BIOL196 with another course,
+        BIOL222, a course that doesn't (currently) exist, and went to Courses.xlsx and added BIOL222 with only 1 section, whose timeslot
+        is the exact same as that of BIOL196 and set the capacity to 1, so that I can test time overlap conflict for two different courses.
+        Yet, still both course requests were assigned to the respective sections (both of which occur at the same time) [See solution 210926_204519]. 
+        - I've looked in the SolverConfiguration.cfg file and Use Time Overlaps (StudentSct.TimeOverlaps) is set to true.
+        - BUG FOUND AND FIXED
+            - On the UniTime CPSolver's Student Sectioning Data Format link (https://www.unitime.org/sct_dataformat.php),
+            for the two time placements overlap condition, the 'dates', 'days', and 'times' conditions are all joined by
+            'AND'. This means that for there to be a time overlap conflict for a student, two  sections have to also be taking
+            place on the same date. In InputProcessing.py, when I added the 'dates' attribute for a section, I set it to an
+            empty string (i.e. it will be an empty string for all sections [Lab Section sessions]). 
+            So a binary XOR of two empty strings probably returns a zero value by the solver, meaning that
+            according to the solver there is no date overlap thus no time overlap. 
+            - So I fixed the bug by setting the 'dates' attribute of a section's time element to "1". 
+            - Solution obtained is 210926_225901. Solution had 9 course requests unassigned, meaning there is 8 time overlap conflicts
+            in this solution to the actual input of this problem instance.
+            - To answer my question: In the solution.xml, for a course request that has a Time Overlap conflict with an existing assigned 
+            section of a course request for that student (i.e. no section was assigned to the course request) 
+            there is no 'best' element added as a sub-element to this course request's ('course') element
+                - i.e. Unassigned course requests in the solution.xml file will not have a <best> sub-element added to it.
+            - After I obtained the 210926_225901 solution, I undid the changes that I made to the Courses.xslx and Students.xlsx file
+            to test the time overlap conflict (i.e. removed the BIOL222 course and its course request for the student 218047643)
+        - **This bug means that all my previously obtained solutions up to this point probably have Time overlap conflicts
+        within them, and that they went unchecked, and that the time taken by the solver are quite shorter than what they should have been.**
+            - The solver would've taken the Termination.TimeOut time as no complete solution would've been found. But if there was a complete 
+            solution, the solver would've probably taken longer as it would have needed to check for and solve time conflicts from already
+            allocated course requests
+        - Due to this bug, 2020-Sem1-CAES-Wvl-no-extra-requests instance no longer gives a complete initial solution
+            - I've created a child of this problem instance - 2020-Sem1-CAES-Wvl-no-extra-requests-testing - to use to develop and test
+            ModifiedInputProcessing.py on.
+                -  The change I made: In the initial Students.xlsx input file, I only kept the last 100 students and removed the rest above them.
+                - I've created this instance as processCurrentSolution() takes too long (for my liking), a couple of minutes, to process the 
+                entire Students input (as I'm making small changes and then running and testing). Furthermore, there is no Time overlaps conflicts
+                in this problem instance - we get a complete solution
+    - ** THe updated input data XML file has a different name for my experimentation part so the initial input data XML file remains
+    unchanged, so that I can run multiple different experiments on the same current input and current solution (different Student 
+    changes -> different [but parallel] updated input data XML files to obtain different updated solutions)
+    
+    See "Dealing with the unassigned course requests due to filled capacities. "
+    
+    
 ## Reference and Acknowledgement Links
 
 https://realpython.com/python-dicts/

@@ -970,11 +970,11 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 
 	print("\nUpdated input data XML file has been generated.")
 
-
+	# Todo - uncomment this out after doing experimentation, and comment out the part below
 	# updatedXmlFileName = inputXmlFilePath  # Overwrite current input data XML file (user system version)
 
 	# For my experimentation process, I will be using a different XML file name for the updated input data XML file, to
-	# allow for easy comparison, and multiple independent solver runs (with different modifed Students input file) on the
+	# allow for easy comparison, and multiple independent solver runs (with different modified Students input file) on the
 	# same input data XML file
 	periodIndex = inputXmlFilePath.rfind(".xml")
 	updatedXmlFileName = inputXmlFilePath[:periodIndex] + "-updated-1.xml"
