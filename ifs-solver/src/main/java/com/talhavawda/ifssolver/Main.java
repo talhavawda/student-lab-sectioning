@@ -13,7 +13,11 @@ public class Main {
 
 		String problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts";
 		String problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName; // input data XML file's directory (directory also used to store output)
-		String xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml"; //path of the input file (its name + relative path from Source directory preceding it)
+		// String xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml"; //path of the input file (its name + relative path from Source directory preceding it)
+
+		// For experimentation process:
+		String xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-updated-1.xml"; //path of the updated input file for experimentation
+
 		String configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
 
 		String[] cpsolverArgs = {configurationFilePath, xmlInputFilePath, problemInstanceDirectoryPath};

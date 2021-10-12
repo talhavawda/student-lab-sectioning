@@ -246,11 +246,11 @@ def getModifiedStudentsFilePath(problemInstanceDirectoryPath: str):
 			modVerNum = input("Enter the modification version number of the modified Students input file that you want to process: ")
 			modifiedStudentsFilePath = problemInstanceDirectoryPath + "/Students-" + modVerNum + ".xlsx"
 			modifiedStudentsFile = open(modifiedStudentsFilePath, "r")
+			modifiedStudentsFile.close()
 			break  # If the file was opened successfully
 		except FileNotFoundError:
 			print("Invalid modification version number entered. You will be prompted to re-enter\n")
-		finally:
-			modifiedStudentsFile.close()
+
 
 	print("Modified Students file:\t", "Students-" + modVerNum + ".xlsx", end="\n\n")
 	return modifiedStudentsFilePath

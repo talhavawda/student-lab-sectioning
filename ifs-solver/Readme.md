@@ -210,14 +210,20 @@ the new course requests are unassigned/unallocated, and the old course requests 
         - I did this as I would like to use a complete initial solution when experimenting
             - I also intend to use the other problem instances (containing incomplete initial solutions) for experimentation
             to show the different cases (TODO)
-    - Using the 2020-Sem1-CAES-Wvl-no-conflicts problem instance
+            
+    - Using the 2020-Sem1-CAES-Wvl-no-conflicts problem instance for this Minimal Perturbation Experimentation process
     
     - Creating multiple parallel (first) modified/updated Students.xlsx input files (i.e. Students-1.xlsx) representing different 
     scenarios (% of additions and modifications, % of individual capacities filled etc.) for this problem instance.
         - The modified Students.xlsx files are the entire Students' input data for the problem instance, not just containing
         the course requests that need to be added/removed. 
+        - The current scenario's Students-1.xlsx file will be placed in the folder of this problem instance so that
+        the updated input data XML file and updated solution folder can be obtained. Thereafter a folder inside this problem instance's 
+        folder will be created for this current scenario and these 3 items will be placed inside it, so that the next scenario's updated 
+        Students file can be placed in the problem instances folder so that the next scenario can be run, and so on.
 
 
+TODO: WHAT IS AVERAGE DISBALANCE IN THE SOLUTION INFO FILE???
 
 Todo - see Toby for the  chrome tabs I had open    
 Todo - update (re processes) the input data XML file for all other problem instances (based on additions made to InputProcessing.py on 22/09/2021

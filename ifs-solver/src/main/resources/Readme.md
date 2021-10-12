@@ -267,7 +267,16 @@ Changes made:
             without having to wait for processCurrentSolution() to process the entire Students input (which takes long) 
                 - I only kept the last 100 students from the initial Students.xlsx and removed the rest above. 
                     - Thus there is no Time overlaps conflicts, as was the case in this problem instance's parent
-
+            - modified Students file:
+                - Students-1.xlsx; initialised to a copy of Students.xlsx
+                    - Made simple changes (1 for each case) to identify what the resulting modificationsDF in 
+                    ModifiedInputProcessing.processModifiedStudentsData() will look like
+                    - All modifications were made at the end of the file
+                    - Modifications:
+                        - Removed student: 220111511. (Had 1 processed course request for MATH134)
+                        - Modified student: 220112040. Removed course request for MATH134. Added course request for STAT130. 
+                        - Modified student: 220112256. Added course request for STAT130.
+                        - Added student: 220120001 with 3 processed course requests.
                                 
 - 2020-Sem1-CAES-Wvl-no-conflicts
         - This modified problem instance removes the Time Overlap conflicts in its parent instance (2020-Sem1-CAES-Wvl-no-extra-requests)
@@ -276,10 +285,10 @@ Changes made:
                 - Students: 219009466, 219013287, 219018827, 219021664, 219027743, 219030037, 219033547, 218000612
                 
     - 211011_011710
-        - Initial complete solution that I shall be working with.
-
-
-
+        - Initial complete solution that I shall be working with for the Minimal Perturbation Experimentation process
+        
+        
+ 
 ### Modified Students input files
 
 #### 2020-Sem1-CAES-Wvl-no-extra-requests-testing
@@ -293,3 +302,43 @@ Changes made:
         - Modified student: 220112040. Removed course request for MATH134. Added course request for STAT130. 
         - Modified student: 220112256. Added course request for STAT130.
         - Added student: 220120001 with 3 processed course requests.
+
+
+### Minimal Perturbation Experimentation process
+- Each updated/modified Students file (Students-1.xlsx) is initialised to a copy of Students.xlsx file and the modifications 
+then made. New students are added at the end of the file.
+
+#### 2020-Sem1-CAES-Wvl-no-conflicts
+ - Initial (complete) solution: 211011_011710
+    - 6166/6166 [100%] course requests assigned
+    - Solver took 0.08m (4.67s)
+    - Complete solution found
+      
+ - Initial num students: 2547
+ - Initial num course requests: 6166
+
+##### Scenario 1
+- Student modifications:
+        - same as for 2020-Sem1-CAES-Wvl-no-extra-requests-testing instance. I want to test the updated solution out.
+    - Removed student: 220111511. (Had 1 processed course request for MATH134)
+    - Modified student: 220112040. Removed course request for MATH134. Added course request for STAT130. 
+    - Modified student: 220112256. Added course request for STAT130.
+    - Added student: 220120001 with 3 processed course requests (COMP100, MATH130, STAT130).
+    
+- Updated num students: 2547
+- Updated num course requests: 6169
+
+- Num assigned course requests: 6164 (99.92%)
+    - Get this num from the updated solution's debug.log file. Can also calculate it: Initial num course requests - num removed course requests
+- Num students with complete schedule: 2544 (99.88%)
+
+- Updated solution: 211012_223043
+    - 6169/6169 [100%] course requests assigned
+   - Solver took 0.03m (1.95s)
+   - Complete solution found
+   - There are a number of section allocation changes to existing course requests
+   
+  
+##### Scenario 2
+- Student modifications:
+    - 
