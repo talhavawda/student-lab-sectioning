@@ -364,7 +364,8 @@ then made. New students are added at the end of the file.
             - Course C11 (MATH130)
                 - Allocation change from Section S26 to S27 occurred 3 times     
             - Course C17 (PHYS131)
-                - Allocation change from Section S39 to S37 occurred 1 times
+                - Allocation change from Section S39 to S37 occurred 2 times
+                    - One of this was for student 220112256, who had 1 added course request, for STAT130
                 - Allocation change from Section S38 to S37 occurred 1 times
             - Course C14 (MATH150)
                 - Allocation change from Section S33 to S32 occurred 2 times
@@ -408,8 +409,17 @@ then made. New students are added at the end of the file.
                 - 724 course requests
                 - Sections S32, S33, S34, with capacities being 491, 350, and 491 and respectively
                 - Initial Solution: students allocated were 256, 202, 266 respectively 
-                
-        - **So based on the above, there were no availability conflicts or time overlap conflicts, so none of these 
+        
+        - student 220112256:
+            - CR allocations in initial solution: C17 (PHYS131) -> S39 (Wed 09:35); C2 (BIOL103) -> S5 (Fri 14:10); C14 (MATH150) -> S32 (Tues 14:10)
+            - In updated solution, C17 allocation changed from S39 (Wed 09:35) to S37 (Mon 14:10), and the new course request for
+            course C19 (STAT130) was allocated to S43 (Wed 09:35). 
+            **BUT** why didn't the allocation be to the other STAT130 section - S42 (Mon 14:10)? 
+            AS this student had no conflict with that timeslot (but had a conflict with this Wed 09:35 timeslot with PHYS131), 
+            and then the allocation for PHYS131 wouldn't have needed to change. 
+            
+             
+        - **So based on the above, there were no actual availability conflicts or time overlap conflicts, so none of these 
         section allocation changes above should have occurred**, based on the 5 new course requests from the updated Students 
         input
                 
@@ -422,10 +432,29 @@ then made. New students are added at the end of the file.
     - Complete solution found
     - There are still section allocation changes to existing course requests that have occurred, although slightly less than
     that of the previous updated solution above.
-        - It seems that the course requests that had their allocation changed, the associated course is usually involved
-        in a new course request from the updated Students input (** verify this)
-   
-  
+        - Affected courses and sections:
+                - Data obtained by comparing the initial solution.xml file to this updated solution.xml file in IntelliJ
+                and looking at the differences
+            - Course C19 (STAT130)
+                - Allocation change from Section S42 to S43 occurred 20 times
+            - Course C7 (CHEM196)
+                - Allocation change from Section S17 to S19 occurred 7 times
+                - Allocation change from Section S17 to S18 occurred 5 times
+                - Allocation change from Section S18 to S17 occurred 1 times
+            - Course C1 (BIOL101)
+                - Allocation change from Section S1 to S4 occurred 1 times
+            - Course C8 (COMP100)
+                - Allocation change from Section S21 to S20 occurred 1 times
+            - Course C11 (MATH130)
+                - Allocation change from Section S26 to S27 occurred 3 times     
+            - Course C17 (PHYS131)
+                - Allocation change from Section S39 to S37 occurred 1 times
+                    - This was for student 220112256, who had 1 added course request, for STAT130
+
+                
+        - allocations of new student: S20, S27, S43. The other 2 added course requests for STAT130 was also S43
+        
+        
 ##### Scenario 2
 - Student modifications:
     - 
