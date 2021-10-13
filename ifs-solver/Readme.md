@@ -227,18 +227,25 @@ the new course requests are unassigned/unallocated, and the old course requests 
         
     - Creating a separate solver config file (SolverConfiguration-resolving.cfg) to be used here so that I can set the 
     Termination condition to be MPPTerminationCondition.
-        - I'm doing this as for the updated solution I got for Scenario 1, there are a number of existing course requests that have 
+        - I'm doing this as for the (first) updated solution I got for Scenario 1, there are a number of existing course requests that have 
         their allocated sections being changed. So I'm using MPPTerminationCondition instead of GeneralTerminationCondition
         for the resolving part to see if we can get an updated solution that minimises the number of existing course requests
         that get their allocated sections changed. 
+            - Upon obtaining another updated solution after changing the termination condition to MPPTerminationCondition, 
 
 TODO: set up the resolving Solver config file
 
 TODO: talk about code I changed specifically for the experimentation process
     - also the code in Main.java - to determine which configuration file i should use
 
+TODO: have a text file in the instance folder with the current solution round num - initialise to 0 for initial solution.
+    this helps ModifiedIP  to decide which input data Xml file to select, and Main.java to decide which input data xml file to select (if 
+    we not overwriting the initial file)
+    
 TODO: look at variables in the Solver config files
 TODO: WHAT IS AVERAGE DISBALANCE IN THE SOLUTION INFO FILE???
+
+TODO: do experimentation on the original problem instances (that gave incomplete solutions) so that we can show what happened for those cases
 
 TODO: in submission docs, talk about me having to go through the CPSolve code to understand what to do. and not much documentation 
 given on how to use the code, and that I had to fix couple bugs

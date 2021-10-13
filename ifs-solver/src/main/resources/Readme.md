@@ -121,7 +121,7 @@ Termination condition to be MPPTerminationCondition, so that the number of exist
 sections changed is minimised.
     - Initialised it to SolverConfiguration.cfg, changed Termination.Class to MPPTerminationCondition, and added 
     Termination.MinPerturbances attribute and set the value to 0 -> ideally we don't want any changes to be made to existing
-    variables (course requests) 
+    variables (course requests), and the solver will focus on minimising the number of perturbances
 <br>
 
 ### Solutions explanations
@@ -346,6 +346,18 @@ then made. New students are added at the end of the file.
    - Solver took 0.03m (1.95s)
    - Complete solution found
    - There are a number of section allocation changes to existing course requests
+   
+   
+- Updated solution: 211013_115521
+        - Obtained this solution after creating a solver config file for the resolving part and setting Termination.Class 
+        to MPPTerminationCondition, and added Termination.MinPerturbances attribute and set the value to 0
+    - 6169/6169 [100%] course requests assigned
+    - Solver took 0.02m (1.01s)
+    - Complete solution found
+    - There are still section allocation changes to existing course requests that have occurred, although slightly less than
+    that of the previous updated solution above.
+        - It seems that the course requests that had their allocation changed, the associated course is usually involved
+        in a new course request from the updated Students input (** verify this)
    
   
 ##### Scenario 2
