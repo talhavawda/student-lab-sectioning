@@ -343,11 +343,58 @@ then made. New students are added at the end of the file.
 
 - Updated solution: 211012_223043
     - 6169/6169 [100%] course requests assigned
-   - Solver took 0.03m (1.95s)
-   - Complete solution found
-   - There are a number of section allocation changes to existing course requests
-   
-   
+    - Solver took 0.03m (1.95s)
+    - Complete solution found
+    - There are a number of section allocation changes to existing course requests
+        - Affected courses and sections:
+                - Data obtained by comparing the initial solution.xml file to this updated solution.xml file in IntelliJ
+                and looking at the differences
+            - Course C19 (STAT130)
+                - Allocation change from Section S42 to S43 occurred 23 times
+                - Allocation change from Section S43 to S42 occurred 3 times
+            - Course C7 (CHEM196)
+                - Allocation change from Section S17 to S19 occurred 6 times
+                - Allocation change from Section S18 to S19 occurred 1 times
+                - Allocation change from Section S17 to S18 occurred 5 times
+            - Course C1 (BIOL101)
+                - Allocation change from Section S1 to S4 occurred 1 times
+            - Course C8 (COMP100)
+                - Allocation change from Section S21 to S20 occurred 2 times
+                - Allocation change from Section S20 to S21 occurred 2 times
+            - Course C11 (MATH130)
+                - Allocation change from Section S26 to S27 occurred 3 times     
+            - Course C17 (PHYS131)
+                - Allocation change from Section S39 to S37 occurred 1 times
+                - Allocation change from Section S38 to S37 occurred 1 times
+            - Course C14 (MATH150)
+                - Allocation change from Section S33 to S32 occurred 2 times
+        - Looking at STAT130 since it had the most number changes:
+            - In the Students.xlsx input file, there is 520 course requests for STAT130
+            - In the Courses.xlsx input file, there is 2 sections for the STAT130 lab. In the input data XML file they because 
+            S42 and S43 with capacities being 491 and 544 respectively.
+            - In the intital solution (from looking at the tableau.csv file), 268 students were allocated to S42 and 
+            252 students were allocated to S43
+            - In  the updated Student's input, there were 3 added course requests for STAT130, and in the updated solution, 
+            S43 was allocated to all of them. Thus with the allocation changes above, for the updated solution: 
+            248 students were allocated to S42 and 275 students were allocated to S43 (the tableau.csv file ofthe updated solution confirms this)
+            - So it seems that all these allocation changes made to STAT130 is unnecessary as there was enough available space
+            in both sections of the lab to fit in the 3 new course requests.
+        - Looking at the other courses:
+            - CHEM196
+                - 148 course requests
+            - BIOL101
+                - 600 course requests
+            - COMP100
+                - 242 course requests
+            - MATH130
+                - 255 course requests
+            - PHYS131
+                - 609 course requests
+            - MATH150
+                - 724 course requests
+            
+                
+                                                                          
 - Updated solution: 211013_115521
         - Obtained this solution after creating a solver config file for the resolving part and setting Termination.Class 
         to MPPTerminationCondition, and added Termination.MinPerturbances attribute and set the value to 0
