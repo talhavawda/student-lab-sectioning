@@ -368,7 +368,8 @@ then made. New students are added at the end of the file.
                 - Allocation change from Section S38 to S37 occurred 1 times
             - Course C14 (MATH150)
                 - Allocation change from Section S33 to S32 occurred 2 times
-        - Looking at STAT130 since it had the most number changes:
+                
+        - Looking at STAT130 since it had the most number of changes:
             - In the Students.xlsx input file, there is 520 course requests for STAT130
             - In the Courses.xlsx input file, there is 2 sections for the STAT130 lab. In the input data XML file they because 
             S42 and S43 with capacities being 491 and 544 respectively.
@@ -376,23 +377,41 @@ then made. New students are added at the end of the file.
             252 students were allocated to S43
             - In  the updated Student's input, there were 3 added course requests for STAT130, and in the updated solution, 
             S43 was allocated to all of them. Thus with the allocation changes above, for the updated solution: 
-            248 students were allocated to S42 and 275 students were allocated to S43 (the tableau.csv file ofthe updated solution confirms this)
+            248 students were allocated to S42 and 275 students were allocated to S43 (the tableau.csv file of the updated solution confirms this)
             - So it seems that all these allocation changes made to STAT130 is unnecessary as there was enough available space
             in both sections of the lab to fit in the 3 new course requests.
+            
         - Looking at the other courses:
             - CHEM196
                 - 148 course requests
+                - Sections S16, S17, S18, S19, each with a capacity of 48
+                - Initial Solution: students allocated were 37, 48, 33, 30 respectively 
             - BIOL101
                 - 600 course requests
+                - Sections S1, S2, S3, S4, each with a capacity of 200
+                - Initial Solution: students allocated were 151, 150, 150, 149 respectively 
             - COMP100
                 - 242 course requests
+                - Sections S20, S21, each with a capacity of 250
+                - Initial Solution: students allocated were 121 and 121 respectively
+                - Updated Student's input: 1 added course request, allocated to S20 in updated Solution
             - MATH130
                 - 255 course requests
+                - Sections S26, S27, with capacities being 154 and 136 respectively
+                - Initial Solution: students allocated were 139 and 116 respectively
+                - Updated Student's input: 1 added course request, allocated to S27 in updated Solution
             - PHYS131
                 - 609 course requests
+                - Sections S37, S38, S39, S40, with capacities being 270, 320, 320, and 320 respectively
+                - Initial Solution: students allocated were 133, 159, 159, 158 respectively 
             - MATH150
                 - 724 course requests
-            
+                - Sections S32, S33, S34, with capacities being 491, 350, and 491 and respectively
+                - Initial Solution: students allocated were 256, 202, 266 respectively 
+                
+        - **So based on the above, there were no availability conflicts or time overlap conflicts, so none of these 
+        section allocation changes above should have occurred**, based on the 5 new course requests from the updated Students 
+        input
                 
                                                                           
 - Updated solution: 211013_115521
