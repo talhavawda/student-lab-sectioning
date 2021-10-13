@@ -7,6 +7,8 @@ import java.io.*;
 import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Main {
 	public static void main(String [] args) {
@@ -15,10 +17,36 @@ public class Main {
 		String problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName; // input data XML file's directory (directory also used to store output)
 		// String xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml"; //path of the input file (its name + relative path from Source directory preceding it)
 
-		// For experimentation process:
-		String xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-updated-1.xml"; //path of the updated input file for experimentation
+		// For experimentation process, updated input data xml file has different name, so we adding it to the if statement Selection part
+		// when done with experimentation, comment it out there and uncomment the line above.
+		String xmlInputFilePath;
 
-		String configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
+		String configurationFilePath;
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Are you (Enter the number):\n\t0: Obtaining an initial solution to the problem instance\n\t1: Obtaining an updated solution to the problem instance");
+		int userAnswer;
+
+		try {
+			userAnswer = input.nextInt();
+		} catch (InputMismatchException e) { // if invalid integer number entered
+			userAnswer = 0;
+		}
+
+
+		if (userAnswer == 0) {
+			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
+			configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
+		} else if (userAnswer == 1) {
+			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-updated-1.xml";
+			configurationFilePath = "src/main/resources/SolverConfiguration-resolving.cfg";
+
+		} else {
+			// do default (userAnswer == 0)
+			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
+			configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
+		}
+
 
 		String[] cpsolverArgs = {configurationFilePath, xmlInputFilePath, problemInstanceDirectoryPath};
 

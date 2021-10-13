@@ -17,7 +17,7 @@ InputProcessing.py or ModifiedInputProcessing.py), a blank/empty CurrentSolution
 problem instance's folder, and each time the solver is run on the current input data XML file, the name of the solution 
 (its probable folder name) is appended to a new line of this text file. 
 So Solutions.txt represents all the solutions obtained for this problem instance, and CurrentSolutions.txt represents 
-all the solutions obtained (sibling [independent] solutions to each other) on the current input data XML file of this 
+all the solutions obtained (sibling [independent/parallel] solutions to each other) on the current input data XML file of this 
 problem instance. 
 
 **_Modified input and resolving_**:
@@ -113,7 +113,15 @@ Changes made:
         - all this does (to the solution) is add the time of the session (as actual text in between the tags)
         to the time sub-element of the section element in the offerings part, and the to the allocated
         section element in the students part 
+<br>
 
+Configuration File for resolving
+- I've created a separate solver config file ("SolverConfiguration-resolving.cfg") for the resolving part as I want the 
+Termination condition to be MPPTerminationCondition, so that the number of existing course requests that get their allocated 
+sections changed is minimised.
+    - Initialised it to SolverConfiguration.cfg, changed Termination.Class to MPPTerminationCondition, and added 
+    Termination.MinPerturbances attribute and set the value to 0 -> ideally we don't want any changes to be made to existing
+    variables (course requests) 
 <br>
 
 ### Solutions explanations
@@ -305,6 +313,7 @@ Changes made:
 
 
 ### Minimal Perturbation Experimentation process
+- Simulating students making changes to their registrations
 - Each updated/modified Students file (Students-1.xlsx) is initialised to a copy of Students.xlsx file and the modifications 
 then made. New students are added at the end of the file.
 
