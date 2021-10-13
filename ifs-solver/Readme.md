@@ -233,7 +233,10 @@ the new course requests are unassigned/unallocated, and the old course requests 
         that get their allocated sections changed. 
             - Upon obtaining another updated solution after changing the termination condition to MPPTerminationCondition, 
 
+
+TODO: Observe what actual changes occurred when resolving
 TODO: set up the resolving Solver config file
+TODO: get num allocations to each lab section (from student course requests)
 
 TODO: talk about code I changed specifically for the experimentation process
     - also the code in Main.java - to determine which configuration file i should use
