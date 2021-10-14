@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Tue Oct 12 22:16:38 2021" nrDays="5" slotsPerDay="2" numStudents="2547" numCourses="19" numCourseRequests="6169" lastCourseRequestID="6171">
+<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Thu Oct 14 13:20:50 2021" nrDays="5" slotsPerDay="2" numStudents="2547" numCourses="19" numCourseRequests="6168" lastCourseRequestID="6170">
 	<offerings>
 		<offering id="1">
 			<course id="1" name="BIOL101" numLabs="1"/>
@@ -41251,7 +41251,7 @@
 			<major area="BCOM-A"/>
 			<course id="6167" priority="0" course="19" courseName="STAT130"/>
 		</student>
-		<student id="220112256" surname="Khan" firstnames="Barira Mohammed" numCourses="5" numProcessedCourses="4">
+		<student id="220112256" surname="Khan" firstnames="Barira Mohammed" numCourses="4" numProcessedCourses="3">
 			<classification area="COLLEGE OF HEALTH SCIENCES"/>
 			<major area="B-PHAM"/>
 			<course id="6164" priority="0" course="17" courseName="PHYS131">
@@ -41269,14 +41269,13 @@
 					<section id="32"/>
 				</best>
 			</course>
-			<course id="6168" priority="0" course="19" courseName="STAT130"/>
 		</student>
 		<student id="220120001" surname="Student" firstnames="New" numCourses="3" numProcessedCourses="3">
 			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
 			<major area="BSCSIT"/>
-			<course id="6169" priority="0" course="8" courseName="COMP100"/>
-			<course id="6170" priority="0" course="11" courseName="MATH130"/>
-			<course id="6171" priority="0" course="19" courseName="STAT130"/>
+			<course id="6168" priority="0" course="8" courseName="COMP100"/>
+			<course id="6169" priority="0" course="11" courseName="MATH130"/>
+			<course id="6170" priority="0" course="19" courseName="STAT130"/>
 		</student>
 	</students>
 	<courses>

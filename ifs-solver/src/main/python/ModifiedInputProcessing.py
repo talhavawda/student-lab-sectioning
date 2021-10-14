@@ -62,17 +62,19 @@ def main():
 		for line in solutionsFile:
 			line = line[:len(line)-1]  # Remove the "\n" part at the end of the string | Doing -2 cuts out the last digit in the solution name so it seems that '\n' is being treated as one character
 			problemInstanceSolutions.append(line)
-			print("\t", solutionIndex,":", line)
+			print("\t", solutionIndex, ":", line)
 			solutionIndex += 1
 		solutionsFile.close()
 
 	print()
 
 	try:
-		currentSolution = input("Enter the number of the solution that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: ")
+		currentSolutionIndex = int(input("Enter the number of the solution that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: "))
 
-		if currentSolution < 0 or currentSolution > solutionIndex:
+		if currentSolutionIndex < 0 or currentSolutionIndex > solutionIndex:  # Validation
 			currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver) | Alt. we can use solutionIndex
+		else:
+			currentSolution = problemInstanceSolutions[currentSolutionIndex]
 
 	except TypeError:
 		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
@@ -736,7 +738,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 
 	# for student in studentsDict.items():
 	# 	print(student)
-	print(updatedInputDict)
+
 	return updatedInputDict
 
 

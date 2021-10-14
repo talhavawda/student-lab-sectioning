@@ -337,7 +337,7 @@ then made. New students are added at the end of the file.
 - Updated num students: 2547
 - Updated num course requests: 6169
 
-- Num assigned course requests: 6164 (99.92%)
+- Num assigned course requests (pre-resolving): 6164 (99.92%)
     - Get this num from the updated solution's debug.log file. Can also calculate it: Initial num course requests - num removed course requests
 - Num students with complete schedule: 2544 (99.88%)
 
@@ -457,4 +457,23 @@ then made. New students are added at the end of the file.
         
 ##### Scenario 2
 - Student modifications:
-    - 
+    - similar to Scenario 1, just removing the added STAT130 course request from the student 220112256
+
+- Updated num students: 2547
+- Updated num course requests: 6168
+
+- Num assigned course requests (pre-resolving): 6164 (99.94%)
+    - Get this num from the updated solution's debug.log file. Can also calculate it: Initial num course requests - num removed course requests
+- Num students with complete schedule: 2545 (99.92%)
+
+- Updated solution: 211014_132146
+    - 6168/6168 [100%] course requests assigned
+    - Solver took 0.03m (1.55s)
+    - Complete solution found
+    - There are still section allocation changes to existing course requests that have occurred, although much less than that of
+    Scenario 1, and they only affect C19 (STAT130)
+        - Affected courses and sections:
+                - Data obtained by comparing the initial solution.xml file to this updated solution.xml file in IntelliJ
+                and looking at the differences
+            - Course C19 (STAT130)
+                - Allocation change from Section S42 to S43 occurred 18 times

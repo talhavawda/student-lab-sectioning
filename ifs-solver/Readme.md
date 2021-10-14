@@ -230,9 +230,24 @@ the new course requests are unassigned/unallocated, and the old course requests 
         - I'm doing this as for the (first) updated solution I got for Scenario 1, there are a number of existing course requests that have 
         their allocated sections being changed. So I'm using MPPTerminationCondition instead of GeneralTerminationCondition
         for the resolving part to see if we can get an updated solution that minimises the number of existing course requests
-        that get their allocated sections changed. 
+        that get their allocated sections changed (ideally we want 0, so I set the attribute MinPerturbances's value to 0). 
+            - See Issue #7
             - Upon obtaining another updated solution after changing the termination condition to MPPTerminationCondition, 
+            but there are still changes being made to existing course requests.
+    - BUG FOUND AND FIXED
+        - Bug: In ModifiedInputProcessing.py when I am asking the user to enter the number/index of the solution that they want to use
+        as the current solution, I did not convert the input to an int, so when I was doing validation checking on the input
+        they entered, a TypeError would've been raised (when comparing the current solution string to the ints' 0 and solutionIndex) 
+        and the current solution would have been set to the default (the last of the solutions from the CurrentSolutions.txt file) in the
+        'except' block. This didn't actually cause a problem until now as I was resetting the CurrentSolutions.txt file when processing/reprocessing
+        the input so there would've been only 1 solution listed, which would've also been the last of the solutions. But for the Experimentation part,
+        I'm not resetting the CurrentSolutions.txt file as I want to use keep on using the initial solution to obtained different updated solutions
+        for different scenarios.
+        
 
+
+ANBAN (14/10/21): IF WE CANT GET THE SOLVER TO DO THE MINIMUM CHANGES THEN EXTRACT THE DATA OF THE STUDENTS WHO HAVE CHANGED AND
+SOLVE IT SEPARATELY AND MERGE BACK TOGETHER
 
 TODO: Observe what actual changes occurred when resolving
 TODO: set up the resolving Solver config file
@@ -296,6 +311,11 @@ https://stackoverflow.com/questions/1679384/converting-dictionary-to-list
 https://realpython.com/iterate-through-dictionary-python/
 
 https://realpython.com/python-time-module/#python-time-in-seconds-as-a-string-representing-local-time
+
+### CPSolver / UniTime links
+
+[todo]
+[put links from Issue #7]
 
                 
             
