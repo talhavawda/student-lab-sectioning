@@ -417,8 +417,7 @@ then made. New students are added at the end of the file.
             **BUT** why didn't the allocation be to the other STAT130 section - S42 (Mon 14:10)? 
             AS this student had no conflict with that timeslot (but had a conflict with this Wed 09:35 timeslot with PHYS131), 
             and then the allocation for PHYS131 wouldn't have needed to change. 
-            
-             
+               
         - **So based on the above, there were no actual availability conflicts or time overlap conflicts, so none of these 
         section allocation changes above should have occurred**, based on the 5 new course requests from the updated Students 
         input
@@ -452,7 +451,8 @@ then made. New students are added at the end of the file.
                     - This was for student 220112256, who had 1 added course request, for STAT130
 
                 
-        - allocations of new student: S20, S27, S43. The other 2 added course requests for STAT130 was also S43
+        - Allocations of new student (220120001): COMP100: S20, MATH130: S27, STAT130: S43. The other 2 added course requests (for the students
+         who were modified) for STAT130 was also S43
         
         
 ##### Scenario 2
