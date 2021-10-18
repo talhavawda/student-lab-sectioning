@@ -122,6 +122,9 @@ sections changed is minimised.
     - Initialised it to SolverConfiguration.cfg, changed Termination.Class to MPPTerminationCondition, and added 
     Termination.MinPerturbances attribute and set the value to 0 -> ideally we don't want any changes to be made to existing
     variables (course requests), and the solver will focus on minimising the number of perturbances
+- However the solver is still not minimising the number of perturbances
+    - See 11. in ../Readme.md - "Trying to fix perturbations problem" - for more details on changes I played around with in the config
+    file to try and remove perturbations
 <br>
 
 ### Solutions explanations
@@ -374,7 +377,7 @@ then made. New students are added at the end of the file.
             - In the Students.xlsx input file, there is 520 course requests for STAT130
             - In the Courses.xlsx input file, there is 2 sections for the STAT130 lab. In the input data XML file they because 
             S42 and S43 with capacities being 491 and 544 respectively.
-            - In the intital solution (from looking at the tableau.csv file), 268 students were allocated to S42 and 
+            - In this intital solution [211011_011710] (from looking at the tableau.csv file), 268 students were allocated to S42 and 
             252 students were allocated to S43
             - In  the updated Student's input, there were 3 added course requests for STAT130, and in the updated solution, 
             S43 was allocated to all of them. Thus with the allocation changes above, for the updated solution: 
@@ -477,3 +480,44 @@ then made. New students are added at the end of the file.
                 and looking at the differences
             - Course C19 (STAT130)
                 - Allocation change from Section S42 to S43 occurred 18 times
+                
+##### Scenario 3
+- Student modifications:
+        - similar to Scenario 1, removing STAT130 course requests as most perturbations are from STAT130 course requests
+    - Removed student: 220111511. (Had 1 processed course request for MATH134)
+    - Modified student: 220112040. Removed course request for MATH134. Added course request for COMP100.
+    - Added student: 220120001 with 2 processed course requests (COMP100, MATH130).
+    
+    
+- Updated num students: 2547
+- Updated num course requests: 6167
+
+- Num assigned course requests (pre-resolving): 6164 (99,95%)
+- Num students with complete schedule: 2545 (99.92%)
+
+- Updated solutions (See Exp-S3 folder) 
+    - Still getting perturbations
+        - There's no STAT130 course requests additions/deletions in the student modifications but all the perturbations are
+        for STAT130 course requests
+        
+        
+#### Trying out a new initial solution
+- Trying out a new initial solution since the previous one (211011_011710) results in perturbations for the STAT130 course even
+though there are no student modifications involving STAT130 (in Scenario 3)
+
+- Testing on Scenario 3
+
+- Updated solutions - See Exp-S3-NIS folder (solutions obtained after also changing some parameter values in the solver config resolving file)
+- There's still the same number of perturbations in the updated solutions I've obtained
+
+- Initial (complete) solution: 211018_210933
+    - Data from Courses and Students input files:
+        - There's 520 course requests for STAT130
+        - There's 2 STAT130 Lab Sections: S42 and S43, with capacities being 491 and 544 respectively
+            - In this intital solution (from looking at the tableau.csv file), 270 students were allocated to S42 and 
+            250 students were allocated to S43
+                - So it seems that there is a section allocation disbalance with STAT130: S42 is assigned more students that
+                S42, even though S43 has a higher capacity. S42 is 54.99% filled, whilst S43 is 45.96% filled. 
+                    - This disbalance also occurs in the first initial solution I obtained above (211011_011710).
+                    - **It seems that all the updated solutions (resolving on updated input) are trying to fix this section 
+                    allocation disbalance for STAT130.** 

@@ -243,13 +243,42 @@ the new course requests are unassigned/unallocated, and the old course requests 
         the input so there would've been only 1 solution listed, which would've also been the last of the solutions. But for the Experimentation part,
         I'm not resetting the CurrentSolutions.txt file as I want to use keep on using the initial solution to obtained different updated solutions
         for different scenarios.
+    - Trying to fix perturbations problem
+        - Testing changes on the SolverConfiguration-resolving.cfg file (modifying parameter values and adding parameters) on Scenario 1, Scenario 2, 
+         and Scenario 3 (See Exp-S1, Exp-S2 & Exp-S3 folders containing the solutions generated)
+            - Still got the unnecessary perturbations, and the number of permutations is not going down much
+            - Got extra parameters for the config file from: https://www.unitime.org/text.php?file=mpp12
+            - Also see:
+                - https://www.unitime.org/api/cpsolver-1.3/org/cpsolver/ifs/heuristics/GeneralValueSelection.html
+                - https://www.unitime.org/api/cpsolver-1.3/org/cpsolver/ifs/heuristics/GeneralVariableSelection.html
+                - https://www.unitime.org/api/cpsolver-1.3/org/cpsolver/ifs/solution/GeneralSolutionComparator.html
+            - Parameters experimented with
+                - Changed: Termination.MinPerturbances, Comparator.Class, Value.Class, Value.WeightNrAssignments, 
+                Neighbour.RandomUnassignmentProb, Neighbour.RandomUnassignmentOfProblemStudentProb
+                    - Comparator.Class: tried out org.cpsolver.ifs.solution.MPPSolutionComparator
+                    - Value.Class: tried out org.cpsolver.ifs.heuristics.GeneralValueSelection 
+                - Added: General.MPP, Value.MPPLimit, Value.InitialSelectionProb, Variable.RandomSelection   
+        - I've tried using a new initial solution (211018_210933) but the (almost) same number of STAT130 perturbations are coming up              
+        - There seems to be a problem with STAT130
+            - Most perturbations are for STAT130 course requests
+                - In the case of Scenario 2 & 3, all perturbations are for STAT130 course requests
+            - In Scenario 3, there's no STAT130 course requests additions/deletions in the student modifications but all the 
+            perturbations are for STAT130 course requests
+            - There seems to be an allocation disbalance for STAT130 in both the initial solutions I've obtained
+                - AND it seems that all the updated solutions (resolving on updated input) are trying to fix this section 
+                allocation disbalance for STAT130. **I think this is what is resulting in the perturbations for STAT130** 
+                    - maybe its happening for STAT130 cos it is the last course in the courses list ? If true, does this mean
+                    that this will happen to whatever the last course is?
+                
+                
         
+TODO: remove STAT130 for courses list and see if any perturbations occur
 
 
 ANBAN (14/10/21): IF WE CANT GET THE SOLVER TO DO THE MINIMUM CHANGES THEN EXTRACT THE DATA OF THE STUDENTS WHO HAVE CHANGED AND
 SOLVE IT SEPARATELY AND MERGE BACK TOGETHER
 
-TODO: Observe what actual changes occurred when resolving
+
 TODO: set up the resolving Solver config file
 TODO: get num allocations to each lab section (from student course requests)
 
@@ -273,7 +302,8 @@ Todo - update (re processes) the input data XML file for all other problem insta
 
     
 Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions<br>
-Todo: Try out different heuristics. (modify config file)<br>
+Todo: Try out different heuristics. (modify config file)
+To see: https://www.unitime.org/api/cpsolver-1.3/org/cpsolver/studentsct/heuristics/StudentSctNeighbourSelection.html <br>
 Todo: DO A COMPLETE USER-SYSTEM OF THIS CPSOLVER FIRST<br>
 
 Todo: Change Xmx option (Memory heap size of JVM)

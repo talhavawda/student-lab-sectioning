@@ -1,0 +1,343 @@
+16-Oct-21 20:49:00.068 [main] DEBUG studentsct.StudentSectioningXMLLoader> Reading XML data from src\main\resources\input\2020-Sem1-CAES-Wvl-no-conflicts\2020-Sem1-CAES-Wvl-no-conflicts-updated-1.xml
+16-Oct-21 20:49:00.887 [main] DEBUG studentsct.StudentSectioningXMLLoader> Root element: sectioning
+16-Oct-21 20:49:00.897 [main] INFO  util.Progress> [Restoring from backup ...]
+16-Oct-21 20:49:02.029 [main] DEBUG studentsct.StudentSectioningXMLLoader> Model successfully loaded.
+16-Oct-21 20:49:02.105 [SolverSync] INFO  util.Progress> [Solving problem ...]
+16-Oct-21 20:49:02.110 [SolverSync] DEBUG util.Progress> [Initializing solver]
+16-Oct-21 20:49:02.119 [SolverSync] INFO  solver.Solver> Using org.cpsolver.ifs.termination.MPPTerminationCondition
+16-Oct-21 20:49:02.125 [SolverSync] INFO  solver.Solver> Using org.cpsolver.ifs.solution.MPPSolutionComparator
+16-Oct-21 20:49:02.144 [SolverSync] INFO  solver.Solver> Using org.cpsolver.studentsct.heuristics.StudentSctNeighbourSelection
+16-Oct-21 20:49:02.183 [SolverSync] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:02.188 [SolverSync] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:02.191 [SolverSync] INFO  solver.Solver> Using org.cpsolver.ifs.perturbations.DefaultPerturbationsCounter
+16-Oct-21 20:49:02.201 [SolverSync] INFO  solver.Solver> Using org.cpsolver.studentsct.extension.StudentConflictStatistics
+16-Oct-21 20:49:02.213 [SolverSync] INFO  solver.Solver> Using org.cpsolver.studentsct.extension.DistanceConflict
+16-Oct-21 20:49:02.229 [SolverSync] INFO  solver.Solver> Using org.cpsolver.studentsct.extension.TimeOverlapsCounter
+16-Oct-21 20:49:02.761 [SolverSync] INFO  solver.Solver> Initial solution:[
+      Assigned course requests: 99,92% (6164/6169)
+      Assigned course requests (priority students): Normal: 99,92% (6164/6169)
+      Assigned variables: 99.92% (6164/6169)
+      Iteration: 0
+      Overall solution value: -2059.55
+      Students with complete schedule: 99.88% (2544/2547)
+      Students with complete schedule (priority students): Normal: 99.88% (2544/2547)
+      Time: 0.00 min
+    ]
+16-Oct-21 20:49:02.851 [SolverSync] INFO  util.JProf> Using wall time.
+16-Oct-21 20:49:02.866 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 1
+16-Oct-21 20:49:02.879 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.418 [Solver-3] INFO  studentsct.Test> **BEST** RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86, TM:0,000h
+16-Oct-21 20:49:03.530 [Solver-3] DEBUG util.Progress> [Assign initial enrollments...]
+16-Oct-21 20:49:03.559 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 2
+16-Oct-21 20:49:03.562 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.569 [Solver-3] DEBUG util.Progress> [Critical Courses B&B (priority students)...]
+16-Oct-21 20:49:03.570 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 3
+16-Oct-21 20:49:03.570 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.576 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.586 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.586 [Solver-3] DEBUG util.Progress> [Critical Backtracking (priority students)...]
+16-Oct-21 20:49:03.611 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 4
+16-Oct-21 20:49:03.628 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.629 [Solver-1] DEBUG util.Progress> [Critical Ifs (priority students)...]
+16-Oct-21 20:49:03.664 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 5
+16-Oct-21 20:49:03.665 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.667 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.669 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.669 [Solver-3] DEBUG util.Progress> [Critical Backtracking (priority students)...]
+16-Oct-21 20:49:03.670 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 6
+16-Oct-21 20:49:03.671 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.673 [Solver-4] DEBUG util.Progress> [Important Courses B&B (priority students)...]
+16-Oct-21 20:49:03.675 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 7
+16-Oct-21 20:49:03.683 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.689 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.689 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.689 [Solver-4] DEBUG util.Progress> [Important Backtracking (priority students)...]
+16-Oct-21 20:49:03.689 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 8
+16-Oct-21 20:49:03.689 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.689 [Solver-4] DEBUG util.Progress> [Important Ifs (priority students)...]
+16-Oct-21 20:49:03.707 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 9
+16-Oct-21 20:49:03.724 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.725 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.726 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.729 [Solver-4] DEBUG util.Progress> [Important Backtracking (priority students)...]
+16-Oct-21 20:49:03.733 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 10
+16-Oct-21 20:49:03.733 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.811 [Solver-4] DEBUG util.Progress> [Normal Courses B&B (priority students)...]
+16-Oct-21 20:49:03.813 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 11
+16-Oct-21 20:49:03.814 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.816 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.817 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.817 [Solver-4] DEBUG util.Progress> [Normal Backtracking (priority students)...]
+16-Oct-21 20:49:03.817 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 12
+16-Oct-21 20:49:03.818 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.819 [Solver-3] DEBUG util.Progress> [Normal Ifs (priority students)...]
+16-Oct-21 20:49:03.870 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 13
+16-Oct-21 20:49:03.871 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.874 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.874 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.876 [Solver-3] DEBUG util.Progress> [Normal Backtracking (priority students)...]
+16-Oct-21 20:49:03.880 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 14
+16-Oct-21 20:49:03.884 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.888 [Solver-4] DEBUG util.Progress> [Critical Courses B&B (senior students)...]
+16-Oct-21 20:49:03.889 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 15
+16-Oct-21 20:49:03.889 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.891 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.892 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.892 [Solver-4] DEBUG util.Progress> [Critical Backtracking (senior students)...]
+16-Oct-21 20:49:03.893 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 16
+16-Oct-21 20:49:03.895 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.896 [Solver-2] DEBUG util.Progress> [Critical Ifs (senior students)...]
+16-Oct-21 20:49:03.901 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 17
+16-Oct-21 20:49:03.901 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.903 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.904 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.904 [Solver-2] DEBUG util.Progress> [Critical Backtracking (senior students)...]
+16-Oct-21 20:49:03.905 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 18
+16-Oct-21 20:49:03.906 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.908 [Solver-1] DEBUG util.Progress> [Important Courses B&B (senior students)...]
+16-Oct-21 20:49:03.910 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 19
+16-Oct-21 20:49:03.910 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.914 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.914 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.915 [Solver-1] DEBUG util.Progress> [Important Backtracking (senior students)...]
+16-Oct-21 20:49:03.915 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 20
+16-Oct-21 20:49:03.915 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.916 [Solver-2] DEBUG util.Progress> [Important Ifs (senior students)...]
+16-Oct-21 20:49:03.919 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 21
+16-Oct-21 20:49:03.920 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.921 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.921 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.921 [Solver-3] DEBUG util.Progress> [Important Backtracking (senior students)...]
+16-Oct-21 20:49:03.922 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 22
+16-Oct-21 20:49:03.922 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.941 [Solver-4] DEBUG util.Progress> [Normal Courses B&B (senior students)...]
+16-Oct-21 20:49:03.942 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 23
+16-Oct-21 20:49:03.943 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.944 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.944 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.946 [Solver-4] DEBUG util.Progress> [Normal Backtracking (senior students)...]
+16-Oct-21 20:49:03.946 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 24
+16-Oct-21 20:49:03.947 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.947 [Solver-2] DEBUG util.Progress> [Normal Ifs (senior students)...]
+16-Oct-21 20:49:03.949 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 25
+16-Oct-21 20:49:03.950 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.951 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.951 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.952 [Solver-4] DEBUG util.Progress> [Normal Backtracking (senior students)...]
+16-Oct-21 20:49:03.952 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 26
+16-Oct-21 20:49:03.952 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.955 [Solver-3] DEBUG util.Progress> [Critical Courses B&B (junior students)...]
+16-Oct-21 20:49:03.956 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 27
+16-Oct-21 20:49:03.956 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.957 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.957 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.958 [Solver-3] DEBUG util.Progress> [Critical Backtracking (junior students)...]
+16-Oct-21 20:49:03.958 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 28
+16-Oct-21 20:49:03.959 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.959 [Solver-1] DEBUG util.Progress> [Critical Ifs (junior students)...]
+16-Oct-21 20:49:03.964 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 29
+16-Oct-21 20:49:03.964 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.965 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.965 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.965 [Solver-1] DEBUG util.Progress> [Critical Backtracking (junior students)...]
+16-Oct-21 20:49:03.966 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 30
+16-Oct-21 20:49:03.966 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.968 [Solver-1] DEBUG util.Progress> [Important Courses B&B (junior students)...]
+16-Oct-21 20:49:03.969 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 31
+16-Oct-21 20:49:03.969 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.970 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.974 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.975 [Solver-4] DEBUG util.Progress> [Important Backtracking (junior students)...]
+16-Oct-21 20:49:03.975 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 32
+16-Oct-21 20:49:03.976 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.976 [Solver-3] DEBUG util.Progress> [Important Ifs (junior students)...]
+16-Oct-21 20:49:03.979 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 33
+16-Oct-21 20:49:03.980 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.981 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.982 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:03.982 [Solver-1] DEBUG util.Progress> [Important Backtracking (junior students)...]
+16-Oct-21 20:49:03.982 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 34
+16-Oct-21 20:49:03.983 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.996 [Solver-2] DEBUG util.Progress> [Normal Courses B&B (junior students)...]
+16-Oct-21 20:49:03.997 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 35
+16-Oct-21 20:49:03.998 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:03.999 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:03.999 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.010 [Solver-2] DEBUG util.Progress> [Normal Backtracking (junior students)...]
+16-Oct-21 20:49:04.011 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 36
+16-Oct-21 20:49:04.012 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.012 [Solver-3] DEBUG util.Progress> [Normal Ifs (junior students)...]
+16-Oct-21 20:49:04.014 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 37
+16-Oct-21 20:49:04.015 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.016 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.016 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.016 [Solver-3] DEBUG util.Progress> [Normal Backtracking (junior students)...]
+16-Oct-21 20:49:04.016 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 38
+16-Oct-21 20:49:04.017 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.019 [Solver-2] DEBUG util.Progress> [Critical Courses B&B (sophomore students)...]
+16-Oct-21 20:49:04.020 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 39
+16-Oct-21 20:49:04.020 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.021 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.021 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.021 [Solver-2] DEBUG util.Progress> [Critical Backtracking (sophomore students)...]
+16-Oct-21 20:49:04.022 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 40
+16-Oct-21 20:49:04.022 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.022 [Solver-2] DEBUG util.Progress> [Critical Ifs (sophomore students)...]
+16-Oct-21 20:49:04.024 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 41
+16-Oct-21 20:49:04.024 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.026 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.026 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.026 [Solver-4] DEBUG util.Progress> [Critical Backtracking (sophomore students)...]
+16-Oct-21 20:49:04.027 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 42
+16-Oct-21 20:49:04.027 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.031 [Solver-4] DEBUG util.Progress> [Important Courses B&B (sophomore students)...]
+16-Oct-21 20:49:04.032 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 43
+16-Oct-21 20:49:04.032 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.033 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.033 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.033 [Solver-3] DEBUG util.Progress> [Important Backtracking (sophomore students)...]
+16-Oct-21 20:49:04.034 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 44
+16-Oct-21 20:49:04.035 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.035 [Solver-2] DEBUG util.Progress> [Important Ifs (sophomore students)...]
+16-Oct-21 20:49:04.042 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 45
+16-Oct-21 20:49:04.043 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.044 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.045 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.045 [Solver-2] DEBUG util.Progress> [Important Backtracking (sophomore students)...]
+16-Oct-21 20:49:04.046 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 46
+16-Oct-21 20:49:04.047 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.061 [Solver-2] DEBUG util.Progress> [Normal Courses B&B (sophomore students)...]
+16-Oct-21 20:49:04.062 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 47
+16-Oct-21 20:49:04.063 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.064 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.064 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.065 [Solver-2] DEBUG util.Progress> [Normal Backtracking (sophomore students)...]
+16-Oct-21 20:49:04.065 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 48
+16-Oct-21 20:49:04.065 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.066 [Solver-1] DEBUG util.Progress> [Normal Ifs (sophomore students)...]
+16-Oct-21 20:49:04.069 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 49
+16-Oct-21 20:49:04.069 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.071 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.071 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.071 [Solver-1] DEBUG util.Progress> [Normal Backtracking (sophomore students)...]
+16-Oct-21 20:49:04.072 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 50
+16-Oct-21 20:49:04.072 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.074 [Solver-4] DEBUG util.Progress> [Critical Courses B&B (frehmen students)...]
+16-Oct-21 20:49:04.075 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 51
+16-Oct-21 20:49:04.076 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.077 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.077 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.077 [Solver-4] DEBUG util.Progress> [Critical Backtracking (frehmen students)...]
+16-Oct-21 20:49:04.078 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 52
+16-Oct-21 20:49:04.080 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.080 [Solver-4] DEBUG util.Progress> [Critical Ifs (frehmen students)...]
+16-Oct-21 20:49:04.083 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 53
+16-Oct-21 20:49:04.084 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.086 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.086 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.086 [Solver-1] DEBUG util.Progress> [Critical Backtracking (frehmen students)...]
+16-Oct-21 20:49:04.087 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 54
+16-Oct-21 20:49:04.087 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.089 [Solver-4] DEBUG util.Progress> [Important Courses B&B (frehmen students)...]
+16-Oct-21 20:49:04.090 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 55
+16-Oct-21 20:49:04.091 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.092 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.092 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.092 [Solver-4] DEBUG util.Progress> [Important Backtracking (frehmen students)...]
+16-Oct-21 20:49:04.093 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 56
+16-Oct-21 20:49:04.093 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.093 [Solver-3] DEBUG util.Progress> [Important Ifs (frehmen students)...]
+16-Oct-21 20:49:04.100 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 57
+16-Oct-21 20:49:04.100 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.101 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.102 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.102 [Solver-4] DEBUG util.Progress> [Important Backtracking (frehmen students)...]
+16-Oct-21 20:49:04.102 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 58
+16-Oct-21 20:49:04.103 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.118 [Solver-1] DEBUG util.Progress> [Normal Courses B&B (frehmen students)...]
+16-Oct-21 20:49:04.120 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 59
+16-Oct-21 20:49:04.120 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.122 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.122 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.122 [Solver-3] DEBUG util.Progress> [Normal Backtracking (frehmen students)...]
+16-Oct-21 20:49:04.123 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 60
+16-Oct-21 20:49:04.123 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.123 [Solver-3] DEBUG util.Progress> [Normal Ifs (frehmen students)...]
+16-Oct-21 20:49:04.131 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 61
+16-Oct-21 20:49:04.133 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.134 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.135 [Solver-2] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.135 [Solver-2] DEBUG util.Progress> [Normal Backtracking (frehmen students)...]
+16-Oct-21 20:49:04.135 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 62
+16-Oct-21 20:49:04.136 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.137 [Solver-1] DEBUG util.Progress> [Critical Courses B&B...]
+16-Oct-21 20:49:04.150 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 63
+16-Oct-21 20:49:04.150 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.151 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.152 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.152 [Solver-1] DEBUG util.Progress> [Critical Backtracking...]
+16-Oct-21 20:49:04.152 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 64
+16-Oct-21 20:49:04.152 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.152 [Solver-4] DEBUG util.Progress> [Critical Ifs...]
+16-Oct-21 20:49:04.160 [Solver-3] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 65
+16-Oct-21 20:49:04.161 [Solver-3] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.163 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.163 [Solver-3] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.163 [Solver-3] DEBUG util.Progress> [Critical Backtracking...]
+16-Oct-21 20:49:04.164 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 66
+16-Oct-21 20:49:04.164 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.165 [Solver-2] DEBUG util.Progress> [Important Courses B&B...]
+16-Oct-21 20:49:04.170 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 67
+16-Oct-21 20:49:04.171 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.172 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.172 [Solver-4] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.172 [Solver-4] DEBUG util.Progress> [Important Backtracking...]
+16-Oct-21 20:49:04.172 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 68
+16-Oct-21 20:49:04.173 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.173 [Solver-1] DEBUG util.Progress> [Important Ifs...]
+16-Oct-21 20:49:04.183 [Solver-1] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 69
+16-Oct-21 20:49:04.184 [Solver-1] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.184 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.studentsct.heuristics.EnrollmentSelection
+16-Oct-21 20:49:04.185 [Solver-1] INFO  heuristics.StandardNeighbourSelection> Using org.cpsolver.ifs.heuristics.GeneralVariableSelection
+16-Oct-21 20:49:04.186 [Solver-1] DEBUG util.Progress> [Important Backtracking...]
+16-Oct-21 20:49:04.187 [Solver-4] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 70
+16-Oct-21 20:49:04.187 [Solver-4] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.198 [Solver-4] DEBUG util.Progress> [Min Credit B&B...]
+16-Oct-21 20:49:04.201 [Solver-2] INFO  heuristics.RoundRobinNeighbourSelection> Phase changed to 71
+16-Oct-21 20:49:04.201 [Solver-2] DEBUG util.Progress>   -- RRq:6164/6169, RS:2544/2547, CR:99,92%, V:2059,55, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,86
+16-Oct-21 20:49:04.213 [Solver-2] DEBUG util.Progress> [Branch&bound...]
+16-Oct-21 20:49:04.732 [Solver-3] INFO  studentsct.Test> **BEST** RRq:6169/6169, RS:2547/2547, CR:100,00%, V:2061,81, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,95, TM:0,001h
+16-Oct-21 20:49:04.733 [Solver-3] INFO  termination.MPPTerminationCondition> A complete solution with allowed number of perturbances found.
+16-Oct-21 20:49:04.733 [Solver-1] INFO  termination.MPPTerminationCondition> A complete solution with allowed number of perturbances found.
+16-Oct-21 20:49:04.733 [Solver-2] INFO  termination.MPPTerminationCondition> A complete solution with allowed number of perturbances found.
+16-Oct-21 20:49:04.733 [Solver-4] INFO  termination.MPPTerminationCondition> A complete solution with allowed number of perturbances found.
+16-Oct-21 20:49:04.884 [SolverSync] DEBUG util.Progress> [Done]
+16-Oct-21 20:49:04.885 [SolverSync] DEBUG solver.Solver> Solver done.
+16-Oct-21 20:49:04.885 [SolverSync] INFO  util.Progress> [Solver done.]
+16-Oct-21 20:49:05.418 [ShutdownHook] INFO  studentsct.Test> **BEST** RRq:6169/6169, RS:2547/2547, CR:100,00%, V:2061,81, DC:0, TOC:0, IS:NaN%, IT:NaN%, %:80,95, TM:0,001h
+16-Oct-21 20:49:05.422 [ShutdownHook] INFO  check.OverlapCheck> Checking for overlaps...
+16-Oct-21 20:49:05.435 [ShutdownHook] INFO  check.SectionLimitCheck> Checking section limits...
+16-Oct-21 20:49:05.438 [ShutdownHook] INFO  check.CourseLimitCheck> Checking for course limits...
+16-Oct-21 20:49:05.438 [ShutdownHook] INFO  studentsct.Test> Best solution found after 1.807893699995475 seconds (907 iterations).
+16-Oct-21 20:49:05.462 [ShutdownHook] INFO  studentsct.Test> Info: [
+      Assigned course requests: 100,00% (6169/6169)
+      Assigned course requests (priority students): Normal: 100,00% (6169/6169)
+      Assigned priority course requests: 100.00% (6169/6169)
+      Assigned variables: 100.00% (6169/6169)
+      Average disbalance: 0,65% (1,14)
+      Best Iteration: 907
+      Best Time: 0.03 min (501.69 it/s)
+      Choice: Average assigned choice: 1,00
+      Choice: assigned 1st course choice: 100,00% (6169)
+      Full Sections: 4 with no space (9,30% of all sections, 11,28% assignments)
+4 with &leq; 2% available (9,30% of all sections, 11,28% assignments)
+7 with &leq; 10% available (16,28% of all sections, 17,65% assignments)
+      Iteration: 907
+      Overall solution value: -2061.81
+      Sections disbalanced by 10% or more: 0,00% (0)
+      Speed: 501.69 it/s
+      Students with complete schedule: 100.00% (2547/2547)
+      Students with complete schedule (priority students): Normal: 100.00% (2547/2547)
+      Time: 0.03 min
+    ]
+16-Oct-21 20:49:05.472 [ShutdownHook] DEBUG studentsct.StudentSectioningXMLSaver> Writting XML data to:C:\Users\talha\Documents\CS Honours\COMP700 - HP\student-lab-sectioning\ifs-solver\src\main\resources\input\2020-Sem1-CAES-Wvl-no-conflicts\211016_204859\solution.xml
