@@ -521,3 +521,17 @@ though there are no student modifications involving STAT130 (in Scenario 3)
                     - This disbalance also occurs in the first initial solution I obtained above (211011_011710).
                     - **It seems that all the updated solutions (resolving on updated input) are trying to fix this section 
                     allocation disbalance for STAT130.** 
+                    
+#### Trying out another (third) new initial solution
+- In the SolverConfiguration.cfg file (for the initial solution, although this Weights applies to the config file for the updated solution), 
+the StudentWeights.Class is set to PriorityStudentWeights. I want to get an initial solution with EqualStudentWeights to see if 
+this fixes the section allocation disbalance of STAT130
+    - Even though I've set the course request priorities to be the same (priority="0") when generating the initial input data XML file, 
+    it seems that the solver is setting its own priorities [in descending order] (first course request of student has priority=1 -> highest priority, 
+    and last course request of student has lowest priority) - see request-priorities.csv in a solution folder - as the StudentWeightsClass 
+    is set to PriorityStudentWeights.
+    
+- Initial (complete) solution: 211019_000822
+    - still having the STAT130 section allocation disbalance
+    
+- Updated solution (See Exp-S3-NIS2 folder) still has the STAT130 perturbations

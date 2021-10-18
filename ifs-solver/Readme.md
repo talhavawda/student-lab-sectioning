@@ -258,28 +258,46 @@ the new course requests are unassigned/unallocated, and the old course requests 
                     - Comparator.Class: tried out org.cpsolver.ifs.solution.MPPSolutionComparator
                     - Value.Class: tried out org.cpsolver.ifs.heuristics.GeneralValueSelection 
                 - Added: General.MPP, Value.MPPLimit, Value.InitialSelectionProb, Variable.RandomSelection   
-        - I've tried using a new initial solution (211018_210933) but the (almost) same number of STAT130 perturbations are coming up              
+        - I've tried using a new initial solution (211018_210933) but the  same number of STAT130 perturbations (18) are coming up              
         - There seems to be a problem with STAT130
             - Most perturbations are for STAT130 course requests
                 - In the case of Scenario 2 & 3, all perturbations are for STAT130 course requests
             - In Scenario 3, there's no STAT130 course requests additions/deletions in the student modifications but all the 
             perturbations are for STAT130 course requests
-            - There seems to be an allocation disbalance for STAT130 in both the initial solutions I've obtained
+            - There seems to be a section allocation disbalance for STAT130 in both the initial solutions I've obtained
                 - AND it seems that all the updated solutions (resolving on updated input) are trying to fix this section 
-                allocation disbalance for STAT130. **I think this is what is resulting in the perturbations for STAT130** 
-                    - maybe its happening for STAT130 cos it is the last course in the courses list ? If true, does this mean
+                allocation disbalance for STAT130. **I think this is what is resulting in the perturbations for STAT130**
+                    - For disbalance details, search for the following in /../resources/Readme.md:
+                        - "Looking at STAT130 since it had the most number of changes"
+                        - "Initial (complete) solution: 211018_210933"
+                    - Maybe its happening for STAT130 cos it is the last course in the courses list? If true, does this mean
                     that this will happen to whatever the last course is?
-                
+                    
+        - I've relooked at the UniTime API online and I've discovered that there's also EqualStudentWeights class. 
+        The current Comparator.Class and StudentWeights.Class values in both config files are set to PriorityStudentWeights. 
+        So I've gone and changed these parameters to EqualStudentWeights. It seems that for PriorityStudentWeights, the solver 
+        assigns different weights to a student's course requests, with higher priorities having higher weights. 
+        EqualStudentWeights gives equal weight to all the student's course requests. 
+        Even though I've set the course request priorities to be the same (priority="0") when generating the initial input data XML file, 
+        it seems that the solver is setting its own priorities for student's course requests - the request-priorities.csv file 
+        in a solution folder has priorities numbered from 1 to numProcessedCourseRequests for each student. Maybe its setting its own 
+        priorities as the StudentWeights.Class is PriorityStudentWeights.
+                - Student Sectioning weights package: https://www.unitime.org/api/cpsolver-1.3/org/cpsolver/studentsct/weights/package-summary.html
+        - I want to see if I set  Comparator.Class and StudentWeights.Class to EqualStudentWeights, if this will solve 
+        the STAT130 section allocation disbalance
+            - I've changed the parameter values and then obtained a new initial solution (211019_000822)
+                - However, the same disbalance is still present, and request-priorities.csv still has different priorities 
+                for each student's course requests
                 
         
-TODO: remove STAT130 for courses list and see if any perturbations occur
+TODO: remove STAT130 for courses list and see if any perturbations occur. if any perturbations, see if it is with the new last course
+in the courses list
 
 
 ANBAN (14/10/21): IF WE CANT GET THE SOLVER TO DO THE MINIMUM CHANGES THEN EXTRACT THE DATA OF THE STUDENTS WHO HAVE CHANGED AND
 SOLVE IT SEPARATELY AND MERGE BACK TOGETHER
 
 
-TODO: set up the resolving Solver config file
 TODO: get num allocations to each lab section (from student course requests)
 
 TODO: talk about code I changed specifically for the experimentation process
