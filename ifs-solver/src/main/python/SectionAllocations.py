@@ -200,15 +200,15 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 	for course in allocationsDict:  # traversing a dict using a for loop traverses the keys of the dict | courses are the keys (course IDs) of allocationsDict
 		courseDict = allocationsDict[course]
 		courseName = courseDict["courseName"]
-		numCourseRequests = courseDict["numCourseRequests"]
-		numLabs = courseDict["numLabs"]
+		numCourseRequests = courseDict["numCourseRequests"]  # an int
+		numLabs = courseDict["numLabs"]  # an int
 
 		print("\t\tCourse C", course, " [" + courseName + "] -\tCourse requests = ", numCourseRequests, " |\tLabs = ", numLabs, sep="")
 		courseElement = solutionXML.createElement("course")
 		courseElement.setAttribute("course", "C" + course)
 		courseElement.setAttribute("courseName", courseName)
-		courseElement.setAttribute("numCourseRequests", numCourseRequests)
-		courseElement.setAttribute("numLabs", numLabs)
+		courseElement.setAttribute("numCourseRequests", str(numCourseRequests))  # all attribute values of XML files are strings
+		courseElement.setAttribute("numLabs", str(numLabs))  # all attribute values of XML files are strings
 
 		labsList = courseDict["labsList"]
 
@@ -237,7 +237,7 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 				sectionAllocatedPercentage = round(sectionAllocated / sectionCapacity * 100, 2)  # round off percentage to 2 decimal places
 
 				print("\t\t\t\tSection ", sectionName, " -\tSection Capacity = ", sectionCapacity, " |\tSection Allocated = ", sectionAllocated, " |\t % allocated = ", sectionAllocatedPercentage, sep="")
-				sectionElement = solutionXML.appendChild("section")
+				sectionElement = solutionXML.createElement("section")
 				sectionElement.setAttribute("section", sectionName)
 				sectionElement.setAttribute("sectionCapacity", str(sectionCapacity))  # all attribute values of XML files are strings
 				sectionElement.setAttribute("sectionAllocated", str(sectionAllocated))  # all attribute values of XML files are strings
@@ -256,7 +256,7 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 
 	# Write the updated solution XML file
 	with open(solutionFilePath, "w") as updatedXmlFile:
-		updatedXmlFile.write(updatedXmlFile)
+		updatedXmlFile.write(solutionXML)
 
 	print("\n\nCourses and allocations data have been written to the solution file: '" + solutionFilePath + ".")
 
