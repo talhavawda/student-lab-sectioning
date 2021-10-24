@@ -913,8 +913,9 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 
 	print("\tWriting updated students data to the updated input data XML file...")
 
+
 	""" Process all student enrollments (lab sessions requests and section allocations) """
-	# todo...
+
 	studentNumbersList = list(studentsDict.keys())
 
 	for studentNumber in studentNumbersList:
