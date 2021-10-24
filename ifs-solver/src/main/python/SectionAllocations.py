@@ -30,11 +30,24 @@ def main():
 			print("Solution folder not found in the problem instance's directory. You will be prompted to re-enter the name of the solution.")
 			print("Please ensure that the solution's folder is located in this problem instance's directory.\n")
 
-	""" Process the solution's XML file and obtain the courses and allocations data """
-	allocationsDict = processSolution(inputXmlFilePath, solutionFilePath)
 
-	""" Write the allocations data to the end of the solution's XML file and display it to the console """
-	writeAllocationsData(allocationsDict, solutionFilePath)
+	""" Do processing only if section allocations for this solution XML file has not already been processed """
+
+	with open(solutionFilePath, "r") as solutionXMLFile:
+		solutionXML = solutionXMLFile.read()
+
+	solutionBS = BeautifulSoup(solutionXML, "xml")
+	solutionAllocationsTag = solutionBS.find("allocations")
+
+	if solutionAllocationsTag is None:  # if this script has not already been run on this solution XML file 
+
+		""" Process the solution's XML file and obtain the courses and allocations data """
+		allocationsDict = processSolution(inputXmlFilePath, solutionFilePath)
+
+		""" Write the allocations data to the end of the solution's XML file and display it to the console """
+		writeAllocationsData(allocationsDict, solutionFilePath)
+
+# End main
 
 
 def processSolution(inputXmlFilePath: str, solutionFilePath: str):
@@ -225,7 +238,7 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 			labElement.setAttribute("numLabSections", str(numLabSections))  # all attribute values of XML files are strings
 			labElement.setAttribute("labCapacity", str(labCapacity))  # all attribute values of XML files are strings
 			labElement.setAttribute("labAllocated", str(labAllocated))  # all attribute values of XML files are strings
-			labElement.setAttribute("%allocated", str(labAllocatedPercentage))  # all attribute values of XML files are strings
+			labElement.setAttribute("allocated%", str(labAllocatedPercentage))  # all attribute values of XML files are strings
 
 			sectionsDict = labDict["sectionsDict"]
 
@@ -241,7 +254,7 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 				sectionElement.setAttribute("section", sectionName)
 				sectionElement.setAttribute("sectionCapacity", str(sectionCapacity))  # all attribute values of XML files are strings
 				sectionElement.setAttribute("sectionAllocated", str(sectionAllocated))  # all attribute values of XML files are strings
-				sectionElement.setAttribute("%allocated", str(sectionAllocatedPercentage))  # all attribute values of XML files are strings
+				sectionElement.setAttribute("allocated%", str(sectionAllocatedPercentage))  # all attribute values of XML files are strings
 
 				labElement.appendChild(sectionElement)
 
@@ -257,6 +270,7 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 	# Write the updated solution XML file
 	with open(solutionFilePath, "w") as updatedXmlFile:
 		updatedXmlFile.write(solutionXML)
+		updatedXmlFile.close()
 
 	print("\n\nCourses and allocations data have been written to the solution file: '" + solutionFilePath + ".")
 
