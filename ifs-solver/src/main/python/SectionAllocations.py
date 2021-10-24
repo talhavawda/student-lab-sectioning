@@ -97,14 +97,16 @@ def processSolution(inputXmlFilePath: str, solutionFilePath: str):
 		solutionConfigTag = offering.find("config")
 
 		courseDict = allocationsDict[courseID]
-		labsDict = dict()
+		# labsDict = dict()
+		labsList = list()  # Making it a list instead of a dict as we will be needing to access the labs of a course in their order (course's first lab, course's second lab, etc.) instead of by their ID
 		numLabs = 0
 		solutionConfigSubpartTags = solutionConfigTag.find_all("subpart")
 
-		for subpart in solutionConfigSubpartTags:
+		for subpart in solutionConfigSubpartTags: # a 'subpart' tag is a Lab
 			numLabs += 1
 			labDict = dict()
 			labID = subpart.get("id")
+			labDict["labID"] = subpart.get("id")
 			labDict["labName"] = subpart.get("name")
 
 			sectionsDict = dict()
@@ -119,24 +121,57 @@ def processSolution(inputXmlFilePath: str, solutionFilePath: str):
 				sectionDict["sectionName"] = section.get("name")
 				sectionCapacity = int(section.get("limit"))
 				sectionDict["sectionCapacity"] = sectionCapacity
+				sectionDict["sectionAllocated"] = 0
 				labCapacity += sectionCapacity
 				sectionsDict[sectionID] = sectionDict
 
 
 			labDict["numLabSections"] = numLabSections
 			labDict["labCapacity"] = labCapacity
+			labDict["labAllocated"] = 0
 			labDict["sectionsDict"] = sectionsDict
-			labsDict[labID] = labDict
+			# labsDict[labID] = labDict
+			labsList.append(labDict)
 
 
 		courseDict["numLabs"] = str(numLabs)
-		courseDict["labsDict"] = labsDict
+		# courseDict["labsDict"] = labsDict
+		courseDict["labsList"] = labsList
 		allocationsDict[courseID] = courseDict
 
-		for course in allocationsDict.items():
-			print(course)
 
 
+	""" Process the section allocations from the solution XML file """
+
+	solutionStudentTags = solutionBS.find_all("student")
+
+	for student in solutionStudentTags:  # each student is a Tag object
+		solutionCourseRequestTags = student.find_all("course")
+
+		for courseRequest in solutionCourseRequestTags:
+			courseRequestCourseID = courseRequest.get("course")
+			solutionCRAllocationTags = courseRequest.find_all("section")
+
+			courseDict = allocationsDict[courseRequestCourseID]
+			labsList = courseDict["labsList"]
+
+			labNum = 0
+
+			for sectionAllocation in solutionCRAllocationTags:
+				sectionID = sectionAllocation.get("id")
+				labDict = labsList[labNum]
+				labDict["labAllocated"] += 1
+
+				sectionsDict = labDict["sectionsDict"]
+				sectionDict = sectionsDict[sectionID]
+				sectionDict["sectionAllocated"] += 1
+
+				labNum += 1
+
+			allocationsDict[courseRequestCourseID] = courseDict
+
+	for course in allocationsDict.items():
+		print(course)
 
 
 
