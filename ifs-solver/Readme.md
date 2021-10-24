@@ -283,11 +283,11 @@ the new course requests are unassigned/unallocated, and the old course requests 
         in a solution folder has priorities numbered from 1 to numProcessedCourseRequests for each student. Maybe its setting its own 
         priorities as the StudentWeights.Class is PriorityStudentWeights.
                 - Student Sectioning weights package: https://www.unitime.org/api/cpsolver-1.3/org/cpsolver/studentsct/weights/package-summary.html
-        - I want to see if I set  Comparator.Class and StudentWeights.Class to EqualStudentWeights, if this will solve 
-        the STAT130 section allocation disbalance
+            - I want to see if I set  Comparator.Class and StudentWeights.Class to EqualStudentWeights, if this will solve 
+            the STAT130 section allocation disbalance
             - I've changed the parameter values and then obtained a new initial solution (211019_000822)
-                - However, the same disbalance is still present, and request-priorities.csv still has different priorities 
-                for each student's course requests
+            - However, the same disbalance is still present, and request-priorities.csv still has different priorities 
+            for each student's course requests
                 
         
 TODO: remove STAT130 for courses list and see if any perturbations occur. if any perturbations, see if it is with the new last course
@@ -333,6 +333,9 @@ Todo: Change Xmx option (Memory heap size of JVM)
         
         
 ## Reference and Acknowledgement Links
+https://www.datacamp.com/community/tutorials/python-excel-tutorial
+https://openpyxl.readthedocs.io/en/stable/
+http://docs.pyexcel.org/en/latest/
 
 https://realpython.com/python-dicts/
 https://www.geeksforgeeks.org/python-dictionary/
