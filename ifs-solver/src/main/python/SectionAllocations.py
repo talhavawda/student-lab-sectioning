@@ -1,10 +1,9 @@
 from bs4 import BeautifulSoup  # For reading from XML files (bs4 needs to be installed first)
 from xml.dom import minidom  # For creating and writing to XML files
-
+from os import path  # For checking if file exists
 """
 	Process a solution file to obtain the number of course requests for each course, the total capacity across all sections
-	of each of its labs, and the number of allocations for each of its lab sections, and append this info to the end of 
-	the solution xml file.
+	of each of its labs, and the number of allocations for each of its lab sections, and write this info to an xml file.
 """
 # current Assumption - each course only has 1 lab, with possibly many sections
 
@@ -32,24 +31,18 @@ def main():
 
 
 	""" Do processing only if section allocations for this solution XML file has not already been processed """
+	allocationsFilePath = problemInstanceDirectoryPath + "/" + solutionName + "/allocations.xml"
+	fileExists = path.isfile(allocationsFilePath)
 
-	with open(solutionFilePath, "r") as solutionXMLFile:
-		solutionXML = solutionXMLFile.read()
-		solutionXMLFile.close()
-
-
-	solutionBS = BeautifulSoup(solutionXML, "xml")
-	solutionAllocationsTag = solutionBS.find("allocations")
-
-	if solutionAllocationsTag is None:  # if this script has not already been run on this solution XML file
+	if not fileExists:  # if this script has not already been run on this solution XML file
 
 		""" Process the solution's XML file and obtain the courses and allocations data """
 		allocationsDict = processSolution(inputXmlFilePath, solutionFilePath)
 
 		""" Write the allocations data to the end of the solution's XML file and display it to the console """
-		writeAllocationsData(allocationsDict, solutionFilePath)
+		writeAllocationsData(allocationsDict, allocationsFilePath)
 	else:
-		print("This solution file has already been processed by this script, and the section allocation data has already been written to the file")
+		print("This solution file has already been processed by this script, and the section allocation data has already been written to the allocations.xml file")
 
 # End main
 
@@ -197,20 +190,29 @@ def processSolution(inputXmlFilePath: str, solutionFilePath: str):
 	return allocationsDict
 
 
-def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
+def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 	"""
-		Write the courses and allocations data to the end of the solution's XML file and display it to the console
+		Write the courses and allocations data to an XML file (allocations.xml) in the folder of the solution and display it to the console
 
 		:param allocationsDict: dictionary containing the courses info, num course requests, section limits, and section
 		allocations for this solution
-		:param solutionFilePath: str: the file path of this solution's XML file
+		:param allocationsFilePath: str: the file path to write the allocations data to (path ends with an allocations.xml file)
 		:return: None
 	"""
 
-	solutionXML = minidom.parse(solutionFilePath)  # Using minidom instead of BeautifulSoup as we shall be writing back to this XML file (I prefer to write using minidom instead of BS)
-	sectioningElement = solutionXML.getElementsByTagName("sectioning")[0]  # There is only 1 sectioning element
+	""" 
+		Update: Writing to a separate xml file (allocations.xml) instead of appending to the current solution file.xml file, 
+		as when I append to the current solution file, 2 blank lines get inserted after every (existing) line. 
+		I have attempted to debug this but cannot fix this issue.
+		
+		Code for parsing an existing XML file using minidom has been removed. I was using minidom here to read in the XML file 
+		instead of BeautifulSoup as we shall be writing back to this XML file (I prefer to write using minidom instead of BS).
+		parse() and getElementsByTagName() were used.
+	"""
 
-	allocationsElement = solutionXML.createElement("allocations")
+	allocationsXML = minidom.Document()
+	allocationsElement = allocationsXML.createElement("allocations")
+	allocationsXML.appendChild(allocationsElement)
 
 	print("\tCourses and allocations data:")
 
@@ -221,11 +223,12 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 		numLabs = courseDict["numLabs"]  # an int
 
 		print("\t\tCourse C", course, " [" + courseName + "] -\tCourse requests = ", numCourseRequests, " |\tLabs = ", numLabs, sep="")
-		courseElement = solutionXML.createElement("course")
+		courseElement = allocationsXML.createElement("course")
 		courseElement.setAttribute("course", "C" + course)
 		courseElement.setAttribute("courseName", courseName)
 		courseElement.setAttribute("numCourseRequests", str(numCourseRequests))  # all attribute values of XML files are strings
 		courseElement.setAttribute("numLabs", str(numLabs))  # all attribute values of XML files are strings
+		allocationsElement.appendChild(courseElement)
 
 		labsList = courseDict["labsList"]
 
@@ -237,12 +240,13 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 			labAllocatedPercentage = round(labAllocated / labCapacity * 100, 2)  # round off percentage to 2 decimal places
 
 			print("\t\t\tLab ", labName, " -\tLab Sections = ", numLabSections, " |\tLab Capacity = ", labCapacity, " |\tLab Allocated = ", labAllocated, " |\t % allocated = ", labAllocatedPercentage, sep="")
-			labElement = solutionXML.createElement("lab")
+			labElement = allocationsXML.createElement("lab")
 			labElement.setAttribute("lab", labName)
 			labElement.setAttribute("numLabSections", str(numLabSections))  # all attribute values of XML files are strings
 			labElement.setAttribute("labCapacity", str(labCapacity))  # all attribute values of XML files are strings
 			labElement.setAttribute("labAllocated", str(labAllocated))  # all attribute values of XML files are strings
 			labElement.setAttribute("allocatedPercent", str(labAllocatedPercentage))  # all attribute values of XML files are strings
+			courseElement.appendChild(labElement)
 
 			sectionsDict = labDict["sectionsDict"]
 
@@ -254,29 +258,22 @@ def writeAllocationsData(allocationsDict: dict, solutionFilePath: str):
 				sectionAllocatedPercentage = round(sectionAllocated / sectionCapacity * 100, 2)  # round off percentage to 2 decimal places
 
 				print("\t\t\t\tSection ", sectionName, " -\tSection Capacity = ", sectionCapacity, " |\tSection Allocated = ", sectionAllocated, " |\t % allocated = ", sectionAllocatedPercentage, sep="")
-				sectionElement = solutionXML.createElement("section")
+				sectionElement = allocationsXML.createElement("section")
 				sectionElement.setAttribute("section", sectionName)
 				sectionElement.setAttribute("sectionCapacity", str(sectionCapacity))  # all attribute values of XML files are strings
 				sectionElement.setAttribute("sectionAllocated", str(sectionAllocated))  # all attribute values of XML files are strings
 				sectionElement.setAttribute("allocatedPercent", str(sectionAllocatedPercentage))  # all attribute values of XML files are strings
-
 				labElement.appendChild(sectionElement)
-
-			courseElement.appendChild(labElement)
-
-		allocationsElement.appendChild(courseElement)
-
-	sectioningElement.appendChild(allocationsElement)
+		print()
 
 
-	solutionXML = solutionXML.toprettyxml()  # indent="\t"
+	allocationsXML = allocationsXML.toprettyxml(indent="\t")
 
-	# Write the updated solution XML file
-	with open(solutionFilePath, "w") as updatedXmlFile:
-		updatedXmlFile.write(solutionXML)
-		updatedXmlFile.close()
+	# Write the allocations XML file
+	with open(allocationsFilePath, "w") as allocationsXmlFile:
+		allocationsXmlFile.write(allocationsXML)
 
-	print("\n\nCourses and allocations data have been written to the solution file: '" + solutionFilePath + ".")
+	print("\n\nCourses and allocations data have been written to the solution file: '" + allocationsFilePath + ".")
 
 
 main()
