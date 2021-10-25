@@ -289,6 +289,14 @@ the new course requests are unassigned/unallocated, and the old course requests 
             - However, the same disbalance is still present, and request-priorities.csv still has different priorities 
             for each student's course requests
                 
+        - Created a Python program script (SectionAllocations.py) that processes a solution file to obtain the number of allocations
+        for each of the sections (and related data - num course requests for each course, total num allocated for each lab, and % allocated
+        for each section, and % allocated for the lab in total), displays it to the console and writes it to an XML file (allocations.xml) 
+        and a text file (allocations.txt) in the folder of the solution
+            - I've done this so I can look at how well balanced the sections of each lab are, for the initial solutions, 
+            and which courses have a section allocation disbalance
+
+TODO: write alloctions data to allocations.txt incase user cant open and view xml file                
         
 TODO: remove STAT130 for courses list and see if any perturbations occur. if any perturbations, see if it is with the new last course
 in the courses list
@@ -296,9 +304,6 @@ in the courses list
 
 ANBAN (14/10/21): IF WE CANT GET THE SOLVER TO DO THE MINIMUM CHANGES THEN EXTRACT THE DATA OF THE STUDENTS WHO HAVE CHANGED AND
 SOLVE IT SEPARATELY AND MERGE BACK TOGETHER
-
-
-TODO: get num allocations to each lab section (from student course requests)
 
 TODO: talk about code I changed specifically for the experimentation process
     - also the code in Main.java - to determine which configuration file i should use

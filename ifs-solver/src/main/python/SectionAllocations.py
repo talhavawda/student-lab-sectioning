@@ -184,8 +184,8 @@ def processSolution(inputXmlFilePath: str, solutionFilePath: str):
 
 	print("\tCourses and section allocations data have been obtained.\n")
 
-	for course in allocationsDict.items():
-		print(course)
+	#for course in allocationsDict.items():
+	#	print(course)
 
 	return allocationsDict
 
@@ -208,13 +208,20 @@ def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 		Code for parsing an existing XML file using minidom has been removed. I was using minidom here to read in the XML file 
 		instead of BeautifulSoup as we shall be writing back to this XML file (I prefer to write using minidom instead of BS).
 		parse() and getElementsByTagName() were used.
+		
+		Update 2: Also writing the data to a text file (allocations.txt) in case the user cannot open an XML file
 	"""
+
+	allocationsFilePathTxt = allocationsFilePath.replace(".xml", ".txt")  # file path for text file | replace() returns a copy - original string left unchanged
+	allocationsTxtFile = open(allocationsFilePathTxt, "w")
 
 	allocationsXML = minidom.Document()
 	allocationsElement = allocationsXML.createElement("allocations")
 	allocationsXML.appendChild(allocationsElement)
 
-	print("\tCourses and allocations data:")
+	line = "Courses and allocations data:\n\n"
+	print(line, end="")  # The "\n" for the end is specified in line
+	allocationsTxtFile.write(line)
 
 	for course in allocationsDict:  # traversing a dict using a for loop traverses the keys of the dict | courses are the keys (course IDs) of allocationsDict
 		courseDict = allocationsDict[course]
@@ -222,7 +229,10 @@ def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 		numCourseRequests = courseDict["numCourseRequests"]  # an int
 		numLabs = courseDict["numLabs"]  # an int
 
-		print("\t\tCourse C", course, " [" + courseName + "] -\tCourse requests = ", numCourseRequests, " |\tLabs = ", numLabs, sep="")
+		line = "\tCourse C" + course + " [" + courseName + "] -\tCourse requests = " + str(numCourseRequests) + " |\tLabs = " + str(numLabs) + "\n"
+		print(line, end="")  # The "\n" for the end is specified in line
+		allocationsTxtFile.write(line)
+
 		courseElement = allocationsXML.createElement("course")
 		courseElement.setAttribute("course", "C" + course)
 		courseElement.setAttribute("courseName", courseName)
@@ -239,7 +249,10 @@ def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 			labAllocated = labDict["labAllocated"]  # an int
 			labAllocatedPercentage = round(labAllocated / labCapacity * 100, 2)  # round off percentage to 2 decimal places
 
-			print("\t\t\tLab ", labName, " -\tLab Sections = ", numLabSections, " |\tLab Capacity = ", labCapacity, " |\tLab Allocated = ", labAllocated, " |\t % allocated = ", labAllocatedPercentage, sep="")
+			line = "\t\tLab " + labName + " -\tLab Sections = " + str(numLabSections) + " |\tLab Capacity = " + str(labCapacity) + " |\tLab Allocated = " + str(labAllocated) + " |\t % allocated = " + str(labAllocatedPercentage) + "\n"
+			print(line, end="")  # The "\n" for the end is specified in line
+			allocationsTxtFile.write(line)
+
 			labElement = allocationsXML.createElement("lab")
 			labElement.setAttribute("lab", labName)
 			labElement.setAttribute("numLabSections", str(numLabSections))  # all attribute values of XML files are strings
@@ -257,14 +270,18 @@ def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 				sectionAllocated = sectionDict["sectionAllocated"]  # an int
 				sectionAllocatedPercentage = round(sectionAllocated / sectionCapacity * 100, 2)  # round off percentage to 2 decimal places
 
-				print("\t\t\t\tSection ", sectionName, " -\tSection Capacity = ", sectionCapacity, " |\tSection Allocated = ", sectionAllocated, " |\t % allocated = ", sectionAllocatedPercentage, sep="")
+				line = "\t\t\tSection " + sectionName + " -\tSection Capacity = " + str(sectionCapacity) + " |\tSection Allocated = " + str(sectionAllocated) + " |\t % allocated = " + str(sectionAllocatedPercentage) + "\n"
+				print(line, end="")  # The "\n" for the end is specified in line
+				allocationsTxtFile.write(line)
 				sectionElement = allocationsXML.createElement("section")
 				sectionElement.setAttribute("section", sectionName)
 				sectionElement.setAttribute("sectionCapacity", str(sectionCapacity))  # all attribute values of XML files are strings
 				sectionElement.setAttribute("sectionAllocated", str(sectionAllocated))  # all attribute values of XML files are strings
 				sectionElement.setAttribute("allocatedPercent", str(sectionAllocatedPercentage))  # all attribute values of XML files are strings
 				labElement.appendChild(sectionElement)
+
 		print()
+		allocationsTxtFile.write("\n")
 
 
 	allocationsXML = allocationsXML.toprettyxml(indent="\t")
@@ -273,8 +290,12 @@ def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 	with open(allocationsFilePath, "w") as allocationsXmlFile:
 		allocationsXmlFile.write(allocationsXML)
 
-	print("\n\nCourses and allocations data have been written to the solution file: '" + allocationsFilePath + ".")
+	# Close the file object that writes to the allocations txt file
+	allocationsTxtFile.close()
 
+	print("\n\nCourses and allocations data have been written to the allocations file in the solutions folder:")
+	print("\t'" + allocationsFilePath + "'")
+	print("\t'" + allocationsFilePathTxt + "'")
 
 main()
 
