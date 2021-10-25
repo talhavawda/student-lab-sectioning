@@ -501,7 +501,7 @@ then made. New students are added at the end of the file.
         for STAT130 course requests
         
         
-#### Trying out a new initial solution
+##### Trying out a new initial solution
 - Trying out a new initial solution since the previous one (211011_011710) results in perturbations for the STAT130 course even
 though there are no student modifications involving STAT130 (in Scenario 3)
 
@@ -522,7 +522,7 @@ though there are no student modifications involving STAT130 (in Scenario 3)
                     - **It seems that all the updated solutions (resolving on updated input) are trying to fix this section 
                     allocation disbalance for STAT130.** 
                     
-#### Trying out another (third) new initial solution
+##### Trying out another (third) new initial solution
 - In the SolverConfiguration.cfg file (for the initial solution, although this Weights applies to the config file for the updated solution), 
 the StudentWeights.Class is set to PriorityStudentWeights. I want to get an initial solution with EqualStudentWeights to see if 
 this fixes the section allocation disbalance of STAT130

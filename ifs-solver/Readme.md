@@ -296,7 +296,7 @@ the new course requests are unassigned/unallocated, and the old course requests 
             - I've done this so I can look at how well balanced the sections of each lab are, for the initial solutions, 
             and which courses have a section allocation disbalance
 
-TODO: write alloctions data to allocations.txt incase user cant open and view xml file                
+        
         
 TODO: remove STAT130 for courses list and see if any perturbations occur. if any perturbations, see if it is with the new last course
 in the courses list
