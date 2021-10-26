@@ -305,5 +305,8 @@ def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 	print("\t'" + allocationsFilePath + "'")
 	print("\t'" + allocationsFilePathTxt + "'")
 
+# END main()
+
+
 main()
 

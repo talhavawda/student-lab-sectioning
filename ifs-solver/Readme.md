@@ -310,9 +310,21 @@ the new course requests are unassigned/unallocated, and the old course requests 
             - Ran the solver and obtained an initial and updated solution (used Scenario 1 for student modifications)
                 - There are NO perturbations (NO section allocation changes to existing course requests)
 
+12. Since we're getting some perturbations that shouldn't occur (due to possible section allocation disbalances) - although 
+it's occurring only for STAT130 in the 2020-Sem1-CAES-Wvl-no-conflicts problem instance, for other problem instances it could 
+occur for any other course, and more than one course, and a much larger number of perturbances - we are going to solve the new course 
+requests separately and merge that (updated) solution with the current solution.  
+Creating a Python program script (SeparateModifiedInputProcessing.py) to process a modified/updated Students.xlsx input file, 
+the initial(current) solution file (solution.xml), along with the input data XML file that was used to obtain it, and to produce 
+an input data XML file containing the new course requests and course data with modified capacities, and the initial(current) solution file 
+with the old course requests removed. 
+
+TODO: Creating a Python script to process the initial/current solution file and the solution for the new course requests and merge them 
+together, resulting in an updated solution
 
 
-12. Processing additional datasets
+
+13. Processing additional datasets
     - 3 datasets for CAES 2021 Sem 2 (Wvl, Howard, PMB)
         - The original Students Excel files are named "CAES Tutorial Groups 2021_2 <CAMPUS> - 2021-08-20"
         - No courses data has been provided so I have to get my own (can't reuse from 2020-Sem1-CAES-Wvl as that was for Semester 1)
@@ -326,6 +338,16 @@ the new course requests are unassigned/unallocated, and the old course requests 
         - Obtained the course offering details (of their lab sessions) of the CAES courses using the timetable link
         - Some courses had multiple labs (both practicals and tutorials)
         - Cannot specify exact capacities as they are not specified in the timetables on the timetable site
+
+
+Order of run:
+    1. InputProcessing.py (input data XML file)
+    2. Main.java (initial solution)
+    3. ModifiedInputProcessing.py (updated input data XML file)
+    4. Main.java (updated solution)
+    5. SectionAllocations.py (allocations data for both initial and updated solution)
+    
+
 
 
 TODO: courses data for 2021-Sem2-CAES-Wvl. Stopped at BIOL234
