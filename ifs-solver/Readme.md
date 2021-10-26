@@ -216,7 +216,7 @@ the new course requests are unassigned/unallocated, and the old course requests 
             
     - Using the 2020-Sem1-CAES-Wvl-no-conflicts problem instance for this Minimal Perturbation Experimentation process
     
-    - Creating multiple parallel (first) modified/updated Students.xlsx input files (i.e. Students-1.xlsx) representing different 
+    - Creating multiple parallel (first) modified/updated Students excel input files (i.e. Students-1.xlsx) representing different 
     scenarios (% of additions and modifications, % of individual capacities filled etc.) for this problem instance.
         - The modified Students.xlsx files are the entire Students' input data for the problem instance, not just containing
         the course requests that need to be added/removed. 
@@ -303,11 +303,15 @@ the new course requests are unassigned/unallocated, and the old course requests 
                 - STAT130
                     - S42 allocated to 267-270 students; capacity = 491; % allocated = 54%-55%
                     - S43 allocated to 253-250 students; capacity = 544; % allocated = 47%-46%
+                    
+        - Created a sub-instance (2020-Sem1-CAES-Wvl-no-conflicts-no-STAT130 problem instance) of this problem instance that 
+        removes STAT130 from the courses input file (so that course requests for it don't get processed), to see if any perturbations
+        still occur after simulating students making changes
+            - Ran the solver and obtained an initial and updated solution (used Scenario 1 for student modifications)
+                - There are NO perturbations (NO section allocation changes to existing course requests)
 
         
-        
-TODO: remove STAT130 for courses list and see if any perturbations occur. if any perturbations, see if it is with the new last course
-in the courses list
+
 
 
 ANBAN (14/10/21): IF WE CANT GET THE SOLVER TO DO THE MINIMUM CHANGES THEN EXTRACT THE DATA OF THE STUDENTS WHO HAVE CHANGED AND

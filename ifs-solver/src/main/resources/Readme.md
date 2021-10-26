@@ -298,6 +298,14 @@ sections changed is minimised.
     - 211011_011710
         - Initial complete solution that I shall be working with for the Minimal Perturbation Experimentation process
         
+    - 2020-Sem1-CAES-Wvl-no-conflicts-no-STAT130
+        - This modified problem instance removes the course STAT130 from the courses input file so that (course requests for) 
+        it is not processed
+            - This is being done for the Minimal Perturbation Experimentation process to see if there are no perturbations
+            if STAT130 is removed, as STAT130 results in (most/all depending on modification Scenario) perturbations, even 
+            if none of the student modifications involve STAT130
+        
+        
         
  
 ### Modified Students input files
@@ -535,3 +543,30 @@ this fixes the section allocation disbalance of STAT130
     - still having the STAT130 section allocation disbalance
     
 - Updated solution (See Exp-S3-NIS2 folder) still has the STAT130 perturbations
+
+
+#### 2020-Sem1-CAES-Wvl-no-conflicts-no-STAT130
+ - Initial (complete) solution: 211026_023305
+    - 5646/5646 [100%] course requests assigned
+    - Solver took 0.09m (5.70s)
+    - Complete solution found
+      
+ - Initial num students: 2547
+ - Initial num course requests: 5646
+
+##### Scenario 1
+- Student modifications:
+        - same as Scenario 3 of 2020-Sem1-CAES-Wvl-no-conflicts
+    - Removed student: 220111511. (Had 1 processed course request for MATH134)
+    - Modified student: 220112040. Removed course request for MATH134. Added course request for COMP100.
+    - Added student: 220120001 with 2 processed course requests (COMP100, MATH130).
+
+- Num assigned course requests (pre-resolving): 5644 (99.95%)
+- Num students with complete schedule: 2387 (93.72%)
+
+- Updated solution: 211026_144654
+    - 5647/5647 [100%] course requests assigned
+    - Solver took 0.05m (2.82s)
+    - Complete solution found
+    - There are NO section allocation changes to existing course requests (i.e. no perturbations)
+        - Compared the initial solution.xml file to this updated solution.xml file in IntelliJ and looking at the differences
