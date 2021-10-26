@@ -134,6 +134,11 @@ def processSolution(inputXmlFilePath: str, solutionFilePath: str):
 				sectionDict["sectionCapacity"] = sectionCapacity
 				sectionDict["sectionAllocated"] = 0
 				labCapacity += sectionCapacity
+
+				solutionTimeTag = section.find("time")
+				sectionTimeslot = solutionTimeTag.text
+				sectionDict["sectionTimeslot"] = sectionTimeslot
+
 				sectionsDict[sectionID] = sectionDict
 
 
@@ -192,7 +197,8 @@ def processSolution(inputXmlFilePath: str, solutionFilePath: str):
 
 def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 	"""
-		Write the courses and allocations data to an XML file (allocations.xml) in the folder of the solution and display it to the console
+		Write the courses and allocations data to an XML file (allocations.xml) in the folder of the solution and display
+		it to the console
 
 		:param allocationsDict: dictionary containing the courses info, num course requests, section limits, and section
 		allocations for this solution
@@ -266,15 +272,17 @@ def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 			for section in sectionsDict:  # traversing a dict using a for loop traverses the keys of the dict | sections are the keys (section IDs) of sectionsDict
 				sectionDict = sectionsDict[section]
 				sectionName = sectionDict["sectionName"]
+				sectionTimeslot = sectionDict["sectionTimeslot"]
 				sectionCapacity = sectionDict["sectionCapacity"]  # an int
 				sectionAllocated = sectionDict["sectionAllocated"]  # an int
 				sectionAllocatedPercentage = round(sectionAllocated / sectionCapacity * 100, 2)  # round off percentage to 2 decimal places
 
-				line = "\t\t\tSection " + sectionName + " -\tSection Capacity = " + str(sectionCapacity) + " |\tSection Allocated = " + str(sectionAllocated) + " |\t % allocated = " + str(sectionAllocatedPercentage) + "\n"
+				line = "\t\t\tSection " + sectionName + " -\tSection Timeslot = " + sectionTimeslot + " |\tSection Capacity = " + str(sectionCapacity) + " |\tSection Allocated = " + str(sectionAllocated) + " |\t % allocated = " + str(sectionAllocatedPercentage) + "\n"
 				print(line, end="")  # The "\n" for the end is specified in line
 				allocationsTxtFile.write(line)
 				sectionElement = allocationsXML.createElement("section")
 				sectionElement.setAttribute("section", sectionName)
+				sectionElement.setAttribute("sectionTimeslot", sectionTimeslot)
 				sectionElement.setAttribute("sectionCapacity", str(sectionCapacity))  # all attribute values of XML files are strings
 				sectionElement.setAttribute("sectionAllocated", str(sectionAllocated))  # all attribute values of XML files are strings
 				sectionElement.setAttribute("allocatedPercent", str(sectionAllocatedPercentage))  # all attribute values of XML files are strings

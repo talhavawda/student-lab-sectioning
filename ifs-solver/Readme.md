@@ -290,11 +290,19 @@ the new course requests are unassigned/unallocated, and the old course requests 
             for each student's course requests
                 
         - Created a Python program script (SectionAllocations.py) that processes a solution file to obtain the number of allocations
-        for each of the sections (and related data - num course requests for each course, total num allocated for each lab, and % allocated
-        for each section, and % allocated for the lab in total), displays it to the console and writes it to an XML file (allocations.xml) 
+        for each of the sections (and related data - num course requests for each course, total num allocated for each lab, section's timeslot, 
+        % allocated for each section, and % allocated for the lab in total), displays it to the console and writes it to an XML file (allocations.xml) 
         and a text file (allocations.txt) in the folder of the solution
             - I've done this so I can look at how well balanced the sections of each lab are, for the initial solutions, 
             and which courses have a section allocation disbalance
+            - I'm defining a section allocation disbalance to be when a lab's allocation %'s for its sections differ by 5% or more.
+            - Courses that have a section allocation disbalance (occurs on all 3 initial solutions I've got for 2020-Sem1-CAES-Wvl-no-conflicts)
+                - CHEM196
+                    - all 4 sections' capacities are 48
+                    - S17 allocated 46-48 students whilst S16, S18, S19 allocated 33-37, 33-37, 30-33 students respectively
+                - STAT130
+                    - S42 allocated to 267-270 students; capacity = 491; % allocated = 54%-55%
+                    - S43 allocated to 253-250 students; capacity = 544; % allocated = 47%-46%
 
         
         
@@ -367,6 +375,9 @@ https://stackoverflow.com/questions/1679384/converting-dictionary-to-list
 https://realpython.com/iterate-through-dictionary-python/
 
 https://realpython.com/python-time-module/#python-time-in-seconds-as-a-string-representing-local-time
+
+https://www.geeksforgeeks.org/reading-writing-text-files-python/
+https://realpython.com/beautiful-soup-web-scraper-python/#find-elements-by-class-name-and-text-content
 
 ### CPSolver / UniTime links
 
