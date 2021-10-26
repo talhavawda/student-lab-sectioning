@@ -310,9 +310,25 @@ the new course requests are unassigned/unallocated, and the old course requests 
             - Ran the solver and obtained an initial and updated solution (used Scenario 1 for student modifications)
                 - There are NO perturbations (NO section allocation changes to existing course requests)
 
+
+
+12. Processing additional datasets
+    - 3 datasets for CAES 2021 Sem 2 (Wvl, Howard, PMB)
+        - The original Students Excel files are named "CAES Tutorial Groups 2021_2 <CAMPUS> - 2021-08-20"
+        - No courses data has been provided so I have to get my own (can't reuse from 2020-Sem1-CAES-Wvl as that was for Semester 1)
+            - UKZN's timetable.ukzn.ac.za site is down
+            - Sir provided the following direct link to access the timetables for the courses on the Westville (Wvl) campus for Semester 2: 
+            https://celcatwp.ukzn.ac.za/2021/WESTVILLE/SCIENCEAGRICSEM2/finder.html
+                - If I change 2 to 1 then I can access the timetables for CAES WVL Semester 1. But I can't find the right URL 
+                change to access the timetables for Howard College and PMB campuses
         
+    - 2021-Sem2-CAES-Wvl
+        - Obtained the course offering details (of their lab sessions) of the CAES courses using the timetable link
+        - Some courses had multiple labs (both practicals and tutorials)
+        - Cannot specify exact capacities as they are not specified in the timetables on the timetable site
 
 
+TODO: courses data for 2021-Sem2-CAES-Wvl. Stopped at BIOL234
 
 ANBAN (14/10/21): IF WE CANT GET THE SOLVER TO DO THE MINIMUM CHANGES THEN EXTRACT THE DATA OF THE STUDENTS WHO HAVE CHANGED AND
 SOLVE IT SEPARATELY AND MERGE BACK TOGETHER
