@@ -76,7 +76,7 @@ def main():
 		else:
 			currentSolution = problemInstanceSolutions[currentSolutionIndex]
 
-	except TypeError:
+	except ValueError:
 		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
 
 	currentSolutionFilePath = getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)

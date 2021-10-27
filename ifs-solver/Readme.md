@@ -348,7 +348,7 @@ Order of run:
     5. SectionAllocations.py (allocations data for both initial and updated solution)
     
 
-
+TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
 
 TODO: courses data for 2021-Sem2-CAES-Wvl. Up to BIOL234 done, and all first year courses done
 
