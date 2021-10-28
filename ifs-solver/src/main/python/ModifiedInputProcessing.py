@@ -82,8 +82,8 @@ def main():
 	currentSolutionFilePath = getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)
 
 
-	# Get the modified Students input file
-	modifiedStudentsFilePath = getModifiedStudentsFilePath(problemInstanceDirectoryPath)
+	# Get the modified Students input file, and its modification version number
+	modifiedStudentsFilePath, modVerNum = getModifiedStudentsFilePath(problemInstanceDirectoryPath)
 
 
 	""" Process the current input data and solution XML files and store them in a dictionary """
@@ -245,17 +245,19 @@ def getModifiedStudentsFilePath(problemInstanceDirectoryPath: str):
 	"""
 	while True:
 		try:
-			modVerNum = input("Enter the modification version number of the modified Students input file that you want to process: ")
-			modifiedStudentsFilePath = problemInstanceDirectoryPath + "/Students-" + modVerNum + ".xlsx"
+			modVerNum = int(input("Enter the modification version number of the modified Students input file that you want to process: "))
+			modifiedStudentsFilePath = problemInstanceDirectoryPath + "/Students-" + str(modVerNum) + ".xlsx"
 			modifiedStudentsFile = open(modifiedStudentsFilePath, "r")
 			modifiedStudentsFile.close()
 			break  # If the file was opened successfully
 		except FileNotFoundError:
-			print("Invalid modification version number entered. You will be prompted to re-enter\n")
+			print("Modified Students input file with that modification version number does not exist. You will be prompted to re-enter\n")
+		except ValueError:
+			print("Invalid number value entered. You will be prompted to re-enter.")
 
 
 	print("Modified Students file:\t", "Students-" + modVerNum + ".xlsx", end="\n\n")
-	return modifiedStudentsFilePath
+	return modifiedStudentsFilePath, modVerNum
 
 
 def processCurrentSolution(inputXmlFilePath: str, currentSolutionFilePath: str):
@@ -480,7 +482,7 @@ def getStudentProcessedCourses(row, studentNumCourses: int, courseIdDict: dict):
 	return studentProcessedCourses
 
 
-def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDict: dict):
+def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDict: dict, caller: str = None):
 	"""
 		Read in the modified Students input Excel file, the dictionary containing the current solution (that stores all
 		the student details, their course requests and allocated/assigned sections for each of their requests),
@@ -489,10 +491,18 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 		This updated dictionary (updatedInputDict) represents a partial solution containing the allocations of the
 		unchanged course requests from the current solution.
 
+		The above is the default functionality. If caller = "SMIP" (for SeparateModifiedInputProcessing.py) then we also
+		create an updated input data XML file that represents only the new course requests (and the updated capacities
+		of the lab sections), and will be named the current input data XML file name with "-newrequests-<modVerNum>"
+		being appended.
+
+
 		:param modifiedStudentsFilePath: the file path of the modified Students input Excel file, obtained and validated
 		using getModifiedStudentsFilePath()
 		:param currentSolutionDict: dict: a dictionary representing the current solution. See processCurrentSolution() for
 		its' structure
+		:param caller: str: the class calling this function. Default is None. "SMIP" for SeparateModifiedInputProcessing.py.
+		If value is "SMIP" then the functionality of this function changes from the default specified above.
 		:return: updatedInputDict, containing the updated input data for this problem instance
 	"""
 	updatedInputDict = currentSolutionDict
@@ -684,12 +694,12 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				print("student has been added")
 
 				studentDict = dict() # The dictionary for this student. The values element in studentsDict to the studentNumber key
-				
+
 				surname = row["surname"]
 				studentDict["surname"] = surname
 				firstnames = row["firstnames"]
 				studentDict["firstnames"] = firstnames
-				
+
 				studentNumCourses = row["numCourses"]  # The number of courses that this student is registered for | I set the data type to 'int' when I read in the Excel file into the DataFrame
 				studentDict["numCourses"] = str(studentNumCourses)  # All 'primitive' values in the dict are strings
 

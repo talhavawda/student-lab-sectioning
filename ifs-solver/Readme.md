@@ -317,7 +317,14 @@ requests separately and merge that (updated) solution with the current solution.
 Creating a Python program script (SeparateModifiedInputProcessing.py) to process a modified/updated Students.xlsx input file, 
 the initial(current) solution file (solution.xml), along with the input data XML file that was used to obtain it, and to produce 
 an input data XML file containing the new course requests and course data with modified capacities, and the initial(current) solution file 
-with the old course requests removed. 
+with the old course requests removed.
+    - In SeparateModifiedInputProcessing.py, instead of doing the entire script from scratch, I decided to call some of the 
+    functions from ModifiedInputProcessing.py as some of the initial program functionality is the same. I then thought that maybe 
+    I can model this separate redoing part along the lines of ModifiedInputProcessing.py by following the approach I did there and 
+    adding some code to its functions, so that I do not have to write a lot of new code, which is what would've happened if I followed 
+    my initial idea (my initial idea did not involve getting the entire solution dict as I did in MIP, as getting the dict takes a lot 
+    of time, so  I was thinking of working on the solution file directly). ... Played around with different ideas on how to use
+    MIP.py best
 
 TODO: Creating a Python script to process the initial/current solution file and the solution for the new course requests and merge them 
 together, resulting in an updated solution
@@ -360,7 +367,7 @@ TODO: talk about code I changed specifically for the experimentation process
 
 TODO: have a text file in the instance folder with the current solution round num - initialise to 0 for initial solution.
     this helps ModifiedIP  to decide which input data Xml file to select, and Main.java to decide which input data xml file to select (if 
-    we not overwriting the initial file)
+    we not overwriting the initial file). Alternative use modVerNum from getModifiedStudentsFilePath() and subtract 1 to get solNum
     
 TODO: look at variables in the Solver config files
 TODO: WHAT IS AVERAGE DISBALANCE IN THE SOLUTION INFO FILE???
