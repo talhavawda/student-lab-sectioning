@@ -7,27 +7,34 @@ from os import path  # For checking if file exists
 """
 # current Assumption - each course only has 1 lab, with possibly many sections
 
-def main():
+def main(solutionFilePath: str = None, solutionName: str = None):
+	"""
+		Either both parameters are both None or both specified
+		:param solutionFilePath:
+		:param solutionName:
+		:return:
+	"""
 
 	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts-no-STAT130"
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # initial input data XML file for the problem instance
 
+	if solutionFilePath is None and solutionName is None:
+		""" Get the name of the solution we want to work with """
 
-	""" Get the name of the solution we want to work with """
+		while True:
+			try:
+				solutionName = input("Enter the name of the solution (format: yymmdd_hhmmss) that you want to use process to obtain the Section Allocations data: ")
+				solutionFilePath = problemInstanceDirectoryPath + "/" + solutionName + "/solution.xml"  # the file path of the solution.xml file of this solution
+				print(solutionName)
+				open(solutionFilePath, "r")
+				break  # solutionFilePath is valid
 
-	while True:
-		try:
-			solutionName = input("Enter the name of the solution (format: yymmdd_hhmmss) that you want to use process to obtain the Section Allocations data: ")
-			solutionFilePath = problemInstanceDirectoryPath + "/" + solutionName + "/solution.xml"  # the file path of the solution.xml file of this solution
-			open(solutionFilePath, "r")
-			break  # solutionFilePath is valid
-
-		except FileNotFoundError:
-			print("Solution folder not found in the problem instance's directory. You will be prompted to re-enter the name of the solution.")
-			print("Please ensure that the solution's folder is located in this problem instance's directory.\n")
+			except FileNotFoundError:
+				print("Solution folder not found in the problem instance's directory. You will be prompted to re-enter the name of the solution.")
+				print("Please ensure that the solution's folder is located in this problem instance's directory.\n")
 
 
 	""" Do processing only if section allocations for this solution XML file has not already been processed """
@@ -43,6 +50,7 @@ def main():
 		writeAllocationsData(allocationsDict, allocationsFilePath)
 	else:
 		print("This solution file has already been processed by this script, and the section allocation data has already been written to the allocations.xml file")
+		print("\nSection Allocations file:", allocationsFilePath)
 
 # End main
 
@@ -308,5 +316,7 @@ def writeAllocationsData(allocationsDict: dict, allocationsFilePath: str):
 # END main()
 
 
-main()
-
+# Run the main method if this python file is being executed/run directly (either from IDE or Command Line)
+if __name__ == '__main__':
+	main()
+	print("SectionAllocations.py has been executed")
