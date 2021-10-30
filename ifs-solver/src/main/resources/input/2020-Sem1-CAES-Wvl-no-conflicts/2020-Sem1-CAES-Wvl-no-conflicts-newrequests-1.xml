@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Sat Oct 30 23:54:43 2021" nrDays="5" slotsPerDay="2">
+<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Sun Oct 31 00:14:10 2021" nrDays="5" slotsPerDay="2">
 	<offerings>
 		<offering id="1">
 			<course id="1" name="BIOL101" numLabs="1"/>
@@ -264,5 +264,23 @@
 			</config>
 		</offering>
 	</offerings>
-	<students/>
+	<students>
+		<student id="220112040" surname="Kuzwayo" firstnames="Mthokozisi Goodboy" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="6167" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220112256" surname="Khan" firstnames="Barira Mohammed" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-PHAM"/>
+			<course id="6168" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220120001" surname="Student" firstnames="New" numCourses="3" numProcessedCourses="3">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6169" priority="0" course="8" courseName="COMP100"/>
+			<course id="6170" priority="0" course="11" courseName="MATH130"/>
+			<course id="6171" priority="0" course="19" courseName="STAT130"/>
+		</student>
+	</students>
 </sectioning>
