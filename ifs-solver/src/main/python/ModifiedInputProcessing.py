@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup  # For reading from XML files (bs4 needs to be ins
 from xml.dom import minidom  # For creating and writing to XML files
 # from time import time, ctime, localtime
 import time
+import copy
 
 #Installed the openpyxl, beautifulsoup4 and lxml packages (lxml is a parser)
 
@@ -44,7 +45,7 @@ def main():
 	"""
 
 	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts-no-STAT130"
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file
@@ -256,7 +257,7 @@ def getModifiedStudentsFilePath(problemInstanceDirectoryPath: str):
 			print("Invalid number value entered. You will be prompted to re-enter.")
 
 
-	print("Modified Students file:\t", "Students-" + modVerNum + ".xlsx", end="\n\n")
+	print("Modified Students file:\t", "Students-" + str(modVerNum) + ".xlsx", end="\n\n")
 	return modifiedStudentsFilePath, modVerNum
 
 
@@ -482,7 +483,7 @@ def getStudentProcessedCourses(row, studentNumCourses: int, courseIdDict: dict):
 	return studentProcessedCourses
 
 
-def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDict: dict, caller: str = None):
+def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDict: dict):
 	"""
 		Read in the modified Students input Excel file, the dictionary containing the current solution (that stores all
 		the student details, their course requests and allocated/assigned sections for each of their requests),
@@ -491,18 +492,14 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 		This updated dictionary (updatedInputDict) represents a partial solution containing the allocations of the
 		unchanged course requests from the current solution.
 
-		The above is the default functionality. If caller = "SMIP" (for SeparateModifiedInputProcessing.py) then we also
-		create an updated input data XML file that represents only the new course requests (and the updated capacities
-		of the lab sections), and will be named the current input data XML file name with "-newrequests-<modVerNum>"
-		being appended.
-
+		Since for SeparateModifiedInputProcessing.py we want the new course requests separately, we have created an
+		additional dictionary, studentsNewRequestsDict, that represents the students who have new course requests, and
+		their new course requests, which will be added as a sub-dictionary of updatedInputDict (key="studentsNewRequestsDictionary")
 
 		:param modifiedStudentsFilePath: the file path of the modified Students input Excel file, obtained and validated
 		using getModifiedStudentsFilePath()
 		:param currentSolutionDict: dict: a dictionary representing the current solution. See processCurrentSolution() for
 		its' structure
-		:param caller: str: the class calling this function. Default is None. "SMIP" for SeparateModifiedInputProcessing.py.
-		If value is "SMIP" then the functionality of this function changes from the default specified above.
 		:return: updatedInputDict, containing the updated input data for this problem instance
 	"""
 	updatedInputDict = currentSolutionDict
@@ -514,6 +511,8 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	studentsDict = updatedInputDict["studentsDictionary"]
 	courseIdDict = updatedInputDict["courseIDDict"]
 	courseNameDict = updatedInputDict["courseNameDict"]
+
+	studentsNewRequestsDict = dict()  # A dictionary of student's who have new course requests, and containing only their new requests | To be used by SeparateModifiedInputProcessing.py
 
 	print("\nProcessing the modified Students input Excel file...")
 
@@ -627,6 +626,10 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				studentNewNumCourses = row["numCourses"]  # I set the data type of numCourses to 'int' when I read in the Excel file into the DataFrame
 				studentNewNumProcessedCourses = 0
 
+				studentNewRequestsDict = copy.deepcopy(studentDict)  # For studentsNewRequestsDict, which is for SeparateModifiedInputProcessing.py
+				studentNewRequestsCourseRequestsDict = dict()
+				studentNewRequestsNumProcessedCourses = 0
+
 				# Get current course requests
 				studentCourseRequestsDict = studentDict["courseRequests"]
 				studentCourseRequestsIdsList = list(studentCourseRequestsDict.keys())
@@ -667,6 +670,8 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 
 						currentCourseRequestID += 1
 						studentCourseRequestsDict[str(currentCourseRequestID)] = courseRequestDict
+						studentNewRequestsCourseRequestsDict[str(currentCourseRequestID)] = courseRequestDict
+						studentNewRequestsNumProcessedCourses += 1
 
 						print("\t\t\t\t", courseName, " has been added", sep="")
 
@@ -679,6 +684,11 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 
 				studentDict["courseRequests"] = studentCourseRequestsDict
 				studentsDict[str(studentNumber)] = studentDict
+
+				studentNewRequestsDict["numCourses"] = str(studentNewRequestsNumProcessedCourses)  # we can't actually get the number of new courses the student is enrolled for as the code above traverses through the processed courses from the modified Students input file
+				studentNewRequestsDict["numProcessedCourses"] = str(studentNewRequestsNumProcessedCourses)
+				studentNewRequestsDict["courseRequests"] = studentNewRequestsCourseRequestsDict
+				studentsNewRequestsDict[str(studentNumber)] = studentNewRequestsDict
 
 		else:  # if this student only appears once in modificationsDF
 			print("\t\t\t", studentNumber, sep="", end=" - ")
@@ -735,6 +745,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 				studentDict["courseRequests"] = studentCourseRequestsDict
 
 				studentsDict[str(studentNumber)] = studentDict
+				studentsNewRequestsDict[str(studentNumber)] = studentDict  # Since this is a completely new student (all course requests are new) , we can assign studentDict directly
 				numStudents += 1
 
 	print("\tStudent modifications have been processed.")
@@ -745,6 +756,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	updatedInputDict["numCourseRequests"] = numCourseRequests
 	updatedInputDict["lastCourseRequestID"] = currentCourseRequestID
 	updatedInputDict["studentsDictionary"] = studentsDict
+	updatedInputDict["studentsNewRequestsDictionary"] = studentsNewRequestsDict  # For SeparateModifiedInputProcessing.py
 
 	# for student in studentsDict.items():
 	# 	print(student)
@@ -1004,5 +1016,7 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 
 
 
-main()
-
+# Run the main method if this python file is being executed/run directly (either from IDE or Command Line)
+if __name__ == '__main__':
+	main()
+	print("ModifiedInputProcessing.py has been executed")

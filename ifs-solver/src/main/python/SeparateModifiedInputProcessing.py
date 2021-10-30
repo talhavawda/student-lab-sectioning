@@ -33,7 +33,7 @@ def main():
 			                   "0: Process a modified Students file to produce an input data XML file for new course requests\n\t"
 			                   "1: Process current and new solution files to merge them together\n"))
 			if option == 0:
-				generateInputXmlFile()
+				generateNewRequestsInputXmlFile()
 				break
 			elif option == 1:
 				generateUpdatedSolutionFile()
@@ -46,9 +46,9 @@ def main():
 # END main()
 
 
-def generateInputXmlFile():
+def generateNewRequestsInputXmlFile():
 	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts-no-STAT130"
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file
@@ -84,7 +84,6 @@ def generateInputXmlFile():
 		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
 
 
-	# We can use getCurrentSolutionFilePath(), getModifiedStudentsFilePath(), and processCurrentSolution() from ModifiedInputProcessing.py
 
 	currentSolutionFilePath = ModifiedInputProcessing.getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)
 
@@ -95,6 +94,18 @@ def generateInputXmlFile():
 	""" Process the current input data and solution XML files and store them in a dictionary """
 	currentSolutionDict = ModifiedInputProcessing.processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
 
+	""" Process the modified Students input Excel file to obtain a dictionary containing the updated input data"""
+	updatedInputDict = ModifiedInputProcessing.processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict)
+
+	""" Generate/Produce the updated input data XML file, which we shall use to represent the current solution """
+	generateUpdatedInputXmlFile(updatedInputDict, inputXmlFilePath)
+
+	studentsNewRequestsDict = updatedInputDict["studentsNewRequestsDictionary"]
+
+
+	""" Create an updated input data XML file with only the new course requests"""
+	# Create XML document with XML Prolog
+	newRequestsInputFileXML = minidom.Document()
 
 	#TODO modify processModifiedStudentsData() to include a "caller" parameter, and if it is "SMIP",
 	# then include code to also generate an xml file for the new course requests, which will be passed to the solver instead of
@@ -104,7 +115,12 @@ def generateInputXmlFile():
 
 
 
+
 def generateUpdatedSolutionFile():
 	print()
 
-main()
+
+# Run the main method if this python file is being executed/run directly (either from IDE or Command Line)
+if __name__ == '__main__':
+	main()
+	print("SeparateModifiedInputProcessing.py has been executed")
