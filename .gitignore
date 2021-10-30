@@ -3,3 +3,4 @@ ifs-solver/src/main/resources/input/2020-Sem1-CAES-Wvl/~$Students.xlsx
 ifs-solver/src/main/resources/~$CoursesInputTemplate.xlsx
 ifs-solver/src/main/resources/~$StudentsInputTemplate.xlsx
 ifs-solver/src/main/resources/input/2020-Sem1-CAES-Wvl/210828_003504/debug.log
+*.pyc

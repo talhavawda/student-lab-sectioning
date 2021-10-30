@@ -80,7 +80,7 @@ def main():
 	except ValueError:
 		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
 
-	currentSolutionFilePath = getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)
+	currentSolution, currentSolutionFilePath = getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)
 
 
 	# Get the modified Students input file, and its modification version number
@@ -147,7 +147,7 @@ def getCurrentSolutionFilePath(currentSolution: str, problemInstanceDirectoryPat
 
 		:param currentSolution: str: the current solution name obtained from the CurrentSolutions.txt file
 		:param problemInstanceDirectoryPath: str:
-		:return: currentSolutionFilePath: str:
+		:return: currentSolution:str: actual name of the current solution, currentSolutionFilePath: str: path of the current solution's solution.xml file
 	"""
 	problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
 	currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
@@ -234,7 +234,7 @@ def getCurrentSolutionFilePath(currentSolution: str, problemInstanceDirectoryPat
 
 	print("Current solution:\t", currentSolution, end="\n\n")
 
-	return currentSolutionFilePath
+	return currentSolution, currentSolutionFilePath
 
 
 def getModifiedStudentsFilePath(problemInstanceDirectoryPath: str):

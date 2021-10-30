@@ -351,10 +351,16 @@ requests separately and merge the obtained solution with the current solution to
         - The original Students Excel files are named "CAES Tutorial Groups 2021_2 <CAMPUS> - 2021-08-20"
         - No courses data has been provided so I have to get my own (can't reuse from 2020-Sem1-CAES-Wvl as that was for Semester 1)
             - UKZN's timetable.ukzn.ac.za site is down
+                - UPDATE: use http://timetable.ukzn.ac.za/Homepage.aspx (**TODO**)
             - Sir provided the following direct link to access the timetables for the courses on the Westville (Wvl) campus for Semester 2: 
             https://celcatwp.ukzn.ac.za/2021/WESTVILLE/SCIENCEAGRICSEM2/finder.html
                 - If I change 2 to 1 then I can access the timetables for CAES WVL Semester 1. But I can't find the right URL 
                 change to access the timetables for Howard College and PMB campuses
+            - Since I've got the timetables for each CAES course (and not only for the first year courses) we won't have any CAES
+            courses not being processed, only non-CAES courses will not be processed (i.e. Issue #1 will only affect non-CAES courses, 
+            as they wouldn't have been specified in the Courses.xlsx input file) - although I can go and find out which non-CAES courses
+            the students in the Students.xlsx input file are doing, and get their timetables and add their course offerings to the 
+            Courses.xlsx input file
         
     - 2021-Sem2-CAES-Wvl
         - Obtained the course offering details (of their lab sessions) of the CAES courses using the timetable link
@@ -372,7 +378,7 @@ Order of run:
 
 TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
 
-TODO: courses data for 2021-Sem2-CAES-Wvl. Up to BIOL234 done, and all first year courses done
+TODO: courses data for 2021-Sem2-CAES-Wvl. Up to BIOL234 done, and all first year and second year courses done
 
 TODO: Create a Main.py script where we can set the name of the problem instance in one place, and which lets us choose which of 
 the other script's we'd like to run, and can pass in the name of the problem instance to their main methods
