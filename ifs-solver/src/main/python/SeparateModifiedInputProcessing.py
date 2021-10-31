@@ -1,10 +1,11 @@
-import pandas as pd  # Following naming convention
 from bs4 import BeautifulSoup  # For reading from XML files (bs4 needs to be installed first)
 from xml.dom import minidom  # For creating and writing to XML files
 # from time import time, ctime, localtime
 import time
 import ModifiedInputProcessing
 import SectionAllocations
+# from py4j.java_gateway import JavaGateway
+import _jpype as jp
 
 """
 	Process the current solution file (solution.xml), along with the input data XML file that was used to obtain it, 
@@ -32,28 +33,44 @@ import SectionAllocations
 
 
 def main():
+
+	#problemInstanceName = input("Enter problem instance name: ")
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
+
+	"""
 	while True:
 		try:
 			option = int(input("Do you want to (Enter the number):\n\t"
 			                   "0: Process a modified Students file to produce an input data XML file for new course requests\n\t"
 			                   "1: Process current and new solution files to merge them together\n"))
 			if option == 0:
-				generateNewRequestsInputXmlFile()
+				generateNewRequestsInputXmlFile(problemInstanceName)
 				break
 			elif option == 1:
-				generateUpdatedSolutionFile()
+				generateUpdatedSolutionFile(problemInstanceName)
 				break
 			else:
 				print("Invalid number entered. You will be prompted to re-enter.")
 		except ValueError:
 			print("Invalid number entered. You will be prompted to re-enter.")
+	"""
+
+
+	# gateway = JavaGateway()  # connect to the JVM
+	# java_object = gateway.jvm.Main
+
+
+	jp.startJVM(jp.getDefaultJVMPath(), "-ea")
+	jp.java.lang.System.out.println("hello world")
+	jp.shutdownJVM()
+
+	generateNewRequestsInputXmlFile(problemInstanceName)
+	generateUpdatedSolutionFile(problemInstanceName)
 
 # END main()
 
 
-def generateNewRequestsInputXmlFile():
-	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
+def generateNewRequestsInputXmlFile(problemInstanceName: str):
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file
@@ -312,11 +329,13 @@ def generateNewRequestsInputXmlFile():
 	print("Updated input data XML file with only the new course requests has been written to file: '" + newRequestsXmlFileName + "'.")
 
 
-def generateUpdatedSolutionFile():
-	print()
+def generateUpdatedSolutionFile(problemInstanceName: str):
+	print("generateUpdatedSolutionFile()")
 
-	# Delete current SectionAllocations for this problem instance and re-obtain it
-	# make problemInstanceName a parameter to both these functions and set it in the main function
+
+
+
+	# Delete current SectionAllocations for this problem instance and re-obtain it (to get the updated allocations)
 
 
 # Run the main method if this python file is being executed/run directly (either from IDE or Command Line)
