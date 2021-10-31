@@ -5,7 +5,9 @@ import time
 import ModifiedInputProcessing
 import SectionAllocations
 # from py4j.java_gateway import JavaGateway
-import _jpype as jp
+import jpype
+import jpype.imports
+from jpype.types import *
 
 """
 	Process the current solution file (solution.xml), along with the input data XML file that was used to obtain it, 
@@ -56,15 +58,42 @@ def main():
 	"""
 
 
+	print("Process a modified Students file to produce a current solution XML file and am input data XML file for new course requests:\n")
+	generateNewRequestsInputXmlFile(problemInstanceName)
+
+	print("Run IFS solver to obtain solution file for the new course requests")
+
+	""" Run Main.java -> using jpype"""
+
+	# Py4j
 	# gateway = JavaGateway()  # connect to the JVM
 	# java_object = gateway.jvm.Main
 
+	# pype.addClassPath('out/artifacts/ifs_solver_jar/ifs-solver.jar')
+	jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=out/artifacts/ifs_solver_jar/ifs-solver.jar")
 
-	jp.startJVM(jp.getDefaultJVMPath(), "-ea")
-	jp.java.lang.System.out.println("hello world")
-	jp.shutdownJVM()
+	#from java.lang import System
+	#print(System.getProperty("java.class.path"))
 
-	generateNewRequestsInputXmlFile(problemInstanceName)
+	jpype.JClass("com.talhavawda.ifssolver.Main").main([])
+
+	# Other/aleterante jpype code:
+
+	#pkg = jpype.JPackage('com').talhavawda.ifssolver
+	#Main = pkg.Main
+	#Main.main()
+
+	# import the Java modules
+	#from com.talhavawda.ifssolver import Main
+	#Main.main()
+
+	# javaPackage = jpype.JPackage("com.talhavawda.ifssolver")
+	# javaClass = javaPackage.Main
+	# javaClass.main()
+
+	jpype.shutdownJVM()
+
+	print("Process current and new solution files to merge them together:\n")
 	generateUpdatedSolutionFile(problemInstanceName)
 
 # END main()

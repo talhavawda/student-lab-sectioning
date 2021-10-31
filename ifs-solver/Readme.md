@@ -378,9 +378,17 @@ requests separately and merge the obtained solution with the current solution to
                 Try setting up the JAVA_HOME environment variable properly." even after setting the JAVA_HOME variable. According to StackOverflow, 
                 it could be because my JVM architecture doesn't match my Python one, and my Java is 64-bit whilst my Python is 32-bit. So I've gone 
                 and installed a 64-bit version of Python 3.10 (the latest version of Python) and its relevant packages (including jpype)
-                and also created a JAVA_HOME environment variable and set it to the Java JDK path
-            
-            Todo: revert back to using the Python 3.8 interpreter instead of the virtualenv interpreter
+                and also _**created a JAVA_HOME environment variable and set it to the Java JDK path_**.
+                    - I also changed the interpreters for all the Python scripts to the Python 3.10 system interpreter 
+                    - Still getting an error when installing Jpype for Python 3.10 using pip in cmd. It's involving VS Tools.
+                    I then found the following suggestion: https://github.com/sammchardy/python-binance/issues/148#issuecomment-374853521 and
+                    followed it. This also appied for installing lxml for Python 3.10 
+                    - Still getting an error with the Jpype function, so I went to Project Structure -> Modules -> Dependencies and added
+                    the library Python 3.10 and it now works
+                    - When running Jpype to access my java class Main.java it is giving an error that it can't find the specified package
+                    I searched online and found out that I need to create a jar file of my Java class first, so I did that.
+                    IT's FINALLY WORKING. I GOT MY JABA CODE RUNNING IN PYTHON.
+
 
 
 13. Processing additional datasets
@@ -419,7 +427,12 @@ Order of run (updated):
     3. SeparateModifiedInputProcessing.py (option 0 - updated input data XML file [current solution] + new requests input data XML file)
     4. Main.java (solution for new course requests - userAnswer==2)    
     5. SeparateModifiedInputProcessing.py (option 1 - merge solutions to obtain updated solution file, and the updated Section Allocations data)
-    
+
+Order of run (updated 2):
+    1. InputProcessing.py (input data XML file)
+    2. Main.java (initial solution - userAnswer==0)
+    3. SeparateModifiedInputProcessing.py (now does steps 3, 4, and 5 above)
+ 
 TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
 
 TODO: courses data for 2021-Sem2-CAES-Wvl. Up to BIOL234 done, and all first year and second year courses done
@@ -504,8 +517,21 @@ https://packaging.python.org/tutorials/installing-packages/#creating-virtual-env
 https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/
 https://www.py4j.org/index.html - connect Java to Python (run Java code from within Python)
                 
+https://libzx.so/main/learning/2016/03/13/best-practice-for-virtualenv-and-git-repos.html                
+https://stackoverflow.com/questions/6590688/is-it-bad-to-have-my-virtualenv-directory-inside-my-git-repository
+https://stackoverflow.com/questions/44827624/why-would-you-create-a-requirements-txt-file-in-a-virtual-environment-in-python?noredirect=1&lq=1
+https://stackoverflow.com/questions/67188483/is-it-a-good-practice-to-use-python-virtual-env-as-a-way-of-deploy-python-app?noredirect=1&lq=1
             
 https://stackoverflow.com/questions/60390858/jpype-getdefaultjvmpath-fails-when-i-try-accessing-jvm-from-python3
 https://stackoverflow.com/questions/13596505/python-not-working-in-command-prompt
+https://github.com/sammchardy/python-binance/issues/148#issuecomment-374853521
+
+https://stackoverflow.com/questions/3652554/calling-java-from-python
+https://www.tutorialguruji.com/python/jpype-simple-jar-import-and-run-main/
+https://www.jetbrains.com/help/idea/compiling-applications.html#package_into_jar
+https://stackoverflow.com/questions/23521273/class-not-found-error-on-jpype
+https://stackoverflow.com/questions/44033891/jpype-python-importing-folder-of-jars
             
 https://jpype.readthedocs.io/en/latest/
+https://jpype.readthedocs.io/en/latest/userguide.html
+https://jpype.readthedocs.io/en/latest/quickguide.html

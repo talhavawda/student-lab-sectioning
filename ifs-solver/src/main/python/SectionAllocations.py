@@ -26,7 +26,7 @@ def main(solutionFilePath: str = None, solutionName: str = None):
 
 		while True:
 			try:
-				solutionName = input("Enter the name of the solution (format: yymmdd_hhmmss) that you want to use process to obtain the Section Allocations data: ")
+				solutionName = input("Enter the name of the solution (format: yymmdd_hhmmss) that you want to use to obtain the Section Allocations data: ")
 				solutionFilePath = problemInstanceDirectoryPath + "/" + solutionName + "/solution.xml"  # the file path of the solution.xml file of this solution
 				print(solutionName)
 				open(solutionFilePath, "r")
