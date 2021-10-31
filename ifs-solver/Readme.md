@@ -363,32 +363,33 @@ requests separately and merge the obtained solution with the current solution to
                 for Python 3.8 and install the packages from cmd, and it worked.
                 - I then changed the interpreters for the other Python scripts from the default Python 3.8 to the Python 3.8's 
                 virtualenv virtual environment [Python 3.8 (ifs-solver)] I created in this project
-            - I've now discovered that Python virtual environments are for Python packages (specifically project dependencies involving them)
-            instead of for Python interpreter itself - my initial thinking was that if I use a Python virtual environment then I don't have to worry 
-            about the user of my system having to have the right version of Python and having to have the packages installed. But this is not the case, 
-            and according to StackOverflow it is not recommended to add your virtual environments to version control and Git. 
-            - I've also discovered PyInstaller, which lets you create an executable of your project, including its dependencies.
-            - I've discovered the jpype package (to access Java from Python) and I'm going to try it out instead of py4j as 
-            py4j requires you to have a gateway running.
-                - Ran the following 3 commands in cmd in the directory of the Python 3.8 (ifs-solver) virtual environment (/venv-py38/Scripts)
-                    - git clone https://github.com/originell/jpype.git
-                    -  cd jpype
-                    -  python setup.py install
-                - jpype not working - giving an error:  "jpype._jvmfinder.JVMNotFoundException: No JVM shared library file (jvm.dll) found. 
-                Try setting up the JAVA_HOME environment variable properly." even after setting the JAVA_HOME variable. According to StackOverflow, 
-                it could be because my JVM architecture doesn't match my Python one, and my Java is 64-bit whilst my Python is 32-bit. So I've gone 
-                and installed a 64-bit version of Python 3.10 (the latest version of Python) and its relevant packages (including jpype)
-                and also _**created a JAVA_HOME environment variable and set it to the Java JDK path_**.
-                    - I also changed the interpreters for all the Python scripts to the Python 3.10 system interpreter 
-                    - Still getting an error when installing Jpype for Python 3.10 using pip in cmd. It's involving VS Tools.
-                    I then found the following suggestion: https://github.com/sammchardy/python-binance/issues/148#issuecomment-374853521 and
-                    followed it. This also appied for installing lxml for Python 3.10 
-                    - Still getting an error with the Jpype function, so I went to Project Structure -> Modules -> Dependencies and added
-                    the library Python 3.10 and it now works
-                    - When running Jpype to access my java class Main.java it is giving an error that it can't find the specified package
-                    I searched online and found out that I need to create a jar file of my Java class first, so I did that.
-                    IT's FINALLY WORKING. I GOT MY JABA CODE RUNNING IN PYTHON.
-
+        - I've now discovered that Python virtual environments are for Python packages (specifically project dependencies involving them)
+        instead of for Python interpreter itself - my initial thinking was that if I use a Python virtual environment then I don't have to worry 
+        about the user of my system having to have the right version of Python and having to have the packages installed. But this is not the case, 
+        and according to StackOverflow it is not recommended to add your virtual environments to version control and Git. 
+        - I've also discovered PyInstaller, which lets you create an executable of your project, including its dependencies.
+        - I've discovered the jpype package (to access Java from Python) and I'm going to try it out instead of py4j as 
+        py4j requires you to have a gateway running.
+            - Ran the following 3 commands in cmd in the directory of the Python 3.8 (ifs-solver) virtual environment (/venv-py38/Scripts)
+                - git clone https://github.com/originell/jpype.git
+                -  cd jpype
+                -  python setup.py install
+            - jpype not working - giving an error:  "jpype._jvmfinder.JVMNotFoundException: No JVM shared library file (jvm.dll) found. 
+            Try setting up the JAVA_HOME environment variable properly." even after setting the JAVA_HOME variable. According to StackOverflow, 
+            it could be because my JVM architecture doesn't match my Python one, and my Java is 64-bit whilst my Python is 32-bit. So I've gone 
+            and installed a 64-bit version of Python 3.10 (the latest version of Python) and its relevant packages (including jpype)
+            and also _**created a JAVA_HOME environment variable and set it to the Java JDK path_**.
+                - I also changed the interpreters for all the Python scripts to the Python 3.10 system interpreter 
+                - Still getting an error when installing Jpype for Python 3.10 using pip in cmd. It's involving VS Tools.
+                I then found the following suggestion: https://github.com/sammchardy/python-binance/issues/148#issuecomment-374853521 and
+                followed it. This also appied for installing lxml for Python 3.10 
+                - Still getting an error with the Jpype function, so I went to Project Structure -> Modules -> Dependencies and added
+                the library Python 3.10 and it now works
+                - When running Jpype to access my java class Main.java it is giving an error that it can't find the specified package
+                I searched online and found out that I need to create a jar file of my Java class first, so I did that.
+                IT's FINALLY WORKING. I GOT MY JABA CODE RUNNING IN PYTHON.
+                - Removed the Python 3.7 and 3.8 and also their virtual environments from Platform Settings -> SDKs and also 
+                Python 3.8 from Project Settings -> Modules -> Dependencies (as I'm using Python 3.10 now)
 
 
 13. Processing additional datasets

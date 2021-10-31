@@ -61,7 +61,7 @@ def main():
 	print("Process a modified Students file to produce a current solution XML file and am input data XML file for new course requests:\n")
 	generateNewRequestsInputXmlFile(problemInstanceName)
 
-	print("Run IFS solver to obtain solution file for the new course requests")
+	print("\n\nRun IFS solver to obtain solution file for the new course requests:\n")
 
 	""" Run Main.java -> using jpype"""
 
