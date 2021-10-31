@@ -315,6 +315,9 @@ def generateNewRequestsInputXmlFile():
 def generateUpdatedSolutionFile():
 	print()
 
+	# Delete current SectionAllocations for this problem instance and re-obtain it
+	# make problemInstanceName a parameter to both these functions and set it in the main function
+
 
 # Run the main method if this python file is being executed/run directly (either from IDE or Command Line)
 if __name__ == '__main__':

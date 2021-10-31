@@ -466,7 +466,15 @@ then made. New students are added at the end of the file.
         - Allocations of new student (220120001): COMP100: S20, MATH130: S27, STAT130: S43. The other 2 added course requests (for the students
          who were modified) for STAT130 was also S43
         
-        
+
+- Solving using SeparateModifiedInputProcessing.py (to not get any perturbations)
+        - 'Updated solution''s solution.xml file is now only the solution for the new course requests
+    - Updated solution: 211031_111738 
+        - 5/5 [100%] course requests assigned
+        - Solver took 0.01m (0.38s)
+        - Complete solution found       
+
+ 
 ##### Scenario 2
 - Student modifications:
     - similar to Scenario 1, just removing the added STAT130 course request from the student 220112256
@@ -571,3 +579,7 @@ this fixes the section allocation disbalance of STAT130
     - Complete solution found
     - There are NO section allocation changes to existing course requests (i.e. no perturbations)
         - Compared the initial solution.xml file to this updated solution.xml file in IntelliJ and looking at the differences
+        
+        
+- Created SeparateModifiedInputProcessing.py to solve the perturbations issue. Testing on 2020-Sem1-CAES-Wvl-no-conflicts problem instance,
+on its Scenario 1. (See above)

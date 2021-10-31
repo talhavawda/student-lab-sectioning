@@ -24,7 +24,9 @@ public class Main {
 		String configurationFilePath;
 
 		Scanner input = new Scanner(System.in);
-		System.out.println("Are you (Enter the number):\n\t0: Obtaining an initial solution to the problem instance\n\t1: Obtaining an updated solution to the problem instance");
+		System.out.println("Are you (Enter the number):\n\t0: Obtaining an initial solution to the problem instance" +
+				"\n\t1: Obtaining an updated solution to the problem instance (updated input data XML file)" +
+				"\n\t2: Obtaining an updated solution to the problem instance on only the new course requests (new requests input data XML file)");
 		int userAnswer;
 
 		try {
@@ -41,6 +43,9 @@ public class Main {
 			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-updated-1.xml";
 			configurationFilePath = "src/main/resources/SolverConfiguration-resolving.cfg";
 
+		}  else if (userAnswer == 2) {
+			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-newrequests-1.xml";
+			configurationFilePath = "src/main/resources/SolverConfiguration.cfg"; // Not the resolving one as in this input XML file, none of the course requests are allocated - treating it as an initial input
 		} else {
 			// do default (userAnswer == 0)
 			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";

@@ -370,12 +370,19 @@ requests separately and merge the obtained solution with the current solution to
 
 Order of run:
     1. InputProcessing.py (input data XML file)
-    2. Main.java (initial solution)
+    2. Main.java (initial solution - userAnswer==0)
     3. ModifiedInputProcessing.py (updated input data XML file)
-    4. Main.java (updated solution)
+    4. Main.java (updated solution - userAnswer==1)
     5. SectionAllocations.py (allocations data for both initial and updated solution)
     
-
+    
+Order of run (updated):
+    1. InputProcessing.py (input data XML file)
+    2. Main.java (initial solution - userAnswer==0)
+    3. SeparateModifiedInputProcessing.py (option 0 - updated input data XML file [current solution] + new requests input data XML file)
+    4. Main.java (solution for new course requests - userAnswer==2)    
+    5. SeparateModifiedInputProcessing.py (option 1 - merge solutions to obtain updated solution file)
+    
 TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
 
 TODO: courses data for 2021-Sem2-CAES-Wvl. Up to BIOL234 done, and all first year and second year courses done
