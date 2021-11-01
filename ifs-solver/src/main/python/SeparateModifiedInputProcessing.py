@@ -103,47 +103,17 @@ def generateNewRequestsInputXmlFile(problemInstanceName: str):
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file
-	problemInputInstanceSolutionsFile = problemInstanceDirectoryPath + "/CurrentSolutions.txt"
 
 
 	""" Get the solution of this problem instance's input data XML file instance that we want to work with (the current solution, to the current input data XML file) """
-
-	problemInstanceSolutions = list()
-	solutionIndex = 0
-
-	print("Solutions of this problem instance's input data XML file instance:")
-
-	with open(problemInputInstanceSolutionsFile, "r") as solutionsFile:
-		for line in solutionsFile:
-			line = line[:len(line)-1]  # Remove the "\n" part at the end of the string | Doing -2 cuts out the last digit in the solution name so it seems that '\n' is being treated as one character
-			problemInstanceSolutions.append(line)
-			print("\t", solutionIndex, ":", line)
-			solutionIndex += 1
-		solutionsFile.close()
-
-	print()
-
-	try:
-		currentSolutionIndex = int(input("Enter the number of the solution that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: "))
-
-		if currentSolutionIndex < 0 or currentSolutionIndex > solutionIndex:  # Validation
-			currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver) | Alt. we can use solutionIndex
-		else:
-			currentSolution = problemInstanceSolutions[currentSolutionIndex]
-
-	except ValueError:
-		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
-
-
-
-	currentSolution, currentSolutionFilePath = ModifiedInputProcessing.getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)
+	currentSolution, currentSolutionXmlFilePath = ModifiedInputProcessing.getCurrentSolutionFilePath(problemInstanceDirectoryPath)
 
 	# Get the modified Students input file, and its modification version number
 	modifiedStudentsFilePath, modVerNum = ModifiedInputProcessing.getModifiedStudentsFilePath(problemInstanceDirectoryPath)
 
 
 	""" Process the current input data and solution XML files and store them in a dictionary """
-	currentSolutionDict = ModifiedInputProcessing.processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
+	currentSolutionDict = ModifiedInputProcessing.processCurrentSolution(inputXmlFilePath, currentSolutionXmlFilePath)
 
 	""" Process the modified Students input Excel file to obtain a dictionary containing the updated input data"""
 	updatedInputDict = ModifiedInputProcessing.processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict)
@@ -361,7 +331,7 @@ def generateNewRequestsInputXmlFile(problemInstanceName: str):
 def generateUpdatedSolutionFile(problemInstanceName: str):
 	print("generateUpdatedSolutionFile()")
 
-
+	# Todo - in Main.java if args length > 0 then it represents the option we want to run, so process that option
 
 
 	# Delete current SectionAllocations for this problem instance and re-obtain it (to get the updated allocations)

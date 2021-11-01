@@ -49,38 +49,10 @@ def main():
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file
-	problemInputInstanceSolutionsFile = problemInstanceDirectoryPath + "/CurrentSolutions.txt"
 
 
 	""" Get the solution of this problem instance's input data XML file instance that we want to work with (the current solution, to the current input data XML file) """
-
-	problemInstanceSolutions = list()
-	solutionIndex = 0
-
-	print("Solutions of this problem instance's input data XML file instance:")
-
-	with open(problemInputInstanceSolutionsFile, "r") as solutionsFile:
-		for line in solutionsFile:
-			line = line[:len(line)-1]  # Remove the "\n" part at the end of the string | Doing -2 cuts out the last digit in the solution name so it seems that '\n' is being treated as one character
-			problemInstanceSolutions.append(line)
-			print("\t", solutionIndex, ":", line)
-			solutionIndex += 1
-		solutionsFile.close()
-
-	print()
-
-	try:
-		currentSolutionIndex = int(input("Enter the number of the solution that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: "))
-
-		if currentSolutionIndex < 0 or currentSolutionIndex > solutionIndex:  # Validation
-			currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver) | Alt. we can use solutionIndex
-		else:
-			currentSolution = problemInstanceSolutions[currentSolutionIndex]
-
-	except ValueError:
-		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
-
-	currentSolution, currentSolutionFilePath = getCurrentSolutionFilePath(currentSolution, problemInstanceDirectoryPath)
+	currentSolution, currentSolutionXmlFilePath = getCurrentSolutionFilePath(problemInstanceDirectoryPath)
 
 
 	# Get the modified Students input file, and its modification version number
@@ -88,7 +60,7 @@ def main():
 
 
 	""" Process the current input data and solution XML files and store them in a dictionary """
-	currentSolutionDict = processCurrentSolution(inputXmlFilePath, currentSolutionFilePath)
+	currentSolutionDict = processCurrentSolution(inputXmlFilePath, currentSolutionXmlFilePath)
 
 	""" Process the modified Students input Excel file"""
 	updatedInputDict = processModifiedStudentsData(modifiedStudentsFilePath, currentSolutionDict)
@@ -134,8 +106,12 @@ def isEndofMonth(day: int, month: int, year: int):
 		return day == lastDayOfMonth[month]
 
 
-def getCurrentSolutionFilePath(currentSolution: str, problemInstanceDirectoryPath: str):
+def getCurrentSolutionFilePath(problemInstanceDirectoryPath: str):
 	"""
+		Get the (name of the) solution of this problem instance's input data XML file instance that we want to work with (the current
+		solution, to the current input data XML file) from the user, based on the solutions listed in the CurrentSolutions.txt file,
+		and return the name and the file path of its solution.xml file
+
 		The actual folder name (the current  date and time that the solver started, in the yymmdd_hhmmss format) of the
 		directory of the current solution instance may not be exactly the same as the name I got from the CurrentSolutions.txt file.
 		In my Main.java program where I ran the solver on the current problem instance's input data XML file, I obtained
@@ -145,16 +121,43 @@ def getCurrentSolutionFilePath(currentSolution: str, problemInstanceDirectoryPat
 		So if the current solution path doesn't exist, increment the date-time of the current solution by 1 second each
 		time till the path is valid.
 
-		:param currentSolution: str: the current solution name obtained from the CurrentSolutions.txt file
 		:param problemInstanceDirectoryPath: str:
-		:return: currentSolution:str: actual name of the current solution, currentSolutionFilePath: str: path of the current solution's solution.xml file
+		:return: currentSolution:str: actual name of the current solution, currentSolutionXmlFilePath: str: path of the current solution's solution.xml file
 	"""
+	problemInputInstanceSolutionsFile = problemInstanceDirectoryPath + "/CurrentSolutions.txt"
+
+	problemInstanceSolutions = list()
+	solutionIndex = 0
+
+	print("Solutions of this problem instance's input data XML file instance:")
+
+	with open(problemInputInstanceSolutionsFile, "r") as solutionsFile:
+		for line in solutionsFile:
+			line = line[:len(line)-1]  # Remove the "\n" part at the end of the string | Doing -2 cuts out the last digit in the solution name so it seems that '\n' is being treated as one character
+			problemInstanceSolutions.append(line)
+			print("\t", solutionIndex, ":", line)
+			solutionIndex += 1
+		solutionsFile.close()
+
+	print()
+
+	try:
+		currentSolutionIndex = int(input("Enter the number of the solution that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: "))
+
+		if currentSolutionIndex < 0 or currentSolutionIndex > solutionIndex:  # Validation
+			currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver) | Alt. we can use solutionIndex
+		else:
+			currentSolution = problemInstanceSolutions[currentSolutionIndex]
+
+	except ValueError:
+		currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver)
+
 	problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
-	currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
+	currentSolutionXmlFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
 
 	while True:
 		try:
-			open(currentSolutionFilePath, "r")
+			open(currentSolutionXmlFilePath, "r")
 			break  # currentSolutionFilePath is valid - we have found the current solution folder
 		except FileNotFoundError:
 
@@ -229,12 +232,12 @@ def getCurrentSolutionFilePath(currentSolution: str, problemInstanceDirectoryPat
 			#print(currentSolution)   # For testing
 
 			problemInstanceCurrentSolutionDirectoryPath = problemInstanceDirectoryPath + "/" + currentSolution
-			currentSolutionFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
+			currentSolutionXmlFilePath = problemInstanceCurrentSolutionDirectoryPath + "/solution.xml"
 
 
 	print("Current solution:\t", currentSolution, end="\n\n")
 
-	return currentSolution, currentSolutionFilePath
+	return currentSolution, currentSolutionXmlFilePath
 
 
 def getModifiedStudentsFilePath(problemInstanceDirectoryPath: str):
