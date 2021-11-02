@@ -329,6 +329,7 @@ def generateNewRequestsInputXmlFile(problemInstanceName: str):
 	print("Updated input data XML file with only the new course requests has been written to file: '" + newRequestsXmlFileName + "'.")
 
 
+# Since BeatifulSoup's prettify() function's indent size is 1, I'm using my own customPrettify() function that has indent size of 4
 # indentBSLine() and customPrettify() acknowledgement: https://gist.github.com/dmattera/ef11cb37c31d732f9e5d2347eea876c2
 
 def indentBSLine(line: str, currentIndent: int, desiredIndent: int):
@@ -414,7 +415,7 @@ def generateUpdatedSolutionFile(problemInstanceName: str):
 
 	# Since BeatifulSoup's prettify() function's indent size is 1, I'm using my own customPrettify() function that has indent size of 4
 	# currentSolutionBS = currentSolutionBS.prettify()
-
+	currentSolutionBS = customPrettify(currentSolutionBS, 4)
 
 	# Write the full updated solution XML file
 	fullUpdatedSolutionXmlFileName = problemInstanceDirectoryPath + "/" + problemInstanceName + "-fullsolution-1.xml"
