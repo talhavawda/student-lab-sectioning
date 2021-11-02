@@ -20,7 +20,7 @@ from jpype.types import *
 	with "-newrequests-<modVerNum>" appended]
 	
 	We then process the current solution file (with the old course requests removed) and the solution file for the new 
-	course requests and merge them together, resulting in an updated solution
+	course requests and merge them together, resulting in the full updated solution
 	
 	
 	We are having to do the resolving part separately as passing in an updated input data XML file (representing 
@@ -342,11 +342,39 @@ def generateUpdatedSolutionFile(problemInstanceName: str):
 	updatedSolution, updatedSolutionXmlFilePath = ModifiedInputProcessing.getCurrentSolutionFilePath(problemInstanceDirectoryPath, current=False)
 
 
+	with open(updatedInputXmlFilePath, "r") as updatedInputXMLFile:
+		currentSolutionXML = updatedInputXMLFile.read()  # the updated input data XML file represents the current solution with the old course requests removed
 
+	with open(updatedSolutionXmlFilePath, "r") as updatedSolutionXMLFile:
+		updatedSolutionXML = updatedSolutionXMLFile.read()
+
+
+	# Passing the current and updated solution files to BeatifulSoup parsers
+	currentSolutionBS = BeautifulSoup(currentSolutionXML, "xml")
+	updatedSolutionBS = BeautifulSoup(updatedSolutionXML, "xml")
+
+	updatedSolutionBSStudentTags = updatedSolutionBS.find_all("student")
+
+	for studentTag in updatedSolutionBSStudentTags:
+		print(studentTag.get("id"))
+		studentCourseRequestsTags = studentTag.find_all("course")
+
+		for courseRequestTag in studentCourseRequestsTags:
+			sectionAllocationTags = courseRequestTag.find_all("section")
+			print("\t" + courseRequestTag.get("id") + " -\t", end="")
+			for sectionAllocationTag in sectionAllocationTags:
+				print(sectionAllocationTag.get("id") + "|" + sectionAllocationTags[0].get("id"), end=", ")
+			print()
+
+	# allocationsSectionTag = allocationsBS.find("section", section="S"+sectionID) # Get the section tag/element of this section in the solution.xml file
 	# Delete current SectionAllocations for this problem instance and re-obtain it (to get the updated allocations)
 
 
 # Run the main method if this python file is being executed/run directly (either from IDE or Command Line)
 if __name__ == '__main__':
-	main()
+	# main()
+	# Todo - remove the 2 lines below and uncomment the line above (below lines are for ease of testing)
+	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
+	generateUpdatedSolutionFile(problemInstanceName)
+
 	print("SeparateModifiedInputProcessing.py has been executed")
