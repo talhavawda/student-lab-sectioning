@@ -106,11 +106,21 @@ def isEndofMonth(day: int, month: int, year: int):
 		return day == lastDayOfMonth[month]
 
 
-def getCurrentSolutionFilePath(problemInstanceDirectoryPath: str):
+def getCurrentSolutionFilePath(problemInstanceDirectoryPath: str, current: bool = True):
 	"""
+		current == True (Default)
 		Get the (name of the) solution of this problem instance's input data XML file instance that we want to work with (the current
 		solution, to the current input data XML file) from the user, based on the solutions listed in the CurrentSolutions.txt file,
 		and return the name and the file path of its solution.xml file
+
+		current == False (applicable to SeparateModifiedInputProcessing.py)
+		Get the name of the (updated) solution (containing the allocations of the new course requests) of this problem instance's updated
+		input data XML file instance (containing the new course requests) instance that we want to work with
+		(the updated solution, to the updated input data XML file containing only the new course requests)
+		from the user, based on the solutions listed in the CurrentSolutions.txt file, and return the name and the file path of its solution.xml file
+		The only difference this makes is when displaying messages to the user - we want to say we want the updated solution
+		instead of saying we want the current solution. Otherwise the code functionality remains the same.
+
 
 		The actual folder name (the current  date and time that the solver started, in the yymmdd_hhmmss format) of the
 		directory of the current solution instance may not be exactly the same as the name I got from the CurrentSolutions.txt file.
@@ -122,6 +132,9 @@ def getCurrentSolutionFilePath(problemInstanceDirectoryPath: str):
 		time till the path is valid.
 
 		:param problemInstanceDirectoryPath: str:
+		:param current: bool: if True (default) we want the name of the current solution that we want to work with,
+		else (applicable to SeparateModifiedInputProcessing.py) we want the name of the updated solution containing the allocations
+		of only the new course requests
 		:return: currentSolution:str: actual name of the current solution, currentSolutionXmlFilePath: str: path of the current solution's solution.xml file
 	"""
 	problemInputInstanceSolutionsFile = problemInstanceDirectoryPath + "/CurrentSolutions.txt"
@@ -142,7 +155,11 @@ def getCurrentSolutionFilePath(problemInstanceDirectoryPath: str):
 	print()
 
 	try:
-		currentSolutionIndex = int(input("Enter the number of the solution that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: "))
+		if current:
+			inputString = "Enter the number of the solution that you want to use as the current solution to\nprocess with the modified Students input to obtain the updated solution: "
+		else:
+			inputString = "Enter the number of the solution that you want to use as the updated solution (containing the allocations to the new course requests)\nto merge into the current solution to obtain the full updated solution: "
+		currentSolutionIndex = int(input(inputString))
 
 		if currentSolutionIndex < 0 or currentSolutionIndex > solutionIndex:  # Validation
 			currentSolution = problemInstanceSolutions[-1] # Default is the last element of the list (the latest solution that was generated using the solver) | Alt. we can use solutionIndex

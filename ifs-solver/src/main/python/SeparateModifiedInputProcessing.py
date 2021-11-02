@@ -332,7 +332,15 @@ def generateNewRequestsInputXmlFile(problemInstanceName: str):
 def generateUpdatedSolutionFile(problemInstanceName: str):
 	print("generateUpdatedSolutionFile()")
 
-	# Todo - in Main.java if args length > 0 then it represents the option we want to run, so process that option
+	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
+	updatedInputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + "-updated-1.xml"  # the updated input data XML file represents the current solution with the old course requests removed
+	# Todo - replace "1" above with modVerNum after Exerimentation process is complete
+
+	""" Get the (updated) solution (containing the allocations of the new course requests) of this problem instance's updated 
+	input data XML file instance (containing the new course requests) instance that we want to work with 
+	(the updated solution, to the updated input data XML file containing only the new course requests) """
+	updatedSolution, updatedSolutionXmlFilePath = ModifiedInputProcessing.getCurrentSolutionFilePath(problemInstanceDirectoryPath, current=False)
+
 
 
 	# Delete current SectionAllocations for this problem instance and re-obtain it (to get the updated allocations)
