@@ -75,7 +75,8 @@ def main():
 	#from java.lang import System
 	#print(System.getProperty("java.class.path"))
 
-	jpype.JClass("com.talhavawda.ifssolver.Main").main([])
+
+	jpype.JClass("com.talhavawda.ifssolver.Main").main(["2"]) # Run option 2
 
 	# Other/aleterante jpype code:
 
@@ -131,7 +132,7 @@ def generateNewRequestsInputXmlFile(problemInstanceName: str):
 	with only the new course requests"""
 
 	print()
-	SectionAllocations.main(currentSolutionFilePath, currentSolution)
+	SectionAllocations.main(currentSolutionXmlFilePath, currentSolution)
 	allocationsXmlFilePath = problemInstanceDirectoryPath + "/" + currentSolution + "/allocations.xml"
 
 

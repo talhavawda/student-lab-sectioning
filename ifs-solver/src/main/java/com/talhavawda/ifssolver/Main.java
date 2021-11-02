@@ -23,31 +23,47 @@ public class Main {
 
 		String configurationFilePath;
 
-		Scanner input = new Scanner(System.in);
-		System.out.println("Are you (Enter the number):\n\t0: Obtaining an initial solution to the problem instance" +
-				"\n\t1: Obtaining an updated solution to the problem instance (updated input data XML file)" +
-				"\n\t2: Obtaining an updated solution to the problem instance on only the new course requests (new requests input data XML file)");
-		int userAnswer;
+		int option; //type of solution we're obtaining
 
-		try {
-			userAnswer = input.nextInt();
-		} catch (InputMismatchException e) { // if invalid integer number entered
-			userAnswer = 0;
+		if (args.length > 0) {
+			try {
+				option = Integer.parseInt(args[0]);
+			} catch (NumberFormatException e) { // if string contains an invalid (not parsable) integer
+				option = 0; //assign a default
+			}
+
+			System.out.println("Option: " + option + "\n");
+
+		} else { //get option from user
+			int userAnswer;
+			Scanner input = new Scanner(System.in);
+			System.out.println("Are you (Enter the number):\n\t0: Obtaining an initial solution to the problem instance" +
+					"\n\t1: Obtaining an updated solution to the problem instance (updated input data XML file)" +
+					"\n\t2: Obtaining an updated solution to the problem instance on only the new course requests (new requests input data XML file)");
+
+
+			try {
+				userAnswer = input.nextInt();
+			} catch (InputMismatchException e) { // if invalid integer number entered
+				userAnswer = 0;
+			}
+
+			option = userAnswer;
 		}
 
 
-		if (userAnswer == 0) {
+		if (option == 0) {
 			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
 			configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
-		} else if (userAnswer == 1) {
+		} else if (option == 1) {
 			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-updated-1.xml";
 			configurationFilePath = "src/main/resources/SolverConfiguration-resolving.cfg";
 
-		}  else if (userAnswer == 2) {
+		}  else if (option == 2) {
 			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-newrequests-1.xml";
 			configurationFilePath = "src/main/resources/SolverConfiguration.cfg"; // Not the resolving one as in this input XML file, none of the course requests are allocated - treating it as an initial input
 		} else {
-			// do default (userAnswer == 0)
+			// do default (option == 0)
 			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
 			configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
 		}

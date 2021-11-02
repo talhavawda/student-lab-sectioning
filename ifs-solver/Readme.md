@@ -388,6 +388,7 @@ requests separately and merge the obtained solution with the current solution to
                 - When running Jpype to access my java class Main.java it is giving an error that it can't find the specified package
                 I searched online and found out that I need to create a jar file of my Java class first, so I did that.
                 IT's FINALLY WORKING. I GOT MY JABA CODE RUNNING IN PYTHON.
+                    - Remember to rebuild the Jar file everytime I modify the Java code
                 - Since I'm using Python 3.10 now, I removed the Python 3.7 and 3.8 and also their virtual environments from Platform Settings -> 
                 SDKs (and also deleted their folders),  and also removed Python 3.8 from Project Settings -> Modules -> Dependencies
 
