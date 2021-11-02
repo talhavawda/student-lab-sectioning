@@ -329,6 +329,43 @@ def generateNewRequestsInputXmlFile(problemInstanceName: str):
 	print("Updated input data XML file with only the new course requests has been written to file: '" + newRequestsXmlFileName + "'.")
 
 
+# indentBSLine() and customPrettify() acknowledgement: https://gist.github.com/dmattera/ef11cb37c31d732f9e5d2347eea876c2
+
+def indentBSLine(line: str, currentIndent: int, desiredIndent: int):
+	identedLine = ""
+	spacesToAdd = (currentIndent * desiredIndent) - currentIndent
+	if spacesToAdd > 0:
+		for i in range(spacesToAdd):
+			identedLine += " "
+	identedLine += str(line) + "\n"
+	return identedLine
+
+
+def customPrettify(BS, desiredIndent: int):  # desiredIndent is indent size in terms of number of spaces
+
+	prettifiedBS = str()
+	previousIndent = 0
+
+	for line in BS.prettify().split("\n"):  # iterate over each prettified line of the BeautifulSoup object
+		currentIndent = str(line).find("<")  # returns the index for the opening tag '<', which also represents the number of spaces in the line's indentation
+
+
+		"""
+			str.find() will equal -1 when no '<' is found. This means the line is some kind
+			of text or script instead of an HTML/XML element and should be treated as a child
+			of the previous line. Also, since BeautifulSoup uses an indent size of 1, 
+			currentIndent should never be more than previousIndent + 1.
+		"""
+		if currentIndent == -1 or currentIndent > previousIndent + 1:
+			currentIndent = previousIndent + 1
+
+		previousIndent = currentIndent
+
+		prettifiedBS += indentBSLine(line, currentIndent, desiredIndent)
+
+	return prettifiedBS
+
+
 def generateUpdatedSolutionFile(problemInstanceName: str):
 	print("generateUpdatedSolutionFile()")
 
@@ -356,17 +393,37 @@ def generateUpdatedSolutionFile(problemInstanceName: str):
 	updatedSolutionBSStudentTags = updatedSolutionBS.find_all("student")
 
 	for studentTag in updatedSolutionBSStudentTags:
-		print(studentTag.get("id"))
+		studentNumber = studentTag.get("id")
+		currentSolutionBSStudentTag = currentSolutionBS.find("student", id=studentNumber)
+
 		studentCourseRequestsTags = studentTag.find_all("course")
 
-		for courseRequestTag in studentCourseRequestsTags:
+		for courseRequestTag in studentCourseRequestsTags:  # for each course request of this student in the updated solution
 			sectionAllocationTags = courseRequestTag.find_all("section")
-			print("\t" + courseRequestTag.get("id") + " -\t", end="")
-			for sectionAllocationTag in sectionAllocationTags:
-				print(sectionAllocationTag.get("id") + "|" + sectionAllocationTags[0].get("id"), end=", ")
-			print()
 
-	# allocationsSectionTag = allocationsBS.find("section", section="S"+sectionID) # Get the section tag/element of this section in the solution.xml file
+			if sectionAllocationTags: # if sectionAllocationTags is not empty - there are section allocations for the labs of this course request
+
+				currentSolutionBSCRTag = currentSolutionBSStudentTag.find("course", id=courseRequestTag.get("id"))
+				currentSolutionBestTag = currentSolutionBS.new_tag("best", course=currentSolutionBSCRTag.get("course"))
+				currentSolutionBSCRTag.append(currentSolutionBestTag)
+
+				for sectionAllocationTag in sectionAllocationTags:
+					currentSolutionSectionTag = currentSolutionBS.new_tag("section", id=sectionAllocationTag.get("id"))
+					currentSolutionBestTag.append(currentSolutionSectionTag)
+
+
+	# Since BeatifulSoup's prettify() function's indent size is 1, I'm using my own customPrettify() function that has indent size of 4
+	# currentSolutionBS = currentSolutionBS.prettify()
+
+
+	# Write the full updated solution XML file
+	fullUpdatedSolutionXmlFileName = problemInstanceDirectoryPath + "/" + problemInstanceName + "-fullsolution-1.xml"
+	with open(fullUpdatedSolutionXmlFileName, "w") as fullUpdatedSolutionXmlFile:
+		fullUpdatedSolutionXmlFile.write(str(currentSolutionBS))
+
+	# Note that for each tag, BeautifulSoup will reorder the attributes in alphabetical order - original order will not be preserved
+	# This cannot be changed as BeautifulSoup store a tag's attribute in a dict object, which is an unordered object.
+
 	# Delete current SectionAllocations for this problem instance and re-obtain it (to get the updated allocations)
 
 

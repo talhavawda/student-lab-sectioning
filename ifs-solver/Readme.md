@@ -133,7 +133,6 @@ CPSolver/UniTime Student Sectioning Solver (UniTime site Links):
         - I did this as I want a complete solution that I can use to do the Minimal Perturbation 
         experimentation part - making changes to the input and resolving.
 
-        
 10. Creating a Python program script (ModifiedInputProcessing.py) to process a modified/updated Students.xlsx input file, 
 the initial solution file (solution.xml), along with the input data XML file that was used to obtain it, and to produce 
 an updated XML file (input data file) that is a partial solution (the unchanged course requests are still assigned as is, 
@@ -190,8 +189,7 @@ the new course requests are unassigned/unallocated, and the old course requests 
                 - I've created this instance as processCurrentSolution() takes too long (for my liking), a couple of minutes, to process the 
                 entire Students input (as I'm making small changes and then running and testing). Furthermore, there is no Time overlaps conflicts
                 in this problem instance - we get a complete solution
-                
-                
+                                
 11. Minimal Perturbation Experimentation process                
     - Simulating students making changes to their registrations/enrollments, and resolving on updated input to get an updated solution
      and evaluating number of existing variables (course requests) whose assigned values (allocated sections) get changed
@@ -392,7 +390,6 @@ requests separately and merge the obtained solution with the current solution to
                 - Since I'm using Python 3.10 now, I removed the Python 3.7 and 3.8 and also their virtual environments from Platform Settings -> 
                 SDKs (and also deleted their folders),  and also removed Python 3.8 from Project Settings -> Modules -> Dependencies
 
-
 13. Processing additional datasets
     - 3 datasets for CAES 2021 Sem 2 (Wvl, Howard, PMB)
         - The original Students Excel files are named "CAES Tutorial Groups 2021_2 <CAMPUS> - 2021-08-20"
@@ -415,24 +412,24 @@ requests separately and merge the obtained solution with the current solution to
         - Cannot specify exact capacities as they are not specified in the timetables on the timetable site
 
 
-Order of run:
-    1. InputProcessing.py (input data XML file)
-    2. Main.java (initial solution - userAnswer==0)
-    3. ModifiedInputProcessing.py (updated input data XML file)
-    4. Main.java (updated solution - userAnswer==1)
+Order of run:\
+    1. InputProcessing.py (input data XML file)\
+    2. Main.java (initial solution - userAnswer==0)\
+    3. ModifiedInputProcessing.py (updated input data XML file)\
+    4. Main.java (updated solution - userAnswer==1)\
     5. SectionAllocations.py (allocations data for both initial and updated solution)
     
     
-Order of run (updated):
-    1. InputProcessing.py (input data XML file)
-    2. Main.java (initial solution - userAnswer==0)
-    3. SeparateModifiedInputProcessing.py (option 0 - updated input data XML file [current solution] + new requests input data XML file)
-    4. Main.java (solution for new course requests - userAnswer==2)    
+Order of run (updated):\
+    1. InputProcessing.py (input data XML file)\
+    2. Main.java (initial solution - userAnswer==0)\
+    3. SeparateModifiedInputProcessing.py (option 0 - updated input data XML file [current solution] + new requests input data XML file)\
+    4. Main.java (solution for new course requests - userAnswer==2)\
     5. SeparateModifiedInputProcessing.py (option 1 - merge solutions to obtain updated solution file, and the updated Section Allocations data)
 
-Order of run (updated 2):
-    1. InputProcessing.py (input data XML file)
-    2. Main.java (initial solution - userAnswer==0)
+Order of run (updated 2):\
+    1. InputProcessing.py (input data XML file)\
+    2. Main.java (initial solution - userAnswer==0)\
     3. SeparateModifiedInputProcessing.py (now does steps 3, 4, and 5 above)
  
 TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
@@ -484,7 +481,9 @@ Todo: Change Xmx option (Memory heap size of JVM)
 ## Reference and Acknowledgement Links
 https://www.datacamp.com/community/tutorials/python-excel-tutorial
 https://openpyxl.readthedocs.io/en/stable/
+https://openpyxl.readthedocs.io/en/default/pandas.html
 http://docs.pyexcel.org/en/latest/
+http://docs.pyexcel.org/en/latest/tutorial_file.html
 
 https://realpython.com/python-dicts/
 https://www.geeksforgeeks.org/python-dictionary/
@@ -537,3 +536,9 @@ https://stackoverflow.com/questions/44033891/jpype-python-importing-folder-of-ja
 https://jpype.readthedocs.io/en/latest/
 https://jpype.readthedocs.io/en/latest/userguide.html
 https://jpype.readthedocs.io/en/latest/quickguide.html
+
+https://stackoverflow.com/questions/21356014/how-can-i-insert-a-new-tag-into-a-beautifulsoup-object
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/#navigablestring-and-new-tag
+https://stackoverflow.com/questions/40529848/how-to-write-the-output-to-html-file-with-python-beautifulsoup
+https://stackoverflow.com/questions/42649596/can-i-make-beautiful-soup-keep-the-attributes-ordering-and-lines-indentation
+https://gist.github.com/dmattera/ef11cb37c31d732f9e5d2347eea876c2
