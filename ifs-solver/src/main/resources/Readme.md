@@ -465,14 +465,6 @@ then made. New students are added at the end of the file.
                 
         - Allocations of new student (220120001): COMP100: S20, MATH130: S27, STAT130: S43. The other 2 added course requests (for the students
          who were modified) for STAT130 was also S43
-        
-
-- Solving using SeparateModifiedInputProcessing.py (to not get any perturbations)
-        - 'Updated solution''s solution.xml file is now only the solution for the new course requests
-    - Updated solution: 211031_111738 
-        - 5/5 [100%] course requests assigned
-        - Solver took 0.01m (0.38s)
-        - Complete solution found       
 
  
 ##### Scenario 2
@@ -579,7 +571,27 @@ this fixes the section allocation disbalance of STAT130
     - Complete solution found
     - There are NO section allocation changes to existing course requests (i.e. no perturbations)
         - Compared the initial solution.xml file to this updated solution.xml file in IntelliJ and looking at the differences
-        
-        
-- Created SeparateModifiedInputProcessing.py to solve the perturbations issue. Testing on 2020-Sem1-CAES-Wvl-no-conflicts problem instance,
-on its Scenario 1. (See above)
+
+
+    
+- Created SeparateModifiedInputProcessing.py to solve the perturbations issue (not get any perturbations in the updated solution - no existing 
+course requests get their section allocations changed), and testing on 2020-Sem1-CAES-Wvl-no-conflicts problem instance,
+on its Scenario 1:
+
+#### 2020-Sem1-CAES-Wvl-no-conflicts [SMIP.py]
+ - Initial (complete) solution: 211011_011710
+- See 2020-Sem1-CAES-Wvl-no-conflict above for details
+ 
+ ##### Scenario 1
+ - See 2020-Sem1-CAES-Wvl-no-conflicts -> Scenario 1 above for student modifications and other details
+ 
+ - Solving using SeparateModifiedInputProcessing.py (to not get any perturbations)
+         - 'Updated solution''s solution.xml file is now only the solution for the new course requests
+     - Updated solution: 211031_111738 
+         - 5/5 [100%] course requests assigned
+         - Solver took 0.01m (0.38s)
+         - Complete solution found
+         
+     - Was able to merge the allocations of the new course requests into the current solution and get a full updated solution
+     
+     - See Scenario 1 - SMIP folder in the Experimentation folder of this problem instance
