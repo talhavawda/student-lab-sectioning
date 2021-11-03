@@ -413,6 +413,11 @@ requests separately and merge the obtained solution with the current solution to
         - Obtained the course offering details (of their lab sessions) of the CAES courses using the timetable link
         - Some courses had multiple labs (both practicals and tutorials)
         - Cannot specify exact capacities as they are not specified in the timetables on the timetable site
+        - Only specified/processed the course offerings in the in Courses.xlsx input file for first year and second year CAES courses
+            - The Students input file we're given is for students doing first-year CAES courses (CAES want to do the sectioning for first year labs), 
+            and its highly unlikely that a student doing a first year CAES course will also be doing a third-year CAES course. And by searching through the 
+            Students input file for each third year CAES course, there are very few students in that file that do them (if any), 
+            and the numbers are usually just 1 or 2 students. 
 
 
 Order of run:\
@@ -434,18 +439,15 @@ Order of run (updated 2):\
     1. InputProcessing.py (input data XML file)\
     2. Main.java (initial solution - userAnswer==0)\
     3. SeparateModifiedInputProcessing.py (now does steps 3, 4, and 5 above)
+
  
 TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
 
-TODO: courses data for 2021-Sem2-CAES-Wvl. Up to BIOL234 done, and all first year and second year courses done
 
 TODO: Create a Main.py script where we can set the name of the problem instance in one place, and which lets us choose which of 
 the other script's we'd like to run, and can pass in the name of the problem instance to their main methods
 
 
-
-ANBAN (14/10/21): IF WE CANT GET THE SOLVER TO DO THE MINIMUM CHANGES THEN EXTRACT THE DATA OF THE STUDENTS WHO HAVE CHANGED AND
-SOLVE IT SEPARATELY AND MERGE BACK TOGETHER
 
 TODO: talk about code I changed specifically for the experimentation process
     - also the code in Main.java - to determine which configuration file i should use
@@ -545,3 +547,7 @@ https://www.crummy.com/software/BeautifulSoup/bs4/doc/#navigablestring-and-new-t
 https://stackoverflow.com/questions/40529848/how-to-write-the-output-to-html-file-with-python-beautifulsoup
 https://stackoverflow.com/questions/42649596/can-i-make-beautiful-soup-keep-the-attributes-ordering-and-lines-indentation
 https://gist.github.com/dmattera/ef11cb37c31d732f9e5d2347eea876c2
+
+https://www.geeksforgeeks.org/beautifulsoup-modifying-the-tree/
+https://www.geeksforgeeks.org/python-string-replace/
+https://www.geeksforgeeks.org/python-string-strip/

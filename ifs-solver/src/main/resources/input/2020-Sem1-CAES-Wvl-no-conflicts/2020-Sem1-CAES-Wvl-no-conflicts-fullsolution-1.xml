@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sectioning created="Mon Nov  1 00:28:55 2021" initiative="CAES-Wvl" lastCourseRequestID="6171" nrDays="5" numCourseRequests="6169" numCourses="19" numStudents="2547" slotsPerDay="2" term="Sem1" version="1.1" year="2020">
+<sectioning created="Wed Nov  3 14:03:26 2021" initiative="CAES-Wvl" lastCourseRequestID="6171" nrDays="5" numCourseRequests="6169" numCourses="19" numStudents="2547" slotsPerDay="2" term="Sem1" version="1.1" year="2020">
     <offerings>
         <offering id="1">
             <course id="1" name="BIOL101" numLabs="1"/>
             <config id="1">
-                <subpart courseLabNum="1" id="1" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="1" limit="200">
-                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170"/>
+                <subpart courseLabNum="1" id="1" itype="Laboratory" name="P1">
+                    <section courseLabSectionNum="1" id="1" limit="200" name="S1">
+                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170">
+                            M 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="2" limit="200">
-                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170"/>
+                    <section courseLabSectionNum="2" id="2" limit="200" name="S2">
+                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170">
+                            T 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="3" id="3" limit="200">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170"/>
+                    <section courseLabSectionNum="3" id="3" limit="200" name="S3">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170">
+                            W 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="4" id="4" limit="200">
-                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170"/>
+                    <section courseLabSectionNum="4" id="4" limit="200" name="S4">
+                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170">
+                            Th 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -23,9 +31,11 @@
         <offering id="2">
             <course id="2" name="BIOL103" numLabs="1"/>
             <config id="2">
-                <subpart courseLabNum="1" id="2" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="5" limit="218">
-                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170"/>
+                <subpart courseLabNum="1" id="2" itype="Laboratory" name="P2">
+                    <section courseLabSectionNum="1" id="5" limit="218" name="S5">
+                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170">
+                            F 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -33,9 +43,11 @@
         <offering id="3">
             <course id="3" name="BIOL195" numLabs="1"/>
             <config id="3">
-                <subpart courseLabNum="1" id="3" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="6" limit="238">
-                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="115"/>
+                <subpart courseLabNum="1" id="3" itype="Laboratory" name="P3">
+                    <section courseLabSectionNum="1" id="6" limit="238" name="S6">
+                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="115">
+                            F 9:35a - 12:35p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -43,9 +55,11 @@
         <offering id="4">
             <course id="4" name="BIOL196" numLabs="1"/>
             <config id="4">
-                <subpart courseLabNum="1" id="4" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="7" limit="200">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115"/>
+                <subpart courseLabNum="1" id="4" itype="Laboratory" name="P4">
+                    <section courseLabSectionNum="1" id="7" limit="200" name="S7">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115">
+                            W 9:35a - 12:35p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -53,24 +67,36 @@
         <offering id="5">
             <course id="5" name="CHEM110" numLabs="1"/>
             <config id="5">
-                <subpart courseLabNum="1" id="5" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="8" limit="144">
-                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170"/>
+                <subpart courseLabNum="1" id="5" itype="Laboratory" name="P5">
+                    <section courseLabSectionNum="1" id="8" limit="144" name="S8">
+                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170">
+                            M 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="9" limit="144">
-                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170"/>
+                    <section courseLabSectionNum="2" id="9" limit="144" name="S9">
+                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170">
+                            T 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="3" id="10" limit="144">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115"/>
+                    <section courseLabSectionNum="3" id="10" limit="144" name="S10">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115">
+                            W 9:35a - 12:35p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="4" id="11" limit="144">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170"/>
+                    <section courseLabSectionNum="4" id="11" limit="144" name="S11">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170">
+                            W 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="5" id="12" limit="144">
-                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170"/>
+                    <section courseLabSectionNum="5" id="12" limit="144" name="S12">
+                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170">
+                            Th 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="6" id="13" limit="144">
-                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170"/>
+                    <section courseLabSectionNum="6" id="13" limit="144" name="S13">
+                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170">
+                            F 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -78,12 +104,16 @@
         <offering id="6">
             <course id="6" name="CHEM195" numLabs="1"/>
             <config id="6">
-                <subpart courseLabNum="1" id="6" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="14" limit="192">
-                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="115"/>
+                <subpart courseLabNum="1" id="6" itype="Laboratory" name="P6">
+                    <section courseLabSectionNum="1" id="14" limit="192" name="S14">
+                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="115">
+                            T 9:35a - 12:35p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="15" limit="48">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170"/>
+                    <section courseLabSectionNum="2" id="15" limit="48" name="S15">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170">
+                            W 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -91,18 +121,26 @@
         <offering id="7">
             <course id="7" name="CHEM196" numLabs="1"/>
             <config id="7">
-                <subpart courseLabNum="1" id="7" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="16" limit="48">
-                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170"/>
+                <subpart courseLabNum="1" id="7" itype="Laboratory" name="P7">
+                    <section courseLabSectionNum="1" id="16" limit="48" name="S16">
+                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170">
+                            M 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="17" limit="48">
-                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170"/>
+                    <section courseLabSectionNum="2" id="17" limit="48" name="S17">
+                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170">
+                            T 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="3" id="18" limit="48">
-                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170"/>
+                    <section courseLabSectionNum="3" id="18" limit="48" name="S18">
+                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170">
+                            Th 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="4" id="19" limit="48">
-                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170"/>
+                    <section courseLabSectionNum="4" id="19" limit="48" name="S19">
+                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170">
+                            F 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -110,12 +148,16 @@
         <offering id="8">
             <course id="8" name="COMP100" numLabs="1"/>
             <config id="8">
-                <subpart courseLabNum="1" id="8" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="20" limit="250">
-                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170"/>
+                <subpart courseLabNum="1" id="8" itype="Laboratory" name="P8">
+                    <section courseLabSectionNum="1" id="20" limit="250" name="S20">
+                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170">
+                            M 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="21" limit="250">
-                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170"/>
+                    <section courseLabSectionNum="2" id="21" limit="250" name="S21">
+                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170">
+                            Th 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -123,9 +165,11 @@
         <offering id="9">
             <course id="9" name="GEOG110" numLabs="1"/>
             <config id="9">
-                <subpart courseLabNum="1" id="9" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="22" limit="260">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170"/>
+                <subpart courseLabNum="1" id="9" itype="Laboratory" name="P9">
+                    <section courseLabSectionNum="1" id="22" limit="260" name="S22">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170">
+                            W 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -133,15 +177,21 @@
         <offering id="10">
             <course id="10" name="GEOL101" numLabs="1"/>
             <config id="10">
-                <subpart courseLabNum="1" id="10" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="23" limit="40">
-                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170"/>
+                <subpart courseLabNum="1" id="10" itype="Laboratory" name="P10">
+                    <section courseLabSectionNum="1" id="23" limit="40" name="S23">
+                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170">
+                            M 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="24" limit="40">
-                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170"/>
+                    <section courseLabSectionNum="2" id="24" limit="40" name="S24">
+                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170">
+                            Th 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="3" id="25" limit="40">
-                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170"/>
+                    <section courseLabSectionNum="3" id="25" limit="40" name="S25">
+                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170">
+                            F 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -149,12 +199,16 @@
         <offering id="11">
             <course id="11" name="MATH130" numLabs="1"/>
             <config id="11">
-                <subpart courseLabNum="1" id="11" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="26" limit="154">
-                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170"/>
+                <subpart courseLabNum="1" id="11" itype="Laboratory" name="P11">
+                    <section courseLabSectionNum="1" id="26" limit="154" name="S26">
+                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170">
+                            T 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="27" limit="136">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170"/>
+                    <section courseLabSectionNum="2" id="27" limit="136" name="S27">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170">
+                            W 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -162,15 +216,21 @@
         <offering id="12">
             <course id="12" name="MATH134" numLabs="1"/>
             <config id="12">
-                <subpart courseLabNum="1" id="12" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="28" limit="750">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115"/>
+                <subpart courseLabNum="1" id="12" itype="Laboratory" name="P12">
+                    <section courseLabSectionNum="1" id="28" limit="750" name="S28">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115">
+                            W 9:35a - 12:35p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="29" limit="500">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170"/>
+                    <section courseLabSectionNum="2" id="29" limit="500" name="S29">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170">
+                            W 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="3" id="30" limit="250">
-                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170"/>
+                    <section courseLabSectionNum="3" id="30" limit="250" name="S30">
+                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170">
+                            Th 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -178,9 +238,11 @@
         <offering id="13">
             <course id="13" name="MATH140" numLabs="1"/>
             <config id="13">
-                <subpart courseLabNum="1" id="13" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="31" limit="165">
-                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170"/>
+                <subpart courseLabNum="1" id="13" itype="Laboratory" name="P13">
+                    <section courseLabSectionNum="1" id="31" limit="165" name="S31">
+                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170">
+                            F 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -188,15 +250,21 @@
         <offering id="14">
             <course id="14" name="MATH150" numLabs="1"/>
             <config id="14">
-                <subpart courseLabNum="1" id="14" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="32" limit="491">
-                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170"/>
+                <subpart courseLabNum="1" id="14" itype="Laboratory" name="P14">
+                    <section courseLabSectionNum="1" id="32" limit="491" name="S32">
+                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170">
+                            T 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="33" limit="350">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115"/>
+                    <section courseLabSectionNum="2" id="33" limit="350" name="S33">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115">
+                            W 9:35a - 12:35p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="3" id="34" limit="491">
-                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170"/>
+                    <section courseLabSectionNum="3" id="34" limit="491" name="S34">
+                        <time dates="1" days="0000100" length="36" sessionDay="Friday" start="170">
+                            F 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -204,9 +272,11 @@
         <offering id="15">
             <course id="15" name="MATH196" numLabs="1"/>
             <config id="15">
-                <subpart courseLabNum="1" id="15" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="35" limit="106">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115"/>
+                <subpart courseLabNum="1" id="15" itype="Laboratory" name="P15">
+                    <section courseLabSectionNum="1" id="35" limit="106" name="S35">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115">
+                            W 9:35a - 12:35p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -214,9 +284,11 @@
         <offering id="16">
             <course id="16" name="PHYS113" numLabs="1"/>
             <config id="16">
-                <subpart courseLabNum="1" id="16" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="36" limit="320">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170"/>
+                <subpart courseLabNum="1" id="16" itype="Laboratory" name="P16">
+                    <section courseLabSectionNum="1" id="36" limit="320" name="S36">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="170">
+                            W 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -224,18 +296,26 @@
         <offering id="17">
             <course id="17" name="PHYS131" numLabs="1"/>
             <config id="17">
-                <subpart courseLabNum="1" id="17" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="37" limit="270">
-                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170"/>
+                <subpart courseLabNum="1" id="17" itype="Laboratory" name="P17">
+                    <section courseLabSectionNum="1" id="37" limit="270" name="S37">
+                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170">
+                            M 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="38" limit="320">
-                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170"/>
+                    <section courseLabSectionNum="2" id="38" limit="320" name="S38">
+                        <time dates="1" days="0100000" length="36" sessionDay="Tuesday" start="170">
+                            T 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="3" id="39" limit="320">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115"/>
+                    <section courseLabSectionNum="3" id="39" limit="320" name="S39">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115">
+                            W 9:35a - 12:35p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="4" id="40" limit="320">
-                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170"/>
+                    <section courseLabSectionNum="4" id="40" limit="320" name="S40">
+                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="170">
+                            Th 2:10p - 5:10p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -243,9 +323,11 @@
         <offering id="18">
             <course id="18" name="PHYS195" numLabs="1"/>
             <config id="18">
-                <subpart courseLabNum="1" id="18" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="41" limit="320">
-                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="115"/>
+                <subpart courseLabNum="1" id="18" itype="Laboratory" name="P18">
+                    <section courseLabSectionNum="1" id="41" limit="320" name="S41">
+                        <time dates="1" days="0001000" length="36" sessionDay="Thursday" start="115">
+                            Th 9:35a - 12:35p
+                        </time>
                     </section>
                 </subpart>
             </config>
@@ -253,12 +335,16 @@
         <offering id="19">
             <course id="19" name="STAT130" numLabs="1"/>
             <config id="19">
-                <subpart courseLabNum="1" id="19" itype="Laboratory">
-                    <section courseLabSectionNum="1" id="42" limit="491">
-                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170"/>
+                <subpart courseLabNum="1" id="19" itype="Laboratory" name="P19">
+                    <section courseLabSectionNum="1" id="42" limit="491" name="S42">
+                        <time dates="1" days="1000000" length="36" sessionDay="Monday" start="170">
+                            M 2:10p - 5:10p
+                        </time>
                     </section>
-                    <section courseLabSectionNum="2" id="43" limit="544">
-                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115"/>
+                    <section courseLabSectionNum="2" id="43" limit="544" name="S43">
+                        <time dates="1" days="0010000" length="36" sessionDay="Wednesday" start="115">
+                            W 9:35a - 12:35p
+                        </time>
                     </section>
                 </subpart>
             </config>

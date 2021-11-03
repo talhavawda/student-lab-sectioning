@@ -7,43 +7,76 @@ from os import path  # For checking if file exists
 """
 # current Assumption - each course only has 1 lab, with possibly many sections
 
-def main(solutionFilePath: str = None, solutionName: str = None):
+def main(problemInstanceName: str = None, solutionFilePath: str = None, solutionName: str = None, fullUpdatedSolution: bool = False, modVerNum: int = None):
 	"""
-		Either both parameters are both None or both specified
+		Either both solutionFilePath and solutionName parameters are both None or both specified
+		If fullUpdatedSolution is False, then solutionFilePath and solutionName are used, otheriwise modVerNMum is used instead
+		:param problemInstanceName:
 		:param solutionFilePath:
 		:param solutionName:
-		:return:
+		:param fullUpdatedSolution: whether we are getting the section allocations for a full updated (merged) solution file
+		Default is False, which represents the default functionality below. Else if True (applicable to SeparateModifiedInputProcessing.py)
+		then the solution file is no longer .. solutionName + "/solution.xml" but it will be problemInstanceName + "-fullsolution-<modVerNum>.xml"
+		and will be located in the problem instance's directly instead of inside the directory of an obtained solution of this
+		problem instance
+		:param modVerNum:
+		:return: allocationsFilePath (or None if fullUpdatedSolution == True and modVerNum is None)
 	"""
 
-	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
+	if problemInstanceName is None:
+		#problemInstanceName = input("Enter problem instance name: ")
+		problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # initial input data XML file for the problem instance
 
-	if solutionFilePath is None and solutionName is None:
-		""" Get the name of the solution we want to work with """
+	if fullUpdatedSolution == False: # Default functionality
+		if solutionFilePath is None and solutionName is None:
+			""" Get the name of the solution we want to work with """
 
-		while True:
+			while True:
+				try:
+					solutionName = input("Enter the name of the solution (format: yymmdd_hhmmss) that you want to use to obtain the Section Allocations data: ")
+					solutionFilePath = problemInstanceDirectoryPath + "/" + solutionName + "/solution.xml"  # the file path of the solution.xml file of this solution
+					print(solutionName)
+					open(solutionFilePath, "r")
+					break  # solutionFilePath is valid
+
+				except FileNotFoundError:
+					print("Solution folder not found in the problem instance's directory. You will be prompted to re-enter the name of the solution.")
+					print("Please ensure that the solution's folder is located in this problem instance's directory.\n")
+
+
+		""" Do processing only if section allocations for this solution XML file has not already been processed """
+		allocationsFilePath = problemInstanceDirectoryPath + "/" + solutionName + "/allocations.xml"
+
+
+	else:  # applicable to SeparateModifiedInputProcessing.py
+		if modVerNum is not None:
 			try:
-				solutionName = input("Enter the name of the solution (format: yymmdd_hhmmss) that you want to use to obtain the Section Allocations data: ")
-				solutionFilePath = problemInstanceDirectoryPath + "/" + solutionName + "/solution.xml"  # the file path of the solution.xml file of this solution
-				print(solutionName)
+				solutionFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + "-fullsolution-" + str(modVerNum) + ".xml"
 				open(solutionFilePath, "r")
-				break  # solutionFilePath is valid
-
 			except FileNotFoundError:
-				print("Solution folder not found in the problem instance's directory. You will be prompted to re-enter the name of the solution.")
-				print("Please ensure that the solution's folder is located in this problem instance's directory.\n")
+				print("Full updated solution XML file to modification version " + str(modVerNum) + " not found in the problem instance's directory.")
+				print("Unable to process Section Allocations.")
+				return None
+
+			allocationsFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + "-allocations-" + str(modVerNum) + ".xml"
+
+		else:
+			print("modVerNum not specified. Unable to process Section Allocations for the full updated solution XML file.")
+			return None
 
 
-	""" Do processing only if section allocations for this solution XML file has not already been processed """
-	allocationsFilePath = problemInstanceDirectoryPath + "/" + solutionName + "/allocations.xml"
 	fileExists = path.isfile(allocationsFilePath)
 
 	if not fileExists:  # if this script has not already been run on this solution XML file
 
-		""" Process the solution's XML file and obtain the courses and allocations data """
+		"""
+		Process the solution's XML file and obtain the courses and allocations data.
+			Since the inputXmlFilePath is only used to get the course id-name mappings in processSolution(), 
+			we don't have to change anything for SeparateModifiedInputProcessing.py's functionality
+		"""
 		allocationsDict = processSolution(inputXmlFilePath, solutionFilePath)
 
 		""" Write the allocations data to the end of the solution's XML file and display it to the console """
@@ -51,6 +84,8 @@ def main(solutionFilePath: str = None, solutionName: str = None):
 	else:
 		print("This solution file has already been processed by this script, and the section allocation data has already been written to the allocations.xml file")
 		print("\nSection Allocations file:", allocationsFilePath)
+
+	return allocationsFilePath
 
 # End main
 
@@ -145,6 +180,8 @@ def processSolution(inputXmlFilePath: str, solutionFilePath: str):
 
 				solutionTimeTag = section.find("time")
 				sectionTimeslot = solutionTimeTag.text
+				sectionTimeslot = sectionTimeslot.replace("\n", "")
+				sectionTimeslot = sectionTimeslot.strip()
 				sectionDict["sectionTimeslot"] = sectionTimeslot
 
 				sectionsDict[sectionID] = sectionDict

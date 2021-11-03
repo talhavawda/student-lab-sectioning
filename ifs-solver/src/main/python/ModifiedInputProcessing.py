@@ -262,7 +262,7 @@ def getModifiedStudentsFilePath(problemInstanceDirectoryPath: str):
 		Get the the correct file name of the modified Students input Excel file from the user, and return
 		the file path of the modified Students input file
 		:param problemInstanceDirectoryPath: str:
-		:return: modifiedStudentsFilePath
+		:return: modifiedStudentsFilePath, modVerNum
 	"""
 	while True:
 		try:

@@ -20,755 +20,755 @@
     Time: 0.01 min
 -->
 <sectioning version="1.0" initiative="CAES-Wvl" term="Sem1" year="2020" created="Sun Oct 31 11:17:39 SAST 2021">
-  <offerings>
-    <offering id="1" name="O1">
-      <course id="1" subjectArea="" courseNbr="C1"/>
-      <config id="1" name="G1">
-        <subpart id="1" itype="Laboratory" name="P1">
-          <section id="1" limit="49" name="S1">
-            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
-          </section>
-          <section id="2" limit="50" name="S2">
-            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
-          </section>
-          <section id="3" limit="50" name="S3">
-            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
-          </section>
-          <section id="4" limit="51" name="S4">
-            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="2" name="O2">
-      <course id="2" subjectArea="" courseNbr="C2"/>
-      <config id="2" name="G2">
-        <subpart id="2" itype="Laboratory" name="P2">
-          <section id="5" limit="0" name="S5">
-            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="3" name="O3">
-      <course id="3" subjectArea="" courseNbr="C3"/>
-      <config id="3" name="G3">
-        <subpart id="3" itype="Laboratory" name="P3">
-          <section id="6" limit="0" name="S6">
-            <time days="0000100" start="115" length="36" dates="1">F 9:35a - 12:35p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="4" name="O4">
-      <course id="4" subjectArea="" courseNbr="C4"/>
-      <config id="4" name="G4">
-        <subpart id="4" itype="Laboratory" name="P4">
-          <section id="7" limit="43" name="S7">
-            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="5" name="O5">
-      <course id="5" subjectArea="" courseNbr="C5"/>
-      <config id="5" name="G5">
-        <subpart id="5" itype="Laboratory" name="P5">
-          <section id="8" limit="11" name="S8">
-            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
-          </section>
-          <section id="9" limit="14" name="S9">
-            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
-          </section>
-          <section id="10" limit="15" name="S10">
-            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
-          </section>
-          <section id="11" limit="14" name="S11">
-            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
-          </section>
-          <section id="12" limit="15" name="S12">
-            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
-          </section>
-          <section id="13" limit="15" name="S13">
-            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="6" name="O6">
-      <course id="6" subjectArea="" courseNbr="C6"/>
-      <config id="6" name="G6">
-        <subpart id="6" itype="Laboratory" name="P6">
-          <section id="14" limit="0" name="S14">
-            <time days="0100000" start="115" length="36" dates="1">T 9:35a - 12:35p</time>
-          </section>
-          <section id="15" limit="0" name="S15">
-            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="7" name="O7">
-      <course id="7" subjectArea="" courseNbr="C7"/>
-      <config id="7" name="G7">
-        <subpart id="7" itype="Laboratory" name="P7">
-          <section id="16" limit="11" name="S16">
-            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
-          </section>
-          <section id="17" limit="0" name="S17">
-            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
-          </section>
-          <section id="18" limit="15" name="S18">
-            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
-          </section>
-          <section id="19" limit="18" name="S19">
-            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="8" name="O8">
-      <course id="8" subjectArea="" courseNbr="C8"/>
-      <config id="8" name="G8">
-        <subpart id="8" itype="Laboratory" name="P8">
-          <section id="20" limit="129" name="S20">
-            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
-          </section>
-          <section id="21" limit="129" name="S21">
-            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="9" name="O9">
-      <course id="9" subjectArea="" courseNbr="C9"/>
-      <config id="9" name="G9">
-        <subpart id="9" itype="Laboratory" name="P9">
-          <section id="22" limit="75" name="S22">
-            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="10" name="O10">
-      <course id="10" subjectArea="" courseNbr="C10"/>
-      <config id="10" name="G10">
-        <subpart id="10" itype="Laboratory" name="P10">
-          <section id="23" limit="11" name="S23">
-            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
-          </section>
-          <section id="24" limit="11" name="S24">
-            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
-          </section>
-          <section id="25" limit="12" name="S25">
-            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="11" name="O11">
-      <course id="11" subjectArea="" courseNbr="C11"/>
-      <config id="11" name="G11">
-        <subpart id="11" itype="Laboratory" name="P11">
-          <section id="26" limit="15" name="S26">
-            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
-          </section>
-          <section id="27" limit="20" name="S27">
-            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="12" name="O12">
-      <course id="12" subjectArea="" courseNbr="C12"/>
-      <config id="12" name="G12">
-        <subpart id="12" itype="Laboratory" name="P12">
-          <section id="28" limit="425" name="S28">
-            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
-          </section>
-          <section id="29" limit="284" name="S29">
-            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
-          </section>
-          <section id="30" limit="142" name="S30">
-            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="13" name="O13">
-      <course id="13" subjectArea="" courseNbr="C13"/>
-      <config id="13" name="G13">
-        <subpart id="13" itype="Laboratory" name="P13">
-          <section id="31" limit="95" name="S31">
-            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="14" name="O14">
-      <course id="14" subjectArea="" courseNbr="C14"/>
-      <config id="14" name="G14">
-        <subpart id="14" itype="Laboratory" name="P14">
-          <section id="32" limit="235" name="S32">
-            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
-          </section>
-          <section id="33" limit="148" name="S33">
-            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
-          </section>
-          <section id="34" limit="225" name="S34">
-            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="15" name="O15">
-      <course id="15" subjectArea="" courseNbr="C15"/>
-      <config id="15" name="G15">
-        <subpart id="15" itype="Laboratory" name="P15">
-          <section id="35" limit="57" name="S35">
-            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="16" name="O16">
-      <course id="16" subjectArea="" courseNbr="C16"/>
-      <config id="16" name="G16">
-        <subpart id="16" itype="Laboratory" name="P16">
-          <section id="36" limit="163" name="S36">
-            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="17" name="O17">
-      <course id="17" subjectArea="" courseNbr="C17"/>
-      <config id="17" name="G17">
-        <subpart id="17" itype="Laboratory" name="P17">
-          <section id="37" limit="137" name="S37">
-            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
-          </section>
-          <section id="38" limit="161" name="S38">
-            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
-          </section>
-          <section id="39" limit="161" name="S39">
-            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
-          </section>
-          <section id="40" limit="162" name="S40">
-            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="18" name="O18">
-      <course id="18" subjectArea="" courseNbr="C18"/>
-      <config id="18" name="G18">
-        <subpart id="18" itype="Laboratory" name="P18">
-          <section id="41" limit="81" name="S41">
-            <time days="0001000" start="115" length="36" dates="1">Th 9:35a - 12:35p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-    <offering id="19" name="O19">
-      <course id="19" subjectArea="" courseNbr="C19"/>
-      <config id="19" name="G19">
-        <subpart id="19" itype="Laboratory" name="P19">
-          <section id="42" limit="223" name="S42">
-            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
-          </section>
-          <section id="43" limit="292" name="S43">
-            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
-          </section>
-        </subpart>
-      </config>
-    </offering>
-  </offerings>
-  <students>
-    <student id="220112040">
-      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
-      <major area="BCOM-A"/>
-      <course id="6167" priority="0" waitlist="false" course="19">
-        <best course="19">
-          <section id="43">S43 W 9:35a - 12:35p</section>
-        </best>
-      </course>
-    </student>
-    <student id="220112256">
-      <classification area="COLLEGE OF HEALTH SCIENCES"/>
-      <major area="B-PHAM"/>
-      <course id="6168" priority="0" waitlist="false" course="19">
-        <best course="19">
-          <section id="42">S42 M 2:10p - 5:10p</section>
-        </best>
-      </course>
-    </student>
-    <student id="220120001">
-      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
-      <major area="BSCSIT"/>
-      <course id="6169" priority="0" waitlist="false" course="8">
-        <best course="8">
-          <section id="21">S21 Th 2:10p - 5:10p</section>
-        </best>
-      </course>
-      <course id="6170" priority="0" waitlist="false" course="11">
-        <best course="11">
-          <section id="27">S27 W 2:10p - 5:10p</section>
-        </best>
-      </course>
-      <course id="6171" priority="0" waitlist="false" course="19">
-        <best course="19">
-          <section id="43">S43 W 9:35a - 12:35p</section>
-        </best>
-      </course>
-    </student>
-  </students>
-  <constraints/>
-  <travel-times/>
-  <log>
-    <msg level="4" msg="Restoring from backup ..." date="1635671858409"/>
-    <msg level="4" msg="Solving problem ..." date="1635671858460"/>
-    <msg level="2" msg="Initializing solver" date="1635671858461"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:-0,00, DC:0, TOC:0, %:-0,00" date="1635671858570"/>
-    <msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1635671858572"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858573"/>
-    <msg level="2" msg="Critical Backtracking (priority students)..." date="1635671858575"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858576"/>
-    <msg level="2" msg="Critical Ifs (priority students)..." date="1635671858576"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858578"/>
-    <msg level="2" msg="Critical Backtracking (priority students)..." date="1635671858578"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858579"/>
-    <msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1635671858579"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858580"/>
-    <msg level="2" msg="Important Backtracking (priority students)..." date="1635671858583"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858583"/>
-    <msg level="2" msg="Important Ifs (priority students)..." date="1635671858583"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858585"/>
-    <msg level="2" msg="Important Backtracking (priority students)..." date="1635671858586"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858588"/>
-    <msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1635671858588"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858589"/>
-    <msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858589"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858590"/>
-    <msg level="2" msg="Normal Ifs (priority students)..." date="1635671858590"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858592"/>
-    <msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858593"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858595"/>
-    <msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1635671858595"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858595"/>
-    <msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858596"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858597"/>
-    <msg level="2" msg="Critical Ifs (senior students)..." date="1635671858597"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858598"/>
-    <msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858598"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858599"/>
-    <msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1635671858600"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858600"/>
-    <msg level="2" msg="Important Backtracking (senior students)..." date="1635671858601"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858601"/>
-    <msg level="2" msg="Important Ifs (senior students)..." date="1635671858601"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858603"/>
-    <msg level="2" msg="Important Backtracking (senior students)..." date="1635671858603"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858605"/>
-    <msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1635671858606"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858606"/>
-    <msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858607"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858607"/>
-    <msg level="2" msg="Normal Ifs (senior students)..." date="1635671858607"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858609"/>
-    <msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858610"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858613"/>
-    <msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1635671858613"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858615"/>
-    <msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858616"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858626"/>
-    <msg level="2" msg="Critical Ifs (junior students)..." date="1635671858627"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858628"/>
-    <msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858631"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858636"/>
-    <msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1635671858636"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858637"/>
-    <msg level="2" msg="Important Backtracking (junior students)..." date="1635671858641"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858641"/>
-    <msg level="2" msg="Important Ifs (junior students)..." date="1635671858641"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858644"/>
-    <msg level="2" msg="Important Backtracking (junior students)..." date="1635671858646"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858649"/>
-    <msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1635671858649"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858649"/>
-    <msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858650"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858650"/>
-    <msg level="2" msg="Normal Ifs (junior students)..." date="1635671858650"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858650"/>
-    <msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858651"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858651"/>
-    <msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1635671858651"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858652"/>
-    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858658"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858658"/>
-    <msg level="2" msg="Critical Ifs (sophomore students)..." date="1635671858658"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858660"/>
-    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858661"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858661"/>
-    <msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1635671858661"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858662"/>
-    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858662"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858663"/>
-    <msg level="2" msg="Important Ifs (sophomore students)..." date="1635671858665"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858666"/>
-    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858669"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858670"/>
-    <msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1635671858671"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858672"/>
-    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858672"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858673"/>
-    <msg level="2" msg="Normal Ifs (sophomore students)..." date="1635671858673"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858673"/>
-    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858675"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858676"/>
-    <msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1635671858676"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858676"/>
-    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858677"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858677"/>
-    <msg level="2" msg="Critical Ifs (frehmen students)..." date="1635671858678"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858679"/>
-    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858681"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858683"/>
-    <msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1635671858683"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858683"/>
-    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858684"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858684"/>
-    <msg level="2" msg="Important Ifs (frehmen students)..." date="1635671858684"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858685"/>
-    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858685"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858686"/>
-    <msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1635671858686"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858687"/>
-    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858699"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858699"/>
-    <msg level="2" msg="Normal Ifs (frehmen students)..." date="1635671858699"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858701"/>
-    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858702"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858703"/>
-    <msg level="2" msg="Critical Courses B&amp;B..." date="1635671858703"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858704"/>
-    <msg level="2" msg="Critical Backtracking..." date="1635671858705"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858706"/>
-    <msg level="2" msg="Critical Ifs..." date="1635671858706"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858707"/>
-    <msg level="2" msg="Critical Backtracking..." date="1635671858707"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858708"/>
-    <msg level="2" msg="Important Courses B&amp;B..." date="1635671858708"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858709"/>
-    <msg level="2" msg="Important Backtracking..." date="1635671858709"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858709"/>
-    <msg level="2" msg="Important Ifs..." date="1635671858709"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858710"/>
-    <msg level="2" msg="Important Backtracking..." date="1635671858711"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858711"/>
-    <msg level="2" msg="Min Credit B&amp;B..." date="1635671858712"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858712"/>
-    <msg level="2" msg="Branch&amp;bound..." date="1635671858713"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858716"/>
-    <msg level="2" msg="Student swap..." date="1635671858716"/>
-    <msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858717"/>
-    <msg level="2" msg="Backtracking..." date="1635671858718"/>
-    <msg level="1" msg="Timing of BacktrackSelection: 27,00 ms/it (1 iterations, 0,00% time limit of 5,00 seconds reached)" date="1635671858753"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858753"/>
-    <msg level="2" msg="Enrollment swaps..." date="1635671858755"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858756"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858757"/>
-    <msg level="2" msg="Student swap..." date="1635671858757"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858758"/>
-    <msg level="2" msg="Random unassignment of problematic students..." date="1635671858758"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858759"/>
-    <msg level="2" msg="Resection incomplete students..." date="1635671858759"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858761"/>
-    <msg level="2" msg="Resection unassigned students..." date="1635671858761"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858762"/>
-    <msg level="2" msg="Student swap..." date="1635671858762"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858763"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858764"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858765"/>
-    <msg level="2" msg="Enrollment swaps..." date="1635671858765"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858767"/>
-    <msg level="2" msg="Backtracking..." date="1635671858767"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858767"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858768"/>
-    <msg level="2" msg="Random unassignment..." date="1635671858768"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858768"/>
-    <msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1635671858769"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858769"/>
-    <msg level="2" msg="Critical Backtracking (priority students)..." date="1635671858769"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858769"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858769"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858770"/>
-    <msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1635671858770"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858771"/>
-    <msg level="2" msg="Important Backtracking (priority students)..." date="1635671858771"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858772"/>
-    <msg level="2" msg="Important Ifs (priority students)..." date="1635671858772"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858773"/>
-    <msg level="2" msg="Important Backtracking (priority students)..." date="1635671858773"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858773"/>
-    <msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1635671858773"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858774"/>
-    <msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858774"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858774"/>
-    <msg level="2" msg="Normal Ifs (priority students)..." date="1635671858774"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858775"/>
-    <msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858776"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858776"/>
-    <msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1635671858776"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858777"/>
-    <msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858777"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858777"/>
-    <msg level="2" msg="Critical Ifs (senior students)..." date="1635671858777"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858778"/>
-    <msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858778"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858779"/>
-    <msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1635671858779"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858779"/>
-    <msg level="2" msg="Important Backtracking (senior students)..." date="1635671858779"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858780"/>
-    <msg level="2" msg="Important Ifs (senior students)..." date="1635671858780"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858780"/>
-    <msg level="2" msg="Important Backtracking (senior students)..." date="1635671858780"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858781"/>
-    <msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1635671858781"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858781"/>
-    <msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858781"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858782"/>
-    <msg level="2" msg="Normal Ifs (senior students)..." date="1635671858782"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858783"/>
-    <msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858783"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858783"/>
-    <msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1635671858783"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858784"/>
-    <msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858784"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858784"/>
-    <msg level="2" msg="Critical Ifs (junior students)..." date="1635671858784"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858785"/>
-    <msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858785"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858786"/>
-    <msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1635671858786"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858787"/>
-    <msg level="2" msg="Important Backtracking (junior students)..." date="1635671858787"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858787"/>
-    <msg level="2" msg="Important Ifs (junior students)..." date="1635671858787"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858788"/>
-    <msg level="2" msg="Important Backtracking (junior students)..." date="1635671858788"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858789"/>
-    <msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1635671858789"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858789"/>
-    <msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858789"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858790"/>
-    <msg level="2" msg="Normal Ifs (junior students)..." date="1635671858790"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858791"/>
-    <msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858791"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858791"/>
-    <msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1635671858791"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858792"/>
-    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858792"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858792"/>
-    <msg level="2" msg="Critical Ifs (sophomore students)..." date="1635671858792"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858793"/>
-    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858793"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858793"/>
-    <msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1635671858793"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858794"/>
-    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858794"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858794"/>
-    <msg level="2" msg="Important Ifs (sophomore students)..." date="1635671858794"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858795"/>
-    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858795"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858796"/>
-    <msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1635671858796"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858796"/>
-    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858796"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858797"/>
-    <msg level="2" msg="Normal Ifs (sophomore students)..." date="1635671858797"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858798"/>
-    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858798"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858798"/>
-    <msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1635671858798"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858798"/>
-    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858799"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858799"/>
-    <msg level="2" msg="Critical Ifs (frehmen students)..." date="1635671858799"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858799"/>
-    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858799"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858800"/>
-    <msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1635671858800"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858801"/>
-    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858801"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858801"/>
-    <msg level="2" msg="Important Ifs (frehmen students)..." date="1635671858801"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858802"/>
-    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858802"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858803"/>
-    <msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1635671858803"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858803"/>
-    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858803"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858803"/>
-    <msg level="2" msg="Normal Ifs (frehmen students)..." date="1635671858803"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858804"/>
-    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858804"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858805"/>
-    <msg level="2" msg="Critical Courses B&amp;B..." date="1635671858805"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858806"/>
-    <msg level="2" msg="Critical Backtracking..." date="1635671858806"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858806"/>
-    <msg level="2" msg="Critical Ifs..." date="1635671858806"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858807"/>
-    <msg level="2" msg="Critical Backtracking..." date="1635671858807"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858807"/>
-    <msg level="2" msg="Important Courses B&amp;B..." date="1635671858807"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858808"/>
-    <msg level="2" msg="Important Backtracking..." date="1635671858808"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858808"/>
-    <msg level="2" msg="Important Ifs..." date="1635671858808"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858809"/>
-    <msg level="2" msg="Important Backtracking..." date="1635671858809"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858809"/>
-    <msg level="2" msg="Min Credit B&amp;B..." date="1635671858809"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858810"/>
-    <msg level="2" msg="Branch&amp;bound..." date="1635671858810"/>
-    <msg level="1" msg="Timing of BranchBoundSelection: 0,00 ms/it (2 iterations, 0,00% time limit of 5,00 seconds reached)" date="1635671858814"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,81" date="1635671858814"/>
-    <msg level="2" msg="Student swap..." date="1635671858815"/>
-    <msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,81" date="1635671858820"/>
-    <msg level="2" msg="Backtracking..." date="1635671858820"/>
-    <msg level="1" msg="Timing of BacktrackSelection: 2,50 ms/it (2 iterations, 0,00% time limit of 5,00 seconds reached)" date="1635671858867"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858867"/>
-    <msg level="2" msg="Enrollment swaps..." date="1635671858867"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858870"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858871"/>
-    <msg level="2" msg="Student swap..." date="1635671858871"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858872"/>
-    <msg level="2" msg="Random unassignment of problematic students..." date="1635671858872"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858875"/>
-    <msg level="2" msg="Resection incomplete students..." date="1635671858875"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858876"/>
-    <msg level="2" msg="Resection unassigned students..." date="1635671858876"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858877"/>
-    <msg level="2" msg="Student swap..." date="1635671858877"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858878"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858878"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858879"/>
-    <msg level="2" msg="Enrollment swaps..." date="1635671858879"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858879"/>
-    <msg level="2" msg="Backtracking..." date="1635671858879"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858881"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858885"/>
-    <msg level="2" msg="Random unassignment..." date="1635671858885"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858889"/>
-    <msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1635671858889"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858889"/>
-    <msg level="2" msg="Critical Backtracking (priority students)..." date="1635671858889"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858890"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858890"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858890"/>
-    <msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1635671858890"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
-    <msg level="2" msg="Important Backtracking (priority students)..." date="1635671858891"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
-    <msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1635671858891"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
-    <msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858891"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858892"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858892"/>
-    <msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1635671858892"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858892"/>
-    <msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858892"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858892"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858893"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858893"/>
-    <msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1635671858893"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858893"/>
-    <msg level="2" msg="Important Backtracking (senior students)..." date="1635671858893"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858894"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858894"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858895"/>
-    <msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1635671858895"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858895"/>
-    <msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858896"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858897"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858898"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858899"/>
-    <msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1635671858899"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858899"/>
-    <msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858899"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858900"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858900"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858900"/>
-    <msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1635671858901"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858901"/>
-    <msg level="2" msg="Important Backtracking (junior students)..." date="1635671858901"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858901"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858901"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858902"/>
-    <msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1635671858902"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858902"/>
-    <msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858902"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858903"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858903"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858903"/>
-    <msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1635671858903"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858903"/>
-    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858903"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858904"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858904"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858907"/>
-    <msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1635671858907"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858908"/>
-    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858908"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858909"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858911"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858912"/>
-    <msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1635671858912"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858912"/>
-    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858912"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858913"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858915"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858917"/>
-    <msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1635671858917"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858917"/>
-    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858917"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858919"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858919"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858919"/>
-    <msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1635671858919"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858919"/>
-    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858919"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858920"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858920"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858920"/>
-    <msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1635671858920"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858920"/>
-    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858921"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858921"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858921"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858921"/>
-    <msg level="2" msg="Critical Courses B&amp;B..." date="1635671858921"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858922"/>
-    <msg level="2" msg="Critical Backtracking..." date="1635671858922"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858922"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858922"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858922"/>
-    <msg level="2" msg="Important Courses B&amp;B..." date="1635671858922"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858923"/>
-    <msg level="2" msg="Important Backtracking..." date="1635671858923"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858923"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858923"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858924"/>
-    <msg level="2" msg="Min Credit B&amp;B..." date="1635671858924"/>
-    <msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858935"/>
-    <msg level="2" msg="Branch&amp;bound..." date="1635671858936"/>
-    <msg level="2" msg="Done" date="1635671859562"/>
-    <msg level="4" msg="Solver done." date="1635671859563"/>
-  </log>
+	<offerings>
+		<offering id="1" name="O1">
+			<course id="1" subjectArea="" courseNbr="C1"/>
+			<config id="1" name="G1">
+				<subpart id="1" itype="Laboratory" name="P1">
+					<section id="1" limit="49" name="S1">
+						<time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+					</section>
+					<section id="2" limit="50" name="S2">
+						<time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+					</section>
+					<section id="3" limit="50" name="S3">
+						<time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+					</section>
+					<section id="4" limit="51" name="S4">
+						<time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="2" name="O2">
+			<course id="2" subjectArea="" courseNbr="C2"/>
+			<config id="2" name="G2">
+				<subpart id="2" itype="Laboratory" name="P2">
+					<section id="5" limit="0" name="S5">
+						<time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="3" name="O3">
+			<course id="3" subjectArea="" courseNbr="C3"/>
+			<config id="3" name="G3">
+				<subpart id="3" itype="Laboratory" name="P3">
+					<section id="6" limit="0" name="S6">
+						<time days="0000100" start="115" length="36" dates="1">F 9:35a - 12:35p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="4" name="O4">
+			<course id="4" subjectArea="" courseNbr="C4"/>
+			<config id="4" name="G4">
+				<subpart id="4" itype="Laboratory" name="P4">
+					<section id="7" limit="43" name="S7">
+						<time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="5" name="O5">
+			<course id="5" subjectArea="" courseNbr="C5"/>
+			<config id="5" name="G5">
+				<subpart id="5" itype="Laboratory" name="P5">
+					<section id="8" limit="11" name="S8">
+						<time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+					</section>
+					<section id="9" limit="14" name="S9">
+						<time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+					</section>
+					<section id="10" limit="15" name="S10">
+						<time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+					</section>
+					<section id="11" limit="14" name="S11">
+						<time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+					</section>
+					<section id="12" limit="15" name="S12">
+						<time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+					</section>
+					<section id="13" limit="15" name="S13">
+						<time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="6" name="O6">
+			<course id="6" subjectArea="" courseNbr="C6"/>
+			<config id="6" name="G6">
+				<subpart id="6" itype="Laboratory" name="P6">
+					<section id="14" limit="0" name="S14">
+						<time days="0100000" start="115" length="36" dates="1">T 9:35a - 12:35p</time>
+					</section>
+					<section id="15" limit="0" name="S15">
+						<time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="7" name="O7">
+			<course id="7" subjectArea="" courseNbr="C7"/>
+			<config id="7" name="G7">
+				<subpart id="7" itype="Laboratory" name="P7">
+					<section id="16" limit="11" name="S16">
+						<time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+					</section>
+					<section id="17" limit="0" name="S17">
+						<time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+					</section>
+					<section id="18" limit="15" name="S18">
+						<time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+					</section>
+					<section id="19" limit="18" name="S19">
+						<time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="8" name="O8">
+			<course id="8" subjectArea="" courseNbr="C8"/>
+			<config id="8" name="G8">
+				<subpart id="8" itype="Laboratory" name="P8">
+					<section id="20" limit="129" name="S20">
+						<time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+					</section>
+					<section id="21" limit="129" name="S21">
+						<time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="9" name="O9">
+			<course id="9" subjectArea="" courseNbr="C9"/>
+			<config id="9" name="G9">
+				<subpart id="9" itype="Laboratory" name="P9">
+					<section id="22" limit="75" name="S22">
+						<time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="10" name="O10">
+			<course id="10" subjectArea="" courseNbr="C10"/>
+			<config id="10" name="G10">
+				<subpart id="10" itype="Laboratory" name="P10">
+					<section id="23" limit="11" name="S23">
+						<time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+					</section>
+					<section id="24" limit="11" name="S24">
+						<time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+					</section>
+					<section id="25" limit="12" name="S25">
+						<time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="11" name="O11">
+			<course id="11" subjectArea="" courseNbr="C11"/>
+			<config id="11" name="G11">
+				<subpart id="11" itype="Laboratory" name="P11">
+					<section id="26" limit="15" name="S26">
+						<time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+					</section>
+					<section id="27" limit="20" name="S27">
+						<time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="12" name="O12">
+			<course id="12" subjectArea="" courseNbr="C12"/>
+			<config id="12" name="G12">
+				<subpart id="12" itype="Laboratory" name="P12">
+					<section id="28" limit="425" name="S28">
+						<time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+					</section>
+					<section id="29" limit="284" name="S29">
+						<time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+					</section>
+					<section id="30" limit="142" name="S30">
+						<time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="13" name="O13">
+			<course id="13" subjectArea="" courseNbr="C13"/>
+			<config id="13" name="G13">
+				<subpart id="13" itype="Laboratory" name="P13">
+					<section id="31" limit="95" name="S31">
+						<time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="14" name="O14">
+			<course id="14" subjectArea="" courseNbr="C14"/>
+			<config id="14" name="G14">
+				<subpart id="14" itype="Laboratory" name="P14">
+					<section id="32" limit="235" name="S32">
+						<time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+					</section>
+					<section id="33" limit="148" name="S33">
+						<time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+					</section>
+					<section id="34" limit="225" name="S34">
+						<time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="15" name="O15">
+			<course id="15" subjectArea="" courseNbr="C15"/>
+			<config id="15" name="G15">
+				<subpart id="15" itype="Laboratory" name="P15">
+					<section id="35" limit="57" name="S35">
+						<time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="16" name="O16">
+			<course id="16" subjectArea="" courseNbr="C16"/>
+			<config id="16" name="G16">
+				<subpart id="16" itype="Laboratory" name="P16">
+					<section id="36" limit="163" name="S36">
+						<time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="17" name="O17">
+			<course id="17" subjectArea="" courseNbr="C17"/>
+			<config id="17" name="G17">
+				<subpart id="17" itype="Laboratory" name="P17">
+					<section id="37" limit="137" name="S37">
+						<time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+					</section>
+					<section id="38" limit="161" name="S38">
+						<time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+					</section>
+					<section id="39" limit="161" name="S39">
+						<time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+					</section>
+					<section id="40" limit="162" name="S40">
+						<time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="18" name="O18">
+			<course id="18" subjectArea="" courseNbr="C18"/>
+			<config id="18" name="G18">
+				<subpart id="18" itype="Laboratory" name="P18">
+					<section id="41" limit="81" name="S41">
+						<time days="0001000" start="115" length="36" dates="1">Th 9:35a - 12:35p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="19" name="O19">
+			<course id="19" subjectArea="" courseNbr="C19"/>
+			<config id="19" name="G19">
+				<subpart id="19" itype="Laboratory" name="P19">
+					<section id="42" limit="223" name="S42">
+						<time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+					</section>
+					<section id="43" limit="292" name="S43">
+						<time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+	</offerings>
+	<students>
+		<student id="220112040">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="6167" priority="0" waitlist="false" course="19">
+				<best course="19">
+					<section id="43">S43 W 9:35a - 12:35p</section>
+				</best>
+			</course>
+		</student>
+		<student id="220112256">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-PHAM"/>
+			<course id="6168" priority="0" waitlist="false" course="19">
+				<best course="19">
+					<section id="42">S42 M 2:10p - 5:10p</section>
+				</best>
+			</course>
+		</student>
+		<student id="220120001">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6169" priority="0" waitlist="false" course="8">
+				<best course="8">
+					<section id="21">S21 Th 2:10p - 5:10p</section>
+				</best>
+			</course>
+			<course id="6170" priority="0" waitlist="false" course="11">
+				<best course="11">
+					<section id="27">S27 W 2:10p - 5:10p</section>
+				</best>
+			</course>
+			<course id="6171" priority="0" waitlist="false" course="19">
+				<best course="19">
+					<section id="43">S43 W 9:35a - 12:35p</section>
+				</best>
+			</course>
+		</student>
+	</students>
+	<constraints/>
+	<travel-times/>
+	<log>
+		<msg level="4" msg="Restoring from backup ..." date="1635671858409"/>
+		<msg level="4" msg="Solving problem ..." date="1635671858460"/>
+		<msg level="2" msg="Initializing solver" date="1635671858461"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:-0,00, DC:0, TOC:0, %:-0,00" date="1635671858570"/>
+		<msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1635671858572"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858573"/>
+		<msg level="2" msg="Critical Backtracking (priority students)..." date="1635671858575"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858576"/>
+		<msg level="2" msg="Critical Ifs (priority students)..." date="1635671858576"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858578"/>
+		<msg level="2" msg="Critical Backtracking (priority students)..." date="1635671858578"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858579"/>
+		<msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1635671858579"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858580"/>
+		<msg level="2" msg="Important Backtracking (priority students)..." date="1635671858583"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858583"/>
+		<msg level="2" msg="Important Ifs (priority students)..." date="1635671858583"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858585"/>
+		<msg level="2" msg="Important Backtracking (priority students)..." date="1635671858586"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858588"/>
+		<msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1635671858588"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858589"/>
+		<msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858589"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858590"/>
+		<msg level="2" msg="Normal Ifs (priority students)..." date="1635671858590"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858592"/>
+		<msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858593"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858595"/>
+		<msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1635671858595"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858595"/>
+		<msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858596"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858597"/>
+		<msg level="2" msg="Critical Ifs (senior students)..." date="1635671858597"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858598"/>
+		<msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858598"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858599"/>
+		<msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1635671858600"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858600"/>
+		<msg level="2" msg="Important Backtracking (senior students)..." date="1635671858601"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858601"/>
+		<msg level="2" msg="Important Ifs (senior students)..." date="1635671858601"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858603"/>
+		<msg level="2" msg="Important Backtracking (senior students)..." date="1635671858603"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858605"/>
+		<msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1635671858606"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858606"/>
+		<msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858607"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858607"/>
+		<msg level="2" msg="Normal Ifs (senior students)..." date="1635671858607"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858609"/>
+		<msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858610"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858613"/>
+		<msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1635671858613"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858615"/>
+		<msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858616"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858626"/>
+		<msg level="2" msg="Critical Ifs (junior students)..." date="1635671858627"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858628"/>
+		<msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858631"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858636"/>
+		<msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1635671858636"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858637"/>
+		<msg level="2" msg="Important Backtracking (junior students)..." date="1635671858641"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858641"/>
+		<msg level="2" msg="Important Ifs (junior students)..." date="1635671858641"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858644"/>
+		<msg level="2" msg="Important Backtracking (junior students)..." date="1635671858646"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858649"/>
+		<msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1635671858649"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858649"/>
+		<msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858650"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858650"/>
+		<msg level="2" msg="Normal Ifs (junior students)..." date="1635671858650"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858650"/>
+		<msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858651"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858651"/>
+		<msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1635671858651"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858652"/>
+		<msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858658"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858658"/>
+		<msg level="2" msg="Critical Ifs (sophomore students)..." date="1635671858658"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858660"/>
+		<msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858661"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858661"/>
+		<msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1635671858661"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858662"/>
+		<msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858662"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858663"/>
+		<msg level="2" msg="Important Ifs (sophomore students)..." date="1635671858665"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858666"/>
+		<msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858669"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858670"/>
+		<msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1635671858671"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858672"/>
+		<msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858672"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858673"/>
+		<msg level="2" msg="Normal Ifs (sophomore students)..." date="1635671858673"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858673"/>
+		<msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858675"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858676"/>
+		<msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1635671858676"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858676"/>
+		<msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858677"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858677"/>
+		<msg level="2" msg="Critical Ifs (frehmen students)..." date="1635671858678"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858679"/>
+		<msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858681"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858683"/>
+		<msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1635671858683"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858683"/>
+		<msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858684"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858684"/>
+		<msg level="2" msg="Important Ifs (frehmen students)..." date="1635671858684"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858685"/>
+		<msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858685"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858686"/>
+		<msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1635671858686"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858687"/>
+		<msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858699"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858699"/>
+		<msg level="2" msg="Normal Ifs (frehmen students)..." date="1635671858699"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858701"/>
+		<msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858702"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858703"/>
+		<msg level="2" msg="Critical Courses B&amp;B..." date="1635671858703"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858704"/>
+		<msg level="2" msg="Critical Backtracking..." date="1635671858705"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858706"/>
+		<msg level="2" msg="Critical Ifs..." date="1635671858706"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858707"/>
+		<msg level="2" msg="Critical Backtracking..." date="1635671858707"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858708"/>
+		<msg level="2" msg="Important Courses B&amp;B..." date="1635671858708"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858709"/>
+		<msg level="2" msg="Important Backtracking..." date="1635671858709"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858709"/>
+		<msg level="2" msg="Important Ifs..." date="1635671858709"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858710"/>
+		<msg level="2" msg="Important Backtracking..." date="1635671858711"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858711"/>
+		<msg level="2" msg="Min Credit B&amp;B..." date="1635671858712"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858712"/>
+		<msg level="2" msg="Branch&amp;bound..." date="1635671858713"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858716"/>
+		<msg level="2" msg="Student swap..." date="1635671858716"/>
+		<msg level="1" msg="RRq:0/5, RS:0/3, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1635671858717"/>
+		<msg level="2" msg="Backtracking..." date="1635671858718"/>
+		<msg level="1" msg="Timing of BacktrackSelection: 27,00 ms/it (1 iterations, 0,00% time limit of 5,00 seconds reached)" date="1635671858753"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858753"/>
+		<msg level="2" msg="Enrollment swaps..." date="1635671858755"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858756"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858757"/>
+		<msg level="2" msg="Student swap..." date="1635671858757"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858758"/>
+		<msg level="2" msg="Random unassignment of problematic students..." date="1635671858758"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858759"/>
+		<msg level="2" msg="Resection incomplete students..." date="1635671858759"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858761"/>
+		<msg level="2" msg="Resection unassigned students..." date="1635671858761"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858762"/>
+		<msg level="2" msg="Student swap..." date="1635671858762"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858763"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858764"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858765"/>
+		<msg level="2" msg="Enrollment swaps..." date="1635671858765"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858767"/>
+		<msg level="2" msg="Backtracking..." date="1635671858767"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858767"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858768"/>
+		<msg level="2" msg="Random unassignment..." date="1635671858768"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858768"/>
+		<msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1635671858769"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858769"/>
+		<msg level="2" msg="Critical Backtracking (priority students)..." date="1635671858769"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858769"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858769"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,69, DC:0, TOC:0, %:89,60" date="1635671858770"/>
+		<msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1635671858770"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858771"/>
+		<msg level="2" msg="Important Backtracking (priority students)..." date="1635671858771"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858772"/>
+		<msg level="2" msg="Important Ifs (priority students)..." date="1635671858772"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858773"/>
+		<msg level="2" msg="Important Backtracking (priority students)..." date="1635671858773"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858773"/>
+		<msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1635671858773"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858774"/>
+		<msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858774"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858774"/>
+		<msg level="2" msg="Normal Ifs (priority students)..." date="1635671858774"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858775"/>
+		<msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858776"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858776"/>
+		<msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1635671858776"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858777"/>
+		<msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858777"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858777"/>
+		<msg level="2" msg="Critical Ifs (senior students)..." date="1635671858777"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858778"/>
+		<msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858778"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858779"/>
+		<msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1635671858779"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858779"/>
+		<msg level="2" msg="Important Backtracking (senior students)..." date="1635671858779"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858780"/>
+		<msg level="2" msg="Important Ifs (senior students)..." date="1635671858780"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858780"/>
+		<msg level="2" msg="Important Backtracking (senior students)..." date="1635671858780"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858781"/>
+		<msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1635671858781"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858781"/>
+		<msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858781"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858782"/>
+		<msg level="2" msg="Normal Ifs (senior students)..." date="1635671858782"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858783"/>
+		<msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858783"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858783"/>
+		<msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1635671858783"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858784"/>
+		<msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858784"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858784"/>
+		<msg level="2" msg="Critical Ifs (junior students)..." date="1635671858784"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858785"/>
+		<msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858785"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858786"/>
+		<msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1635671858786"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858787"/>
+		<msg level="2" msg="Important Backtracking (junior students)..." date="1635671858787"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858787"/>
+		<msg level="2" msg="Important Ifs (junior students)..." date="1635671858787"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858788"/>
+		<msg level="2" msg="Important Backtracking (junior students)..." date="1635671858788"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858789"/>
+		<msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1635671858789"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858789"/>
+		<msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858789"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858790"/>
+		<msg level="2" msg="Normal Ifs (junior students)..." date="1635671858790"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858791"/>
+		<msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858791"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858791"/>
+		<msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1635671858791"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858792"/>
+		<msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858792"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858792"/>
+		<msg level="2" msg="Critical Ifs (sophomore students)..." date="1635671858792"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858793"/>
+		<msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858793"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858793"/>
+		<msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1635671858793"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858794"/>
+		<msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858794"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858794"/>
+		<msg level="2" msg="Important Ifs (sophomore students)..." date="1635671858794"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858795"/>
+		<msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858795"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858796"/>
+		<msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1635671858796"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858796"/>
+		<msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858796"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858797"/>
+		<msg level="2" msg="Normal Ifs (sophomore students)..." date="1635671858797"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858798"/>
+		<msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858798"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858798"/>
+		<msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1635671858798"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858798"/>
+		<msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858799"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858799"/>
+		<msg level="2" msg="Critical Ifs (frehmen students)..." date="1635671858799"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858799"/>
+		<msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858799"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858800"/>
+		<msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1635671858800"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858801"/>
+		<msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858801"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858801"/>
+		<msg level="2" msg="Important Ifs (frehmen students)..." date="1635671858801"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858802"/>
+		<msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858802"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858803"/>
+		<msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1635671858803"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858803"/>
+		<msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858803"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858803"/>
+		<msg level="2" msg="Normal Ifs (frehmen students)..." date="1635671858803"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858804"/>
+		<msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858804"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858805"/>
+		<msg level="2" msg="Critical Courses B&amp;B..." date="1635671858805"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858806"/>
+		<msg level="2" msg="Critical Backtracking..." date="1635671858806"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858806"/>
+		<msg level="2" msg="Critical Ifs..." date="1635671858806"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858807"/>
+		<msg level="2" msg="Critical Backtracking..." date="1635671858807"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858807"/>
+		<msg level="2" msg="Important Courses B&amp;B..." date="1635671858807"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858808"/>
+		<msg level="2" msg="Important Backtracking..." date="1635671858808"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858808"/>
+		<msg level="2" msg="Important Ifs..." date="1635671858808"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858809"/>
+		<msg level="2" msg="Important Backtracking..." date="1635671858809"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858809"/>
+		<msg level="2" msg="Min Credit B&amp;B..." date="1635671858809"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,70" date="1635671858810"/>
+		<msg level="2" msg="Branch&amp;bound..." date="1635671858810"/>
+		<msg level="1" msg="Timing of BranchBoundSelection: 0,00 ms/it (2 iterations, 0,00% time limit of 5,00 seconds reached)" date="1635671858814"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,81" date="1635671858814"/>
+		<msg level="2" msg="Student swap..." date="1635671858815"/>
+		<msg level="1" msg="RRq:2/5, RS:2/3, CR:40,00%, V:1,79, DC:0, TOC:0, %:59,81" date="1635671858820"/>
+		<msg level="2" msg="Backtracking..." date="1635671858820"/>
+		<msg level="1" msg="Timing of BacktrackSelection: 2,50 ms/it (2 iterations, 0,00% time limit of 5,00 seconds reached)" date="1635671858867"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858867"/>
+		<msg level="2" msg="Enrollment swaps..." date="1635671858867"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858870"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858871"/>
+		<msg level="2" msg="Student swap..." date="1635671858871"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858872"/>
+		<msg level="2" msg="Random unassignment of problematic students..." date="1635671858872"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858875"/>
+		<msg level="2" msg="Resection incomplete students..." date="1635671858875"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858876"/>
+		<msg level="2" msg="Resection unassigned students..." date="1635671858876"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858877"/>
+		<msg level="2" msg="Student swap..." date="1635671858877"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858878"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858878"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858879"/>
+		<msg level="2" msg="Enrollment swaps..." date="1635671858879"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858879"/>
+		<msg level="2" msg="Backtracking..." date="1635671858879"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858881"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858885"/>
+		<msg level="2" msg="Random unassignment..." date="1635671858885"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858889"/>
+		<msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1635671858889"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858889"/>
+		<msg level="2" msg="Critical Backtracking (priority students)..." date="1635671858889"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858890"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858890"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858890"/>
+		<msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1635671858890"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
+		<msg level="2" msg="Important Backtracking (priority students)..." date="1635671858891"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
+		<msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1635671858891"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
+		<msg level="2" msg="Normal Backtracking (priority students)..." date="1635671858891"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858891"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858892"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858892"/>
+		<msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1635671858892"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858892"/>
+		<msg level="2" msg="Critical Backtracking (senior students)..." date="1635671858892"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858892"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858893"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858893"/>
+		<msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1635671858893"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858893"/>
+		<msg level="2" msg="Important Backtracking (senior students)..." date="1635671858893"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858894"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858894"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858895"/>
+		<msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1635671858895"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858895"/>
+		<msg level="2" msg="Normal Backtracking (senior students)..." date="1635671858896"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858897"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858898"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858899"/>
+		<msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1635671858899"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858899"/>
+		<msg level="2" msg="Critical Backtracking (junior students)..." date="1635671858899"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858900"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858900"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858900"/>
+		<msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1635671858901"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858901"/>
+		<msg level="2" msg="Important Backtracking (junior students)..." date="1635671858901"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858901"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858901"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858902"/>
+		<msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1635671858902"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858902"/>
+		<msg level="2" msg="Normal Backtracking (junior students)..." date="1635671858902"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858903"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858903"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858903"/>
+		<msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1635671858903"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858903"/>
+		<msg level="2" msg="Critical Backtracking (sophomore students)..." date="1635671858903"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858904"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858904"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858907"/>
+		<msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1635671858907"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858908"/>
+		<msg level="2" msg="Important Backtracking (sophomore students)..." date="1635671858908"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858909"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858911"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858912"/>
+		<msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1635671858912"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858912"/>
+		<msg level="2" msg="Normal Backtracking (sophomore students)..." date="1635671858912"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858913"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858915"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858917"/>
+		<msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1635671858917"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858917"/>
+		<msg level="2" msg="Critical Backtracking (frehmen students)..." date="1635671858917"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858919"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858919"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858919"/>
+		<msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1635671858919"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858919"/>
+		<msg level="2" msg="Important Backtracking (frehmen students)..." date="1635671858919"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858920"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858920"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858920"/>
+		<msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1635671858920"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858920"/>
+		<msg level="2" msg="Normal Backtracking (frehmen students)..." date="1635671858921"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858921"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858921"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858921"/>
+		<msg level="2" msg="Critical Courses B&amp;B..." date="1635671858921"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858922"/>
+		<msg level="2" msg="Critical Backtracking..." date="1635671858922"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858922"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858922"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858922"/>
+		<msg level="2" msg="Important Courses B&amp;B..." date="1635671858922"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858923"/>
+		<msg level="2" msg="Important Backtracking..." date="1635671858923"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858923"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858923"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858924"/>
+		<msg level="2" msg="Min Credit B&amp;B..." date="1635671858924"/>
+		<msg level="1" msg="RRq:5/5, RS:3/3, CR:100,00%, V:2,70, DC:0, TOC:0, %:89,89" date="1635671858935"/>
+		<msg level="2" msg="Branch&amp;bound..." date="1635671858936"/>
+		<msg level="2" msg="Done" date="1635671859562"/>
+		<msg level="4" msg="Solver done." date="1635671859563"/>
+	</log>
 </sectioning>
