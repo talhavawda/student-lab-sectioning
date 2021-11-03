@@ -784,7 +784,7 @@ def processModifiedStudentsData(modifiedStudentsFilePath: str, currentSolutionDi
 	return updatedInputDict
 
 
-def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
+def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str, modVerNum: int = None):
 	"""
 		Create an updated input data XML file (that is a partial solution) based on the updated input data (the
 		unchanged/existing course requests from the current input data XML file are still assigned as is, the new course
@@ -795,6 +795,7 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 		sub-dictionary (studentsDict) containing the student details, course requests, and allocations from the current
 		solution (for existing course requests)
 		:param inputXmlFilePath: str: the file path of the current input data XML file. To be used to extract courses data
+		:param modVerNum: int: the modification version number of the modified Students input data XML file that was processed
 		:return: None
 	"""
 	# Convert values to strings as an XML file stores all attribute values as strings
@@ -836,19 +837,26 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	currentVersion = currentInputSectioningTag.get("version")
 	periodIndex = currentVersion.rfind(".")
 
-	# Todo - ensure the Problem Specification XML file part in the comment below
-	"""
-		modVerNum is the modification version number of the modified Students input data XML file.
-		The Problem Specification XML file, used to create the first/initial input data XML file for this problem
-		instance should have the "version" attribute be either "0" or "<x>.0" so that modVerNum here matches up with the 
-		modification version number of the modified Students input data XML file 
-	"""
-	if periodIndex < 0:
-		modVerNum = int(currentVersion) + 1
-		updatedVersion = str(modVerNum)
-	else:  # updating the subversion instead if there is one
-		modVerNum = int(currentVersion[periodIndex+1:]) + 1
-		updatedVersion = currentVersion[:periodIndex+1] + str(modVerNum)
+	if modVerNum is None:  # Default
+		# Todo - ensure the Problem Specification XML file part in the comment below
+		"""
+			modVerNum is the modification version number of the modified Students input data XML file.
+			The Problem Specification XML file, used to create the first/initial input data XML file for this problem
+			instance should have the "version" attribute be either "0" or "<x>.0" so that modVerNum here matches up with the 
+			modification version number of the modified Students input data XML file 
+		"""
+		if periodIndex < 0:
+			modVerNum = int(currentVersion) + 1
+			updatedVersion = str(modVerNum)
+		else:  # updating the subversion instead if there is one
+			modVerNum = int(currentVersion[periodIndex+1:]) + 1
+			updatedVersion = currentVersion[:periodIndex+1] + str(modVerNum)
+
+	else:
+		if periodIndex < 0:
+			updatedVersion = str(modVerNum)
+		else:  # updating the subversion instead if there is one
+			updatedVersion = currentVersion[:periodIndex+1] + str(modVerNum)
 
 
 	sectioningElement.setAttribute("version", updatedVersion)
@@ -1025,7 +1033,7 @@ def generateUpdatedInputXmlFile(updatedInputDict: dict, inputXmlFilePath: str):
 	# allow for easy comparison, and multiple independent solver runs (with different modified Students input file) on the
 	# same input data XML file
 	periodIndex = inputXmlFilePath.rfind(".xml")
-	updatedXmlFileName = inputXmlFilePath[:periodIndex] + "-updated-1.xml"
+	updatedXmlFileName = inputXmlFilePath[:periodIndex] + "-updated-" + str(modVerNum) + ".xml"
 
 
 	# Write the updated input data XML file

@@ -154,8 +154,7 @@ def generateNewRequestsInputXmlFile(problemInstanceName: str):
 	print("\tReading in and parsing the updated input data XML file...")
 
 	periodIndex = inputXmlFilePath.rfind(".xml")
-	updatedXmlFilePath = inputXmlFilePath[:periodIndex] + "-updated-1.xml"
-
+	updatedXmlFilePath = inputXmlFilePath[:periodIndex] + "-updated-" + str(modVerNum) + ".xml"
 	with open(updatedXmlFilePath, "r") as updatedXMLFile:
 		updatedXML = updatedXMLFile.read()
 

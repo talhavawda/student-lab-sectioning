@@ -446,6 +446,14 @@ Order of run (updated 2):\
     3. SeparateModifiedInputProcessing.py (now does steps 3, 4, and 5 above)
 
  
+ 
+TODO: MENTION IN PAPER: Since the IFS solver balances the section allocations when doing them, for each course request in the resolving part, 
+it most probably will have the option to choose from all the sections for the labs of that course (as in the initial solution the 
+allocations were balanced so there should be space in all sections unless num course requests for a course is very close to lab capacity), 
+so we DON'T need to remove/unallocate any allocations for the existing/unchanged course requests in the initial/current solution to free up section space (to 
+give new course requests an opportunity to be sectioned into other sections)  
+
+ 
 TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
 
 
