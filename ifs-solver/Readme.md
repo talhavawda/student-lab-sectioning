@@ -216,7 +216,7 @@ the new course requests are unassigned/unallocated, and the old course requests 
     - Using the 2020-Sem1-CAES-Wvl-no-conflicts problem instance for this Minimal Perturbation Experimentation process
     
     - Creating multiple parallel (first) modified/updated Students excel input files (i.e. Students-1.xlsx) representing different 
-    scenarios (% of additions and modifications, % of individual capacities filled etc.) for this problem instance.
+    Scenarios (% of additions and modifications, % of individual capacities filled etc.) for this problem instance.
         - The modified Students.xlsx files are the entire Students' input data for the problem instance, not just containing
         the course requests that need to be added/removed. 
         - The current scenario's Students-1.xlsx file will be placed in the folder of this problem instance so that
@@ -398,7 +398,9 @@ requests separately and merge the obtained solution with the current solution to
                 - Since I'm using Python 3.10 now, I removed the Python 3.7 and 3.8 and also their virtual environments from Platform Settings -> 
                 SDKs (and also deleted their folders), and also removed Python 3.8 from Project Settings -> Modules -> Dependencies
 
-13. Processing additional datasets
+13. Returning to the Minimal Perturbation Experimentation Process
+
+14. Processing additional datasets
     - 3 datasets for CAES 2021 Sem 2 (Wvl, Howard, PMB)
         - The original Students Excel files are named "CAES Tutorial Groups 2021_2 <CAMPUS> - 2021-08-20"
         - No courses data has been provided so I have to get my own (can't reuse from 2020-Sem1-CAES-Wvl as that was for Semester 1)

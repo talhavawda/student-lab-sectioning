@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Student Sectioning-->
+<!--Solution Info:
+    Assigned course requests: 100,00% (62/62)
+    Assigned course requests (priority students): Normal: 100,00% (62/62)
+    Assigned priority course requests: 100.00% (62/62)
+    Assigned variables: 100.00% (62/62)
+    Average disbalance: 10,35% (0,18)
+    Best Iteration: 119
+    Best Time: 0.01 min (230.76 it/s)
+    Choice: Average assigned choice: 1,00
+    Choice: assigned 1st course choice: 100,00% (62)
+    Iteration: 119
+    Overall solution value: -46.76
+    Sections disbalanced by 10% or more: 0,00% (0)
+    Speed: 230.76 it/s
+    Students with complete schedule: 89.66% (52/58)
+    Students with complete schedule (priority students): Normal: 89.66% (52/58)
+    Time: 0.01 min
+-->
+<sectioning version="1.0" initiative="CAES-Wvl" term="Sem1" year="2020" created="Mon Nov 15 00:42:26 SAST 2021">
+  <offerings>
+    <offering id="1" name="O1">
+      <course id="1" subjectArea="" courseNbr="C1"/>
+      <config id="1" name="G1">
+        <subpart id="1" itype="Laboratory" name="P1">
+          <section id="1" limit="49" name="S1">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="2" limit="50" name="S2">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="3" limit="50" name="S3">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+          <section id="4" limit="51" name="S4">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="2" name="O2">
+      <course id="2" subjectArea="" courseNbr="C2"/>
+      <config id="2" name="G2">
+        <subpart id="2" itype="Laboratory" name="P2">
+          <section id="5" limit="0" name="S5">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="3" name="O3">
+      <course id="3" subjectArea="" courseNbr="C3"/>
+      <config id="3" name="G3">
+        <subpart id="3" itype="Laboratory" name="P3">
+          <section id="6" limit="0" name="S6">
+            <time days="0000100" start="115" length="36" dates="1">F 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="4" name="O4">
+      <course id="4" subjectArea="" courseNbr="C4"/>
+      <config id="4" name="G4">
+        <subpart id="4" itype="Laboratory" name="P4">
+          <section id="7" limit="43" name="S7">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="5" name="O5">
+      <course id="5" subjectArea="" courseNbr="C5"/>
+      <config id="5" name="G5">
+        <subpart id="5" itype="Laboratory" name="P5">
+          <section id="8" limit="11" name="S8">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="9" limit="14" name="S9">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="10" limit="15" name="S10">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+          <section id="11" limit="14" name="S11">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+          <section id="12" limit="15" name="S12">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+          <section id="13" limit="15" name="S13">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="6" name="O6">
+      <course id="6" subjectArea="" courseNbr="C6"/>
+      <config id="6" name="G6">
+        <subpart id="6" itype="Laboratory" name="P6">
+          <section id="14" limit="0" name="S14">
+            <time days="0100000" start="115" length="36" dates="1">T 9:35a - 12:35p</time>
+          </section>
+          <section id="15" limit="0" name="S15">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="7" name="O7">
+      <course id="7" subjectArea="" courseNbr="C7"/>
+      <config id="7" name="G7">
+        <subpart id="7" itype="Laboratory" name="P7">
+          <section id="16" limit="11" name="S16">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="17" limit="0" name="S17">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="18" limit="15" name="S18">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+          <section id="19" limit="18" name="S19">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="8" name="O8">
+      <course id="8" subjectArea="" courseNbr="C8"/>
+      <config id="8" name="G8">
+        <subpart id="8" itype="Laboratory" name="P8">
+          <section id="20" limit="129" name="S20">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="21" limit="129" name="S21">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="9" name="O9">
+      <course id="9" subjectArea="" courseNbr="C9"/>
+      <config id="9" name="G9">
+        <subpart id="9" itype="Laboratory" name="P9">
+          <section id="22" limit="75" name="S22">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="10" name="O10">
+      <course id="10" subjectArea="" courseNbr="C10"/>
+      <config id="10" name="G10">
+        <subpart id="10" itype="Laboratory" name="P10">
+          <section id="23" limit="11" name="S23">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="24" limit="11" name="S24">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+          <section id="25" limit="12" name="S25">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="11" name="O11">
+      <course id="11" subjectArea="" courseNbr="C11"/>
+      <config id="11" name="G11">
+        <subpart id="11" itype="Laboratory" name="P11">
+          <section id="26" limit="15" name="S26">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="27" limit="20" name="S27">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="12" name="O12">
+      <course id="12" subjectArea="" courseNbr="C12"/>
+      <config id="12" name="G12">
+        <subpart id="12" itype="Laboratory" name="P12">
+          <section id="28" limit="425" name="S28">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+          <section id="29" limit="284" name="S29">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+          <section id="30" limit="142" name="S30">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="13" name="O13">
+      <course id="13" subjectArea="" courseNbr="C13"/>
+      <config id="13" name="G13">
+        <subpart id="13" itype="Laboratory" name="P13">
+          <section id="31" limit="95" name="S31">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="14" name="O14">
+      <course id="14" subjectArea="" courseNbr="C14"/>
+      <config id="14" name="G14">
+        <subpart id="14" itype="Laboratory" name="P14">
+          <section id="32" limit="235" name="S32">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="33" limit="148" name="S33">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+          <section id="34" limit="225" name="S34">
+            <time days="0000100" start="170" length="36" dates="1">F 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="15" name="O15">
+      <course id="15" subjectArea="" courseNbr="C15"/>
+      <config id="15" name="G15">
+        <subpart id="15" itype="Laboratory" name="P15">
+          <section id="35" limit="57" name="S35">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="16" name="O16">
+      <course id="16" subjectArea="" courseNbr="C16"/>
+      <config id="16" name="G16">
+        <subpart id="16" itype="Laboratory" name="P16">
+          <section id="36" limit="163" name="S36">
+            <time days="0010000" start="170" length="36" dates="1">W 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="17" name="O17">
+      <course id="17" subjectArea="" courseNbr="C17"/>
+      <config id="17" name="G17">
+        <subpart id="17" itype="Laboratory" name="P17">
+          <section id="37" limit="137" name="S37">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="38" limit="161" name="S38">
+            <time days="0100000" start="170" length="36" dates="1">T 2:10p - 5:10p</time>
+          </section>
+          <section id="39" limit="161" name="S39">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+          <section id="40" limit="162" name="S40">
+            <time days="0001000" start="170" length="36" dates="1">Th 2:10p - 5:10p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="18" name="O18">
+      <course id="18" subjectArea="" courseNbr="C18"/>
+      <config id="18" name="G18">
+        <subpart id="18" itype="Laboratory" name="P18">
+          <section id="41" limit="81" name="S41">
+            <time days="0001000" start="115" length="36" dates="1">Th 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+    <offering id="19" name="O19">
+      <course id="19" subjectArea="" courseNbr="C19"/>
+      <config id="19" name="G19">
+        <subpart id="19" itype="Laboratory" name="P19">
+          <section id="42" limit="223" name="S42">
+            <time days="1000000" start="170" length="36" dates="1">M 2:10p - 5:10p</time>
+          </section>
+          <section id="43" limit="292" name="S43">
+            <time days="0010000" start="115" length="36" dates="1">W 9:35a - 12:35p</time>
+          </section>
+        </subpart>
+      </config>
+    </offering>
+  </offerings>
+  <students>
+    <student id="209504449">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6167" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="6168" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="213547354">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="6169" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="215009112">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOF-G"/>
+    </student>
+    <student id="215028301">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-PHAM"/>
+      <course id="6170" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="12">S12 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="215033901">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6171" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="39">S39 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="216003709">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6172" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="216009174">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-PHAM"/>
+      <course id="6173" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="6174" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="40">S40 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="216021542">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6175" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="6176" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="216021874">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOF-G"/>
+      <course id="6177" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="6178" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="216040177">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6179" priority="0" waitlist="false" course="5">
+        <best course="5">
+          <section id="10">S10 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="216040805">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6180" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="216049509">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6181" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217002685">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6182" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217007017">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="ENG-AG"/>
+      <course id="6183" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="6184" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="40">S40 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217008939">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="6185" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="6186" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="39">S39 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217011165">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6187" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217012077">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6188" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="38">S38 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217013326">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6189" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217014084">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6190" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="38">S38 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217014127">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6191" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="37">S37 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217014548">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6192" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217015262">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6193" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="6194" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="40">S40 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217016469">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="ENG-AG"/>
+      <course id="6195" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217017329">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6196" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217022427">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+    </student>
+    <student id="217025804">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6197" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="217081977">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+    </student>
+    <student id="218011130">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6198" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218019270">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6199" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218019394">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6200" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218020104">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="BMDSCP"/>
+      <course id="6201" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218031421">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+    </student>
+    <student id="218047002">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6202" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218050371">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6203" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218059360">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6204" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218059596">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="BMDSCP"/>
+      <course id="6205" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218064520">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="6206" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218065922">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6207" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="218084397">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6208" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="219001696">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6209" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="219003271">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="6210" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="219005030">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCA"/>
+      <course id="6211" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="219006005">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6212" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="219006017">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="B-COM"/>
+    </student>
+    <student id="220067121">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+    </student>
+    <student id="220072959">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6213" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220073643">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSGLS"/>
+      <course id="6214" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220086597">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSLES"/>
+      <course id="6215" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220090592">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="6216" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220096568">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSM"/>
+      <course id="6217" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="37">S37 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220097845">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="6218" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220099231">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BS-ENS"/>
+      <course id="6219" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="39">S39 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220103649">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSAPC"/>
+      <course id="6220" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220107721">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6221" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220110855">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BBSC-F"/>
+      <course id="6222" priority="0" waitlist="false" course="17">
+        <best course="17">
+          <section id="38">S38 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220112040">
+      <classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+      <major area="BCOM-A"/>
+      <course id="6223" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220112256">
+      <classification area="COLLEGE OF HEALTH SCIENCES"/>
+      <major area="B-PHAM"/>
+      <course id="6224" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="42">S42 M 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+    <student id="220120001">
+      <classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+      <major area="BSCSIT"/>
+      <course id="6225" priority="0" waitlist="false" course="8">
+        <best course="8">
+          <section id="21">S21 Th 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="6226" priority="0" waitlist="false" course="11">
+        <best course="11">
+          <section id="26">S26 T 2:10p - 5:10p</section>
+        </best>
+      </course>
+      <course id="6227" priority="0" waitlist="false" course="19">
+        <best course="19">
+          <section id="43">S43 W 9:35a - 12:35p</section>
+        </best>
+      </course>
+      <course id="6228" priority="0" waitlist="false" course="16">
+        <best course="16">
+          <section id="36">S36 W 2:10p - 5:10p</section>
+        </best>
+      </course>
+    </student>
+  </students>
+  <constraints/>
+  <travel-times/>
+  <log>
+    <msg level="4" msg="Restoring from backup ..." date="1636929745384"/>
+    <msg level="4" msg="Solving problem ..." date="1636929745427"/>
+    <msg level="2" msg="Initializing solver" date="1636929745428"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:-0,00, DC:0, TOC:0, %:-0,00" date="1636929745505"/>
+    <msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1636929745510"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745512"/>
+    <msg level="2" msg="Critical Backtracking (priority students)..." date="1636929745515"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745516"/>
+    <msg level="2" msg="Critical Ifs (priority students)..." date="1636929745516"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745518"/>
+    <msg level="2" msg="Critical Backtracking (priority students)..." date="1636929745519"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745521"/>
+    <msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1636929745522"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745523"/>
+    <msg level="2" msg="Important Backtracking (priority students)..." date="1636929745525"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745525"/>
+    <msg level="2" msg="Important Ifs (priority students)..." date="1636929745526"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745526"/>
+    <msg level="2" msg="Important Backtracking (priority students)..." date="1636929745527"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745529"/>
+    <msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1636929745530"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745531"/>
+    <msg level="2" msg="Normal Backtracking (priority students)..." date="1636929745532"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745532"/>
+    <msg level="2" msg="Normal Ifs (priority students)..." date="1636929745533"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745533"/>
+    <msg level="2" msg="Normal Backtracking (priority students)..." date="1636929745534"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745535"/>
+    <msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1636929745537"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745541"/>
+    <msg level="2" msg="Critical Backtracking (senior students)..." date="1636929745542"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745543"/>
+    <msg level="2" msg="Critical Ifs (senior students)..." date="1636929745543"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745544"/>
+    <msg level="2" msg="Critical Backtracking (senior students)..." date="1636929745546"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745548"/>
+    <msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1636929745549"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745550"/>
+    <msg level="2" msg="Important Backtracking (senior students)..." date="1636929745551"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745551"/>
+    <msg level="2" msg="Important Ifs (senior students)..." date="1636929745551"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745553"/>
+    <msg level="2" msg="Important Backtracking (senior students)..." date="1636929745553"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745556"/>
+    <msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1636929745557"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745558"/>
+    <msg level="2" msg="Normal Backtracking (senior students)..." date="1636929745560"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745560"/>
+    <msg level="2" msg="Normal Ifs (senior students)..." date="1636929745561"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745562"/>
+    <msg level="2" msg="Normal Backtracking (senior students)..." date="1636929745562"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745564"/>
+    <msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1636929745565"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745566"/>
+    <msg level="2" msg="Critical Backtracking (junior students)..." date="1636929745567"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745568"/>
+    <msg level="2" msg="Critical Ifs (junior students)..." date="1636929745568"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745568"/>
+    <msg level="2" msg="Critical Backtracking (junior students)..." date="1636929745569"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745571"/>
+    <msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1636929745572"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745572"/>
+    <msg level="2" msg="Important Backtracking (junior students)..." date="1636929745575"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745577"/>
+    <msg level="2" msg="Important Ifs (junior students)..." date="1636929745577"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745577"/>
+    <msg level="2" msg="Important Backtracking (junior students)..." date="1636929745578"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745578"/>
+    <msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1636929745579"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745579"/>
+    <msg level="2" msg="Normal Backtracking (junior students)..." date="1636929745580"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745580"/>
+    <msg level="2" msg="Normal Ifs (junior students)..." date="1636929745580"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745582"/>
+    <msg level="2" msg="Normal Backtracking (junior students)..." date="1636929745583"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745584"/>
+    <msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1636929745701"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745702"/>
+    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1636929745703"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745704"/>
+    <msg level="2" msg="Critical Ifs (sophomore students)..." date="1636929745704"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745705"/>
+    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1636929745705"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745706"/>
+    <msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1636929745707"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745708"/>
+    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1636929745708"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745709"/>
+    <msg level="2" msg="Important Ifs (sophomore students)..." date="1636929745709"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745709"/>
+    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1636929745710"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745710"/>
+    <msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1636929745711"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745712"/>
+    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1636929745713"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745713"/>
+    <msg level="2" msg="Normal Ifs (sophomore students)..." date="1636929745713"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745714"/>
+    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1636929745714"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745715"/>
+    <msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1636929745715"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745715"/>
+    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1636929745716"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745716"/>
+    <msg level="2" msg="Critical Ifs (frehmen students)..." date="1636929745716"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745716"/>
+    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1636929745717"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745717"/>
+    <msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1636929745718"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745719"/>
+    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1636929745727"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745728"/>
+    <msg level="2" msg="Important Ifs (frehmen students)..." date="1636929745728"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745728"/>
+    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1636929745730"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745734"/>
+    <msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1636929745734"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745735"/>
+    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1636929745737"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745738"/>
+    <msg level="2" msg="Normal Ifs (frehmen students)..." date="1636929745738"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745739"/>
+    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1636929745740"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745740"/>
+    <msg level="2" msg="Critical Courses B&amp;B..." date="1636929745741"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745742"/>
+    <msg level="2" msg="Critical Backtracking..." date="1636929745744"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745744"/>
+    <msg level="2" msg="Critical Ifs..." date="1636929745744"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745745"/>
+    <msg level="2" msg="Critical Backtracking..." date="1636929745746"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745746"/>
+    <msg level="2" msg="Important Courses B&amp;B..." date="1636929745746"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745749"/>
+    <msg level="2" msg="Important Backtracking..." date="1636929745749"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745750"/>
+    <msg level="2" msg="Important Ifs..." date="1636929745750"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745751"/>
+    <msg level="2" msg="Important Backtracking..." date="1636929745751"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745752"/>
+    <msg level="2" msg="Min Credit B&amp;B..." date="1636929745753"/>
+    <msg level="1" msg="RRq:0/62, RS:0/58, CR:0,00%, V:0,00, DC:0, TOC:0, %:0,00" date="1636929745754"/>
+    <msg level="2" msg="Branch&amp;bound..." date="1636929745754"/>
+    <msg level="1" msg="Timing of BranchBoundSelection: 1,02 ms/it (57 iterations, 0,00% time limit of 5,00 seconds reached)" date="1636929745819"/>
+    <msg level="1" msg="RRq:60/62, RS:50/58, CR:96,77%, V:44,94, DC:0, TOC:0, %:77,49" date="1636929745820"/>
+    <msg level="2" msg="Student swap..." date="1636929745826"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745831"/>
+    <msg level="2" msg="Backtracking..." date="1636929745832"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745832"/>
+    <msg level="2" msg="Enrollment swaps..." date="1636929745834"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745835"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745838"/>
+    <msg level="2" msg="Student swap..." date="1636929745839"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745842"/>
+    <msg level="2" msg="Random unassignment of problematic students..." date="1636929745842"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745843"/>
+    <msg level="2" msg="Resection incomplete students..." date="1636929745844"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745846"/>
+    <msg level="2" msg="Resection unassigned students..." date="1636929745846"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745848"/>
+    <msg level="2" msg="Student swap..." date="1636929745848"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745850"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745851"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745853"/>
+    <msg level="2" msg="Enrollment swaps..." date="1636929745854"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745855"/>
+    <msg level="2" msg="Backtracking..." date="1636929745856"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745856"/>
+    <msg level="1" msg="RRq:62/62, RS:52/58, CR:100,00%, V:46,75, DC:0, TOC:0, %:80,60" date="1636929745857"/>
+    <msg level="2" msg="Random unassignment..." date="1636929745857"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745861"/>
+    <msg level="2" msg="Critical Courses B&amp;B (priority students)..." date="1636929745861"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745862"/>
+    <msg level="2" msg="Critical Backtracking (priority students)..." date="1636929745862"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745862"/>
+    <msg level="2" msg="Critical Ifs (priority students)..." date="1636929745862"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745862"/>
+    <msg level="2" msg="Critical Backtracking (priority students)..." date="1636929745863"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745863"/>
+    <msg level="2" msg="Important Courses B&amp;B (priority students)..." date="1636929745863"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745864"/>
+    <msg level="2" msg="Important Backtracking (priority students)..." date="1636929745864"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745864"/>
+    <msg level="2" msg="Important Ifs (priority students)..." date="1636929745864"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745865"/>
+    <msg level="2" msg="Important Backtracking (priority students)..." date="1636929745865"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745866"/>
+    <msg level="2" msg="Normal Courses B&amp;B (priority students)..." date="1636929745866"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745866"/>
+    <msg level="2" msg="Normal Backtracking (priority students)..." date="1636929745867"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745867"/>
+    <msg level="2" msg="Normal Ifs (priority students)..." date="1636929745867"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745868"/>
+    <msg level="2" msg="Normal Backtracking (priority students)..." date="1636929745869"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745870"/>
+    <msg level="2" msg="Critical Courses B&amp;B (senior students)..." date="1636929745872"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745874"/>
+    <msg level="2" msg="Critical Backtracking (senior students)..." date="1636929745874"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745874"/>
+    <msg level="2" msg="Critical Ifs (senior students)..." date="1636929745874"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745874"/>
+    <msg level="2" msg="Critical Backtracking (senior students)..." date="1636929745874"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745875"/>
+    <msg level="2" msg="Important Courses B&amp;B (senior students)..." date="1636929745875"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745875"/>
+    <msg level="2" msg="Important Backtracking (senior students)..." date="1636929745876"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745876"/>
+    <msg level="2" msg="Important Ifs (senior students)..." date="1636929745877"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745879"/>
+    <msg level="2" msg="Important Backtracking (senior students)..." date="1636929745879"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745879"/>
+    <msg level="2" msg="Normal Courses B&amp;B (senior students)..." date="1636929745880"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745880"/>
+    <msg level="2" msg="Normal Backtracking (senior students)..." date="1636929745880"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745881"/>
+    <msg level="2" msg="Normal Ifs (senior students)..." date="1636929745881"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745882"/>
+    <msg level="2" msg="Normal Backtracking (senior students)..." date="1636929745882"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745882"/>
+    <msg level="2" msg="Critical Courses B&amp;B (junior students)..." date="1636929745882"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745886"/>
+    <msg level="2" msg="Critical Backtracking (junior students)..." date="1636929745886"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745887"/>
+    <msg level="2" msg="Critical Ifs (junior students)..." date="1636929745887"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745887"/>
+    <msg level="2" msg="Critical Backtracking (junior students)..." date="1636929745887"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745889"/>
+    <msg level="2" msg="Important Courses B&amp;B (junior students)..." date="1636929745889"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745892"/>
+    <msg level="2" msg="Important Backtracking (junior students)..." date="1636929745892"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745893"/>
+    <msg level="2" msg="Important Ifs (junior students)..." date="1636929745893"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745894"/>
+    <msg level="2" msg="Important Backtracking (junior students)..." date="1636929745894"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745895"/>
+    <msg level="2" msg="Normal Courses B&amp;B (junior students)..." date="1636929745895"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745897"/>
+    <msg level="2" msg="Normal Backtracking (junior students)..." date="1636929745897"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745897"/>
+    <msg level="2" msg="Normal Ifs (junior students)..." date="1636929745898"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745898"/>
+    <msg level="2" msg="Normal Backtracking (junior students)..." date="1636929745899"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745899"/>
+    <msg level="2" msg="Critical Courses B&amp;B (sophomore students)..." date="1636929745900"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745900"/>
+    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1636929745900"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745901"/>
+    <msg level="2" msg="Critical Ifs (sophomore students)..." date="1636929745901"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745901"/>
+    <msg level="2" msg="Critical Backtracking (sophomore students)..." date="1636929745901"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745903"/>
+    <msg level="2" msg="Important Courses B&amp;B (sophomore students)..." date="1636929745903"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745903"/>
+    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1636929745903"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745904"/>
+    <msg level="2" msg="Important Ifs (sophomore students)..." date="1636929745904"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745904"/>
+    <msg level="2" msg="Important Backtracking (sophomore students)..." date="1636929745904"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745905"/>
+    <msg level="2" msg="Normal Courses B&amp;B (sophomore students)..." date="1636929745905"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745905"/>
+    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1636929745905"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745906"/>
+    <msg level="2" msg="Normal Ifs (sophomore students)..." date="1636929745906"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745907"/>
+    <msg level="2" msg="Normal Backtracking (sophomore students)..." date="1636929745907"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745907"/>
+    <msg level="2" msg="Critical Courses B&amp;B (frehmen students)..." date="1636929745918"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745919"/>
+    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1636929745920"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745926"/>
+    <msg level="2" msg="Critical Ifs (frehmen students)..." date="1636929745926"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745927"/>
+    <msg level="2" msg="Critical Backtracking (frehmen students)..." date="1636929745927"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745928"/>
+    <msg level="2" msg="Important Courses B&amp;B (frehmen students)..." date="1636929745928"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745928"/>
+    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1636929745928"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745932"/>
+    <msg level="2" msg="Important Ifs (frehmen students)..." date="1636929745932"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745934"/>
+    <msg level="2" msg="Important Backtracking (frehmen students)..." date="1636929745934"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745935"/>
+    <msg level="2" msg="Normal Courses B&amp;B (frehmen students)..." date="1636929745936"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745936"/>
+    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1636929745936"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745936"/>
+    <msg level="2" msg="Normal Ifs (frehmen students)..." date="1636929745936"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745937"/>
+    <msg level="2" msg="Normal Backtracking (frehmen students)..." date="1636929745937"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745937"/>
+    <msg level="2" msg="Critical Courses B&amp;B..." date="1636929745937"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745938"/>
+    <msg level="2" msg="Critical Backtracking..." date="1636929745938"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745939"/>
+    <msg level="2" msg="Critical Ifs..." date="1636929745939"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745940"/>
+    <msg level="2" msg="Critical Backtracking..." date="1636929745940"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745941"/>
+    <msg level="2" msg="Important Courses B&amp;B..." date="1636929745942"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745944"/>
+    <msg level="2" msg="Important Backtracking..." date="1636929745944"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745945"/>
+    <msg level="2" msg="Important Ifs..." date="1636929745945"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745945"/>
+    <msg level="2" msg="Important Backtracking..." date="1636929745945"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745946"/>
+    <msg level="2" msg="Min Credit B&amp;B..." date="1636929745946"/>
+    <msg level="1" msg="RRq:59/62, RS:49/58, CR:95,16%, V:44,05, DC:0, TOC:0, %:75,94" date="1636929745947"/>
+    <msg level="2" msg="Branch&amp;bound..." date="1636929745947"/>
+    <msg level="2" msg="Done" date="1636929746501"/>
+    <msg level="4" msg="Solver done." date="1636929746502"/>
+  </log>
+</sectioning>

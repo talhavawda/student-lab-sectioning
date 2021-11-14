@@ -580,9 +580,11 @@ on its Scenario 1:
 
 #### 2020-Sem1-CAES-Wvl-no-conflicts [SMIP.py]
  - Initial (complete) solution: 211011_011710
+    - 2547 students
+    - 6166 [100%] course requests assigned
 - See 2020-Sem1-CAES-Wvl-no-conflict above for details
  
- ##### Scenario 1
+##### Scenario 1 - SMIP
  - See 2020-Sem1-CAES-Wvl-no-conflicts -> Scenario 1 above for student modifications and other details
  
  - Solving using SeparateModifiedInputProcessing.py (to not get any perturbations)
@@ -595,3 +597,47 @@ on its Scenario 1:
      - Was able to merge the allocations of the new course requests into the current solution and get a full updated solution
      
      - See Scenario 1 - SMIP folder in the Experimentation folder of this problem instance
+     
+     
+##### Scenario 4
+- A total of 62 new course requests (1% of the original number of course requests)
+- Student modifications:
+    - Number of removed students: 2 
+        - Removed processed course requests:
+            - MATH130 - 1
+            - MATH134 - 1
+            - STAT130 - 1
+    - Modified students:
+        - Removed processed course requests:
+            - MATH134 - 1
+            - STAT130 - 4
+        - Added processed course requests: 
+            - CHEM110 - 2
+            - PHYS113 - 15
+            - PHYS131 - 11
+            - STAT130 - 30
+    - Number of Added students: 1
+        - Added processed course requests: 
+            - COMP100 - 1
+            - MATH130 - 1
+            - PHYS113 - 1
+            - STAT130 - 1
+            
+            
+            
+- Updated num students: 2546
+- Updated num course requests: 6220
+
+- Num assigned course requests (pre-resolving): 6161 (99.92%)
+- Num students with complete schedule: 2544 (99.88%)
+
+- Updated solution (CPSolver's MPP): 
+    - / [%] course requests assigned
+    - Solver took m (s)
+    - Complete solution found
+
+- Updated solution (SMIP.py - new course requests only): 211115_004225
+    - NUM COURSE REQUESTS IN THIS SOLUTION IS SAYING 6222 INSTEAD OF 6220
+    - / [100%] course requests assigned
+    - Solver took 0.01m (0.54s)
+    - Complete solution found

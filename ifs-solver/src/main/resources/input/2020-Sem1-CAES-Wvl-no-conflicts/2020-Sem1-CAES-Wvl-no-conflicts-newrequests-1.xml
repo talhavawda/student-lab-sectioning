@@ -1,0 +1,563 @@
+<?xml version="1.0" ?>
+<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Mon Nov 15 00:42:23 2021" nrDays="5" slotsPerDay="2">
+	<offerings>
+		<offering id="1">
+			<course id="1" name="BIOL101" numLabs="1"/>
+			<config id="1">
+				<subpart id="1" itype="Laboratory" courseLabNum="1">
+					<section id="1" courseLabSectionNum="1" limit="49">
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
+					</section>
+					<section id="2" courseLabSectionNum="2" limit="50">
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
+					</section>
+					<section id="3" courseLabSectionNum="3" limit="50">
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+					<section id="4" courseLabSectionNum="4" limit="51">
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="2">
+			<course id="2" name="BIOL103" numLabs="1"/>
+			<config id="2">
+				<subpart id="2" itype="Laboratory" courseLabNum="1">
+					<section id="5" courseLabSectionNum="1" limit="0">
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="3">
+			<course id="3" name="BIOL195" numLabs="1"/>
+			<config id="3">
+				<subpart id="3" itype="Laboratory" courseLabNum="1">
+					<section id="6" courseLabSectionNum="1" limit="0">
+						<time days="0000100" start="115" length="36" dates="1" sessionDay="Friday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="4">
+			<course id="4" name="BIOL196" numLabs="1"/>
+			<config id="4">
+				<subpart id="4" itype="Laboratory" courseLabNum="1">
+					<section id="7" courseLabSectionNum="1" limit="43">
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="5">
+			<course id="5" name="CHEM110" numLabs="1"/>
+			<config id="5">
+				<subpart id="5" itype="Laboratory" courseLabNum="1">
+					<section id="8" courseLabSectionNum="1" limit="11">
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
+					</section>
+					<section id="9" courseLabSectionNum="2" limit="14">
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
+					</section>
+					<section id="10" courseLabSectionNum="3" limit="15">
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+					<section id="11" courseLabSectionNum="4" limit="14">
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+					<section id="12" courseLabSectionNum="5" limit="15">
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
+					</section>
+					<section id="13" courseLabSectionNum="6" limit="15">
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="6">
+			<course id="6" name="CHEM195" numLabs="1"/>
+			<config id="6">
+				<subpart id="6" itype="Laboratory" courseLabNum="1">
+					<section id="14" courseLabSectionNum="1" limit="0">
+						<time days="0100000" start="115" length="36" dates="1" sessionDay="Tuesday"/>
+					</section>
+					<section id="15" courseLabSectionNum="2" limit="0">
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="7">
+			<course id="7" name="CHEM196" numLabs="1"/>
+			<config id="7">
+				<subpart id="7" itype="Laboratory" courseLabNum="1">
+					<section id="16" courseLabSectionNum="1" limit="11">
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
+					</section>
+					<section id="17" courseLabSectionNum="2" limit="0">
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
+					</section>
+					<section id="18" courseLabSectionNum="3" limit="15">
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
+					</section>
+					<section id="19" courseLabSectionNum="4" limit="18">
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="8">
+			<course id="8" name="COMP100" numLabs="1"/>
+			<config id="8">
+				<subpart id="8" itype="Laboratory" courseLabNum="1">
+					<section id="20" courseLabSectionNum="1" limit="129">
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
+					</section>
+					<section id="21" courseLabSectionNum="2" limit="129">
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="9">
+			<course id="9" name="GEOG110" numLabs="1"/>
+			<config id="9">
+				<subpart id="9" itype="Laboratory" courseLabNum="1">
+					<section id="22" courseLabSectionNum="1" limit="75">
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="10">
+			<course id="10" name="GEOL101" numLabs="1"/>
+			<config id="10">
+				<subpart id="10" itype="Laboratory" courseLabNum="1">
+					<section id="23" courseLabSectionNum="1" limit="11">
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
+					</section>
+					<section id="24" courseLabSectionNum="2" limit="11">
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
+					</section>
+					<section id="25" courseLabSectionNum="3" limit="12">
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="11">
+			<course id="11" name="MATH130" numLabs="1"/>
+			<config id="11">
+				<subpart id="11" itype="Laboratory" courseLabNum="1">
+					<section id="26" courseLabSectionNum="1" limit="15">
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
+					</section>
+					<section id="27" courseLabSectionNum="2" limit="20">
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="12">
+			<course id="12" name="MATH134" numLabs="1"/>
+			<config id="12">
+				<subpart id="12" itype="Laboratory" courseLabNum="1">
+					<section id="28" courseLabSectionNum="1" limit="425">
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+					<section id="29" courseLabSectionNum="2" limit="284">
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+					<section id="30" courseLabSectionNum="3" limit="142">
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="13">
+			<course id="13" name="MATH140" numLabs="1"/>
+			<config id="13">
+				<subpart id="13" itype="Laboratory" courseLabNum="1">
+					<section id="31" courseLabSectionNum="1" limit="95">
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="14">
+			<course id="14" name="MATH150" numLabs="1"/>
+			<config id="14">
+				<subpart id="14" itype="Laboratory" courseLabNum="1">
+					<section id="32" courseLabSectionNum="1" limit="235">
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
+					</section>
+					<section id="33" courseLabSectionNum="2" limit="148">
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+					<section id="34" courseLabSectionNum="3" limit="225">
+						<time days="0000100" start="170" length="36" dates="1" sessionDay="Friday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="15">
+			<course id="15" name="MATH196" numLabs="1"/>
+			<config id="15">
+				<subpart id="15" itype="Laboratory" courseLabNum="1">
+					<section id="35" courseLabSectionNum="1" limit="57">
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="16">
+			<course id="16" name="PHYS113" numLabs="1"/>
+			<config id="16">
+				<subpart id="16" itype="Laboratory" courseLabNum="1">
+					<section id="36" courseLabSectionNum="1" limit="163">
+						<time days="0010000" start="170" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="17">
+			<course id="17" name="PHYS131" numLabs="1"/>
+			<config id="17">
+				<subpart id="17" itype="Laboratory" courseLabNum="1">
+					<section id="37" courseLabSectionNum="1" limit="137">
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
+					</section>
+					<section id="38" courseLabSectionNum="2" limit="161">
+						<time days="0100000" start="170" length="36" dates="1" sessionDay="Tuesday"/>
+					</section>
+					<section id="39" courseLabSectionNum="3" limit="161">
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+					<section id="40" courseLabSectionNum="4" limit="162">
+						<time days="0001000" start="170" length="36" dates="1" sessionDay="Thursday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="18">
+			<course id="18" name="PHYS195" numLabs="1"/>
+			<config id="18">
+				<subpart id="18" itype="Laboratory" courseLabNum="1">
+					<section id="41" courseLabSectionNum="1" limit="81">
+						<time days="0001000" start="115" length="36" dates="1" sessionDay="Thursday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+		<offering id="19">
+			<course id="19" name="STAT130" numLabs="1"/>
+			<config id="19">
+				<subpart id="19" itype="Laboratory" courseLabNum="1">
+					<section id="42" courseLabSectionNum="1" limit="223">
+						<time days="1000000" start="170" length="36" dates="1" sessionDay="Monday"/>
+					</section>
+					<section id="43" courseLabSectionNum="2" limit="292">
+						<time days="0010000" start="115" length="36" dates="1" sessionDay="Wednesday"/>
+					</section>
+				</subpart>
+			</config>
+		</offering>
+	</offerings>
+	<students>
+		<student id="209504449" surname="Dheda" firstnames="Joshiro" numCourses="2" numProcessedCourses="2">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6167" priority="0" course="16" courseName="PHYS113"/>
+			<course id="6168" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="213547354" surname="Naidoo" firstnames="Lushano" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="6169" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="215009112" surname="Mtungwa" firstnames="Lungelo Sinqobile" numCourses="0" numProcessedCourses="0">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOF-G"/>
+		</student>
+		<student id="215028301" surname="Moosa" firstnames="Aadila" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-PHAM"/>
+			<course id="6170" priority="0" course="5" courseName="CHEM110"/>
+		</student>
+		<student id="215033901" surname="Buthelezi" firstnames="Ndumiso Mzothule" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6171" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="216003709" surname="Dlamini" firstnames="Sfundo Thubelihle" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6172" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="216009174" surname="Muthwa" firstnames="Sbonga Theressa" numCourses="2" numProcessedCourses="2">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-PHAM"/>
+			<course id="6173" priority="0" course="19" courseName="STAT130"/>
+			<course id="6174" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="216021542" surname="Mbanjwa" firstnames="Khulekani Patrick" numCourses="2" numProcessedCourses="2">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6175" priority="0" course="16" courseName="PHYS113"/>
+			<course id="6176" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="216021874" surname="Tantsi" firstnames="Mihlali" numCourses="2" numProcessedCourses="2">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOF-G"/>
+			<course id="6177" priority="0" course="16" courseName="PHYS113"/>
+			<course id="6178" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="216040177" surname="Hlomuka" firstnames="Uyanda" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6179" priority="0" course="5" courseName="CHEM110"/>
+		</student>
+		<student id="216040805" surname="Mohanlal" firstnames="Viren" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6180" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="216049509" surname="Mjwara" firstnames="Yenzokuhle Mhlengi" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6181" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="217002685" surname="Magwaza" firstnames="Msawenkosi Sboniso Thabani" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6182" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="217007017" surname="Nsibande" firstnames="Lethani Xolani" numCourses="2" numProcessedCourses="2">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="ENG-AG"/>
+			<course id="6183" priority="0" course="19" courseName="STAT130"/>
+			<course id="6184" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="217008939" surname="Haripersad" firstnames="Shayur" numCourses="2" numProcessedCourses="2">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="6185" priority="0" course="19" courseName="STAT130"/>
+			<course id="6186" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="217011165" surname="Mntungwa" firstnames="Nelisiwe Irene" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6187" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="217012077" surname="Nteyi" firstnames="Mihle" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6188" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="217013326" surname="Mkhize" firstnames="Nontobeko" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6189" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="217014084" surname="Xulu" firstnames="Ntandoyenkosi Zama" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6190" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="217014127" surname="Myeni" firstnames="Siphephelo Anele" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6191" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="217014548" surname="Mazibuko" firstnames="Andile" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6192" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="217015262" surname="Mkhize" firstnames="Andile Handsome" numCourses="2" numProcessedCourses="2">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6193" priority="0" course="19" courseName="STAT130"/>
+			<course id="6194" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="217016469" surname="Biyela" firstnames="Lindokuhle Sakhiseni" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="ENG-AG"/>
+			<course id="6195" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="217017329" surname="Nades" firstnames="Donelle" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6196" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="217022427" surname="Mkhize" firstnames="Siphesihle" numCourses="0" numProcessedCourses="0">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+		</student>
+		<student id="217025804" surname="Shange" firstnames="Sibonelo" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6197" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="217081977" surname="Dwarkapersad" firstnames="Yuvthi" numCourses="0" numProcessedCourses="0">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+		</student>
+		<student id="218011130" surname="Pramlall" firstnames="Shahin" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6198" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218019270" surname="Gcokwana" firstnames="Sinazo" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6199" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218019394" surname="Majoro" firstnames="Khwezi Thulani JR" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6200" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218020104" surname="Mchunu" firstnames="Ntando Handsome" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="BMDSCP"/>
+			<course id="6201" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218031421" surname="Naidu" firstnames="Veruska" numCourses="0" numProcessedCourses="0">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+		</student>
+		<student id="218047002" surname="Nkungu" firstnames="Avumile" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6202" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218050371" surname="Nzimande" firstnames="Nkanyiso Nhlakanipho" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6203" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218059360" surname="Dumela" firstnames="Nonsikelelo" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6204" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218059596" surname="Mthethwa" firstnames="Zama" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="BMDSCP"/>
+			<course id="6205" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218064520" surname="Ngcongo" firstnames="Nhlakanipho Gift" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="6206" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218065922" surname="Nzimande" firstnames="Siyabonga Zolani" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6207" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="218084397" surname="Makhubu" firstnames="Siyabonga Siphokuhle" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6208" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="219001696" surname="Mjuba" firstnames="Thulile Natasha" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6209" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="219003271" surname="Magudulela" firstnames="Luyanda Aphiwe" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="6210" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="219005030" surname="Zulu" firstnames="Andile" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCA"/>
+			<course id="6211" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="219006005" surname="Aniruth" firstnames="Emma Mattea" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6212" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="219006017" surname="Pulvirenti" firstnames="Jade" numCourses="0" numProcessedCourses="0">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="B-COM"/>
+		</student>
+		<student id="220067121" surname="Naidoo" firstnames="Jeuleshan" numCourses="0" numProcessedCourses="0">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+		</student>
+		<student id="220072959" surname="Sithole" firstnames="Makwande Nkosizwile" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6213" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="220073643" surname="Mkhize" firstnames="Nokubonga" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSGLS"/>
+			<course id="6214" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="220086597" surname="Nomsuka" firstnames="Babalwa Yolanda" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSLES"/>
+			<course id="6215" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="220090592" surname="Pillay" firstnames="Mesantha" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="6216" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="220096568" surname="Seolall" firstnames="Rahul" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSM"/>
+			<course id="6217" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="220097845" surname="Ngubane" firstnames="Phumla Queeneth" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="6218" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="220099231" surname="Memela" firstnames="Nontando Happiness" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BS-ENS"/>
+			<course id="6219" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="220103649" surname="Ngoveni" firstnames="Mpimo Kalman" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSAPC"/>
+			<course id="6220" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="220107721" surname="Thompson" firstnames="Dylan Winston" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6221" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+		<student id="220110855" surname="Pillay" firstnames="Santhiran" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BBSC-F"/>
+			<course id="6222" priority="0" course="17" courseName="PHYS131"/>
+		</student>
+		<student id="220112040" surname="Kuzwayo" firstnames="Mthokozisi Goodboy" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF LAW &amp; MAN STUDIES"/>
+			<major area="BCOM-A"/>
+			<course id="6223" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220112256" surname="Khan" firstnames="Barira Mohammed" numCourses="1" numProcessedCourses="1">
+			<classification area="COLLEGE OF HEALTH SCIENCES"/>
+			<major area="B-PHAM"/>
+			<course id="6224" priority="0" course="19" courseName="STAT130"/>
+		</student>
+		<student id="220120001" surname="Student" firstnames="New" numCourses="4" numProcessedCourses="4">
+			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
+			<major area="BSCSIT"/>
+			<course id="6225" priority="0" course="8" courseName="COMP100"/>
+			<course id="6226" priority="0" course="11" courseName="MATH130"/>
+			<course id="6227" priority="0" course="19" courseName="STAT130"/>
+			<course id="6228" priority="0" course="16" courseName="PHYS113"/>
+		</student>
+	</students>
+</sectioning>
