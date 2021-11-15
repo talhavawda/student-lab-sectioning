@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Mon Nov 15 00:42:21 2021" nrDays="5" slotsPerDay="2" numStudents="2546" numCourses="19" numCourseRequests="6222" lastCourseRequestID="6228">
+<sectioning version="1.1" initiative="CAES-Wvl" term="Sem1" year="2020" created="Mon Nov 15 00:42:21 2021" nrDays="5" slotsPerDay="2" numStudents="2546" numCourses="19" numCourseRequests="6220" lastCourseRequestID="6228">
 	<offerings>
 		<offering id="1">
 			<course id="1" name="BIOL101" numLabs="1"/>
@@ -1118,7 +1118,7 @@
 				</best>
 			</course>
 		</student>
-		<student id="217022427" surname="Mkhize" firstnames="Siphesihle" numCourses="3" numProcessedCourses="2">
+		<student id="217022427" surname="Mkhize" firstnames="Siphesihle" numCourses="2" numProcessedCourses="1">
 			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
 			<major area="BSCSIT"/>
 			<course id="101" priority="0" course="19" courseName="STAT130">
@@ -37569,7 +37569,7 @@
 				</best>
 			</course>
 		</student>
-		<student id="220067121" surname="Naidoo" firstnames="Jeuleshan" numCourses="5" numProcessedCourses="5">
+		<student id="220067121" surname="Naidoo" firstnames="Jeuleshan" numCourses="4" numProcessedCourses="4">
 			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
 			<major area="BSCSIT"/>
 			<course id="5595" priority="0" course="16" courseName="PHYS113">

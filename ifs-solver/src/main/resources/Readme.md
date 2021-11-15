@@ -607,7 +607,7 @@ on its Scenario 1:
             - MATH130 - 1
             - MATH134 - 1
             - STAT130 - 1
-    - Modified students:
+    - Modified students: 57
         - Removed processed course requests:
             - MATH134 - 1
             - STAT130 - 4
@@ -628,16 +628,16 @@ on its Scenario 1:
 - Updated num students: 2546
 - Updated num course requests: 6220
 
-- Num assigned course requests (pre-resolving): 6161 (99.92%)
-- Num students with complete schedule: 2544 (99.88%)
+- Num assigned course requests (pre-resolving): 6158 (99%)
+- Num students with complete schedule: 2490 (97.8%)
 
-- Updated solution (CPSolver's MPP): 
-    - / [%] course requests assigned
-    - Solver took m (s)
+- Updated solution (CPSolver's MPP): 211115_094645
+    - 6220/6220 [%] course requests assigned
+    - Solver took 0.03m (1.61s)
     - Complete solution found
+    - There are perturbations, as expected
 
 - Updated solution (SMIP.py - new course requests only): 211115_004225
-    - NUM COURSE REQUESTS IN THIS SOLUTION IS SAYING 6222 INSTEAD OF 6220
-    - / [100%] course requests assigned
-    - Solver took 0.01m (0.54s)
+    - 62/62 [100%] course requests assigned
+    - Solver took 0.01m (0.52s)
     - Complete solution found

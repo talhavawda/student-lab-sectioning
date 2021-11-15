@@ -391,10 +391,6 @@
 			<major area="BSLES"/>
 			<course id="6196" priority="0" course="19" courseName="STAT130"/>
 		</student>
-		<student id="217022427" surname="Mkhize" firstnames="Siphesihle" numCourses="0" numProcessedCourses="0">
-			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
-			<major area="BSCSIT"/>
-		</student>
 		<student id="217025804" surname="Shange" firstnames="Sibonelo" numCourses="1" numProcessedCourses="1">
 			<classification area="COLLEGE OF AGR, ENG &amp; SCIENCE"/>
 			<major area="BSCSIT"/>

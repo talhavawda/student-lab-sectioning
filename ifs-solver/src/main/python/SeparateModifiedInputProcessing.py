@@ -62,7 +62,7 @@ def main():
 	"""
 
 
-	print("Process a modified Students file to produce a current solution XML file and am input data XML file for new course requests:\n")
+	print("Process a modified Students file to produce a current solution XML file and an input data XML file for new course requests:\n")
 	modVerNum = generateNewRequestsInputXmlFile(problemInstanceName)
 
 	print("\n\nRun IFS solver to obtain solution file for the new course requests:\n")
