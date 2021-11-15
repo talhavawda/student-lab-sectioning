@@ -80,6 +80,8 @@ I am working with the global/universal terms 'Faculty' and 'School' for the acad
  numCourses value will be used to iterate through the columns and extract the courses of that student from the succeeding columns 
  (I am not going to go through all 10 columns and check for courses (if the field is non-empty) as
   this will be more time intensive)
+  - For my problem instances I've used in the Experimentation process, I used the COUNTA() function for each cell to get
+  the number of courses for each student
   
  The 'faculty' field matches with the 'classification' element (sub-element of the 'student' element)
  in the CPSolver
@@ -641,3 +643,66 @@ on its Scenario 1:
     - 62/62 [100%] course requests assigned
     - Solver took 0.01m (0.52s)
     - Complete solution found
+
+
+
+
+
+#### 2021-Sem2-CAES-Wvl
+ - Initial  solution: 211115_230613
+    - No complete solution found - best solution had 69 course requests unassigned (4796/4865 [98.58%] assigned). 
+        - Solution file has "Students missing 1 course: 98,53% (67)" and "Students missing 2 courses: 1,47% (1)" thus giving
+        us the 69 unassigned course requests, indicating that there are 69 conflicts
+    - Solver ran till Timeout (300s - 5m) due to a complete solution not having been found
+    - Conflicts (observe the conflicts-real.csv, availability-conflicts-real.csv, section-conflicts-real.csv and time-conflicts-real.csv files):
+        - Availability conflicts:
+            - Course C5 (BIOL102) has 57 availability conflicts for its only Section S13 of its second lab P8 - this lab is 
+            filled to capacity and there is more course requests (557) for this course than the (total) capacity (500) of this lab.
+            - I have observed (via the generated Section Allocations file and the conflicts files) that those 57 students that have 
+            availability conflicts for the second lab P8 of this course are also not allocated to a section for the first 
+            lab P7 of this course even though there is ample available space
+        - Time Overlap conflicts:
+            - There are 12 Time Overlap conflicts - see section-conflicts-real.csv and time-conflicts-real.csv files for more details
+            - Although there is also Time Overlap conflicts for Course C5 (BIOL102) for both its labs, those same students also
+            have Availability Conflicts for the second lab of this course so the multiple conflicts for a student is only counted
+            as 1 unassigned course request
+             
+    - I'm going ahead with this incomplete solution as is for the initial solution to this problem instance (and not modify the
+    problem instance to remove the conflicts to obtain a complete solution) as for my experimentation process, I want a 
+    problem instance case where the initial solution is not a complete solution
+     
+ - Initial num students: 2154
+ - Initial num course requests: 4865
+
+##### Scenario 1
+- A total of 49 new course requests (1% of the original number of course requests)
+- Student modifications:
+    - Number of removed students: 
+        - Removed processed course requests:
+            -
+    - Modified students: 
+        - Removed processed course requests:
+            - 
+        - Added processed course requests: 
+            - 
+    - Number of Added students: 
+        - Added processed course requests: 
+            - 
+            
+            
+- Updated num students: 
+- Updated num course requests: 
+
+- Num assigned course requests (pre-resolving):  (%)
+- Num students with complete schedule:  (%)
+
+- Updated solution (CPSolver's MPP):
+    - / [%] course requests assigned
+    - Solver took m (s)
+    - ? Complete solution found
+    - ? There are perturbations, as expected
+
+- Updated solution (SMIP.py - new course requests only): 
+    - / [%] course requests assigned
+    - Solver took m (s)
+    - ? Complete solution found

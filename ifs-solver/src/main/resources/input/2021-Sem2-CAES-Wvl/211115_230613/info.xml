@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Solution Info-->
+<info>
+  <property name="Assigned course requests">98,58% (4796/4865)</property>
+  <property name="Assigned course requests (priority students)">Normal: 98,58% (4796/4865)</property>
+  <property name="Assigned priority course requests">100.00% (4796/4796)</property>
+  <property name="Assigned variables">98.58% (4796/4865)</property>
+  <property name="Average disbalance">1,89% (1,97)</property>
+  <property name="Best Iteration">515986 (0.25% failed)</property>
+  <property name="Best Time">5.00 min (1719.95 it/s)</property>
+  <property name="Choice: Average assigned choice">1,00</property>
+  <property name="Choice: assigned 1st course choice">100,00% (4796)</property>
+  <property name="Full Sections">1 with no space (1,19% of all sections, 7,65% assignments) 1 with &amp;leq; 2% available (1,19% of all sections, 7,65% assignments)</property>
+  <property name="Iteration">515986 (0.25% failed)</property>
+  <property name="Overall solution value">-1673.68</property>
+  <property name="Priority: Average not-assigned priority">1,00</property>
+  <property name="Priority: Not-assigned priority 1 course requests">100,00% (69)</property>
+  <property name="Sections disbalanced by 10% or more">0,00% (0)</property>
+  <property name="Speed">1719.95 it/s</property>
+  <property name="Students missing 1 course">98,53% (67)</property>
+  <property name="Students missing 2 courses">1,47% (1)</property>
+  <property name="Students with complete schedule">84.03% (1810/2154)</property>
+  <property name="Students with complete schedule (priority students)">Normal: 84.03% (1810/2154)</property>
+  <property name="Time">5.00 min</property>
+</info>

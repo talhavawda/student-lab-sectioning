@@ -1,0 +1,234 @@
+Courses and allocations data:
+
+	Course C1 [APCH211] -	Course requests = 14 |	Labs = 1
+		Lab P1 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 14 |	 % allocated = 2.8
+			Section S1 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 14 |	 % allocated = 2.8
+
+	Course C2 [APCH231] -	Course requests = 14 |	Labs = 1
+		Lab P2 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 14 |	 % allocated = 2.8
+			Section S2 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 14 |	 % allocated = 2.8
+
+	Course C3 [ASTR204] -	Course requests = 1 |	Labs = 1
+		Lab P3 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 1 |	 % allocated = 0.2
+			Section S3 -	Section Timeslot = F 2:10p - 4:40p |	Section Capacity = 500 |	Section Allocated = 1 |	 % allocated = 0.2
+
+	Course C4 [BIOC202] -	Course requests = 29 |	Labs = 3
+		Lab P4 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 29 |	 % allocated = 2.9
+			Section S4 -	Section Timeslot = M 2:10p - 2:55p |	Section Capacity = 500 |	Section Allocated = 15 |	 % allocated = 3.0
+			Section S5 -	Section Timeslot = Th 2:10p - 2:55p |	Section Capacity = 500 |	Section Allocated = 14 |	 % allocated = 2.8
+		Lab P5 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 29 |	 % allocated = 2.9
+			Section S6 -	Section Timeslot = M 3:05p - 5:35p |	Section Capacity = 500 |	Section Allocated = 15 |	 % allocated = 3.0
+			Section S7 -	Section Timeslot = Th 3:05p - 5:35p |	Section Capacity = 500 |	Section Allocated = 14 |	 % allocated = 2.8
+		Lab P6 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 29 |	 % allocated = 5.8
+			Section S8 -	Section Timeslot = F 11:25a - 12:10p |	Section Capacity = 500 |	Section Allocated = 29 |	 % allocated = 5.8
+
+	Course C5 [BIOL102] -	Course requests = 557 |	Labs = 2
+		Lab P7 -	Lab Sections = 4 |	Lab Capacity = 2000 |	Lab Allocated = 500 |	 % allocated = 25.0
+			Section S9 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 125 |	 % allocated = 25.0
+			Section S10 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 125 |	 % allocated = 25.0
+			Section S11 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 125 |	 % allocated = 25.0
+			Section S12 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 125 |	 % allocated = 25.0
+		Lab P8 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 500 |	 % allocated = 100.0
+			Section S13 -	Section Timeslot = F 11:25a - 12:10p |	Section Capacity = 500 |	Section Allocated = 500 |	 % allocated = 100.0
+
+	Course C6 [BIOL196] -	Course requests = 173 |	Labs = 2
+		Lab P9 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 173 |	 % allocated = 34.6
+			Section S14 -	Section Timeslot = T 1:15p - 2:00p |	Section Capacity = 500 |	Section Allocated = 173 |	 % allocated = 34.6
+		Lab P10 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 173 |	 % allocated = 34.6
+			Section S15 -	Section Timeslot = W 9:35a - 12:05p |	Section Capacity = 500 |	Section Allocated = 173 |	 % allocated = 34.6
+
+	Course C7 [BIOL210] -	Course requests = 4 |	Labs = 1
+		Lab P11 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 4 |	 % allocated = 0.8
+			Section S16 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 4 |	 % allocated = 0.8
+
+	Course C8 [BIOL231] -	Course requests = 12 |	Labs = 2
+		Lab P12 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 12 |	 % allocated = 2.4
+			Section S17 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 12 |	 % allocated = 2.4
+		Lab P13 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 12 |	 % allocated = 2.4
+			Section S18 -	Section Timeslot = W 8:40a - 9:25a |	Section Capacity = 500 |	Section Allocated = 12 |	 % allocated = 2.4
+
+	Course C9 [BIOL233] -	Course requests = 11 |	Labs = 1
+		Lab P14 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 11 |	 % allocated = 2.2
+			Section S19 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 11 |	 % allocated = 2.2
+
+	Course C10 [BIOL234] -	Course requests = 29 |	Labs = 2
+		Lab P15 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 29 |	 % allocated = 5.8
+			Section S20 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 29 |	 % allocated = 5.8
+		Lab P16 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 29 |	 % allocated = 5.8
+			Section S21 -	Section Timeslot = T 12:20p - 1:05p |	Section Capacity = 500 |	Section Allocated = 29 |	 % allocated = 5.8
+
+	Course C11 [CHEM120] -	Course requests = 605 |	Labs = 2
+		Lab P17 -	Lab Sections = 6 |	Lab Capacity = 3000 |	Lab Allocated = 605 |	 % allocated = 20.17
+			Section S22 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 101 |	 % allocated = 20.2
+			Section S23 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 101 |	 % allocated = 20.2
+			Section S24 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 100 |	 % allocated = 20.0
+			Section S25 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 101 |	 % allocated = 20.2
+			Section S26 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 101 |	 % allocated = 20.2
+			Section S27 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 101 |	 % allocated = 20.2
+		Lab P18 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 605 |	 % allocated = 60.5
+			Section S28 -	Section Timeslot = W 1:15p - 2:00p |	Section Capacity = 500 |	Section Allocated = 303 |	 % allocated = 60.6
+			Section S29 -	Section Timeslot = F 1:15p - 2:00p |	Section Capacity = 500 |	Section Allocated = 302 |	 % allocated = 60.4
+
+	Course C12 [CHEM196] -	Course requests = 176 |	Labs = 1
+		Lab P19 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 176 |	 % allocated = 35.2
+			Section S30 -	Section Timeslot = F 8:40a - 9:25a |	Section Capacity = 500 |	Section Allocated = 176 |	 % allocated = 35.2
+
+	Course C13 [CHEM230] -	Course requests = 39 |	Labs = 1
+		Lab P20 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 39 |	 % allocated = 7.8
+			Section S31 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 39 |	 % allocated = 7.8
+
+	Course C14 [COMP102] -	Course requests = 179 |	Labs = 1
+		Lab P21 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 175 |	 % allocated = 17.5
+			Section S32 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 49 |	 % allocated = 9.8
+			Section S33 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 126 |	 % allocated = 25.2
+
+	Course C15 [COMP106] -	Course requests = 114 |	Labs = 1
+		Lab P22 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 110 |	 % allocated = 22.0
+			Section S34 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 110 |	 % allocated = 22.0
+
+	Course C16 [COMP107] -	Course requests = 136 |	Labs = 1
+		Lab P23 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 135 |	 % allocated = 27.0
+			Section S35 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 135 |	 % allocated = 27.0
+
+	Course C17 [COMP201] -	Course requests = 19 |	Labs = 1
+		Lab P24 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 19 |	 % allocated = 3.8
+			Section S36 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 19 |	 % allocated = 3.8
+
+	Course C18 [COMP204] -	Course requests = 21 |	Labs = 1
+		Lab P25 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 21 |	 % allocated = 4.2
+			Section S37 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 21 |	 % allocated = 4.2
+
+	Course C19 [ENVS120] -	Course requests = 144 |	Labs = 1
+		Lab P26 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 143 |	 % allocated = 28.6
+			Section S38 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 143 |	 % allocated = 28.6
+
+	Course C20 [ENVS211] -	Course requests = 36 |	Labs = 1
+		Lab P27 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 36 |	 % allocated = 7.2
+			Section S39 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 36 |	 % allocated = 7.2
+
+	Course C21 [GEOL102] -	Course requests = 85 |	Labs = 1
+		Lab P28 -	Lab Sections = 3 |	Lab Capacity = 1500 |	Lab Allocated = 85 |	 % allocated = 5.67
+			Section S40 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 29 |	 % allocated = 5.8
+			Section S41 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 28 |	 % allocated = 5.6
+			Section S42 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 28 |	 % allocated = 5.6
+
+	Course C22 [GEOL206] -	Course requests = 3 |	Labs = 1
+		Lab P29 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 3 |	 % allocated = 0.3
+			Section S43 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 2 |	 % allocated = 0.4
+			Section S44 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 1 |	 % allocated = 0.2
+
+	Course C23 [GEOL211] -	Course requests = 3 |	Labs = 1
+		Lab P30 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 3 |	 % allocated = 0.3
+			Section S45 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 2 |	 % allocated = 0.4
+			Section S46 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 1 |	 % allocated = 0.2
+
+	Course C24 [GEOL214] -	Course requests = 8 |	Labs = 1
+		Lab P31 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 8 |	 % allocated = 0.8
+			Section S47 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 4 |	 % allocated = 0.8
+			Section S48 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 4 |	 % allocated = 0.8
+
+	Course C25 [MATH130] -	Course requests = 13 |	Labs = 1
+		Lab P32 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 13 |	 % allocated = 2.6
+			Section S49 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 13 |	 % allocated = 2.6
+
+	Course C26 [MATH134] -	Course requests = 0 |	Labs = 1
+		Lab P33 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 0 |	 % allocated = 0.0
+			Section S50 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 0 |	 % allocated = 0.0
+
+	Course C27 [MATH140] -	Course requests = 159 |	Labs = 1
+		Lab P34 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 159 |	 % allocated = 15.9
+			Section S51 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 79 |	 % allocated = 15.8
+			Section S52 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 80 |	 % allocated = 16.0
+
+	Course C28 [MATH144] -	Course requests = 23 |	Labs = 1
+		Lab P35 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 23 |	 % allocated = 4.6
+			Section S53 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 23 |	 % allocated = 4.6
+
+	Course C29 [MATH145] -	Course requests = 272 |	Labs = 1
+		Lab P36 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 272 |	 % allocated = 27.2
+			Section S54 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 136 |	 % allocated = 27.2
+			Section S55 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 136 |	 % allocated = 27.2
+
+	Course C30 [MATH196] -	Course requests = 65 |	Labs = 1
+		Lab P37 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 65 |	 % allocated = 13.0
+			Section S56 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 65 |	 % allocated = 13.0
+
+	Course C31 [MATH243] -	Course requests = 12 |	Labs = 1
+		Lab P38 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 12 |	 % allocated = 2.4
+			Section S57 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 12 |	 % allocated = 2.4
+
+	Course C32 [MATH246] -	Course requests = 8 |	Labs = 1
+		Lab P39 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 8 |	 % allocated = 1.6
+			Section S58 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 8 |	 % allocated = 1.6
+
+	Course C33 [MATH251] -	Course requests = 27 |	Labs = 1
+		Lab P40 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 27 |	 % allocated = 5.4
+			Section S59 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 27 |	 % allocated = 5.4
+
+	Course C34 [MICR182] -	Course requests = 0 |	Labs = 2
+		Lab P41 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 0 |	 % allocated = 0.0
+			Section S60 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 0 |	 % allocated = 0.0
+		Lab P42 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 0 |	 % allocated = 0.0
+			Section S61 -	Section Timeslot = T 1:15p - 2:00p |	Section Capacity = 500 |	Section Allocated = 0 |	 % allocated = 0.0
+
+	Course C35 [MICR215] -	Course requests = 27 |	Labs = 1
+		Lab P43 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 26 |	 % allocated = 5.2
+			Section S62 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 26 |	 % allocated = 5.2
+
+	Course C36 [PHYS114] -	Course requests = 81 |	Labs = 1
+		Lab P44 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 81 |	 % allocated = 16.2
+			Section S63 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 81 |	 % allocated = 16.2
+
+	Course C37 [PHYS132] -	Course requests = 316 |	Labs = 1
+		Lab P45 -	Lab Sections = 3 |	Lab Capacity = 1500 |	Lab Allocated = 316 |	 % allocated = 21.07
+			Section S64 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 105 |	 % allocated = 21.0
+			Section S65 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 106 |	 % allocated = 21.2
+			Section S66 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 105 |	 % allocated = 21.0
+
+	Course C38 [PHYS196] -	Course requests = 64 |	Labs = 1
+		Lab P46 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 64 |	 % allocated = 12.8
+			Section S67 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 64 |	 % allocated = 12.8
+
+	Course C39 [PHYS214] -	Course requests = 5 |	Labs = 1
+		Lab P47 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 5 |	 % allocated = 1.0
+			Section S68 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 5 |	 % allocated = 1.0
+
+	Course C40 [PHYS242] -	Course requests = 3 |	Labs = 1
+		Lab P48 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 3 |	 % allocated = 0.6
+			Section S69 -	Section Timeslot = T 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 3 |	 % allocated = 0.6
+
+	Course C41 [RDNA202] -	Course requests = 67 |	Labs = 2
+		Lab P49 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 67 |	 % allocated = 6.7
+			Section S70 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 34 |	 % allocated = 6.8
+			Section S71 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 33 |	 % allocated = 6.6
+		Lab P50 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 67 |	 % allocated = 6.7
+			Section S72 -	Section Timeslot = F 10:30a - 11:15a |	Section Capacity = 500 |	Section Allocated = 34 |	 % allocated = 6.8
+			Section S73 -	Section Timeslot = F 1:15p - 2:00p |	Section Capacity = 500 |	Section Allocated = 33 |	 % allocated = 6.6
+
+	Course C42 [STAT130] -	Course requests = 699 |	Labs = 1
+		Lab P51 -	Lab Sections = 4 |	Lab Capacity = 2000 |	Lab Allocated = 699 |	 % allocated = 34.95
+			Section S74 -	Section Timeslot = M 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 175 |	 % allocated = 35.0
+			Section S75 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 175 |	 % allocated = 35.0
+			Section S76 -	Section Timeslot = W 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 175 |	 % allocated = 35.0
+			Section S77 -	Section Timeslot = Th 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 174 |	 % allocated = 34.8
+
+	Course C43 [STAT140] -	Course requests = 292 |	Labs = 1
+		Lab P52 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 292 |	 % allocated = 58.4
+			Section S78 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 292 |	 % allocated = 58.4
+
+	Course C44 [STAT222] -	Course requests = 17 |	Labs = 1
+		Lab P53 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 16 |	 % allocated = 3.2
+			Section S79 -	Section Timeslot = W 9:35a - 12:35p |	Section Capacity = 500 |	Section Allocated = 16 |	 % allocated = 3.2
+
+	Course C45 [STAT240] -	Course requests = 7 |	Labs = 1
+		Lab P54 -	Lab Sections = 1 |	Lab Capacity = 500 |	Lab Allocated = 7 |	 % allocated = 1.4
+			Section S80 -	Section Timeslot = F 2:10p - 5:10p |	Section Capacity = 500 |	Section Allocated = 7 |	 % allocated = 1.4
+
+	Course C46 [ZULN101] -	Course requests = 296 |	Labs = 2
+		Lab P55 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 296 |	 % allocated = 29.6
+			Section S81 -	Section Timeslot = M 8:40a - 9:25a |	Section Capacity = 500 |	Section Allocated = 148 |	 % allocated = 29.6
+			Section S82 -	Section Timeslot = Th 3:05p - 3:50p |	Section Capacity = 500 |	Section Allocated = 148 |	 % allocated = 29.6
+		Lab P56 -	Lab Sections = 2 |	Lab Capacity = 1000 |	Lab Allocated = 296 |	 % allocated = 29.6
+			Section S83 -	Section Timeslot = W 9:35a - 11:05a |	Section Capacity = 500 |	Section Allocated = 148 |	 % allocated = 29.6
+			Section S84 -	Section Timeslot = F 2:10p - 3:40p |	Section Capacity = 500 |	Section Allocated = 148 |	 % allocated = 29.6
+

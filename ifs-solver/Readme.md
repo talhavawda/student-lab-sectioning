@@ -431,6 +431,9 @@ requests separately and merge the obtained solution with the current solution to
         - Obtained the course offering details (of their lab sessions) of the CAES courses using the timetable link
         - Some courses had multiple labs (both practicals and tutorials)
         - Cannot specify exact capacities as they are not specified in the timetables on the timetable site
+            - For my experimentation, I put a capacity of 500 for each Lab Section. In the paper, mention that due to the 
+            proper/exact capacities not having been specified, this problem instance is not ideal (as it won't give availability conflicts
+            due to the high capacities specified)
         - Only specified/processed the course offerings in the in Courses.xlsx input file for first year and second year CAES courses
             - The Students input file we're given is for students doing first-year CAES courses (CAES want to do the sectioning for first year labs), 
             and its highly unlikely that a student doing a first year CAES course will also be doing a third-year CAES course. And by searching through the 
@@ -466,6 +469,11 @@ allocations were balanced so there should be space in all sections unless num co
 so we DON'T need to remove/unallocate any allocations for the existing/unchanged course requests in the initial/current solution to free up section space (to 
 give new course requests an opportunity to be sectioned into other sections)  
 
+ 
+ If a course have multiple labs and a student who has a course request for this course has a section conflict (either availabilty of time overlap conflict) 
+ in being allocated to one of the (sections of one of the) labs of this course, will not be allocated to any (to any sections to any other) of the labs 
+ of this course (even though there is ample  available space and no time overlaps in the other labs of this course for this student to be allocated to) 
+ - i.e. the course request will remain unallocated (Refer to 2021-Sem2-CAES-Wvl's initial solution)
  
 TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
 

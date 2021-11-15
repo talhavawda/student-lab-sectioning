@@ -41,7 +41,7 @@ from jpype.types import *
 def main():
 
 	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2020-Sem1-CAES-Wvl-no-conflicts"
+	problemInstanceName = "2021-Sem2-CAES-Wvl"
 
 	"""
 	while True:
