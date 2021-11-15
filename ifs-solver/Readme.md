@@ -313,9 +313,10 @@ the new course requests are unassigned/unallocated, and the old course requests 
             - Ran the solver and obtained an initial and updated solution (used Scenario 1 for student modifications)
                 - There are NO perturbations (NO section allocation changes to existing course requests)
 
-12. Since we're getting some perturbations that shouldn't occur (due to possible section allocation disbalances) - although 
-it's occurring only for STAT130 in the 2020-Sem1-CAES-Wvl-no-conflicts problem instance, for other problem instances it could 
-occur for any other course, and more than one course, and a much larger number of perturbances - we are going to solve the new course 
+12. Since we're getting some perturbations (existing course requests that get their allocated sections changed) that 
+shouldn't occur (due to possible section allocation disbalances) - although it's occurring only for STAT130 in the 
+2020-Sem1-CAES-Wvl-no-conflicts problem instance, for other problem instances it could occur for any other course, 
+and more than one course, and a much larger number of perturbances - we are going to solve the new course 
 requests separately and merge the obtained solution with the current solution to represent the updated solution.  
     - Creating a Python program script (SeparateModifiedInputProcessing.py) to do so. It contains two processes, the first being to
     generate an updated input data XML file that represents only the new course requests (with the updated capacity values of the lab sections), 
@@ -399,6 +400,16 @@ requests separately and merge the obtained solution with the current solution to
                 SDKs (and also deleted their folders), and also removed Python 3.8 from Project Settings -> Modules -> Dependencies
 
 13. Returning to the Minimal Perturbation Experimentation Process
+    - Ran Scenario 4 of the 2020-Sem1-CAES-Wvl-no-conflicts problem instance
+    - **A realisation I've made now: Since for SMIP.py, I'm generating an updated input data XML file that represents 
+    only the new course requests, for modified students only their new course requests will be in this file and their existing 
+    course requests (with their current section allocations won't), so when the solution to the new course requests is merged 
+    with the initial solution, there _may_ be Time Overlap Conflicts for the modified students as the allocations for the new requests
+    weren't checked against the allocations (and their timeslots) for their current requests**
+        - So what I need to do is to go back and recode SMIP.py such that for new course requests of existing students (modified Students),
+        all the existing course requests (with their section allocations) for that student should be added along with their new course requests, 
+        to the new requests input file, so that the solver can check for Time Overlap conflicts and make any changes if necessary
+        - Alternatively, we can leave it as is and mention to do this in Future Work/Improvements
 
 14. Processing additional datasets
     - 3 datasets for CAES 2021 Sem 2 (Wvl, Howard, PMB)
