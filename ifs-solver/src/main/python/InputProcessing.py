@@ -390,7 +390,7 @@ def generateTimeslot(timeslotTime: str) -> int:
 	"""
 		Generate the timeslot number of this time (that UniTime's CP Solver uses) based on this time in the 24 hour format (hh:mm).
 
-		The number of tineslots per day is 288 and the length of each slot is 5 minutes. The timeslot numbers are 0 to 277,
+		The number of timeslots per day is 288 and the length of each slot is 5 minutes. The timeslot numbers are 0 to 287,
 		with the first timeslot 0 being 00:00 - 00:05.
 
 	:param time: the time (in a hh:mm format) to convert to a CP Solver timeslot
