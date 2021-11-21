@@ -38,10 +38,11 @@ from jpype.types import *
 """
 
 
-def main():
+def main(problemInstanceName: str = None):
 
-	#problemInstanceName = input("Enter problem instance name: ")
-	problemInstanceName = "2021-Sem2-CAES-Wvl"
+	if problemInstanceName is None:
+		#problemInstanceName = input("Enter problem instance name: ")
+		problemInstanceName = "2021-Sem2-CAES-Wvl"
 
 	"""
 	while True:

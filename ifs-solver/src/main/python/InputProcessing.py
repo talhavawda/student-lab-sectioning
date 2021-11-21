@@ -5,8 +5,12 @@ import time
 
 #Installed the openpyxl, beautifulsoup4 and lxml packages
 
-def main():
-	problemInstanceName = "2021-Sem2-CAES-Wvl"
+def main(problemInstanceName: str = None):
+
+	if problemInstanceName is None:
+		#problemInstanceName = input("Enter problem instance name: ")
+		problemInstanceName = "2021-Sem2-CAES-Wvl"
+
 	coursesFilePath = "src/main/resources/input/" + problemInstanceName + "/Courses.xlsx"
 	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx"
 	problemSpecificationFilePath = "src/main/resources/input/" + problemInstanceName + "/Specification.xml" # Make txt ?

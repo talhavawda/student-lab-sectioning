@@ -2,16 +2,16 @@
 <!--Student Sectioning-->
 <!-- Data Format Source: https://www.unitime.org/sct_dataformat.php -->
 
-	<!-- The initiative differentiates between the multiple independent timetables/sectionings required for the same Academic
-	 Session/period (term-year) -->
-	<sectioning version="1.0" initiative="CAES-Wvl" term="Sem1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2" >
-		 <!-- version: file version -->
-		 <!-- initiative: campus designation -->
-		 <!-- term: semester  -->
-		 <!-- year -->
-		 <!-- created: creation time of the file - I put this time myself based on the format -->
-		 <!-- nrDays: number of days per week (default is 7 days, Monday through Sunday) -->
-		 <!-- slotsPerDay: number of slots per day (default is 288 -> 5 minute long time slots, going from midnight till midnight) -->
+<!-- The initiative differentiates between the multiple independent timetables/sectionings required for the same Academic
+ Session/period (term-year) -->
+<sectioning version="1.0" initiative="CAES-Wvl" term="Sem1" year="2020" created="Wed Aug 11 12:46:42 SAST 2021" nrDays="5" slotsPerDay="2" >
+	 <!-- version: file version -->
+	 <!-- initiative: campus designation -->
+	 <!-- term: semester  -->
+	 <!-- year -->
+	 <!-- created: creation time of the file - I put this time myself based on the format -->
+	 <!-- nrDays: number of days per week (default is 7 days, Monday through Sunday) -->
+	 <!-- slotsPerDay: number of slots per day (default is 288 -> 5 minute long time slots, going from midnight till midnight) -->
 
 	<!-- UNITIME: An offering consists of one or more courses under which it is offered (students are signing for courses) and one or more configurations.
 	Each configuration has one or more subparts and each subpart has one or more sections (classes). Each student requesting given course

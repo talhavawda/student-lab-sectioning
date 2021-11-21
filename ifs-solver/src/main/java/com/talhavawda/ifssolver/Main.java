@@ -13,6 +13,12 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String [] args) {
 
+		Scanner input = new Scanner(System.in);
+		/*
+		System.out.println("Enter the name of the problem instance: ");
+		String problemInstanceName = input.next();
+		*/
+
 		String problemInstanceName = "2021-Sem2-CAES-Wvl";
 		String problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName; // input data XML file's directory (directory also used to store output)
 		// String xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml"; //path of the input file (its name + relative path from Source directory preceding it)
@@ -36,7 +42,7 @@ public class Main {
 
 		} else { //get option from user
 			int userAnswer;
-			Scanner input = new Scanner(System.in);
+			input = new Scanner(System.in);
 			System.out.println("Are you (Enter the number):\n\t0: Obtaining an initial solution to the problem instance" +
 					"\n\t1: Obtaining an updated solution to the problem instance (updated input data XML file)" +
 					"\n\t2: Obtaining an updated solution to the problem instance on only the new course requests (new requests input data XML file)");

@@ -84,7 +84,7 @@ CPSolver/UniTime Student Sectioning Solver (UniTime site Links):
         Then I added code to my Main.main() method to set up the string parameter variables, and then called org.cpsolver.studentsect.Test.main() with its arg param being the array of my string parameter variables.
         - Was getting a NullPointerException error during the XML Loading process - I didn't specify a 'dates' attribute for the 'time' element of the 'section' element in my XML input file generation
             - I fixed this by setting a 'dates' attribute with the value being an empty string
-                - Todo: Consider changing this 'dates' value to something more meaningful
+                - Todo: Consider changing this 'dates' value to something more meaningful [UPDATE: Done below]
         - Then I was getting an error cos I didn't put priority attribute for course requests (NumberFormatException). Fixed that also.
         - It's working now
             - Observations:
@@ -394,7 +394,7 @@ requests separately and merge the obtained solution with the current solution to
                 the library Python 3.10 and it now works
                 - When running Jpype to access my java class Main.java it is giving an error that it can't find the specified package
                 I searched online and found out that I need to create a jar file of my Java class first, so I did that.
-                IT's FINALLY WORKING. I GOT MY JABA CODE RUNNING IN PYTHON.
+                IT's FINALLY WORKING. I GOT MY JAVA CODE RUNNING IN PYTHON.
                     - Remember to rebuild the Jar file everytime I modify the Java code
                 - Since I'm using Python 3.10 now, I removed the Python 3.7 and 3.8 and also their virtual environments from Platform Settings -> 
                 SDKs (and also deleted their folders), and also removed Python 3.8 from Project Settings -> Modules -> Dependencies
