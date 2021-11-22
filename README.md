@@ -1,8 +1,10 @@
 # student-lab-sectioning
 ## Student Lab Sectioning with Minimal Perturbation
 
+### Execution instructions (COMP700 Project marking)
 
-Download the JAR file (ifs-solver.jar) from this link (https://drive.google.com/file/d/1mjL3uRGLy4oHhna0Td66pcuFo515L6sA/view?usp=sharing) and place it inside the following sub-directory of the ifs-solver project: /out/artifacts/ifs_solver_jar/. The JAR file could not be commited to this remote repositiory as its size is above GitHub's 100MB file size limit. 
+The JAR file (ifs-solver.jar) for the Java sub-system of this project could not be commited to (and is thus not present in) this remote cloud-hosted repositiory as its size is above GitHub's 100MB file size limit.
+Download the JAR file (ifs-solver.jar) from [this link](https://drive.google.com/file/d/1mjL3uRGLy4oHhna0Td66pcuFo515L6sA/view?usp=sharing) and place it inside the following sub-directory of the ifs-solver project: /out/artifacts/ifs_solver_jar/.
 
 Ensure that you're running 64-bit versions of Java and Python.
 
