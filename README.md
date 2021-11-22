@@ -19,7 +19,7 @@ JPype needs to be installed by running the following 3 commands in cmd:
 -  cd jpype
 -  python setup.py install
 
-If there's an error installing JPype which involves VS Code, follow the instructions in this comment: https://github.com/sammchardy/python-binance/issues/148#issuecomment-374853521 to download and install the whl package for you python version, and then re-attempt to install JPype. This also applies if you're using Python 3.10 and getting an error installing lxml using pip.
+If there's an error installing JPype which involves VS Code, follow the instructions in [this comment](https://github.com/sammchardy/python-binance/issues/148#issuecomment-374853521) to download and install the whl package for you python version, and then re-attempt to install JPype. This also applies if you're using Python 3.10 and getting an error installing lxml using pip.
 
 
 #### Execution
