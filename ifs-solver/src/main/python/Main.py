@@ -4,6 +4,8 @@ import SeparateModifiedInputProcessing
 import SectionAllocations
 import jpype
 import jpype.imports
+from pathlib import Path
+import os
 
 """
 	The system's 'entry point' file
@@ -28,7 +30,11 @@ def main():
 			if option == 0:
 				print("Running Main.java\n==================\n")
 				""" Run Main.java -> using jpype"""
-				jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=out/artifacts/ifs_solver_jar/ifs-solver.jar")
+				currentRelativeDirectory = "/src/main/python"
+				solverRootDirectory = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname( __file__ )))) # Go up 3 directories to reach the root directory of this project
+				ifsSolverJarPath = "-Djava.class.path=" + solverRootDirectory + "/out/artifacts/ifs_solver_jar/ifs-solver.jar"
+				#"-Djava.class.path=/out/artifacts/ifs_solver_jar/ifs-solver.jar"
+				jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", ifsSolverJarPath)
 				jpype.JClass("com.talhavawda.ifssolver.Main").main([])
 				jpype.shutdownJVM()
 

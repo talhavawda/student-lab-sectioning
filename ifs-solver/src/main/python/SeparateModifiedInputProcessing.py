@@ -75,8 +75,13 @@ def main(problemInstanceName: str = None):
 	# java_object = gateway.jvm.Main
 
 	# pype.addClassPath('out/artifacts/ifs_solver_jar/ifs-solver.jar')
-	jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=out/artifacts/ifs_solver_jar/ifs-solver.jar")
 
+	currentRelativeDirectory = "/src/main/python"
+	solverRootDirectory = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname( __file__ )))) # Go up 3 directories to reach the root directory of this project
+	ifsSolverJarPath = "-Djava.class.path=" + solverRootDirectory + "/out/artifacts/ifs_solver_jar/ifs-solver.jar"
+
+	#"-Djava.class.path=/out/artifacts/ifs_solver_jar/ifs-solver.jar"
+	jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", ifsSolverJarPath)
 	#from java.lang import System
 	#print(System.getProperty("java.class.path"))
 

@@ -440,6 +440,25 @@ requests separately and merge the obtained solution with the current solution to
             Students input file for each third year CAES course, there are very few students in that file that do them (if any), 
             and the numbers are usually just 1 or 2 students. 
 
+15. Installed PyInstaller (pip install pyinstaller) and ran it in cmd on Main.py from its directory (pyinstaller Main.py) 
+to obtain its executable file.
+    - Getting error: "IndexError: tuple index out of range"
+    - Apparently there's a deep error/bug PyInstaller is having with Python 3.10 (the Python interpreter I'm current using for this project)
+    See: https://github.com/pyinstaller/pyinstaller/issues/6301
+        - Followed the instructions of a comment on this issue (https://github.com/pyinstaller/pyinstaller/issues/6301#issuecomment-962521334)
+        which said must modified Python 3.10 source code to add the following statement 'extended_arg = 0' in the dis.py file after
+        line 525 in my local installation copy (Python GitHub copy: https://github.com/python/cpython/blob/91275207296c39e495fe118019a757c4ddefede8/Lib/dis.py#L525)
+        In my local copy, the dis.py file is located at: C:\Users\talha\AppData\Local\Programs\Python\Python310\Lib\dis.py,
+        and the line where I had to add the code (for the _unpack_opargs() function) was at line 431.
+    -It's working now. Executable was built successfully.
+    - Getting an error when running the executable due to some file in Python 3.10 Lib not being found
+    - Going to specify that the Main.py should be run directly from Command Prompt instead (Python and corresponding libraries will need to now
+    be installed on the user's system). Added code to Main.py and SeparateModifiedInputProcessing.py such that the JAR file can 
+    be located directly by its absolute path - in this IntelliJ project, I set the working directory in build configurations 
+    to the root ifs-solver/ folder and used relative path to th JAR file but when running the scripts from cmd, the working directory 
+    will be the directory of the file (a sub-directory in this project), thus the JAR file wasn't being located correctly if script was being run from cmd. 
+    
+    
 
 Order of run:\
     1. InputProcessing.py (input data XML file)\
