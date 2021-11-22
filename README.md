@@ -26,7 +26,13 @@ If there's an error installing JPype which involves VS Code, follow the instruct
 Running the project: In Command Prompt, change to the directory of the Main.py script and run Main.py using the following command: 'python Main.py'
 
 
-If want to run the project in an IDE, open it in IntelliJ, and create a build configuration for the Main.py file and set the working directory to the ifs-solver root folder (instead of the sub-folder containing Main.py)
+If want to run the project in an IDE, open it in IntelliJ, add a Python interpreter to the project (if one is not already specified) and create a build configuration for the Main.py file and set the working directory to the ifs-solver root folder (instead of the sub-folder containing Main.py). 
+- How to run Python in IntelliJ (adding a Python interpreter):
+    - Links
+        - https://www.jetbrains.com/help/idea/configuring-local-python-interpreters.html
+        - https://www.jetbrains.com/help/idea/configuring-python-sdk.html
+        - https://www.jetbrains.com/help/idea/run-debug-configuration-python.html#1
+    - Then go to Project Settings -> Modules -> Dependencies -> Add Python interpreter
 
-Refer to the paper for the pipeline specifying the steps on how to run the project.
+Refer to the paper for the pipeline specifying the steps on how to run the project (which scripts should be called in Main.py and in what order). Note that for each step, Main.py will have to be re-executed.
 
