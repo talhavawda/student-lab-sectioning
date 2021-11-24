@@ -6,7 +6,7 @@
 The datasets are placed inside this project. Their problem instances are located in the ifs-solver/src/main/resources/input directory. Note that downloading a local copy of this repository may take a while due to the large cummulative file size of the generated experimentation results.
 
 The JAR file (ifs-solver.jar) for the Java sub-system of this project could not be commited to (and is thus not present in) this remote cloud-hosted repositiory as its size is above GitHub's 100MB file size limit.
-Download the JAR file (ifs-solver.jar) from [this link](https://drive.google.com/file/d/1mjL3uRGLy4oHhna0Td66pcuFo515L6sA/view?usp=sharing) and place it inside the following sub-directory of the ifs-solver project: /out/artifacts/ifs_solver_jar/.
+Download the JAR file (ifs-solver.jar) from [this link](https://drive.google.com/drive/folders/1AWqlMftnSjfEWUG8ZbypLO7Ou7nbc0Yo?usp=sharing) and place it inside the following sub-directory of the ifs-solver project: /out/artifacts/ifs_solver_jar/.
 
 
 #### Dependencies
@@ -26,7 +26,7 @@ If there's an error installing JPype which involves VS Code, follow the instruct
 Running the project: In Command Prompt, change to the directory of the Main.py script and run Main.py using the following command: 'python Main.py'
 
 
-If want to run the project in an IDE, open it in IntelliJ, add a Python interpreter to the project (if one is not already specified) and create a build configuration for the Main.py file and set the working directory to the ifs-solver root folder (instead of the sub-folder containing Main.py). 
+If want to run the project in an IDE, open it in IntelliJ, add a Python interpreter to the project (if one is not already specified) and create a build configuration for the Main.py file. 
 - How to run Python in IntelliJ (adding a Python interpreter):
     - Links
         - https://www.jetbrains.com/help/idea/configuring-local-python-interpreters.html
@@ -34,5 +34,20 @@ If want to run the project in an IDE, open it in IntelliJ, add a Python interpre
         - https://www.jetbrains.com/help/idea/run-debug-configuration-python.html#1
     - Then go to Project Settings -> Modules -> Dependencies -> Add Python interpreter
 
-Refer to the paper for the pipeline specifying the steps on how to run the project (which scripts should be called in Main.py and in what order). Note that for each step, Main.py will have to be re-executed.
+
+Obtaining solutions:
+
+1. Run InputProcessing.py which obtains the initial input data XML file and runs the CPSolver to obtain the initial solution
+2. Run ModifiedInputProcessing.py to process a modified Students input data Excel file and runs the CPSolver to obtain the updated solution. 
+Note that for ModifiedInputProcessing.py, there may be perturbations for students with unchanged course registrations in the updated solution. 
+If you want an updated solution for which perturbations for students with unchanged course registrations do not occur, run SeparateModifiedInputProcessing.py, 
+which shall obtain the allocations of the Students with new course requests separately and merge it with the initial solution to obtain the full updated solution.
+
+For the second step above, Main.py will have to be re-executed.
+
+
+Note that although the option is given in Main.py to run Main.java, the three Python processes above run the Main.java file within them and also specify the solution type 
+they want to obtain, so their is no need for the user to run the Main.java file directly. 
+ 
+Refer to the paper for more details on the pipeline and architecture of the project.
 

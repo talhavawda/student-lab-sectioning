@@ -67,7 +67,9 @@ def main(problemInstanceName: str = None):
 	print("Process a modified Students file to produce a current solution XML file and an input data XML file for new course requests:\n")
 	modVerNum = generateNewRequestsInputXmlFile(problemInstanceName)
 
-	print("\n\nRun IFS solver to obtain solution file for the new course requests:\n")
+	print("\n\nRun CPSolver to obtain solution file for the new course requests:\n")
+
+	time.sleep(5)  # Wait 5 seconds so user knows what is going on
 
 	""" Run Main.java -> using jpype"""
 
@@ -89,7 +91,7 @@ def main(problemInstanceName: str = None):
 	problemInstanceAbsDirectory = os.path.abspath("../resources/input/" + problemInstanceName)
 	jpype.JClass("com.talhavawda.ifssolver.Main").main([solverRootDirectory, problemInstanceAbsDirectory, problemInstanceName, "2"]) # Run option 2
 
-	# Other/aleterante jpype code:
+	# Other/alternate jpype code:
 
 	#pkg = jpype.JPackage('com').talhavawda.ifssolver
 	#Main = pkg.Main

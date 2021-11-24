@@ -458,7 +458,12 @@ to obtain its executable file.
     to the root ifs-solver/ folder and used relative path to th JAR file but when running the scripts from cmd, the working directory 
     will be the directory of the file (a sub-directory in this project), thus the JAR file wasn't being located correctly if script was being run from cmd. 
     
+16. 
     
+17. For ease of use, I've added code to the end of the main() functions of InputProcessing.py and ModifiedInputProcessing.py 
+to run the solver (with the option specified) to obtain the relevant solution (similarly to how SeparateModifiedtInputProcessing.py does it). 
+So the user no longer has to run the Main.java file directly
+
 
 Order of run:\
     1. InputProcessing.py (input data XML file)\
@@ -480,9 +485,12 @@ Order of run (updated 2):\
     2. Main.java (initial solution - userAnswer==0)\
     3. SeparateModifiedInputProcessing.py (now does steps 3, 4, and 5 above)
 
+Order of run (updated 3):\
+    1. InputProcessing.py (input data XML file)\
+    2. Either ModifiedInputProcessing.py or SeparateModifiedInputProcessing.py (depending on the type of solution you wish to obtain)
  
  
-TODO: MENTION IN PAPER: Since the IFS solver balances the section allocations when doing them, for each course request in the resolving part, 
+MENTION IN PAPER: Since the IFS solver balances the section allocations when doing them, for each course request in the resolving part, 
 it most probably will have the option to choose from all the sections for the labs of that course (as in the initial solution the 
 allocations were balanced so there should be space in all sections unless num course requests for a course is very close to lab capacity), 
 so we DON'T need to remove/unallocate any allocations for the existing/unchanged course requests in the initial/current solution to free up section space (to 
@@ -494,13 +502,8 @@ give new course requests an opportunity to be sectioned into other sections)
  of this course (even though there is ample  available space and no time overlaps in the other labs of this course for this student to be allocated to) 
  - i.e. the course request will remain unallocated (Refer to 2021-Sem2-CAES-Wvl's initial solution)
  
-TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
-
-
-TODO: Create a Main.py script where we can set the name of the problem instance in one place, and which lets us choose which of 
-the other script's we'd like to run, and can pass in the name of the problem instance to their main methods
-
-
+ 
+[Done] TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
 
 TODO: talk about code I changed specifically for the experimentation process
     - also the code in Main.java - to determine which configuration file i should use

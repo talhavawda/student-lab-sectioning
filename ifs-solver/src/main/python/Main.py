@@ -43,18 +43,22 @@ def main():
 			elif option == 1:
 				print("Running InputProcessing.py\n===========================\n")
 				InputProcessing.main(problemInstanceName)
+				print("\n\nInputProcessing.py has been executed\n===========================\n")
 				break
 			elif option == 2:
 				print("Running ModifiedInputProcessing.py\n===================================\n")
 				ModifiedInputProcessing.main(problemInstanceName)
+				print("\n\nModifiedInputProcessing.py has been executed\n===================================\n")
 				break
 			elif option == 3:
 				print("Running SeparateModifiedInputProcessing.py\n===========================================\n")
 				SeparateModifiedInputProcessing.main(problemInstanceName)
+				print("\n\nSeparateModifiedInputProcessing.py has been executed\n===========================================\n")
 				break
 			elif option == 4:
-				print("Running SectionAllocations.py\n========\n")
+				print("Running SectionAllocations.py\n================================\n")
 				SectionAllocations.main(problemInstanceName)
+				print("\n\nSectionAllocations.py has been executed\n================================\n")
 				break
 			else:
 				print("Number entered is not one of the options. You will be prompted to re-enter.")

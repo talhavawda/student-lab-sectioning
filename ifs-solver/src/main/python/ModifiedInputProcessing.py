@@ -5,6 +5,8 @@ from xml.dom import minidom  # For creating and writing to XML files
 import time
 import copy
 import os
+import jpype
+import jpype.imports
 
 #Installed the openpyxl, beautifulsoup4 and lxml packages (lxml is a parser)
 
@@ -77,6 +79,24 @@ def main(problemInstanceName: str = None):
 	#currentSolutionsFile.write("") # The above line will overwrite so I don't need this line
 	currentSolutionsFile.close()
 	"""
+
+
+	print("\n\nRun CPSolver to obtain solution file for the updated input:\n")
+
+	time.sleep(5)  # Wait 5 seconds so user knows what is going on
+
+	""" Run Main.java -> using jpype"""
+
+	currentRelativeDirectory = "/src/main/python"
+	solverRootDirectory = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname( __file__ )))) # Go up 3 directories to reach the root directory of this project
+	ifsSolverJarPath = "-Djava.class.path=" + solverRootDirectory + "/out/artifacts/ifs_solver_jar/ifs-solver.jar"
+
+	#"-Djava.class.path=/out/artifacts/ifs_solver_jar/ifs-solver.jar"
+	jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", ifsSolverJarPath)
+
+
+	problemInstanceAbsDirectory = os.path.abspath("../resources/input/" + problemInstanceName)
+	jpype.JClass("com.talhavawda.ifssolver.Main").main([solverRootDirectory, problemInstanceAbsDirectory, problemInstanceName, "1"]) # Run option 1
 
 # END main()
 

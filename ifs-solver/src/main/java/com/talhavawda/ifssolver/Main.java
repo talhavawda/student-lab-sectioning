@@ -65,17 +65,21 @@ public class Main {
 
 
 		if (option == 0) {
+			System.out.println("Obtaining an initial solution to the problem instance.");
 			xmlInputFilePath = solverRootDirectory +  "/src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
 			configurationFilePath = solverRootDirectory + "/src/main/resources/SolverConfiguration.cfg";
 		} else if (option == 1) {
+			System.out.println("Obtaining an updated solution to the problem instance (updated input data XML file.)");
 			xmlInputFilePath = solverRootDirectory + "/src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-updated-1.xml";
 			configurationFilePath = solverRootDirectory + "/src/main/resources/SolverConfiguration-resolving.cfg";
 
 		}  else if (option == 2) {
+			System.out.println("Obtaining an updated solution to the problem instance on only the new course requests (new requests input data XML file.)");
 			xmlInputFilePath = solverRootDirectory + "/src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-newrequests-1.xml";
 			configurationFilePath = solverRootDirectory + "/src/main/resources/SolverConfiguration.cfg"; // Not the resolving one as in this input XML file, none of the course requests are allocated - treating it as an initial input
 		} else {
 			// do default (option == 0)
+			System.out.println("Obtaining an initial solution to the problem instance.");
 			xmlInputFilePath = solverRootDirectory +  "/src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
 			configurationFilePath = solverRootDirectory + "/src/main/resources/SolverConfiguration.cfg";
 		}
