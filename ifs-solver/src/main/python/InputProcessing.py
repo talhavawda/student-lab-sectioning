@@ -8,8 +8,8 @@ import time
 def main(problemInstanceName: str = None):
 
 	if problemInstanceName is None:
-		#problemInstanceName = input("Enter problem instance name: ")
-		problemInstanceName = "2021-Sem2-CAES-Wvl"
+		problemInstanceName = input("Enter problem instance name: ")
+		#problemInstanceName = "2021-Sem2-CAES-Wvl"
 
 	coursesFilePath = "src/main/resources/input/" + problemInstanceName + "/Courses.xlsx"
 	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx"

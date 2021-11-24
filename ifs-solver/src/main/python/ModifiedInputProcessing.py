@@ -45,8 +45,8 @@ def main(problemInstanceName: str = None):
 	"""
 
 	if problemInstanceName is None:
-		#problemInstanceName = input("Enter problem instance name: ")
-		problemInstanceName = "2021-Sem2-CAES-Wvl"
+		problemInstanceName = input("Enter problem instance name: ")
+		#problemInstanceName = "2021-Sem2-CAES-Wvl"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file

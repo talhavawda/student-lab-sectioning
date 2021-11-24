@@ -24,8 +24,8 @@ def main(problemInstanceName: str = None, solutionFilePath: str = None, solution
 	"""
 
 	if problemInstanceName is None:
-		#problemInstanceName = input("Enter problem instance name: ")
-		problemInstanceName = "2021-Sem2-CAES-Wvl"
+		problemInstanceName = input("Enter problem instance name: ")
+		#problemInstanceName = "2021-Sem2-CAES-Wvl"
 
 	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # initial input data XML file for the problem instance

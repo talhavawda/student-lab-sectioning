@@ -389,7 +389,7 @@ requests separately and merge the obtained solution with the current solution to
                 - I also changed the interpreters for all the Python scripts to the Python 3.10 system interpreter 
                 - Still getting an error when installing Jpype for Python 3.10 using pip in cmd. It's involving VS Tools.
                 I then found the following suggestion: https://github.com/sammchardy/python-binance/issues/148#issuecomment-374853521 and
-                followed it. This also appied for installing lxml for Python 3.10 
+                followed it. This also applied for installing lxml for Python 3.10 
                 - Still getting an error with the Jpype function, so I went to Project Structure -> Modules -> Dependencies and added
                 the library Python 3.10 and it now works
                 - When running Jpype to access my java class Main.java it is giving an error that it can't find the specified package
@@ -607,3 +607,7 @@ https://www.geeksforgeeks.org/beautifulsoup-modifying-the-tree/
 https://stackoverflow.com/questions/9766966/how-to-set-value-in-with-beautiful-soup-in-some-html-element-if-i-know-id-of-tha
 https://www.geeksforgeeks.org/python-string-replace/
 https://www.geeksforgeeks.org/python-string-strip/
+
+https://stackoverflow.com/questions/9856683/using-pythons-os-path-how-do-i-go-up-one-directory
+https://stackoverflow.com/questions/45112041/pyinstaller-and-py2exe-result-in-error-tuple-index-out-of-range
+https://github.com/pyinstaller/pyinstaller/issues/6301

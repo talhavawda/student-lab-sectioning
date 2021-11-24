@@ -13,8 +13,8 @@ import os
 
 def main():
 
-	#problemInstanceName = input("Enter the name of the current problem instance: ")
-	problemInstanceName = "2021-Sem2-CAES-Wvl"
+	problemInstanceName = input("Enter the name of the current problem instance: ")
+	#problemInstanceName = "2021-Sem2-CAES-Wvl"
 	print("Problem Instance's name:", problemInstanceName)
 
 	while True:

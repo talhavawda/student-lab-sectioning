@@ -41,8 +41,8 @@ from jpype.types import *
 def main(problemInstanceName: str = None):
 
 	if problemInstanceName is None:
-		#problemInstanceName = input("Enter problem instance name: ")
-		problemInstanceName = "2021-Sem2-CAES-Wvl"
+		problemInstanceName = input("Enter problem instance name: ")
+		#problemInstanceName = "2021-Sem2-CAES-Wvl"
 
 	"""
 	while True:
@@ -134,7 +134,8 @@ def generateNewRequestsInputXmlFile(problemInstanceName: str):
 	ModifiedInputProcessing.generateUpdatedInputXmlFile(updatedInputDict, inputXmlFilePath)
 
 
-	# The code of this function of this point is very similar to ModifiedInputProcessing.main()
+	# The code of this function up till this point is very similar to ModifiedInputProcessing.main() [as we're getting the
+	# same updated input data XML file] and now goes on to generating an input data XML file containing the new course requests
 
 
 	""" Process Section Allocations data for the current solution and get its allocations.xml file 
