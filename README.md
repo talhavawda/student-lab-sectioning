@@ -24,6 +24,7 @@ If there's an error installing JPype which involves VS Code, follow the instruct
 
 #### Execution
 First download the ifs-solver project. This can be done by downloading a ZIP folder of this repository and extracting the ifs-solver project. 
+Then place the downloaded ifs-solver.jar file in its respective location in the project, as specified above.
 
 To run the project: In Command Prompt, change your current directory to the directory (on your local machine) of the Main.py script in the ifs-solver project (ifs-solver/src/main/python/)
 and run Main.py using the following command: 'python Main.py'
@@ -44,6 +45,7 @@ Note that although the option is given in Main.py to run Main.java, the three Py
 they want to obtain, so their is no need for the user to run the Main.java file directly. 
  
 
+<br>
 If want to run the project in an IDE, open it in IntelliJ, add a Python interpreter to the project (if one is not already specified) and create a build configuration for the Main.py file. 
 - How to run Python in IntelliJ (adding a Python interpreter):
     - Links
@@ -52,6 +54,8 @@ If want to run the project in an IDE, open it in IntelliJ, add a Python interpre
         - https://www.jetbrains.com/help/idea/run-debug-configuration-python.html#1
     - Then go to Project Settings -> Modules -> Dependencies -> Add Python interpreter
 
+
+<br>
 
 Refer to the paper for more details on the pipeline and architecture of the project.
 
