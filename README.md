@@ -25,7 +25,7 @@ If there's an error installing JPype which involves VS Code, follow the instruct
 #### Execution
 First download the ifs-solver project. This can be done by downloading a ZIP folder of this repository and extracting the ifs-solver project. 
 
-To run the projec: In Command Prompt, change your current directory to the directory (on your local machine) of the Main.py script in the ifs-solver project 
+To run the project: In Command Prompt, change your current directory to the directory (on your local machine) of the Main.py script in the ifs-solver project (ifs-solver/src/main/python/)
 and run Main.py using the following command: 'python Main.py'
 
 
