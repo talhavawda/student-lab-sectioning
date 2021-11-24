@@ -23,19 +23,13 @@ If there's an error installing JPype which involves VS Code, follow the instruct
 
 
 #### Execution
-Running the project: In Command Prompt, change to the directory of the Main.py script and run Main.py using the following command: 'python Main.py'
+First download the ifs-solver project. This can be done by downloading a ZIP folder of this repository and extracting the ifs-solver project. 
+
+To run the projec: In Command Prompt, change your current directory to the directory (on your local machine) of the Main.py script in the ifs-solver project 
+and run Main.py using the following command: 'python Main.py'
 
 
-If want to run the project in an IDE, open it in IntelliJ, add a Python interpreter to the project (if one is not already specified) and create a build configuration for the Main.py file. 
-- How to run Python in IntelliJ (adding a Python interpreter):
-    - Links
-        - https://www.jetbrains.com/help/idea/configuring-local-python-interpreters.html
-        - https://www.jetbrains.com/help/idea/configuring-python-sdk.html
-        - https://www.jetbrains.com/help/idea/run-debug-configuration-python.html#1
-    - Then go to Project Settings -> Modules -> Dependencies -> Add Python interpreter
-
-
-Obtaining solutions:
+Obtaining solutions with Main.py:
 
 1. Run InputProcessing.py which obtains the initial input data XML file and runs the CPSolver to obtain the initial solution
 2. Run ModifiedInputProcessing.py to process a modified Students input data Excel file and runs the CPSolver to obtain the updated solution. 
@@ -49,5 +43,15 @@ For the second step above, Main.py will have to be re-executed.
 Note that although the option is given in Main.py to run Main.java, the three Python processes above run the Main.java file within them and also specify the solution type 
 they want to obtain, so their is no need for the user to run the Main.java file directly. 
  
+
+If want to run the project in an IDE, open it in IntelliJ, add a Python interpreter to the project (if one is not already specified) and create a build configuration for the Main.py file. 
+- How to run Python in IntelliJ (adding a Python interpreter):
+    - Links
+        - https://www.jetbrains.com/help/idea/configuring-local-python-interpreters.html
+        - https://www.jetbrains.com/help/idea/configuring-python-sdk.html
+        - https://www.jetbrains.com/help/idea/run-debug-configuration-python.html#1
+    - Then go to Project Settings -> Modules -> Dependencies -> Add Python interpreter
+
+
 Refer to the paper for more details on the pipeline and architecture of the project.
 

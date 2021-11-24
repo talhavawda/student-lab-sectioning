@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<allocations>
+	<course course="C1" courseName="BIOL101" numCourseRequests="600" numLabs="1">
+		<lab lab="P1" numLabSections="4" labCapacity="800" labAllocated="600" allocatedPercent="75.0">
+			<section section="S1" sectionTimeslot="M 2:10p - 5:10p" sectionCapacity="200" sectionAllocated="150" allocatedPercent="75.0"/>
+			<section section="S2" sectionTimeslot="T 2:10p - 5:10p" sectionCapacity="200" sectionAllocated="150" allocatedPercent="75.0"/>
+			<section section="S3" sectionTimeslot="W 2:10p - 5:10p" sectionCapacity="200" sectionAllocated="150" allocatedPercent="75.0"/>
+			<section section="S4" sectionTimeslot="Th 2:10p - 5:10p" sectionCapacity="200" sectionAllocated="150" allocatedPercent="75.0"/>
+		</lab>
+	</course>
+	<course course="C2" courseName="BIOL103" numCourseRequests="218" numLabs="1">
+		<lab lab="P2" numLabSections="1" labCapacity="218" labAllocated="218" allocatedPercent="100.0">
+			<section section="S5" sectionTimeslot="F 2:10p - 5:10p" sectionCapacity="218" sectionAllocated="218" allocatedPercent="100.0"/>
+		</lab>
+	</course>
+	<course course="C3" courseName="BIOL195" numCourseRequests="238" numLabs="1">
+		<lab lab="P3" numLabSections="1" labCapacity="238" labAllocated="238" allocatedPercent="100.0">
+			<section section="S6" sectionTimeslot="F 9:35a - 12:35p" sectionCapacity="238" sectionAllocated="238" allocatedPercent="100.0"/>
+		</lab>
+	</course>
+	<course course="C4" courseName="BIOL196" numCourseRequests="157" numLabs="1">
+		<lab lab="P4" numLabSections="1" labCapacity="200" labAllocated="157" allocatedPercent="78.5">
+			<section section="S7" sectionTimeslot="W 9:35a - 12:35p" sectionCapacity="200" sectionAllocated="157" allocatedPercent="78.5"/>
+		</lab>
+	</course>
+	<course course="C5" courseName="CHEM110" numCourseRequests="782" numLabs="1">
+		<lab lab="P5" numLabSections="6" labCapacity="864" labAllocated="782" allocatedPercent="90.51">
+			<section section="S8" sectionTimeslot="M 2:10p - 5:10p" sectionCapacity="144" sectionAllocated="131" allocatedPercent="90.97"/>
+			<section section="S9" sectionTimeslot="T 2:10p - 5:10p" sectionCapacity="144" sectionAllocated="130" allocatedPercent="90.28"/>
+			<section section="S10" sectionTimeslot="W 9:35a - 12:35p" sectionCapacity="144" sectionAllocated="132" allocatedPercent="91.67"/>
+			<section section="S11" sectionTimeslot="W 2:10p - 5:10p" sectionCapacity="144" sectionAllocated="131" allocatedPercent="90.97"/>
+			<section section="S12" sectionTimeslot="Th 2:10p - 5:10p" sectionCapacity="144" sectionAllocated="129" allocatedPercent="89.58"/>
+			<section section="S13" sectionTimeslot="F 2:10p - 5:10p" sectionCapacity="144" sectionAllocated="129" allocatedPercent="89.58"/>
+		</lab>
+	</course>
+	<course course="C6" courseName="CHEM195" numCourseRequests="240" numLabs="1">
+		<lab lab="P6" numLabSections="2" labCapacity="240" labAllocated="240" allocatedPercent="100.0">
+			<section section="S14" sectionTimeslot="T 9:35a - 12:35p" sectionCapacity="192" sectionAllocated="192" allocatedPercent="100.0"/>
+			<section section="S15" sectionTimeslot="W 2:10p - 5:10p" sectionCapacity="48" sectionAllocated="48" allocatedPercent="100.0"/>
+		</lab>
+	</course>
+	<course course="C7" courseName="CHEM196" numCourseRequests="148" numLabs="1">
+		<lab lab="P7" numLabSections="4" labCapacity="192" labAllocated="148" allocatedPercent="77.08">
+			<section section="S16" sectionTimeslot="M 2:10p - 5:10p" sectionCapacity="48" sectionAllocated="32" allocatedPercent="66.67"/>
+			<section section="S17" sectionTimeslot="T 2:10p - 5:10p" sectionCapacity="48" sectionAllocated="48" allocatedPercent="100.0"/>
+			<section section="S18" sectionTimeslot="Th 2:10p - 5:10p" sectionCapacity="48" sectionAllocated="36" allocatedPercent="75.0"/>
+			<section section="S19" sectionTimeslot="F 2:10p - 5:10p" sectionCapacity="48" sectionAllocated="32" allocatedPercent="66.67"/>
+		</lab>
+	</course>
+	<course course="C8" courseName="COMP100" numCourseRequests="243" numLabs="1">
+		<lab lab="P8" numLabSections="2" labCapacity="500" labAllocated="243" allocatedPercent="48.6">
+			<section section="S20" sectionTimeslot="M 2:10p - 5:10p" sectionCapacity="250" sectionAllocated="122" allocatedPercent="48.8"/>
+			<section section="S21" sectionTimeslot="Th 2:10p - 5:10p" sectionCapacity="250" sectionAllocated="121" allocatedPercent="48.4"/>
+		</lab>
+	</course>
+	<course course="C9" courseName="GEOG110" numCourseRequests="185" numLabs="1">
+		<lab lab="P9" numLabSections="1" labCapacity="260" labAllocated="185" allocatedPercent="71.15">
+			<section section="S22" sectionTimeslot="W 2:10p - 5:10p" sectionCapacity="260" sectionAllocated="185" allocatedPercent="71.15"/>
+		</lab>
+	</course>
+	<course course="C10" courseName="GEOL101" numCourseRequests="86" numLabs="1">
+		<lab lab="P10" numLabSections="3" labCapacity="120" labAllocated="86" allocatedPercent="71.67">
+			<section section="S23" sectionTimeslot="M 2:10p - 5:10p" sectionCapacity="40" sectionAllocated="29" allocatedPercent="72.5"/>
+			<section section="S24" sectionTimeslot="Th 2:10p - 5:10p" sectionCapacity="40" sectionAllocated="29" allocatedPercent="72.5"/>
+			<section section="S25" sectionTimeslot="F 2:10p - 5:10p" sectionCapacity="40" sectionAllocated="28" allocatedPercent="70.0"/>
+		</lab>
+	</course>
+	<course course="C11" courseName="MATH130" numCourseRequests="255" numLabs="1">
+		<lab lab="P11" numLabSections="2" labCapacity="290" labAllocated="255" allocatedPercent="87.93">
+			<section section="S26" sectionTimeslot="T 2:10p - 5:10p" sectionCapacity="154" sectionAllocated="136" allocatedPercent="88.31"/>
+			<section section="S27" sectionTimeslot="W 2:10p - 5:10p" sectionCapacity="136" sectionAllocated="119" allocatedPercent="87.5"/>
+		</lab>
+	</course>
+	<course course="C12" courseName="MATH134" numCourseRequests="647" numLabs="1">
+		<lab lab="P12" numLabSections="3" labCapacity="1500" labAllocated="647" allocatedPercent="43.13">
+			<section section="S28" sectionTimeslot="W 9:35a - 12:35p" sectionCapacity="750" sectionAllocated="322" allocatedPercent="42.93"/>
+			<section section="S29" sectionTimeslot="W 2:10p - 5:10p" sectionCapacity="500" sectionAllocated="217" allocatedPercent="43.4"/>
+			<section section="S30" sectionTimeslot="Th 2:10p - 5:10p" sectionCapacity="250" sectionAllocated="108" allocatedPercent="43.2"/>
+		</lab>
+	</course>
+	<course course="C13" courseName="MATH140" numCourseRequests="70" numLabs="1">
+		<lab lab="P13" numLabSections="1" labCapacity="165" labAllocated="70" allocatedPercent="42.42">
+			<section section="S31" sectionTimeslot="F 2:10p - 5:10p" sectionCapacity="165" sectionAllocated="70" allocatedPercent="42.42"/>
+		</lab>
+	</course>
+	<course course="C14" courseName="MATH150" numCourseRequests="724" numLabs="1">
+		<lab lab="P14" numLabSections="3" labCapacity="1332" labAllocated="724" allocatedPercent="54.35">
+			<section section="S32" sectionTimeslot="T 2:10p - 5:10p" sectionCapacity="491" sectionAllocated="258" allocatedPercent="52.55"/>
+			<section section="S33" sectionTimeslot="W 9:35a - 12:35p" sectionCapacity="350" sectionAllocated="198" allocatedPercent="56.57"/>
+			<section section="S34" sectionTimeslot="F 2:10p - 5:10p" sectionCapacity="491" sectionAllocated="268" allocatedPercent="54.58"/>
+		</lab>
+	</course>
+	<course course="C15" courseName="MATH196" numCourseRequests="49" numLabs="1">
+		<lab lab="P15" numLabSections="1" labCapacity="106" labAllocated="49" allocatedPercent="46.23">
+			<section section="S35" sectionTimeslot="W 9:35a - 12:35p" sectionCapacity="106" sectionAllocated="49" allocatedPercent="46.23"/>
+		</lab>
+	</course>
+	<course course="C16" courseName="PHYS113" numCourseRequests="173" numLabs="1">
+		<lab lab="P16" numLabSections="1" labCapacity="320" labAllocated="173" allocatedPercent="54.06">
+			<section section="S36" sectionTimeslot="W 2:10p - 5:10p" sectionCapacity="320" sectionAllocated="173" allocatedPercent="54.06"/>
+		</lab>
+	</course>
+	<course course="C17" courseName="PHYS131" numCourseRequests="620" numLabs="1">
+		<lab lab="P17" numLabSections="4" labCapacity="1230" labAllocated="620" allocatedPercent="50.41">
+			<section section="S37" sectionTimeslot="M 2:10p - 5:10p" sectionCapacity="270" sectionAllocated="135" allocatedPercent="50.0"/>
+			<section section="S38" sectionTimeslot="T 2:10p - 5:10p" sectionCapacity="320" sectionAllocated="163" allocatedPercent="50.94"/>
+			<section section="S39" sectionTimeslot="W 9:35a - 12:35p" sectionCapacity="320" sectionAllocated="161" allocatedPercent="50.31"/>
+			<section section="S40" sectionTimeslot="Th 2:10p - 5:10p" sectionCapacity="320" sectionAllocated="161" allocatedPercent="50.31"/>
+		</lab>
+	</course>
+	<course course="C18" courseName="PHYS195" numCourseRequests="239" numLabs="1">
+		<lab lab="P18" numLabSections="1" labCapacity="320" labAllocated="239" allocatedPercent="74.69">
+			<section section="S41" sectionTimeslot="Th 9:35a - 12:35p" sectionCapacity="320" sectionAllocated="239" allocatedPercent="74.69"/>
+		</lab>
+	</course>
+	<course course="C19" courseName="STAT130" numCourseRequests="546" numLabs="1">
+		<lab lab="P19" numLabSections="2" labCapacity="1035" labAllocated="546" allocatedPercent="52.75">
+			<section section="S42" sectionTimeslot="M 2:10p - 5:10p" sectionCapacity="491" sectionAllocated="279" allocatedPercent="56.82"/>
+			<section section="S43" sectionTimeslot="W 9:35a - 12:35p" sectionCapacity="544" sectionAllocated="267" allocatedPercent="49.08"/>
+		</lab>
+	</course>
+</allocations>
