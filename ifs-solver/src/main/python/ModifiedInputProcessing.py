@@ -4,6 +4,7 @@ from xml.dom import minidom  # For creating and writing to XML files
 # from time import time, ctime, localtime
 import time
 import copy
+import os
 
 #Installed the openpyxl, beautifulsoup4 and lxml packages (lxml is a parser)
 
@@ -48,7 +49,7 @@ def main(problemInstanceName: str = None):
 		problemInstanceName = input("Enter problem instance name: ")
 		#problemInstanceName = "2021-Sem2-CAES-Wvl"
 
-	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
+	problemInstanceDirectoryPath = os.path.abspath("../resources/input/" + problemInstanceName)
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file
 
 

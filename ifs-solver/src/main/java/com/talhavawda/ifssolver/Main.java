@@ -12,28 +12,34 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String [] args) {
+		/*
+			args[0] is solverRootDirectory (the local absolute directory of the root folder of this project)
+			args[1] is problemInstanceAbsDirectory (the local absolute directory of the problem instance's folder)
+			args[2] is problemInstanceName
+			args[3] is option
+			solverRootDirectory, problemInstanceAbsDirectory and problemInstanceName  must be specified in the args parameter
+		 */
 
 		Scanner input = new Scanner(System.in);
-		/*
-		System.out.println("Enter the name of the problem instance: ");
-		String problemInstanceName = input.next();
-		*/
 
-		String problemInstanceName = "2021-Sem2-CAES-Wvl";
-		String problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName; // input data XML file's directory (directory also used to store output)
-		// String xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml"; //path of the input file (its name + relative path from Source directory preceding it)
+		String solverRootDirectory = args[0]; //local absolute directory of the root folder of this project
+		String problemInstanceDirectoryPath = args[1]; // input data XML file's directory (directory also used to store output)
 
-		// For experimentation process, updated input data xml file has different name, so we adding it to the if statement Selection part
-		// when done with experimentation, comment it out there and uncomment the line above.
+		//String problemInstanceName = problemInstanceDirectoryPath.substring(problemInstanceDirectoryPath.lastIndexOf("\\")+1); // In problemInstanceDirectoryPath, the slashes separating the directories are backslashes
+		String problemInstanceName = args[2];
+
+
+		// String xmlInputFilePath = "problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"; //path of the input file (its name + relative path from Source directory preceding it)
+
 		String xmlInputFilePath;
 
 		String configurationFilePath;
 
 		int option; //type of solution we're obtaining
 
-		if (args.length > 0) {
+		if (args.length == 4) {
 			try {
-				option = Integer.parseInt(args[0]);
+				option = Integer.parseInt(args[3]);
 			} catch (NumberFormatException e) { // if string contains an invalid (not parsable) integer
 				option = 0; //assign a default
 			}
@@ -59,19 +65,19 @@ public class Main {
 
 
 		if (option == 0) {
-			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
-			configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
+			xmlInputFilePath = solverRootDirectory +  "/src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
+			configurationFilePath = solverRootDirectory + "/src/main/resources/SolverConfiguration.cfg";
 		} else if (option == 1) {
-			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-updated-1.xml";
-			configurationFilePath = "src/main/resources/SolverConfiguration-resolving.cfg";
+			xmlInputFilePath = solverRootDirectory + "/src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-updated-1.xml";
+			configurationFilePath = solverRootDirectory + "/src/main/resources/SolverConfiguration-resolving.cfg";
 
 		}  else if (option == 2) {
-			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-newrequests-1.xml";
-			configurationFilePath = "src/main/resources/SolverConfiguration.cfg"; // Not the resolving one as in this input XML file, none of the course requests are allocated - treating it as an initial input
+			xmlInputFilePath = solverRootDirectory + "/src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + "-newrequests-1.xml";
+			configurationFilePath = solverRootDirectory + "/src/main/resources/SolverConfiguration.cfg"; // Not the resolving one as in this input XML file, none of the course requests are allocated - treating it as an initial input
 		} else {
 			// do default (option == 0)
-			xmlInputFilePath = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
-			configurationFilePath = "src/main/resources/SolverConfiguration.cfg";
+			xmlInputFilePath = solverRootDirectory +  "/src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml";
+			configurationFilePath = solverRootDirectory + "/src/main/resources/SolverConfiguration.cfg";
 		}
 
 

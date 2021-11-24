@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup  # For reading from XML files (bs4 needs to be installed first)
 from xml.dom import minidom  # For creating and writing to XML files
 from os import path  # For checking if file exists
+import os
+
 """
 	Process a solution file to obtain the number of course requests for each course, the total capacity across all sections
 	of each of its labs, and the number of allocations for each of its lab sections, and write this info to an xml file.
@@ -27,7 +29,7 @@ def main(problemInstanceName: str = None, solutionFilePath: str = None, solution
 		problemInstanceName = input("Enter problem instance name: ")
 		#problemInstanceName = "2021-Sem2-CAES-Wvl"
 
-	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
+	problemInstanceDirectoryPath = os.path.abspath("../resources/input/" + problemInstanceName)
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # initial input data XML file for the problem instance
 
 	if fullUpdatedSolution == False: # Default functionality

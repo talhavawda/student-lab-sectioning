@@ -8,6 +8,7 @@ import SectionAllocations
 import jpype
 import jpype.imports
 from jpype.types import *
+import os
 
 """
 	Process the current solution file (solution.xml), along with the input data XML file that was used to obtain it, 
@@ -85,8 +86,8 @@ def main(problemInstanceName: str = None):
 	#from java.lang import System
 	#print(System.getProperty("java.class.path"))
 
-
-	jpype.JClass("com.talhavawda.ifssolver.Main").main(["2"]) # Run option 2
+	problemInstanceAbsDirectory = os.path.abspath("../resources/input/" + problemInstanceName)
+	jpype.JClass("com.talhavawda.ifssolver.Main").main([solverRootDirectory, problemInstanceAbsDirectory, problemInstanceName, "2"]) # Run option 2
 
 	# Other/aleterante jpype code:
 
@@ -112,7 +113,7 @@ def main(problemInstanceName: str = None):
 
 def generateNewRequestsInputXmlFile(problemInstanceName: str):
 
-	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
+	problemInstanceDirectoryPath = os.path.abspath("../resources/input/" + problemInstanceName)
 	inputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + ".xml"  # current input data XML file
 
 
@@ -381,7 +382,7 @@ def customPrettify(BS, desiredIndent: int):  # desiredIndent is indent size in t
 
 def generateUpdatedSolutionFile(problemInstanceName: str, modVerNum: int):
 
-	problemInstanceDirectoryPath = "src/main/resources/input/" + problemInstanceName
+	problemInstanceDirectoryPath = os.path.abspath("../resources/input/" + problemInstanceName)
 	updatedInputXmlFilePath = problemInstanceDirectoryPath + "/" + problemInstanceName + "-updated-" + str(modVerNum) + ".xml"  # the updated input data XML file represents the current solution with the old course requests removed
 
 	""" Get the (updated) solution (containing the allocations of the new course requests) of this problem instance's updated 

@@ -2,6 +2,7 @@ import pandas as pd # Following naming convention
 from bs4 import BeautifulSoup # For reading from XML files (bs4 needs to be installed first)
 from xml.dom import minidom # For creating and writing to XML files
 import time
+import os
 
 #Installed the openpyxl, beautifulsoup4 and lxml packages
 
@@ -11,9 +12,11 @@ def main(problemInstanceName: str = None):
 		problemInstanceName = input("Enter problem instance name: ")
 		#problemInstanceName = "2021-Sem2-CAES-Wvl"
 
-	coursesFilePath = "src/main/resources/input/" + problemInstanceName + "/Courses.xlsx"
-	studentsFilePath = "src/main/resources/input/" + problemInstanceName + "/Students.xlsx"
-	problemSpecificationFilePath = "src/main/resources/input/" + problemInstanceName + "/Specification.xml" # Make txt ?
+
+	currentRelativeDirectory = "/src/main/python" # The working directory of Python scripts  - the paths below are in terms of the solver's root directory
+	coursesFilePath = os.path.abspath("../resources/input/" + problemInstanceName + "/Courses.xlsx")
+	studentsFilePath = os.path.abspath("../resources/input/" + problemInstanceName + "/Students.xlsx")
+	problemSpecificationFilePath = os.path.abspath("../resources/input/" + problemInstanceName + "/Specification.xml") # Make txt ?
 
 	#coursesEF = pandas.ExcelFile(coursesFile, engine="openpyxl") # Load the Courses spreadsheet as an Excel File
 	#coursesDF = coursesEF.parse("Sheet1") # Load the first (and only) sheet as a DataFrame
@@ -294,7 +297,7 @@ def main(problemInstanceName: str = None):
 
 	inputFileXML = inputFileXML.toprettyxml(indent="\t")
 
-	xmlFileName = "src/main/resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml"
+	xmlFileName = os.path.abspath("../resources/input/" + problemInstanceName + "/" + problemInstanceName + ".xml")
 
 	# Write the input data XML file
 	with open(xmlFileName, "w") as xmlFile:
@@ -308,7 +311,7 @@ def main(problemInstanceName: str = None):
 			print("Writing to input data XML file '" + xmlFileName + "' has been successful.")
 
 	# Reset/Overwrite CurrentSolutions.txt file to an empty file
-	currentSolutionsFilePath = "src/main/resources/input/" + problemInstanceName + "/CurrentSolutions.txt"
+	currentSolutionsFilePath = os.path.abspath("../resources/input/" + problemInstanceName + "/CurrentSolutions.txt")
 	currentSolutionsFile = open(currentSolutionsFilePath, "w")
 	#currentSolutionsFile.write("") # The above line will overwrite so I don't need this line
 	currentSolutionsFile.close()
