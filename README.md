@@ -56,6 +56,6 @@ If want to run the project in an IDE, open it in IntelliJ, add a Python interpre
 
 
 <br>
-
+<br>
 Refer to the paper for more details on the pipeline and architecture of the project.
 
