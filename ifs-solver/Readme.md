@@ -6,7 +6,7 @@ to solve my Student Sectioning problem.
 This project is being developed using Java (for the solver, as the CPSolver is available in Java only) and Python in IntelliJ IDEA.
 
 CPSolver/UniTime Student Sectioning Solver (UniTime site Links):
- - Constraint Solver Examples: Constraint Solver Examples: https://www.cpsolver.org/cpsolver_examples.php
+ - Constraint Solver Examples: https://www.cpsolver.org/cpsolver_examples.php
  - Student Sectioning Problem Description: https://www.unitime.org/sct_description.php
  - Student Sectioning Data Format: https://www.unitime.org/sct_dataformat.php
  - Student Sectioning Benchmark Datasets: https://www.unitime.org/sct_datasets.php
@@ -18,8 +18,8 @@ CPSolver/UniTime Student Sectioning Solver (UniTime site Links):
 1. Created this project (ifs-solver) in IntelliJ inside my local copy of the student-lab-sectioning repository
     - This automatically adds the project to Git and I can access Git features inside IntelliJ
         - I've also got the repository opened in GitHub Desktop and I'm using this as my main tool for version control
-2. I created a 'lib' folder (Right Click -> New -> Directory), created a sub-folder inside it called 'cpsolver-1.3.232'
- and added the CPSolver jar files (and the dom4j and log4j jar files) to the 'cpsolver-1.3.232' folder.
+2. I created a 'lib' folder (Right Click -> New -> Directory), created a sub-folder inside it called 'cpsolver-1.3.232' 
+and added the CPSolver jar files (and the dom4j and log4j jar files) to the 'cpsolver-1.3.232' folder.
 3. I right-clicked the 'cpsolver-1.3.232' folder and selected 'Add as library'
     - The folder automatically gets added as a Library in the Project Structure -> Libraries tab
 4. Created sub-directories in the src folder
@@ -28,11 +28,11 @@ CPSolver/UniTime Student Sectioning Solver (UniTime site Links):
         and Resources respectively in the Project Structure
         - In the 'test' sub-directory, I created a 'java' sub-directory and marked it
         as Tests in the Project Structure
-5. Studying the Data Format of the UniTime Student Sectioning solver
-6. Creating my Excel template input files
-7. Creating input files for 2020-Sem1-CAES-Wvl dataset (/problem instance) according to my templates
-8. Creating a Python program script (InputProcessing.py) inside this ifs-solver project to read in and process input files, and produce an XML file (input data XML file)
- for the UniTime Student Sectioning solver according to their data format structure/template
+5. Studying the Data Format of the UniTime Student Sectioning solver and creating my input data XML template guideline file
+6. Creating my Excel input template files
+7. Creating input files for the 2020-Sem1-CAES-Wvl dataset (/problem instance) according to my templates
+8. Creating a Python program script (InputProcessing.py) inside this ifs-solver project to read in and process input files, and produce an XML 
+file (input data XML file) for the UniTime Student Sectioning solver according to their data format structure/template
     - Current input files I'm using are the 2020-Sem1-CAES-Wvl problem instance
     - How to run Python in IntelliJ:
         - Links
@@ -40,9 +40,7 @@ CPSolver/UniTime Student Sectioning Solver (UniTime site Links):
             - https://www.jetbrains.com/help/idea/configuring-python-sdk.html
             - https://www.jetbrains.com/help/idea/run-debug-configuration-python.html#1
         - Then go to Project Settings -> Modules -> Dependencies -> Add Python interpreter
-        - When wanting to run a Python script, switch to the Python configuration in the 'Edit Run/Debug Configurations' dialog dropdown 
-    - For the main software, when adding the Python interpreter, consider using a virtual environment interpreter
-    instead of the System interpreter
+        - When wanting to run a Python script, switch to the Python configuration in the 'Edit Run/Debug Configurations' dialog dropdown
     - I have decided to store the Problem Specification data in an XML file instead of a text file.
     I am using the BeautifulSoup library to read in the XML file. It needs to first be installed (package name is 'beautifulsoup4')
     along with the 'lxml' package
@@ -51,24 +49,26 @@ CPSolver/UniTime Student Sectioning Solver (UniTime site Links):
             - References for using Mindom:
                 - https://www.geeksforgeeks.org/create-xml-documents-using-python/
                 - https://www.guru99.com/manipulating-xml-with-python.html
-        - However apparently ElementTree is faster for parsing (reading in) XML files, but I don't think this will affect me (hopefully) as I'm just creating the XML files
+        - However apparently ElementTree is faster for parsing (reading in) XML files, but I don't think this will affect me (hopefully) as I'm just 
+        creating the XML files
             - References:
                 - https://stackoverflow.com/questions/192907/xml-parsing-elementtree-vs-sax-and-dom
                 - https://www.mirketa.com/xml-parsing-python/
                 - https://www.edureka.co/community/52537/difference-between-elementtree-and-minidom
                 
     - For the 2020-Sem1-CAES-Wvl's Students.xlsx input file, I used the COUNTA() Excel function (with the cell range being the 10 courses for that row) 
-    to populate the numCourses column as the "CAES Tutorial Allocations 2020BC1 - WVC" given by the College did not have 
-    column specifying the number of modules (courses) the student is doing.
+    to populate the numCourses column as the "CAES Tutorial Allocations 2020BC1 - WVC" given by the College did not have column specifying the number 
+    of modules (courses) the student is doing.
         - The default Excel cell format is 'General' and if a cell is empty (in our case, the extra courses columns up till course10), then 
         when reading into a Pandas' DataFrame, the value 'NaN' will be stored 
             - I will be using the numCourses value for that student to extract the courses that that student will be doing as it will be quicker 
             than iterating through all 10 columns and checking if the cell value is non-empty/non-NaN
-    - SEE src/main/resources/Readme.md        
+    - SEE src/main/resources/Readme.md for a description of the input files
  9. Running the UniTime's Student Sectioning CPSolver (on the 2020-Sem1-CAES-Wvl problem instance)
-    - Tried running from command line first (using the execution command on the UniTime website) and was playing around with the command to get the file paths right
-        - The execution command on the UniTime website has the java jar file to run called 'studentsct-1.3.jar' but there doesn't exist such a file (and the output was
-        giving an error about that file not being found) - we're only given the cpsolver jar file that contains everything.
+    - Tried running from command line first (using the execution command on the UniTime website) and was playing around with the command to get the 
+    file paths right
+        - The execution command on the UniTime website has the java jar file to run called 'studentsct-1.3.jar' but there doesn't exist such a 
+        file (and the output was giving an error about that file not being found) - we're only given the cpsolver jar file that contains everything.
         So I used the CPSolver jar file in the cmd command. 
         - CMD command I settled on using that didn't give an error:
             - java -Xmx1g -jar lib/cpsolver-1.3.232/cpsolver-1.3.232.jar src/main/resources/SolverConfigurationFile.cfg src/main/resources/input/2020-Sem1-CAES-Wvl/2020-Sem1-CAES-Wvl.xml src/main/resources/input/2020-Sem1-CAES-Wvl
@@ -81,57 +81,57 @@ CPSolver/UniTime Student Sectioning Solver (UniTime site Links):
                        at org.cpsolver.coursett.Test.main(Test.java:292)`
     - So I decided to skip cmd and go straight to executing from code. 
         - Created an org.talhavawda.ifssolver package inside the src/main/java directory and added a Main file with a main() method. 
-        Then I added code to my Main.main() method to set up the string parameter variables, and then called org.cpsolver.studentsect.Test.main() with its arg param being the array of my string parameter variables.
-        - Was getting a NullPointerException error during the XML Loading process - I didn't specify a 'dates' attribute for the 'time' element of the 'section' element in my XML input file generation
+        Then I added code to my Main.main() method to set up the string parameter variables, and then called org.cpsolver.studentsect.Test.main() with 
+        its arg param being the array of my string parameter variables.
+        - Was getting a NullPointerException error during the XML Loading process - I didn't specify a 'dates' attribute for the 'time' element of the 
+        'section' element in my XML input file generation
             - I fixed this by setting a 'dates' attribute with the value being an empty string
                 - Todo: Consider changing this 'dates' value to something more meaningful [UPDATE: Done below]
-        - Then I was getting an error cos I didn't put priority attribute for course requests (NumberFormatException). Fixed that also.
+        - Then I was getting an error cos I didn't put priority attribute for course requests (NumberFormatException). Fixed that as well.
         - It's working now
             - Observations:
-                - The solution.xml file did not include all the attributes I added to the input file in addition
-                 to what was in the UniTime's SS Data Format
-                 - tableau.csv is a csv file of the solution - it indicates the sections assigned to each course request (1 section per subpart of a course)
+                - The solution.xml file did not include the attributes I added to the input file in addition to what was in the UniTime's SS Data Format
+                - tableau.csv is a csv file of the solution - it indicates the sections assigned to each course request (1 section per subpart of a course)
                     - Each row is a course request
-                 - request-priorities.csv and tableau.csv in the solution folder seems to indicate that if a student has more than 1 course request,
-                 then the priorities of their course requests will be in the listed/ascending order (and not the same priority)
-                 even if the priority attribute values for those course requests are the same.
-                - Config file changes I made (see below)
+                - request-priorities.csv and tableau.csv in the solution folder seems to indicate that if a student has more than 1 course request,
+                then the priorities of their course requests will be in the listed/ascending order (and not the same priority) even if the priority 
+                attribute values for those course requests are the same.
         - I modified the default configuration file given by UniTime to tune it to my specific Student Sectioning Problem
             - Default values were Termination.StopWhenComplete=false and Termination.TimeOut=28800 so it was continuing even though it was solved.
-            I changed Timeout to 60 secs and upon observation of the log file (210902_105758), the CAES-Wvl case was solved
-            within 4 seconds. The solution kept finding other solutions for the remaining 56 seconds, but returned the BEST 
-            solution at the end. The BEST solution wasn't a very big improvement on the first solution, and the quality of the solutions
-            seemed to have decreased over time. 
-            - Further changed StopWhenComplete to true and Timeout to 300      
+            I changed Timeout to 60 secs and upon observation of the log file (210902_105758), the CAES-Wvl case was solved within 4 seconds. 
+            The solution kept finding other solutions for the remaining 56 seconds, but returned the BEST solution at the end. The BEST solution 
+            wasn't a very big improvement on the first solution, and the quality of the solutions seemed to have decreased over time. 
+            - I further changed StopWhenComplete to true and Timeout to 300      
             - SEE src/main/resources/Readme.md for info about the configuration file I'm using for the solver (and more changes I made to it)
-    - Upon relooking at the raw input data files given by UKZN, I noticed that in the "Final Practical allocations Semester 1 2020 Overall"
-    file (also containing the scheduled practical timetables but for both campuses), that it includes additional 
-    courses that were not included in the  Wvl/pmb" sem1 2020 table" files. So I need to go remodify the Courses.xlsx input file
-    for the 2020-Sem1-CAES-Wvl problem instance
-        - I have updated the Courses.xlsx file for the 2020-Sem1-CAES-Wvl problem instance with the additional
-        courses (and their scheduled allocations), and ran InputProcessing.py on the now updated dataset to create the updated
-        2020-Sem1-CAES-Wvl XML input data file. The initial problem instance before this update is now called 2020-Sem1-CAES-Wvl-OLD 
+    - Upon relooking at the raw input data files given by UKZN, I noticed that in the "Final Practical allocations Semester 1 2020 Overall" file (also 
+    containing the scheduled practical timetables but for both campuses), that it includes additional courses that were not included in the  
+    Wvl/pmb" sem1 2020 table" files. So I need to go remodify the Courses.xlsx input file for the 2020-Sem1-CAES-Wvl problem instance
+        - I have updated the Courses.xlsx file for the 2020-Sem1-CAES-Wvl problem instance with the additional courses (and their scheduled allocations), 
+        and ran InputProcessing.py on the now updated dataset to create the updated 2020-Sem1-CAES-Wvl XML input data file. The initial problem 
+        instance before this update is now called 2020-Sem1-CAES-Wvl-OLD 
             - Tried running IFS-Solver on updated 2020-Sem1-CAES-Wvl problem instance. 
             See [src/main/resources/Readme.md#2020-sem1-caes-wvl - 210905_212507 solution](src/main/resources/Readme.md#2020-sem1-caes-wvl) 
             for the error that occurred. I found the error to be in the following line of code: 
             `cmp = a.getSubpart().getInstructionalType().compareTo(b.getSubpart().getInstructionalType());`
             in the SectionConflictTable.java file. I remember now that I did not set an Instructional Type attribute for the subparts of the courses 
             in the XML input file.
-            I fixed the error by updating the Python program script (InputProcessing.py) to add the "itype" attribute (with "Laboratory" value)
-            to each of the subparts, then reran InputProcessing.py and then the IFS-Solver
-        - There are 56 unassigned course requests as  2 courses are filled to capacity and have more course requests than their capacity (See 210906_143728 solution)
+            I fixed the error by updating the Python program script (InputProcessing.py) to add the "itype" attribute (with "Laboratory" value) to 
+            each of the subparts, then reran InputProcessing.py and then the IFS-Solver.
+                - I assume that this error didn't arise with the OLD problem instance due to there being complete solutions available (0 unassigned 
+                course requests in the solution)
+        - There are 56 unassigned course requests as 2 courses are filled to capacity and have more course requests than their capacity (See 
+        210906_143728 solution)
         
     - Attended to and fixed the Timeslots issue (See https://github.com/talhavawda/student-lab-sectioning/issues/10 for details)
         - Timeslots are now according to the default of 288 slots per day and thus 5 minutes per slot
         - I modified the CoursesInputTemplate.xlsx and the corresponding Courses input file for the current 2020-Sem1-CAES-Wvl problem instance, 
         as well as the 2020-Sem1-CAES-Wvl-OLD problem instance, and generated their new/updated input data XML files.        
     - Dealing with the unassigned course requests due to filled capacities. 
-        - I created a modified instance (2020-Sem1-CAES-Wvl-no-extra-requests) of this 2020-Sem1-CAES-Wvl problem instance and
-        increased the capacities of the BIOL103 and BIOL195 courses to 218 and 238 respectively in the Courses.xlsx input file
-        so that there is no extra requests above the capacity for these courses (the number of requests matches the capacity),
-        and ran the solver to obtain a complete solution
-        - I did this as I want a complete solution that I can use to do the Minimal Perturbation 
-        experimentation part - making changes to the input and resolving.
+        - I created a modified instance (2020-Sem1-CAES-Wvl-no-extra-requests) of this 2020-Sem1-CAES-Wvl problem instance and increased the capacities 
+        of the BIOL103 and BIOL195 courses to 218 and 238 respectively in the Courses.xlsx input file so that there is no extra requests above the 
+        capacity for these courses (the number of requests matches the capacity), and ran the solver to obtain a complete solution
+        - I did this as I want a complete solution that I can use to do the Minimal Perturbation experimentation part - making changes to the input 
+        and resolving.
 
 10. Creating a Python program script (ModifiedInputProcessing.py) to process a modified/updated Students.xlsx input file, 
 the initial solution file (solution.xml), along with the input data XML file that was used to obtain it, and to produce 
@@ -144,10 +144,10 @@ the new course requests are unassigned/unallocated, and the old course requests 
     course (the sum of the capacities of each section of that course's lab). Thus we shall not have any availability conflicts.
         - Todo: Since in the user system we won't have any control over the modified input given, we'll also need to ensure that there
         are no availability conflicts (See https://github.com/talhavawda/student-lab-sectioning/issues/9; we may even allow availability conflicts). 
-            - **UPDATE**: This has not been done yet by me
+            - **UPDATE**: This has not been done yet by me [TODO]
     - Discovered a bug when preparing to add the solutions (assigned sections) to the studentsDict. 
-        - BUG: Time overlap conflicts are not being detected by the solver and students' in my problem instance are 
-        being assigned to sections that occur at the same time
+        - BUG: Time overlap conflicts are not being detected by the solver, and students' in my problem instance are being assigned to sections that 
+        occur at the same time
         - I discovered this bug as I was thinking what will reflect in the solution.xml file if there is a time 
         conflict and thus the student will not be assigned a section for that course request. So I took a student (218047643)
         and added a course request  for a course that they were already doing that contained only 1 section for its lab (BIOL196).
@@ -191,19 +191,23 @@ the new course requests are unassigned/unallocated, and the old course requests 
                 in this problem instance - we get a complete solution
                                 
 11. Minimal Perturbation Experimentation process                
-    - Simulating students making changes to their registrations/enrollments, and resolving on updated input to get an updated solution
-     and evaluating number of existing variables (course requests) whose assigned values (allocated sections) get changed
+    - Simulating students making changes to their registrations/enrollments (resulting in multiple parallel updated input instances), and resolving 
+    on (each) updated input to get an updated solution and evaluating number of existing variables (course requests) whose assigned values 
+    (allocated sections) get changed
     
-    - Default functionality of my system: Everytime an updated input data XML file is generated by ModifiedInputProcessing.py based on the modified/updated 
-    Students input, it replaces/overrides the previous input data XML file (as my solver code (Main.java) assumes that the name of input data 
-    XML file is the same as that of the problem instance). So ModifiedInputProcessing.py makes the same assumption and the input data XML file 
-    that we obtained is the current one instead of the first input data XML file for this problem instance.
-    If the user wants to obtain a completely new solution from scratch, they can rerun the InputProcessing.py script
-    to obtain an input data XML file with all course requests being unassigned. 
+    - Default functionality of my system: Everytime an updated input data XML file is generated by ModifiedInputProcessing.py based on the 
+    modified/updated Students input, it replaces/overrides the previous input data XML file (as my solver code (Main.java) assumes that the name of 
+    input data XML file is the same as that of the problem instance). So ModifiedInputProcessing.py makes the same assumption and the input data XML 
+    file that we obtained is the current one instead of the first input data XML file for this problem instance.
+    If the user wants to obtain a completely new solution from scratch, they can rerun the InputProcessing.py script to obtain an input data XML file 
+    with all course requests being unassigned. 
     **HOWEVER**, for my experimentation process, I will be using a different XML file name for the (first) updated input data XML file 
     (suffixing 'updated-1' to the file name), so the initial input data XML file remains unchanged so that I can run multiple 
     different experiments (multiple independent solver runs) on the same initial input and initial solution but with different 
     modified Students input files (different Student changes -> different [but parallel] updated input data XML files to obtain different updated solutions)
+    **UPDATE**: I shall no longer be using the above default functionality of the system. Previous input data XML files will not be replaced/overridden, 
+    and each new updated input data XML shall have its own name, which shall be determined by its Modification Version Number (modVerNum). 
+    See Issue #19 (https://github.com/talhavawda/student-lab-sectioning/issues/19) for more details.    
 
     - Dealing with the Time Overlap conflicts in the 2020-Sem1-CAES-Wvl-no-extra-requests problem instance. 
         - I created a modified/child instance (2020-Sem1-CAES-Wvl-no-conflicts) of this 2020-Sem1-CAES-Wvl-no-extra-requests problem instance
@@ -332,8 +336,8 @@ requests separately and merge the obtained solution with the current solution to
         which ModifiedInputProcessing.py does). And the solution obtained on thus input data XML file, I'd merge it with the actual solution file.
         But then I thought of using some of the code from ModifiedInputProcessing.py - reusing some of the functions, as some
         of the initial program functionality of SMIP.py  is the same as that of MIP.py.  
-        I then thought that maybe I can model this separate redoing part along the lines of ModifiedInputProcessing.py by following the approach I did there and 
-        adding some code to its functions, so that I do not have to write a lot of new code, which is what would've happened if I followed 
+        I then thought that maybe I can model this separate redoing part along the lines of ModifiedInputProcessing.py by following the approach I did 
+        there and adding some code to its functions, so that I do not have to write a lot of new code, which is what would've happened if I followed 
         my initial idea (my initial idea did not involve getting the entire solution dict as I did in MIP, as getting the dict takes a lot 
         of time, so  I was thinking of working on the solution file directly). My first idea was to modify processModifiedStudentsData() in MIP.py,
         by adding a parameter called 'caller' and if 'caller' was set to "SMIP", then I'd add code to it to create the input data XML file with
@@ -341,10 +345,11 @@ requests separately and merge the obtained solution with the current solution to
         called studentsNewRequestsDict that contains the data of only the new course requests (the students who have new course requests, and 
         their new course requests), and I'd create its corresponding input data XML file inside SeparateModifiedInputProcessing.py
             - So for this first process, I created a function inside SeparateModifiedInputProcessing.py called generateNewRequestsInputXmlFile()
-            that basically does ModifiedInputProcessing.main() - I'm going to treat the generated updated input data XML file as the current solution file
-            with the old course requests removed, and the new course requests are already added there (without their allocations) - and I'm going to 
-            add code to create the input data XML with only the new course requests (and the capacity values of the lab sections being updated to account 
-            for the students already sectioned), which will be named the current input data XML file name with "-newrequests-<modVerNum>" being appended.
+            that basically does ModifiedInputProcessing.main() - I'm going to treat the generated updated input data XML file as the current solution 
+            file with the old course requests removed, and the new course requests are already added there (without their allocations) - and I'm going 
+            to add code to create the input data XML with only the new course requests (and the capacity values of the lab sections being updated to 
+            account for the students already sectioned), which will be named the current input data XML file name with "-newrequests-<modVerNum>" being 
+            appended.
             - So for the second process of SeparateModifiedInputProcessing.py, I created a function called generateUpdatedSolutionFile(), that 
             takes the solution file generated by the solver on the input data XML file containing only the new course requests, gets 
             the section allocations and adds them to their respective course requests in (a copy of) the updated input data XML file - which 
@@ -354,20 +359,21 @@ requests separately and merge the obtained solution with the current solution to
     before we do the second process of merging the 2 solution files. And since both processes will have to be run by the user, I only want them
     to have to run this script once. So what I intend to do is to make the SeparateModifiedInputProcessing.py script do the first process, run the solver 
     to obtain the solution for the new course requests, and then run the second process (instead of asking the user which process they want to run). 
-        - So since my running of the solver is in Java, I needed a way to run Java code from Python. I discovered the py4j package, but it wasn't installing 
-        when I tried to install it using the PyCharm Install packages option (my Python version I got installed is Python 3.8). 
+        - So since my running of the solver is in Java, I needed a way to run Java code from Python. I discovered the py4j package, but it wasn't 
+        installing when I tried to install it using the PyCharm Install packages option (my Python version I got installed is Python 3.8). 
         I discovered on their website that it has been tested up till Python 3.7.
-            - So I downloaded Python 3.7 and decided to also create a Python 3.7 virtualenv virtual environment for this project - by going Project Structure -> 
-            SDKs -> Add ... - which is located at /venv-py37 in this project's directory and named Python 3.7 (ifs-solver) in the Project Structure, 
-            and I changed the Python Interpreter for SeparateModifiedInputProcessing.py to this virtual environment [Python 3.7 (ifs-solver)]
+            - So I downloaded Python 3.7 and decided to also create a Python 3.7 virtualenv virtual environment for this project - by going 
+            Project Structure -> SDKs -> Add ... - which is located at /venv-py37 in this project's directory and named Python 3.7 (ifs-solver) in the 
+            Project Structure, and I changed the Python Interpreter for SeparateModifiedInputProcessing.py to this virtual environment [Python 3.7 (ifs-solver)].
             I then had to activate this virtual environment before I could install any packages inside it. Activated it using cmd by 
             going to (changing the directory) this virtual environment's directory (which is located inside this project) and  to its Scripts folder 
-            and typing 'activate'. Installing any packages from the Packages tab of this virtual interpreter in Project Structure was giving an error each time, 
-            so I went back to the cmd window and installed the packages from there, using the command  "py -m pip install <packageName>", and it worked. 
+            and typing 'activate'. Installing any packages from the Packages tab of this virtual interpreter in Project Structure was giving an error 
+            each time, so I went back to the cmd window and installed the packages from there, using the command  "py -m pip install <packageName>", 
+            and it worked. 
             I installed all the packages that SeparateModifiedInputProcessing and ModifiedInputProcessing use (beautifulsoup4, pandas, py4j)
-                - Since for the Python 3.7 virtual environment, the package's also weren't getting installed from the Install packages option in the Project Structure, 
-                and for Python 3.8 the py4j package similarly was giving an error from the install packages option in PyCharm, I decided to create a virtual environment
-                for Python 3.8 and install the packages from cmd, and it worked.
+                - Since for the Python 3.7 virtual environment, the package's also weren't getting installed from the Install packages option in the 
+                Project Structure, and for Python 3.8 the py4j package similarly was giving an error from the install packages option in PyCharm, I 
+                decided to create a virtual environment for Python 3.8 and install the packages from cmd, and it worked.
                 - I then changed the interpreters for the other Python scripts from the default Python 3.8 to the Python 3.8's 
                 virtualenv virtual environment [Python 3.8 (ifs-solver)] I created in this project
         - I've now discovered that Python virtual environments are for Python packages (specifically project dependencies involving them)
@@ -436,8 +442,8 @@ requests separately and merge the obtained solution with the current solution to
             due to the high capacities specified)
         - Only specified/processed the course offerings in the in Courses.xlsx input file for first year and second year CAES courses
             - The Students input file we're given is for students doing first-year CAES courses (CAES want to do the sectioning for first year labs), 
-            and its highly unlikely that a student doing a first year CAES course will also be doing a third-year CAES course. And by searching through the 
-            Students input file for each third year CAES course, there are very few students in that file that do them (if any), 
+            and its highly unlikely that a student doing a first year CAES course will also be doing a third-year CAES course. And by searching 
+            through the Students input file for each third year CAES course, there are very few students in that file that do them (if any), 
             and the numbers are usually just 1 or 2 students. 
 
 15. Installed PyInstaller (pip install pyinstaller) and ran it in cmd on Main.py from its directory (pyinstaller Main.py) 
@@ -456,13 +462,14 @@ to obtain its executable file.
     be installed on the user's system). Added code to Main.py and SeparateModifiedInputProcessing.py such that the JAR file can 
     be located directly by its absolute path - in this IntelliJ project, I set the working directory in build configurations 
     to the root ifs-solver/ folder and used relative path to th JAR file but when running the scripts from cmd, the working directory 
-    will be the directory of the file (a sub-directory in this project), thus the JAR file wasn't being located correctly if script was being run from cmd. 
+    will be the directory of the file (a sub-directory in this project), thus the JAR file wasn't being located correctly if script was being run from 
+    cmd. 
     
 16. 
     
 17. For ease of use, I've added code to the end of the main() functions of InputProcessing.py and ModifiedInputProcessing.py 
 to run the solver (with the option specified) to obtain the relevant solution (similarly to how SeparateModifiedtInputProcessing.py does it). 
-So the user no longer has to run the Main.java file directly
+So the user no longer has to run the Main.java file directly.
 
 
 Order of run:\
@@ -493,14 +500,15 @@ Order of run (updated 3):\
 MENTION IN PAPER: Since the IFS solver balances the section allocations when doing them, for each course request in the resolving part, 
 it most probably will have the option to choose from all the sections for the labs of that course (as in the initial solution the 
 allocations were balanced so there should be space in all sections unless num course requests for a course is very close to lab capacity), 
-so we DON'T need to remove/unallocate any allocations for the existing/unchanged course requests in the initial/current solution to free up section space (to 
-give new course requests an opportunity to be sectioned into other sections)  
+so we DON'T need to remove/unallocate any allocations for the existing/unchanged course requests in the initial/current solution to free up section 
+space (to give new course requests an opportunity to be sectioned into other sections)  
 
  
- If a course have multiple labs and a student who has a course request for this course has a section conflict (either availabilty of time overlap conflict) 
- in being allocated to one of the (sections of one of the) labs of this course, will not be allocated to any (to any sections to any other) of the labs 
- of this course (even though there is ample  available space and no time overlaps in the other labs of this course for this student to be allocated to) 
- - i.e. the course request will remain unallocated (Refer to 2021-Sem2-CAES-Wvl's initial solution)
+ If a course have multiple labs and a student who has a course request for this course has a section conflict (either availabilty of time overlap 
+ conflict) in being allocated to one of the (sections of one of the) labs of this course, will not be allocated to any (to any sections to any other) 
+ of the labs of this course (even though there is ample  available space and no time overlaps in the other labs of this course for this student to be 
+ allocated to) 
+- i.e. the course request will remain unallocated (Refer to 2021-Sem2-CAES-Wvl's initial solution)
  
  
 [Done] TODO: new updated input data XML file should not replace old one - create separate ones for each modified Students file
@@ -523,8 +531,8 @@ given on how to use the code, and that I had to fix couple bugs
 Todo - see Toby for the  chrome tabs I had open    
 Todo - update (re processes) the input data XML file for all other problem instances (based on additions made to InputProcessing.py on 22/09/2021
 
-TODO: do experimentation on being able to have multiple updated Students input files and being able to obtain successive updated solutions - speak about
-this in the paper
+TODO: do experimentation on being able to have multiple updated Students input files and being able to obtain successive updated solutions - speak 
+about this in the paper
     
 [Done] Todo: MAKE CHANGES AND RESOLVE - try out different termination conditions<br>
 [Done] Todo: Try out different heuristics. (modify config file)

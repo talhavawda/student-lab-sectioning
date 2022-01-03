@@ -1,6 +1,10 @@
 # student-lab-sectioning
 ## Student Lab Sectioning with Minimal Perturbation
 
+### Project Description
+
+
+
 ### Execution instructions (COMP700 Project marking)
 
 The datasets are placed inside this project. Their problem instances are located in the ifs-solver/src/main/resources/input directory. Note that downloading a local copy of this repository may take a while due to the large cummulative file size of the generated experimentation results.
@@ -13,7 +17,7 @@ Download the JAR file (ifs-solver.jar) from [this link](https://drive.google.com
 Ensure that you're running 64-bit versions of Java and Python.
 Specifically, Java SDK 13.0.1 and Python 3.10 (both 64-bit) have been used in the current version of this project.
 
-The following libraries need to be installed: pandas, beautifulsoup4, mindom, openpyxl, lxml, and JPype. All but JPype can be installed normally using pip or through an IDE (IntelliJ/PyCharm).
+The following libraries need to be installed: pandas, beautifulsoup4, minidom, openpyxl, lxml, and JPype. All but JPype can be installed normally using pip or through an IDE (IntelliJ/PyCharm).
 JPype needs to be installed by running the following 3 commands in cmd:
 - git clone https://github.com/originell/jpype.git
 -  cd jpype
@@ -46,6 +50,7 @@ they want to obtain, so their is no need for the user to run the Main.java file 
  
 
 <br>
+
 If want to run the project in an IDE, open it in IntelliJ, add a Python interpreter to the project (if one is not already specified) and create a build configuration for the Main.py file. 
 - How to run Python in IntelliJ (adding a Python interpreter):
     - Links
